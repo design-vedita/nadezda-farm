@@ -1,0 +1,33 @@
+mixin header()
+    block header
+        header
+            .header
+                .container
+                    .row
+                        .col-md-3
+                            .header__logo
+                                img(src=require("../image/svg/logo.svg"))
+                        .col-md-9
+                            .header__top
+                                .header__city
+                                    a(href="javascript:void(0)") Тамбов
+                                .header__phone
+                                    a(href="javascript:void(0)") 8-800-123-45-67
+                                        span Круглосуточно
+                                .header__login
+                                    a(href="Javascript:void(0)") Вход
+                                    a(href="Javascript:void(0)") Регистрация
+                                .header__cart
+                            .header__bottom
+                                form.header__form
+                                    input(type="text" value="" placeholder="Поиск: введите название, производителя, симптом, основное вещество").header__input-text
+                                    input(type="submit" value="").header__input-submit
+                .header__menu
+                    .container
+                        .row
+                            .col-md-12
+                                nav
+                                    ul.header__ul
+                                        li.header__li: a(href="javascript:void(0)") Каталог
+                                        li.header__li: a(href="javascript:void(0)") О компании
+                                        li.header__li: a(href="javascript:void(0)") Контакты

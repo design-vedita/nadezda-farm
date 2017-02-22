@@ -1,0 +1,90 @@
+.header
+    padding-top 15px
+    
+    &__menu
+        background-color green-base
+        
+    &__ul
+        font-size 0
+    
+    &__li
+        display inline-block
+        width 33.3333%
+        text-align center
+                
+        &:first-child
+            background-color orange-base
+        
+        a
+            padding_y(10px)
+            display block
+            width 100%
+            height 100%
+            font-size 15px
+            text-decoration none
+            text-transform uppercase
+            color white
+            transition all .5s ease
+            
+            &:hover
+                background-color green-hover
+    
+    &__top
+        display flex
+        flex-direction row
+        
+    &__city
+        
+        a
+            font-size 15px
+            font-weight 600
+            text-decoration none
+            color dark-gray
+            
+    &__phone
+        background-image url(../../image/svg/phone.svg)
+        background-position left top
+        background-repeat no-repeat
+                
+        a
+            padding-left 35px
+            font-size 20px
+            font-weight 600
+            text-decoration none
+            color dark-gray
+            
+        span
+            display block
+            font-size 15px
+            font-weight 600
+            text-align right
+            color light-gray
+            
+    &__form
+        position relative
+        
+    &__input-text
+        padding-left 15px
+        width 100%
+        height 42px
+        font-size 15px
+        font-weight 600
+        color placeholder-gray
+        border 1px solid light-gray
+        border-left-width 3px
+        border-left-color orange-base
+        
+    &__input-submit
+        position absolute
+        top 0
+        right 0
+        padding 10.5px 18px
+        background-image url(../../image/svg/search.svg)
+        background-position center
+        background-repeat no-repeat
+        background-color green-hover
+        border none
+        cursor pointer
+        
+            
+        
