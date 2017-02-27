@@ -1,7 +1,12 @@
 .header
-    padding-top 15px
+    padding-top 22px
+    background-color white
+    
+    &__logo
+        margin-top 7px
     
     &__menu
+        margin-top 15px
         background-color green-base
         
     &__ul
@@ -14,9 +19,13 @@
                 
         &:first-child
             background-color orange-base
+            
+            a
+                &:hover
+                    background-color orange-link
         
         a
-            padding_y(10px)
+            padding_y(6px)
             display block
             width 100%
             height 100%
@@ -34,16 +43,89 @@
         flex-direction row
         
     &__city
-        
-        a
+        position relative
+        width 25%
+                
+        & > a
+            position relative
             font-size 15px
             font-weight 600
             text-decoration none
             color dark-gray
+            transition all .3s ease
             
+            &:hover
+                color green-base
+                
+                &::before,
+                &::after
+                    background-color green-hover
+            
+            &::before
+                position absolute
+                right -11px
+                top 11px
+                content ''
+                display block
+                width 6px
+                height 2px
+                background-color dark-gray
+                transform rotate(45deg)
+                transition background-color .3s ease
+                
+            &::after
+                position absolute
+                right -14px
+                top 11px
+                content ''
+                display block
+                width 6px
+                height 2px
+                background-color dark-gray
+                transform rotate(-45deg)
+                transition background-color .3s ease
+                
+    &__city-list
+        position absolute
+        z-index 2
+        left 0
+        top 26px
+        padding-top 12px
+        padding-bottom 20px
+        padding-left 19px
+        width 'calc(%s + %s)' % (100% 59px)
+        background-color white
+        border-top 4px solid green-base
+        box-shadow 9px 9px 18px 0 rgba(black, 38%)
+        opacity 0
+        visibility hidden
+        transition all .3s ease
+        
+        li
+            list-style-type none
+            
+        a
+            font-size 14px
+            line-height 30px
+            text-decoration none
+            color placeholder-gray
+            transition all .3s ease
+            
+            &:hover
+                color orange-link
+                
+    &__city-list--open
+        opacity 1
+        visibility visible
+    
     &__phone
+        margin-top -2px
+        padding-left 15px
+        padding-right 28px
+        width 32%
+        text-align right
         background-image url(../../image/svg/phone.svg)
-        background-position left top
+        background-position 23% 5px
         background-repeat no-repeat
                 
         a
@@ -54,6 +136,8 @@
             color dark-gray
             
         span
+            margin-top -6px
+            padding-right 3px
             display block
             font-size 15px
             font-weight 600
@@ -64,7 +148,7 @@
         position relative
         
     &__input-text
-        padding-left 15px
+        padding-left 13px
         width 100%
         height 42px
         font-size 15px
@@ -73,6 +157,11 @@
         border 1px solid light-gray
         border-left-width 3px
         border-left-color orange-base
+        transition all .3s ease
+        
+        &:hover,
+        &:focus
+            border-color orange-base
         
     &__input-submit
         position absolute
@@ -85,6 +174,94 @@
         background-color green-hover
         border none
         cursor pointer
+            
+    &__login
+        margin-top 2px
+        margin-left 2px
+        padding-left 58px
+        width 'calc(%s - %s)' % (22% 4px)
+        background-image url(../../image/svg/login.svg)
+        background-position 15% 5px
+        background-repeat no-repeat
+        border-left 1px solid border-gray
+        
+        a
+            display block
+            font 600 15px/19px open-sans
+            text-decoration none
+            transition all .3s ease
+            
+            &:hover
+                color green-base
+            
+    &__enter
+        color dark-gray
+            
+    &__reg
+        color light-gray
+            
+    &__cart
+        display flex
+        justify-content flex-end
+        width 'calc(%s + %s)' % (21% 2px)
+        border-left 1px solid border-gray
+        
+    &__cart-ico
+        position relative
+        margin-top 2px
+        margin-right 11%
+        width 30px
+        height 37px
+        background-image url(../../image/svg/cart.svg)
+        background-size cover
+        background-position center
+    
+    &__cart-counter
+        position absolute
+        right -16px
+        top -11px
+        
+        span
+            padding 2px 8px
+            display inline-block
+            font-size 15px
+            font-weight 600
+            line-height normal
+            color white
+            background-color orange-base
+            border-radius 50%
+            
+            &.ten
+                padding 2px 5px
+            
+    &__cart-price
+        margin-top 4px
+        width 56%
+        
+        a
+            text-decoration none
+            
+        span
+            display block
+            font-size 13px
+            letter-spacing .5px
+            color light-gray
+            transition all .3s ease
+    
+            &:last-of-type
+                margin-top -3px
+                font-size 16px
+                font-weight 600
+                color dark-gray
+        
+        &:hover
+            span
+                color green-base
+                
+    &__bottom
+        margin-top 18px
+            
+        
         
             
         

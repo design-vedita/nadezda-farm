@@ -1,6 +1,22 @@
 extends ../includes/layout
 
 include ../blocks/header/header
+include ../blocks/slider/slider
+include ../blocks/category/category
+include ../blocks/action/action
 
 block header
     +header
+
+block content
+    .container
+        .row
+            .col-md-12
+                +slider
+        .row
+            .col-md-12
+                +category
+        .row
+            .col-md-12
+                +action
+

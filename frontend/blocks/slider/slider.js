@@ -1,6 +1,7 @@
 import Module from '../../includes/Module';
 import Swiper from '../../../node_modules/swiper/dist/js/swiper.min';
 
+// Слайдер на главной под шапкой
 export default class SliderIndex extends Module {
 
     constructor(){

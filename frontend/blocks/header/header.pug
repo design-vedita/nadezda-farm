@@ -1,23 +1,41 @@
 mixin header()
     block header
         header
-            .header
+            .header.js-header
                 .container
                     .row
                         .col-md-3
                             .header__logo
-                                img(src=require("../image/svg/logo.svg"))
+                                a(href="javascript:void(0)"): img(src=require("../image/svg/logo.svg"))
                         .col-md-9
                             .header__top
                                 .header__city
-                                    a(href="javascript:void(0)") Тамбов
+                                    a(href="javascript:void(0)").js-city-link Тамбов
+                                    ul.header__city-list.js-city-list
+                                        li: a(href="javascript:void(0)") Москва
+                                        li: a(href="javascript:void(0)") Санкт-Петербург
+                                        li: a(href="javascript:void(0)") Ростов-на-Дону
+                                        li: a(href="javascript:void(0)") Волгоград
+                                        li: a(href="javascript:void(0)") Уфа
+                                        li: a(href="javascript:void(0)") Мичуринск
+                                        li: a(href="javascript:void(0)") Тамбов
+                                        li: a(href="javascript:void(0)") Воронеж
                                 .header__phone
                                     a(href="javascript:void(0)") 8-800-123-45-67
                                         span Круглосуточно
                                 .header__login
-                                    a(href="Javascript:void(0)") Вход
-                                    a(href="Javascript:void(0)") Регистрация
+                                    a.header__enter(href="Javascript:void(0)") Вход
+                                    a.header__reg(href="Javascript:void(0)") Регистрация
                                 .header__cart
+                                    .header__cart-ico
+                                        a(href="javascript:void(0)")
+                                            .header__cart-counter
+                                                span 3
+                                    .header__cart-price
+                                        a(href="javascript:void(0)")
+                                            span Ваша корзина
+                                            span 130 510 руб
+
                             .header__bottom
                                 form.header__form
                                     input(type="text" value="" placeholder="Поиск: введите название, производителя, симптом, основное вещество").header__input-text
