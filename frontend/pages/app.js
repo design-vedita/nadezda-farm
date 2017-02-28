@@ -2,6 +2,7 @@
 
 import './app.styl';
 import './index.pug';
+import './catalog.pug';
 import App from '../includes/App.js';
 import Header from '../blocks/header/header.js';
 import SliderIndex from '../blocks/slider/slider.js';

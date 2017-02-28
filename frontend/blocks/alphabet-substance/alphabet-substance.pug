@@ -1,0 +1,10 @@
+mixin alphabet-substance()
+    -var alphabet = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z']
+
+    .alphabet-substance&attributes(attributes)= name
+        .alphabet-substance__title
+            p Вещество по алфавиту:
+        .alphabet-substance__list
+            ul
+                each symbol in alphabet
+                    li: a(href="javascript:void(0)")=symbol

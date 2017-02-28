@@ -1,0 +1,20 @@
+mixin reviews(cl)
+    .reviews(class=cl)
+        p.section-title Отзывы
+        .reviews__list
+            .reviews__tale
+                .reviews__tale-image(style="background-image: url(" + require('../image/girl.jpg') + ")")
+                .reviews__tale-description
+                    p.reviews__tale-name Маша Иванова
+                    p.reviews__tale-date 27 мая 2016 г.
+                    .reviews__tale-text
+                        p Пользуясь услугами нашей компании, вы можете купить в Москве оптом и в розницу товары для красоты и здоровья, а также лекарственные препараты по самым низким ценам.
+            .reviews__tale
+                .reviews__tale-image(style="background-image: url(" + require('../image/girl.jpg') + ")")
+                .reviews__tale-description
+                    p.reviews__tale-name Маша Иванова
+                    p.reviews__tale-date 27 мая 2016 г.
+                    .reviews__tale-text
+                        p Пользуясь услугами нашей компании, вы можете купить в Москве оптом и в розницу товары для красоты и здоровья, а также лекарственные препараты по самым низким ценам. Пользуясь услугами нашей компании, вы можете купить в Москве оптом и в розницу товары для красоты и здоровья, а также лекарственные препараты по самым низким ценам Пользуясь услугами нашей компании, вы можете купить
+        a(href="javascript:void(0)").reviews__all-reviews.button-green Все отзывы
+

@@ -1,0 +1,45 @@
+.alphabet-substance
+    padding-top 34px
+    padding-bottom 10px
+    padding_x(29px)
+    display flex
+    flex-wrap wrap
+    flex-direction row
+    justify-content space-between
+    background-color green-base
+    
+    &__title
+        width 20%
+    
+        p
+            font-size 15px
+            line-height normal
+            text-transform uppercase
+            color white
+    
+    &__list
+        width 80%
+        
+        ul
+            text-align justify
+            
+            &::after
+                content ''
+                display inline-block
+                width 100%
+        
+        li
+            display inline-block
+            list-style-type none
+            
+        a
+            padding 5px
+            font-size 15px
+            line-height normal
+            text-decoration none
+            text-transform uppercase
+            color alphabet
+            transition all .5s ease
+            
+            &:hover
+                color white

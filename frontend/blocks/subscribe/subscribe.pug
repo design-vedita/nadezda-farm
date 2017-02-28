@@ -1,0 +1,10 @@
+mixin subscribe(cl)
+    .subscribe(class=cl)
+        .subscribe__title
+            img(src=require("../image/svg/mail.svg"))
+            span Новинки, скидки, предложения!
+        .subscribe__form
+            form
+                input(type="text" placeholder="Ваш e-mail")
+                input(type="submit" value="Подписаться").button-green
+

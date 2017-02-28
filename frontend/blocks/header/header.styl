@@ -6,7 +6,7 @@
         margin-top 7px
     
     &__menu
-        margin-top 15px
+        margin-top 13px
         background-color green-base
         
     &__ul
@@ -21,11 +21,16 @@
             background-color orange-base
             
             a
+                padding-left 36px
+                background-image url(../../image/svg/ico-catalog.svg)
+                background-repeat no-repeat
+                background-position 37% center
+                
                 &:hover
                     background-color orange-link
         
         a
-            padding_y(6px)
+            padding_y(7px)
             display block
             width 100%
             height 100%
@@ -34,8 +39,12 @@
             text-transform uppercase
             color white
             transition all .5s ease
+    
+            @media all and (-webkit-min-device-pixel-ratio:0)
+                padding_y(8px)
             
             &:hover
+                color white
                 background-color green-hover
     
     &__top
@@ -168,12 +177,16 @@
         top 0
         right 0
         padding 10.5px 18px
+        font-size 13.5px
         background-image url(../../image/svg/search.svg)
         background-position center
         background-repeat no-repeat
-        background-color green-hover
+        background-color green-base
         border none
         cursor pointer
+    
+        @media all and (-webkit-min-device-pixel-ratio:0)
+            padding_y(12px)
             
     &__login
         margin-top 2px
@@ -259,7 +272,7 @@
                 color green-base
                 
     &__bottom
-        margin-top 18px
+        margin-top 11px
             
         
         

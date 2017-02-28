@@ -1,0 +1,40 @@
+.brand-tale
+    margin-bottom 30px
+    padding-bottom 23px
+    width 20%
+    background-color white
+    
+    &:not(:nth-of-type(5n))
+        border-right 1px solid border-brand
+    
+    &:hover &__name
+        a
+            color orange-link
+        
+    &__image
+        position relative
+        height 127px
+        
+        img
+            position absolute
+            left 0
+            top 0
+            right 0
+            bottom 0
+            margin auto
+    &__name
+        line-height 20px
+        text-align center
+        
+        a
+            text-decoration none
+            color brand-name
+            transition all .5s ease
+            
+            &:hover
+                color orange-link
+    &__count-good
+        font-size 12px
+        font-weight 600
+        text-align center
+        color placeholder-gray

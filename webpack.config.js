@@ -68,6 +68,10 @@ var config = {
             filename: 'index.html',
             template: './frontend/pages/index.pug'
         }),
+        new HtmlWebpackPlugin({
+            filename: 'catalog.html',
+            template: './frontend/pages/catalog.pug'
+        }),
         new ExtractTextPlugin("css/main.css")
     ],
     output: {

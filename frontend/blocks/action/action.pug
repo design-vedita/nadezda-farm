@@ -1,8 +1,8 @@
-mixin action()
-    .action.index__action
-        h1 Товары по акции
-        a(href="javascript:void(0)") Все акционные товары
-        .action__list
+mixin action(cl)
+    .action(class=cl)
+        p.section-title Товары по акции
+        a(href="javascript:void(0)").section-link Все акционные товары
+        .action__list.section-list
             .card-tale
                 .card-tale__inner
                     .card-tale__inner-type-action
@@ -16,41 +16,34 @@ mixin action()
                         a(href="javascript:void(0)")
                             img(src=require("../image/imodium.png"))
                     .card-tale__rating
+                        img(src=require("../image/svg/star-full.svg"))
+                        img(src=require("../image/svg/star-full.svg"))
+                        img(src=require("../image/svg/star-full.svg"))
+                        img(src=require("../image/svg/star-empty.svg"))
+                        img(src=require("../image/svg/star-empty.svg"))
                     .card-tale__description
                         a(href="javascript:void(0)").card-tale__description-name Алфавит в сезон простуд n60 таблеток
                         span.card-tale__description-manufacturer OOO Внешторг Фарма, Россия
                     .card-tale__prices
                         .card-tale__prices-current
                             p 2 300
+                                =' '
                                 span р.
                         .card-tale__prices-old
                             p 5300 р.
-
-
-            .card-tale
-                .card-tale__inner
-                    .card-tale__inner-type-action
-                        .flag.best-price
-                            span Лучшая цена
-                        .flag.hit
-                            span Хит продаж
-                        .flag.action
-                            span Акция
-                    .card-tale__inner-image
-                        a(href="javascript:void(0)")
-                            img(src=require("../image/lovelas.png"))
-            .card-tale
-                .card-tale__inner
-                    .card-tale__inner-type-action
-                        .flag.best-price
-                            span Лучшая цена
-                        .flag.hit
-                            span Хит продаж
-                        .flag.action
-                            span Акция
-                    .card-tale__inner-image
-                        a(href="javascript:void(0)")
-                            img(src=require("../image/tantum.png"))
+                            p.economy
+                                span 1300
+                                =' '
+                                | Экономия
+                    .card-tale__order
+                        .card-tale__order-count
+                            button.card-tale__order-decrement -
+                            input(type="text" value="1")
+                            button.card-tale__order-increment +
+                        .card-tale__order-button
+                            input(type="submit" value="Купить").button-green
+                    .card-tale__one-click
+                        a(href="javascript:void(0)") Купить в 1 клик
             .card-tale
                 .card-tale__inner
                     .card-tale__inner-type-action
@@ -63,3 +56,114 @@ mixin action()
                     .card-tale__inner-image
                         a(href="javascript:void(0)")
                             img(src=require("../image/imodium.png"))
+                    .card-tale__rating
+                        img(src=require("../image/svg/star-full.svg"))
+                        img(src=require("../image/svg/star-full.svg"))
+                        img(src=require("../image/svg/star-full.svg"))
+                        img(src=require("../image/svg/star-full.svg"))
+                        img(src=require("../image/svg/star-full.svg"))
+                    .card-tale__description
+                        a(href="javascript:void(0)").card-tale__description-name Алфавит в сезон простуд n60 таблеток
+                        span.card-tale__description-manufacturer OOO Внешторг Фарма, Россия
+                    .card-tale__prices
+                        .card-tale__prices-current
+                            p 2 300
+                                =' '
+                                span р.
+                        .card-tale__prices-old
+                            p 5300 р.
+                            p.economy
+                                span 1300
+                                =' '
+                                | Экономия
+                    .card-tale__order
+                        .card-tale__order-count
+                            button.card-tale__order-decrement -
+                            input(type="text" value="1")
+                            button.card-tale__order-increment +
+                        .card-tale__order-button
+                            input(type="submit" value="Купить").button-green
+                    .card-tale__one-click
+                        a(href="javascript:void(0)") Купить в 1 клик
+            .card-tale
+                .card-tale__inner
+                    .card-tale__inner-type-action
+                        .flag.best-price
+                            span Лучшая цена
+                        .flag.hit
+                            span Хит продаж
+                        .flag.action
+                            span Акция
+                    .card-tale__inner-image
+                        a(href="javascript:void(0)")
+                            img(src=require("../image/imodium.png"))
+                    .card-tale__rating
+                        img(src=require("../image/svg/star-full.svg"))
+                        img(src=require("../image/svg/star-full.svg"))
+                        img(src=require("../image/svg/star-full.svg"))
+                        img(src=require("../image/svg/star-full.svg"))
+                        img(src=require("../image/svg/star-full.svg"))
+                    .card-tale__description
+                        a(href="javascript:void(0)").card-tale__description-name Алфавит в сезон простуд n60 таблеток
+                        span.card-tale__description-manufacturer OOO Внешторг Фарма, Россия
+                    .card-tale__prices
+                        .card-tale__prices-current
+                            p 2 300
+                                =' '
+                                span р.
+                        .card-tale__prices-old
+                            p 5300 р.
+                            p.economy
+                                span 1300
+                                =' '
+                                | Экономия
+                    .card-tale__order
+                        .card-tale__order-count
+                            button.card-tale__order-decrement -
+                            input(type="text" value="1")
+                            button.card-tale__order-increment +
+                        .card-tale__order-button
+                            input(type="submit" value="Купить").button-green
+                    .card-tale__one-click
+                        a(href="javascript:void(0)") Купить в 1 клик
+            .card-tale
+                .card-tale__inner
+                    .card-tale__inner-type-action
+                        .flag.best-price
+                            span Лучшая цена
+                        .flag.hit
+                            span Хит продаж
+                        .flag.action
+                            span Акция
+                    .card-tale__inner-image
+                        a(href="javascript:void(0)")
+                            img(src=require("../image/imodium.png"))
+                    .card-tale__rating
+                        img(src=require("../image/svg/star-full.svg"))
+                        img(src=require("../image/svg/star-full.svg"))
+                        img(src=require("../image/svg/star-full.svg"))
+                        img(src=require("../image/svg/star-full.svg"))
+                        img(src=require("../image/svg/star-full.svg"))
+                    .card-tale__description
+                        a(href="javascript:void(0)").card-tale__description-name Алфавит в сезон простуд n60 таблеток
+                        span.card-tale__description-manufacturer OOO Внешторг Фарма, Россия
+                    .card-tale__prices
+                        .card-tale__prices-current
+                            p 2 300
+                                =' '
+                                span р.
+                        .card-tale__prices-old
+                            p 5300 р.
+                            p.economy
+                                span 1300
+                                =' '
+                                | Экономия
+                    .card-tale__order
+                        .card-tale__order-count
+                            button.card-tale__order-decrement -
+                            input(type="text" value="1")
+                            button.card-tale__order-increment +
+                        .card-tale__order-button
+                            input(type="submit" value="Купить").button-green
+                    .card-tale__one-click
+                        a(href="javascript:void(0)") Купить в 1 клик

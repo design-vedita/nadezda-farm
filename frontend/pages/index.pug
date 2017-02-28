@@ -4,6 +4,15 @@ include ../blocks/header/header
 include ../blocks/slider/slider
 include ../blocks/category/category
 include ../blocks/action/action
+include ../blocks/popular-good/popular-good
+include ../blocks/brand-catalog/brand-catalog
+include ../blocks/disease-directory/disease-directory
+include ../blocks/alphabet-substance/alphabet-substance
+include ../blocks/article-index/article-index
+include ../blocks/reviews/reviews
+include ../blocks/subscribe/subscribe
+include ../blocks/text-block/text-block
+include ../blocks/footer/footer
 
 block header
     +header
@@ -15,8 +24,38 @@ block content
                 +slider
         .row
             .col-md-12
-                +category
+                +category('index__category')
         .row
             .col-md-12
-                +action
+                +action('index__action')
+    +popular-good
+
+    .container
+        .row
+            .col-md-12
+                +brand-catalog('index__brand-catalog')
+    .section-white.index__section-white
+        .container
+            .row
+                .col-md-12
+                    +disease-directory
+            .row
+                .col-md-12
+                    +alphabet-substance(class="index__alphabet-substance")
+            .row
+                .col-md-12
+                    .section-info
+                        +article-index
+                        +reviews('index__reviews')
+            .row
+                .col-md-12
+                    +subscribe('index__subscribe')
+            .row
+                .col-md-12
+                    +text-block(class="index__text")
+block footer
+    footer
+        +footer
+
+
 

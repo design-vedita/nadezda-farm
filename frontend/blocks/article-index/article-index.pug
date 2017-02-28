@@ -1,0 +1,12 @@
+mixin article-index()
+    -var articles = ['Аллергия','Ангина (боль в горле)','Атеросклероз','Бессонница','Бронхит','Грипп','Боль в спине', 'Гениталии','Аллергия','Ангина (боль в горле)','Атеросклероз','Бессонница','Бронхит']
+    .article-index
+        .article-index__image
+            img(src=require("../image/article.jpg"))
+        .article-index__list
+            p.section-title Статьи
+            ul
+                li.article-index__category Самые популярные
+                each article in articles
+                    li: a(href="javascript:void(0)")=article
+            a(href="javascript:void(0)").article-index__all-article.button-green Смотреть всё

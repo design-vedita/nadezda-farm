@@ -1,0 +1,35 @@
+.disease-directory
+    
+    &__list
+        margin_x(-16px)
+        margin-top 20px
+        display flex
+        flex-wrap wrap
+        flex-direction row
+        
+    &__ul
+        padding_x(16px)
+        width 25%
+        
+        li
+            list-style-type none
+    
+            &:not(:last-child)
+                margin-bottom 7px
+            
+            &:nth-of-type(1)
+                margin-bottom 14px
+                font-size 15px
+                line-height normal
+                font-weight 600
+                color green-base
+            
+        a
+            font-size 14px
+            line-height normal
+            text-decoration none
+            color placeholder-gray
+            transition all .5s ease
+            
+            &:hover
+              color orange-link

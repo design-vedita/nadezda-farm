@@ -1,0 +1,8 @@
+include ../../blocks/left-menu/left-menu
+
+mixin catalog()
+    .catalog&attributes(attributes)= name
+        .row
+            .col-md-3
+                +left-menu
+            .col-md-9

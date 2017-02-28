@@ -1,0 +1,6 @@
+mixin breadcrumbs()
+    .breadcrumbs&attributes(attributes)= name
+        ul.breadcrumbs__list
+            li: a(href="javascript:void(0)"): img(src=require("../image/svg/home.svg"))
+            li: a(href="javascript:void(0)") Каталог
+            li: span Мед. обородувание

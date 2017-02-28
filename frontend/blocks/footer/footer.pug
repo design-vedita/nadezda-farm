@@ -1,2 +1,44 @@
 mixin footer()
     .footer
+        .container
+            .row
+                .col-md-3.footer__logo
+                    img(src=require("../image/svg/logo-footer.svg"))
+                .col-md-2
+                    ul
+                        li: a(href="javascript:void(0)") О компании
+                        li: a(href="javascript:void(0)") Лицензии
+                        li: a(href="javascript:void(0)") Доставка
+                        li: a(href="javascript:void(0)") Оплата
+                        li: a(href="javascript:void(0)") Отзывы
+                        li: a(href="javascript:void(0)") Баланс карты
+                        li: a(href="javascript:void(0)") География продаж
+                        li: a(href="javascript:void(0)") Контакты
+                .col-md-2
+                    ul
+                        li: a(href="javascript:void(0)") Бренды
+                        li: a(href="javascript:void(0)") Каталог по болезням
+                        li: a(href="javascript:void(0)") Новости
+                        li: a(href="javascript:void(0)") Статьи
+                        li: a(href="javascript:void(0)") Вопрос-ответ
+                .col-md-2
+                    ul
+                        li: a(href="javascript:void(0)") Лекарства
+                        li: a(href="javascript:void(0)") Бады
+                        li: a(href="javascript:void(0)") Гигиена и красота
+                        li: a(href="javascript:void(0)") Питание и спорт
+                        li: a(href="javascript:void(0)") Мед. приборы
+                        li: a(href="javascript:void(0)") Акции
+                .col-md-3.footer__phone
+                    a(href="javascript:void(0)") 8-800-123-45-67
+                        span Время работы:
+                            = ' '
+                            span Круглосуточно
+    .developer
+        .container
+            .row
+                .col-md-6
+                    p Все права защищены (с)
+                .col-md-6.developer__logo
+                    a(href="http:://vedita.ru" target="_blank")
+                        img(src=require("../image/svg/vedita-logo.svg"))

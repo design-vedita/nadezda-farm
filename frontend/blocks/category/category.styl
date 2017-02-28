@@ -14,7 +14,7 @@
         padding-right 1px
         margin-bottom 1px
         width 25%
-        height 181px
+        height 178px
         border-radius 10px
             
         &:hover
@@ -29,33 +29,34 @@
             font-size 18px
             text-transform uppercase
             color white
-            background-color green-base
             border-radius 10px
             
             p
                 color inherit
+                font-weight normal
                 font-size inherit
             
             &::before
                 position absolute
                 z-index 1
-                left -9.5px
-                top -6px
+                left 0
+                top 0
                 content ''
                 display block
-                width 'calc(%s + %s)' % (100% 19px)
-                height 'calc(%s + %s)' % (100% 12px)
-                background-color green-hover
+                width 100%
+                height 100%
+                background-color green-base
+                background-image url(../../image/svg/pattern-right.svg)
+                background-size 260px auto
+                background-repeat no-repeat
+                background-position 152px 84px
                 border-radius 10px
-                opacity 0
-                visibility hidden
-                transform scale(.7)
+                transform scale(1)
                 transition all .5s ease
                 
             &:hover::before
-                opacity 1
-                visibility visible
-                transform scale(1)
+                transform scale(1.1)
+                background-color green-hover
                 
     &__tale-content
         position absolute
@@ -64,7 +65,7 @@
         top 0
         padding-left 20px
         padding-right 11px
-        padding-top 16px
+        padding-top 14px
         display flex
         flex-wrap wrap
         justify-content space-between
@@ -72,10 +73,6 @@
         width 100%
         height 100%
         overflow hidden
-        background-image url(../../image/svg/pattern-right.svg)
-        background-size 260px auto
-        background-repeat no-repeat
-        background-position 152px 84px
         
         .pattern
             position: absolute;
