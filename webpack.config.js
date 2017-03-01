@@ -14,6 +14,8 @@ let svgoConfig = JSON.stringify({
     ]
 });
 
+let path = require('path');
+
 // Получаем параметры scripts
 const ENV = process.env.npm_lifecycle_event;
 
@@ -62,7 +64,8 @@ var config = {
     plugins: [
         new webpack.NoErrorsPlugin(),
         new webpack.ProvidePlugin({
-            $: 'jquery/dist/jquery.slim.js'
+            $: 'jquery/dist/jquery.slim.js',
+            ui: 'jquery-ui-bundle/jquery.ui'
         }),
         new HtmlWebpackPlugin({
             filename: 'index.html',

@@ -11,11 +11,22 @@ export default class Header extends Module {
     }
 
     init() {
+        this.$menu = $('.js-header-menu', this.$root);
+        this.$submenu = $('.js-header-submenu', this.$root);
+
         this.$list_city = $('.js-city-list', this.$root);
         this.$link_city = $('.js-city-link', this.$root);
 
+        this.$menu.on('click',  $.proxy(this.openMenu, this));
+
         this.$link_city.on('click', $.proxy(this.openListCity, this));
         App.doc.on('click', $.proxy(this.closeListCity, this));
+    }
+
+    openMenu(e) {
+        const target = e.currentTarget;
+        $(target).toggleClass('header__li--open');
+        this.$submenu.toggleClass('header__submenu-one--open');
     }
 
     // Показываем список городов

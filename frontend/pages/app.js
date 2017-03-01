@@ -6,6 +6,7 @@ import './catalog.pug';
 import App from '../includes/App.js';
 import Header from '../blocks/header/header.js';
 import SliderIndex from '../blocks/slider/slider.js';
+import Filter from '../blocks/left-filter/left-filter';
 
 $(() => {
 
@@ -37,6 +38,7 @@ $(() => {
 
     App.modules.push(new Header);
     App.modules.push(new SliderIndex);
+    App.modules.push(new Filter);
 
 });
 

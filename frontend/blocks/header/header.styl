@@ -10,17 +10,24 @@
         background-color green-base
         
     &__ul
+        padding 0
         font-size 0
     
     &__li
+        position relative
         display inline-block
         width 33.3333%
         text-align center
                 
+        &--open
+            
+            & > a
+                background-color orange-link
+        
         &:first-child
             background-color orange-base
             
-            a
+            & > a
                 padding-left 36px
                 background-image url(../../image/svg/ico-catalog.svg)
                 background-repeat no-repeat
@@ -29,8 +36,9 @@
                 &:hover
                     background-color orange-link
         
-        a
-            padding_y(7px)
+        & > a
+            padding-top 6px
+            padding-bottom 7px
             display block
             width 100%
             height 100%
@@ -46,7 +54,112 @@
             &:hover
                 color white
                 background-color green-hover
-    
+                
+    &__submenu-one
+        position absolute
+        z-index 3
+        top 'calc(%s + %s)' % (100% 3px)
+        padding-top 13px
+        padding-bottom 8px
+        width 100%
+        opacity 0
+        visibility hidden
+        background-color white
+        border-top 4px solid orange-link
+        box-shadow 9px 9px 18px 0 rgba(black, 38%)
+        transition all .5s ease
+        
+        &--open
+            opacity 1
+            visibility visible
+        
+        & > li
+            position relative
+            text-align left
+            background-color transparent
+            transition all .5 ease
+            
+            &:hover
+                
+                & ^[0]__submenu-two
+                    opacity 1
+                    visibility visible
+            
+            &::after
+                position absolute
+                right 6px
+                top 17px
+                content ''
+                display block
+                width 7px
+                height 1px
+                background-color placeholder-gray
+                transform rotate(-45deg)
+                transition all .5s ease
+            
+            &::before
+                position absolute
+                right 6px
+                top 13px
+                content ''
+                display block
+                width 7px
+                height 1px
+                background-color placeholder-gray
+                transform rotate(45deg)
+                transition all .5s ease
+                
+            &:hover
+                background-color orange-link
+            
+                &::before,
+                &::after
+                    background-color white
+                
+                & > a
+                    color white
+            & > a
+                padding_y(5px)
+                padding-left 17px
+                display block
+                text-transform uppercase
+            
+    &__submenu-two
+        position absolute
+        left 100%
+        top 0
+        padding-bottom 8px
+        display flex
+        flex-wrap wrap
+        flex-direction row
+        align-items stretch
+        justify-content space-between
+        width 200%
+        opacity 0
+        visibility hidden
+        background-color white
+        box-shadow 9px 9px 18px 0 rgba(black, 38%)
+        transition all .5s ease
+        
+        li
+            padding-right 25px
+            width 50%
+            
+            &:nth-of-type(odd)
+                border-right 1px solid submenu-border
+            
+            &:hover
+            
+                a
+                    color white
+                    background-color orange-link
+            
+            a
+                padding_y(5px)
+                padding-left 17px
+                display block
+        
+                
     &__top
         display flex
         flex-direction row
@@ -128,7 +241,6 @@
         visibility visible
     
     &__phone
-        margin-top -2px
         padding-left 15px
         padding-right 28px
         width 32%
@@ -176,7 +288,7 @@
         position absolute
         top 0
         right 0
-        padding 10.5px 18px
+        padding 11px 21px
         font-size 13.5px
         background-image url(../../image/svg/search.svg)
         background-position center
@@ -248,7 +360,6 @@
                 padding 2px 5px
             
     &__cart-price
-        margin-top 4px
         width 56%
         
         a
@@ -272,8 +383,7 @@
                 color green-base
                 
     &__bottom
-        margin-top 11px
-            
+        margin-top 14px
         
         
             

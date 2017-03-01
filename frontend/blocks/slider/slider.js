@@ -20,8 +20,8 @@ export default class SliderIndex extends Module {
             paginationClickable: true,
             loop: true,
             slidesPerView: 1,
-            autoplay: 2500,
-            autoplayDisableOnInteraction: false,
+          //  autoplay: 2500,
+           // autoplayDisableOnInteraction: false,
             nextButton: '.js-slider-next',
             prevButton: '.js-slider-prev'
         });

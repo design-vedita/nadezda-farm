@@ -1,3 +1,5 @@
+@import 'normalize.styl'
+
 *
     margin 0
     padding 0
@@ -17,6 +19,7 @@ h1
     color green-base
 
 h2
+    margin-bottom 15px
     font-size 20px
     font-weight bold
     color green-base
@@ -48,6 +51,9 @@ ul
         &:hover
             color orange-link
 
+.clear
+    clear both
+            
 .section-title
     font-size 22px
     line-height normal
@@ -71,10 +77,11 @@ ul
 .index
     
     &__section-white
+        padding-top 34px
         margin-top 21px
     
     &__alphabet-substance
-        margin-top 30px
+        margin-top 23px
         
     &__reviews
         width 57%
@@ -88,6 +95,15 @@ ul
     &__action
         margin-top 23px
         margin_x(-1px)
+        
+    &__popular-good
+        margin-top 44px
+    
+        @media all and (-webkit-min-device-pixel-ratio:0)
+            margin-top 46px
+        
+    &__brand-catalog
+        margin-top 34px
 
 .catalog
 
@@ -118,6 +134,8 @@ ul
         background-color green-hover
 
 .button-orange
+    text-decoration none
+    color white
     background-color orange-base
     transition all .5s ease
     

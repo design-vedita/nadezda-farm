@@ -1,0 +1,10 @@
+mixin left-banner()
+    .left-banner&attributes(attributes)= name
+        .left-banner__image(style="background-image: url(" + require('../image/left-banner.jpg') + ")")
+        .left-banner__description
+            p.left-banner__description-title Ацц Сироп
+            p.left-banner__description-for-whom Детский сироп от кашля
+            p.left-banner__description-price 2 300
+                =' '
+                span р.
+            a(href="javascript:void(0)").left-banner__description-more.button-orange Подробнее

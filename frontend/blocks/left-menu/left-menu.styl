@@ -1,21 +1,53 @@
 .left-menu
-    padding-top 23px
+    padding-top 15px
     padding-bottom 12px
     background-color green-base
     
     &__title
         padding-left 19px
+        font-size 20px
+        line-height normal
+        text-transform uppercase
+        color white
     
     li
+        position relative
+        padding_y(10px)
         padding-left 19px
         
-        &:not(:last-child)
-            margin-bottom 10px
-        
         &:hover
-              background-color orange-link
+            background-color orange-link
+            
+            &::before
+                background-color orange-link
+                
+            
+        &::before
+            position absolute
+            left 5%
+            bottom 0
+            content ''
+            display block
+            width 90%
+            height 1px
+            background-color green-hover
+            transition all .5s ease
+
     a
         color white
         
         &:hover
             color white
+    &__list
+        margin-top 10px
+        
+    &__arrow
+        position absolute
+        z-index 2
+        right 7px
+        top 'calc(%s - %s)' % (50% 12.5px)
+        width 25px
+        height 25px
+        background-image url(../../image/svg/arrow-left-menu.svg)
+        background-position center
+        background-repeat no-repeat

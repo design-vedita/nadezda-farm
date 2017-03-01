@@ -32,13 +32,13 @@
         padding-left 21px
         padding-right 17px
         padding-top 17px
-        padding-bottom 11px
+        padding-bottom 6px
         
     &__inner-type-action
         position absolute
         z-index 2
         left 1px
-        top 16px
+        top 17px
         
         .flag:not(:last-child)
             margin-bottom 8px
@@ -84,18 +84,21 @@
             margin-right 4px
     
     &__description
-        margin-top 3px
+        margin-top 5px
+    
+        @media all and (-webkit-min-device-pixel-ratio:0)
+            margin-top 4px
             
     &__description-name
         display block
         font-size 15px
-        line-height 20px
+        line-height 18px
         font-weight 600
         text-decoration none
         color dark-gray
             
     &__description-manufacturer
-        margin-top 2px
+        margin-top 4px
         display block
         font-size 12px
         color manufacturer
@@ -118,19 +121,20 @@
             font-weight normal
             
     &__prices-old
-        margin-top 7px
+        margin-top 5px
         padding-left 3px
         width 50%
         
         p
             font-size 12px
-            line-height normal
+            line-height 22px
             font-weight 600
             text-decoration line-through
             
             color dark-gray
             
             &.economy
+                margin-top -5px
                 font-size 12px
                 font-weight 600
                 line-height normal
@@ -138,10 +142,21 @@
                 color dark-gray
                 
                 span
+                    position relative
                     margin-right 3px
                     padding_x(7px)
-                    background-color pink
                     color white
+                    
+                    &::before
+                        position absolute
+                        z-index -1
+                        left 0
+                        top 2px
+                        content ''
+                        display block
+                        width 100%
+                        height 'calc(%s - %s)' % (100% 4px)
+                        background-color pink
                     
     &__order
         margin-top 12px
@@ -154,6 +169,7 @@
         button
             width 27px
             height 27px
+            font-size 18px
             border 1px solid count-button
             background-color white
             cursor pointer
@@ -161,6 +177,7 @@
         input
             width 56px
             height 27px
+            font-size 18px
             text-align center
         
     &__order-decrement
@@ -174,9 +191,9 @@
     &__order-button
         
         input
-            padding-left 38px
-            padding-right 23px
-            padding-top 2px
+            padding-left 42px
+            padding-right 25px
+            padding-top 3px
             font-size 16px
             color white
             background-color green-base
@@ -185,9 +202,12 @@
             background-position 16px center
             border none
             cursor pointer
+    
+            @media all and (-webkit-min-device-pixel-ratio:0)
+                padding-bottom 1px
             
     &__one-click
-        margin-top 6px
+        margin-top 5px
         text-align center
         
         a

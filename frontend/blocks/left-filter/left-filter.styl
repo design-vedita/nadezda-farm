@@ -1,0 +1,142 @@
+.left-filter
+	margin-top 30px
+	padding-top 19px
+	padding-bottom 29px
+	background-color white
+	
+	&__title
+		margin-bottom 9px
+		padding-left 27px
+		font-size 20px
+		line-height normal
+		text-transform uppercase
+		color green-base
+		
+	form
+		padding-right 20px
+		padding-left 24px
+		
+	fieldset
+		padding 0
+		padding_y(10px)
+		border none
+		
+		&:not(:last-of-type)
+			border-bottom 1px solid rgba(fieldset-filter-border, 50%)
+			
+		&^[0]__checkbox-fieldset
+			border-bottom none
+	
+	&__from,
+	&__to
+		width 50%
+		
+		label
+			margin-right 4%
+			color pagination
+		
+	input[type=text]
+		padding-left 7px
+		width 76px
+		height 33px
+		border 1px solid input-filter-border
+		background-color input-filter-bg
+		transition all .5s ease
+		
+		&:hover,
+		&:focus
+			border-color orange-link
+	
+	&__from
+		float left
+		
+	&__to
+		float right
+		text-align right
+		
+	&__hide
+		padding-top 15px
+		display none
+		
+		&--show
+			display block
+			
+	input[type=checkbox]
+		display none
+		
+		&:checked + label::before
+			background-color rgba(checkbox-border, 50%)
+		
+		+ label
+			position relative
+			padding-left 20px
+			cursor pointer
+			
+			&::before
+				position absolute
+				left 0
+				top 'calc(%s - %s)' % (50% 8px)
+				content ''
+				display inline-block
+				vertical-align middle
+				width 12px
+				height 12px
+				border 1px solid checkbox-border
+	
+	&__category-title
+		position relative
+		font-size 15px
+		cursor pointer
+		transition all .5s ease
+		
+		&:hover
+			color orange-link
+		
+			&::before,
+			&::after
+				background-color orange-link
+		
+		&::before
+			position absolute
+			right 3px
+			top 15px
+			content ''
+			display block
+			width 7px
+			height 1px
+			background-color arrow-filer-left
+			transform rotate(45deg)
+			transition all .5s ease
+			
+		&::after
+			position absolute
+			right -2px
+			top 15px
+			content ''
+			display block
+			width 7px
+			height 1px
+			background-color arrow-filer-left
+			transform rotate(-45deg)
+			transition all .5s ease
+			
+		&--click
+			
+			&::before
+				transform rotate(-45deg)
+			
+			&::after
+				transform rotate(45deg)
+	
+	&__button
+		margin-top 10px
+		display flex
+		flex-wrap wrap
+		flex-direction row
+		justify-content space-between
+		
+		input
+			padding_y(5px)
+			padding_x(12px)
+			font-size 16px
+			border none

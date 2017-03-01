@@ -6,10 +6,14 @@ mixin slider()
         .swiper-container.js-slider
             .swiper-wrapper
                 .slider__slide.swiper-slide
-                    p 1
-                .slider__slide.swiper-slide
-                    p 2
-                .slider__slide.swiper-slide
-                    p 3
-                .slider__slide.swiper-slide
-                    p 4
+                    .slider__left-part
+                        img(src=require("../image/banner-miks.png"))
+                    .slider__center-part
+                        p.slider__center-title Ацц сироп
+                        p.slider__center-subtitle Детский сироп от кашля
+                        p.slider__center-price 2 300
+                            = ' '
+                            span р.
+                        a(href="javascript:void(0)").slider__center-more.button-orange Подробнее
+                    .slider__right-part
+                        img(src=require("../image/banner-2.jpg"))

@@ -1,0 +1,47 @@
+mixin left-filter()
+    .left-filter.js-left-filter&attributes()= name
+        p.left-filter__title Фильтр
+        form
+            fieldset.left-filter__checkbox-fieldset
+                input(type="checkbox")#jvls
+                label(for="jvls") ЖВЛС
+            fieldset
+                p.left-filter__category-title.js-left-filter-category-title Возраст
+                .left-filter__hide.js-left-filter-hide
+                    .left-filter__from
+                        label От
+                        input(type="text" value="3").js-left-filter-from
+                    .left-filter__to
+                        label до
+                        input(type="text" value="50").js-left-filter-to
+                    .clear
+                    .left-filter__slider.js-left-filter-slider
+            fieldset
+                p.left-filter__category-title.js-left-filter-category-title Пол
+                .left-filter__hide.js-left-filter-hide
+
+            fieldset
+                p.left-filter__category-title.js-left-filter-category-title Бренд
+                .left-filter__hide.js-left-filter-hide
+
+            fieldset
+                p.left-filter__category-title.js-left-filter-category-title Производитель
+                .left-filter__hide.js-left-filter-hide
+
+            fieldset
+                p.left-filter__category-title.js-left-filter-category-title Страна
+                .left-filter__hide.js-left-filter-hide
+
+            fieldset
+                p.left-filter__category-title.js-left-filter-category-title Цена
+                .left-filter__hide.js-left-filter-hide
+
+            fieldset
+                input(type="checkbox")#sales
+                label(for="sales") Скидка
+
+            .left-filter__button
+                input(type="submit" value="Показать").button-green
+                input(type="reset" value="Сбросить").button-orange
+
+

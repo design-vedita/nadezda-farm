@@ -49,7 +49,38 @@
               <div class="col-md-12">
                 <nav>
                   <ul class="header__ul">
-                    <li class="header__li"><a href="javascript:void(0)">Каталог</a></li>
+                    <li class="header__li js-header-menu"><a href="javascript:void(0)">Каталог</a>
+                      <ul class="header__submenu-one js-header-submenu">
+                        <li><a href="javascript:void(0)">Бады</a></li>
+                        <li><a href="javascript:void(0)">Гигиена и красота</a></li>
+                        <li><a href="javascript:void(0)">Лекарства</a>
+                          <ul class="header__submenu-two">
+                            <li><a href="javascript:void(0)">Антибактериальные препараты</a></li>
+                            <li><a href="javascript:void(0)">Антисептические и дезинфицирующие средства</a></li>
+                            <li><a href="javascript:void(0)">Витамины</a></li>
+                            <li><a href="javascript:void(0)">Вредные привычки</a></li>
+                            <li><a href="javascript:void(0)">Гомеопатические препараты</a></li>
+                            <li><a href="javascript:void(0)">Гормональные препараты</a></li>
+                            <li><a href="javascript:void(0)">Антибактериальные препараты</a></li>
+                            <li><a href="javascript:void(0)">Антисептические и дезинфицирующие средства</a></li>
+                            <li><a href="javascript:void(0)">Витамины</a></li>
+                            <li><a href="javascript:void(0)">Вредные привычки</a></li>
+                            <li><a href="javascript:void(0)">Гомеопатические препараты</a></li>
+                            <li><a href="javascript:void(0)">Гормональные препараты</a></li>
+                            <li><a href="javascript:void(0)">Антибактериальные препараты</a></li>
+                            <li><a href="javascript:void(0)">Антисептические и дезинфицирующие средства</a></li>
+                            <li><a href="javascript:void(0)">Витамины</a></li>
+                            <li><a href="javascript:void(0)">Вредные привычки</a></li>
+                            <li><a href="javascript:void(0)">Гомеопатические препараты</a></li>
+                            <li><a href="javascript:void(0)">Гормональные препараты</a></li>
+                          </ul>
+                        </li>
+                        <li><a href="javascript:void(0)">Мама и малыш</a></li>
+                        <li><a href="javascript:void(0)">Медизделия и приборы</a></li>
+                        <li><a href="javascript:void(0)">Оптика</a></li>
+                        <li><a href="javascript:void(0)">Питание и спорт</a></li>
+                      </ul>
+                    </li>
                     <li class="header__li"><a href="javascript:void(0)">О компании</a></li>
                     <li class="header__li"><a href="javascript:void(0)">Контакты</a></li>
                   </ul>
@@ -119,12 +150,18 @@
                     <p class="left-menu__title">Каталог</p>
                     <nav class="left-menu__list">
                       <ul>
-                        <li><a href="javascript:void(0)">Лекарства и БАДы</a></li>
-                        <li><a href="javascript:void(0)">Гигиена</a></li>
-                        <li><a href="javascript:void(0)">Мама и малыш</a></li>
-                        <li><a href="javascript:void(0)">Мед. приборы и изделия</a></li>
-                        <li><a href="javascript:void(0)">Спорт и фитнес</a></li>
-                        <li><a href="javascript:void(0)">Косметика</a></li>
+                        <li><a href="javascript:void(0)">Лекарства и БАДы
+                            <div class="left-menu__arrow js-arrow-left-menu"></div></a></li>
+                        <li><a href="javascript:void(0)">Гигиена
+                            <div class="left-menu__arrow js-arrow-left-menu"></div></a></li>
+                        <li><a href="javascript:void(0)">Мама и малыш
+                            <div class="left-menu__arrow js-arrow-left-menu"></div></a></li>
+                        <li><a href="javascript:void(0)">Мед. приборы и изделия
+                            <div class="left-menu__arrow js-arrow-left-menu"></div></a></li>
+                        <li><a href="javascript:void(0)">Спорт и фитнес
+                            <div class="left-menu__arrow js-arrow-left-menu"></div></a></li>
+                        <li><a href="javascript:void(0)">Косметика
+                            <div class="left-menu__arrow js-arrow-left-menu"></div></a></li>
                         <li><a href="javascript:void(0)">Линзы</a></li>
                         <li><a href="javascript:void(0)">Каталог по болезням</a></li>
                         <li><a href="javascript:void(0)">Бренды</a></li>
@@ -132,13 +169,576 @@
                       </ul>
                     </nav>
                   </div>
+                  <div class="left-filter js-left-filter">
+                    <p class="left-filter__title">Фильтр</p>
+                    <form>
+                      <fieldset class="left-filter__checkbox-fieldset">
+                        <input type="checkbox" id="jvls">
+                        <label for="jvls">ЖВЛС</label>
+                      </fieldset>
+                      <fieldset>
+                        <p class="left-filter__category-title js-left-filter-category-title">Возраст</p>
+                        <div class="left-filter__hide js-left-filter-hide">
+                          <div class="left-filter__from">
+                            <label>От</label>
+                            <input class="js-left-filter-from" type="text" value="3">
+                          </div>
+                          <div class="left-filter__to">
+                            <label>до</label>
+                            <input class="js-left-filter-to" type="text" value="50">
+                          </div>
+                          <div class="clear"></div>
+                          <div class="left-filter__slider js-left-filter-slider"></div>
+                        </div>
+                      </fieldset>
+                      <fieldset>
+                        <p class="left-filter__category-title js-left-filter-category-title">Пол</p>
+                        <div class="left-filter__hide js-left-filter-hide"></div>
+                      </fieldset>
+                      <fieldset>
+                        <p class="left-filter__category-title js-left-filter-category-title">Бренд</p>
+                        <div class="left-filter__hide js-left-filter-hide"></div>
+                      </fieldset>
+                      <fieldset>
+                        <p class="left-filter__category-title js-left-filter-category-title">Производитель</p>
+                        <div class="left-filter__hide js-left-filter-hide"></div>
+                      </fieldset>
+                      <fieldset>
+                        <p class="left-filter__category-title js-left-filter-category-title">Страна</p>
+                        <div class="left-filter__hide js-left-filter-hide"></div>
+                      </fieldset>
+                      <fieldset>
+                        <p class="left-filter__category-title js-left-filter-category-title">Цена</p>
+                        <div class="left-filter__hide js-left-filter-hide"></div>
+                      </fieldset>
+                      <fieldset>
+                        <input type="checkbox" id="sales">
+                        <label for="sales">Скидка</label>
+                      </fieldset>
+                      <div class="left-filter__button">
+                        <input class="button-green" type="submit" value="Показать">
+                        <input class="button-orange" type="reset" value="Сбросить">
+                      </div>
+                    </form>
+                  </div>
+                  <div class="left-banner">
+                    <div class="left-banner__image" style="background-image: url(image/left-banner.jpg);"></div>
+                    <div class="left-banner__description">
+                      <p class="left-banner__description-title">Ацц Сироп</p>
+                      <p class="left-banner__description-for-whom">Детский сироп от кашля</p>
+                      <p class="left-banner__description-price">2 300 <span>р.</span>
+                      </p><a class="left-banner__description-more button-orange" href="javascript:void(0)">Подробнее</a>
+                    </div>
+                  </div>
                 </div>
-                <div class="col-md-9"></div>
+                <div class="col-md-9">
+                  <h1>Мама и малыш</h1>
+                  <div class="catalog__sort">
+                    <div class="catalog__sort-type"><a href="javascript:void(0)">По цене
+                        <svg class="catalog__sort-arrow" xmlns="http://www.w3.org/2000/svg" width="7" height="7" viewBox="0 0 7 7">
+                          <path d="M738.5,402a0.764,0.764,0,0,0-.818.694v3.942l-1.258-1.066a0.959,0.959,0,0,0-1.2-.032,0.644,0.644,0,0,0,.039,1.013l2.627,2.226a0.958,0.958,0,0,0,1.2.033c0.008-.008.013-0.016,0.021-0.023s0.025-.015.037-0.025l2.591-2.2a0.638,0.638,0,0,0,.029-1.006,0.951,0.951,0,0,0-1.188.025l-1.261,1.069v-3.96A0.764,0.764,0,0,0,738.5,402Z" transform="translate(-735 -402)"></path>
+                        </svg></a><a href="javascript:void(0)">По популярности
+                        <svg class="catalog__sort-arrow" xmlns="http://www.w3.org/2000/svg" width="7" height="7" viewBox="0 0 7 7">
+                          <path d="M738.5,402a0.764,0.764,0,0,0-.818.694v3.942l-1.258-1.066a0.959,0.959,0,0,0-1.2-.032,0.644,0.644,0,0,0,.039,1.013l2.627,2.226a0.958,0.958,0,0,0,1.2.033c0.008-.008.013-0.016,0.021-0.023s0.025-.015.037-0.025l2.591-2.2a0.638,0.638,0,0,0,.029-1.006,0.951,0.951,0,0,0-1.188.025l-1.261,1.069v-3.96A0.764,0.764,0,0,0,738.5,402Z" transform="translate(-735 -402)"></path>
+                        </svg></a></div>
+                    <div class="catalog__sort-view"><a class="catalog__sort-view-tale" href="javascript:void(0)">
+                        <svg class="catalog__sort-view-ico" xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 13 13">
+                          <path d="M1498,397h6v6h-6v-6Zm7,0h6v6h-6v-6Zm-7,7h6v6h-6v-6Zm7,0h6v6h-6v-6Z" transform="translate(-1498 -397)"></path>
+                        </svg></a><a class="catalog__sort-view-list" href="javascript:void(0)">
+                        <svg class="catalog__sort-view-ico" xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 13 13">
+                          <path d="M1518,397h13v3h-13v-3Zm0,5h13v3h-13v-3Zm0,5h13v3h-13v-3Z" transform="translate(-1518 -397)"></path>
+                        </svg></a></div>
+                  </div>
+                  <div class="catalog__list">
+                    <div class="card-tale catalog__card-tale">
+                      <div class="card-tale__inner">
+                        <div class="card-tale__inner-type-action">
+                          <div class="flag best-price"><span>Лучшая цена</span></div>
+                          <div class="flag hit"><span>Хит продаж</span></div>
+                          <div class="flag action"><span>Акция</span></div>
+                        </div>
+                        <div class="card-tale__inner-image"><a href="javascript:void(0)"><img src="image/imodium.png"></a></div>
+                        <div class="card-tale__rating"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMSIgaGVpZ2h0PSIxMSIgdmlld0JveD0iMCAwIDExIDExIj48ZGVmcz48c3R5bGU+LmNscy0xe2ZpbGw6I2Y2MDtmaWxsLXJ1bGU6ZXZlbm9kZDtvcGFjaXR5Oi44fTwvc3R5bGU+PC9kZWZzPjxwYXRoIGlkPSJTaGFwZV8yX2NvcHlfMyIgZGF0YS1uYW1lPSJTaGFwZSAyIGNvcHkgMyIgY2xhc3M9ImNscy0xIiBkPSJNMTI3OS44MiwxMzQwLjc5bC0yLjIzLDIuMjcsMC41MywzLjIyYTAuNjMsMC42MywwLDAsMS0uMjQuNiwwLjU0MywwLjU0MywwLDAsMS0uMzQuMTIsMC42ODEsMC42ODEsMCwwLDEtLjI4LTAuMDdsLTIuNzYtMS41Mi0yLjc2LDEuNTJhMC41NjEsMC41NjEsMCwwLDEtLjYyLTAuMDUsMC42MywwLjYzLDAsMCwxLS4yNC0wLjZsMC41My0zLjIyLTIuMjMtMi4yN2EwLjYzOCwwLjYzOCwwLDAsMS0uMTUtMC42MywwLjU3OCwwLjU3OCwwLDAsMSwuNDctMC40MmwzLjA5LS40NywxLjM4LTIuOTJhMC41ODUsMC41ODUsMCwwLDEsLjUzLTAuMzUsMC41OTIsMC41OTIsMCwwLDEsLjUzLjM0bDEuMzgsMi45MywzLjA5LDAuNDdhMC41NzgsMC41NzgsMCwwLDEsLjQ3LjQyQTAuNjM4LDAuNjM4LDAsMCwxLDEyNzkuODIsMTM0MC43OVoiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0xMjY5IC0xMzM2KSIvPjwvc3ZnPg=="><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMSIgaGVpZ2h0PSIxMSIgdmlld0JveD0iMCAwIDExIDExIj48ZGVmcz48c3R5bGU+LmNscy0xe2ZpbGw6I2Y2MDtmaWxsLXJ1bGU6ZXZlbm9kZDtvcGFjaXR5Oi44fTwvc3R5bGU+PC9kZWZzPjxwYXRoIGlkPSJTaGFwZV8yX2NvcHlfMyIgZGF0YS1uYW1lPSJTaGFwZSAyIGNvcHkgMyIgY2xhc3M9ImNscy0xIiBkPSJNMTI3OS44MiwxMzQwLjc5bC0yLjIzLDIuMjcsMC41MywzLjIyYTAuNjMsMC42MywwLDAsMS0uMjQuNiwwLjU0MywwLjU0MywwLDAsMS0uMzQuMTIsMC42ODEsMC42ODEsMCwwLDEtLjI4LTAuMDdsLTIuNzYtMS41Mi0yLjc2LDEuNTJhMC41NjEsMC41NjEsMCwwLDEtLjYyLTAuMDUsMC42MywwLjYzLDAsMCwxLS4yNC0wLjZsMC41My0zLjIyLTIuMjMtMi4yN2EwLjYzOCwwLjYzOCwwLDAsMS0uMTUtMC42MywwLjU3OCwwLjU3OCwwLDAsMSwuNDctMC40MmwzLjA5LS40NywxLjM4LTIuOTJhMC41ODUsMC41ODUsMCwwLDEsLjUzLTAuMzUsMC41OTIsMC41OTIsMCwwLDEsLjUzLjM0bDEuMzgsMi45MywzLjA5LDAuNDdhMC41NzgsMC41NzgsMCwwLDEsLjQ3LjQyQTAuNjM4LDAuNjM4LDAsMCwxLDEyNzkuODIsMTM0MC43OVoiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0xMjY5IC0xMzM2KSIvPjwvc3ZnPg=="><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMSIgaGVpZ2h0PSIxMSIgdmlld0JveD0iMCAwIDExIDExIj48ZGVmcz48c3R5bGU+LmNscy0xe2ZpbGw6I2Y2MDtmaWxsLXJ1bGU6ZXZlbm9kZDtvcGFjaXR5Oi44fTwvc3R5bGU+PC9kZWZzPjxwYXRoIGlkPSJTaGFwZV8yX2NvcHlfMyIgZGF0YS1uYW1lPSJTaGFwZSAyIGNvcHkgMyIgY2xhc3M9ImNscy0xIiBkPSJNMTI3OS44MiwxMzQwLjc5bC0yLjIzLDIuMjcsMC41MywzLjIyYTAuNjMsMC42MywwLDAsMS0uMjQuNiwwLjU0MywwLjU0MywwLDAsMS0uMzQuMTIsMC42ODEsMC42ODEsMCwwLDEtLjI4LTAuMDdsLTIuNzYtMS41Mi0yLjc2LDEuNTJhMC41NjEsMC41NjEsMCwwLDEtLjYyLTAuMDUsMC42MywwLjYzLDAsMCwxLS4yNC0wLjZsMC41My0zLjIyLTIuMjMtMi4yN2EwLjYzOCwwLjYzOCwwLDAsMS0uMTUtMC42MywwLjU3OCwwLjU3OCwwLDAsMSwuNDctMC40MmwzLjA5LS40NywxLjM4LTIuOTJhMC41ODUsMC41ODUsMCwwLDEsLjUzLTAuMzUsMC41OTIsMC41OTIsMCwwLDEsLjUzLjM0bDEuMzgsMi45MywzLjA5LDAuNDdhMC41NzgsMC41NzgsMCwwLDEsLjQ3LjQyQTAuNjM4LDAuNjM4LDAsMCwxLDEyNzkuODIsMTM0MC43OVoiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0xMjY5IC0xMzM2KSIvPjwvc3ZnPg=="><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMSIgaGVpZ2h0PSIxMSIgdmlld0JveD0iMCAwIDExIDExIj48ZGVmcz48c3R5bGU+LmNscy0xe2ZpbGw6I2Y2MDtmaWxsLXJ1bGU6ZXZlbm9kZH08L3N0eWxlPjwvZGVmcz48cGF0aCBpZD0iU2hhcGVfM19jb3B5XzIiIGRhdGEtbmFtZT0iU2hhcGUgMyBjb3B5IDIiIGNsYXNzPSJjbHMtMSIgZD0iTTEzMjUsMTM0MC4yNmEwLjM0OCwwLjM0OCwwLDAsMC0uMzctMC4zMmwtMy4zMi0uNS0xLjQ5LTMuMTZhMC4zMjMsMC4zMjMsMCwwLDAtLjY0LDBsLTEuNDksMy4xNi0zLjMyLjVhMC4zNDgsMC4zNDgsMCwwLDAtLjM3LjMyLDAuNTA1LDAuNTA1LDAsMCwwLC4xNi4zM2wyLjQxLDIuNDYtMC41NywzLjQ2YTAuODgsMC44OCwwLDAsMC0uMDEuMTQsMC40MDksMC40MDksMCwwLDAsLjA3LjI1LDAuMjM5LDAuMjM5LDAsMCwwLC4yMS4xLDAuNTA3LDAuNTA3LDAsMCwwLC4yNi0wLjA5bDIuOTctMS42MywyLjk3LDEuNjNhMC40NzksMC40NzksMCwwLDAsLjI2LjA5LDAuMjgxLDAuMjgxLDAsMCwwLC4yNy0wLjM1di0wLjE0bC0wLjU3LTMuNDYsMi40LTIuNDZBMC41MjYsMC41MjYsMCwwLDAsMTMyNSwxMzQwLjI2Wm0tMy40OCwyLjQ4LDAuNDcsMi45MS0yLjQ5LTEuMzgtMi41LDEuMzgsMC40OC0yLjkxLTIuMDItMi4wNiwyLjc5LS40MywxLjI1LTIuNjUsMS4yNSwyLjY1LDIuNzksMC40M1oiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0xMzE0IC0xMzM2KSIvPjwvc3ZnPg=="><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMSIgaGVpZ2h0PSIxMSIgdmlld0JveD0iMCAwIDExIDExIj48ZGVmcz48c3R5bGU+LmNscy0xe2ZpbGw6I2Y2MDtmaWxsLXJ1bGU6ZXZlbm9kZH08L3N0eWxlPjwvZGVmcz48cGF0aCBpZD0iU2hhcGVfM19jb3B5XzIiIGRhdGEtbmFtZT0iU2hhcGUgMyBjb3B5IDIiIGNsYXNzPSJjbHMtMSIgZD0iTTEzMjUsMTM0MC4yNmEwLjM0OCwwLjM0OCwwLDAsMC0uMzctMC4zMmwtMy4zMi0uNS0xLjQ5LTMuMTZhMC4zMjMsMC4zMjMsMCwwLDAtLjY0LDBsLTEuNDksMy4xNi0zLjMyLjVhMC4zNDgsMC4zNDgsMCwwLDAtLjM3LjMyLDAuNTA1LDAuNTA1LDAsMCwwLC4xNi4zM2wyLjQxLDIuNDYtMC41NywzLjQ2YTAuODgsMC44OCwwLDAsMC0uMDEuMTQsMC40MDksMC40MDksMCwwLDAsLjA3LjI1LDAuMjM5LDAuMjM5LDAsMCwwLC4yMS4xLDAuNTA3LDAuNTA3LDAsMCwwLC4yNi0wLjA5bDIuOTctMS42MywyLjk3LDEuNjNhMC40NzksMC40NzksMCwwLDAsLjI2LjA5LDAuMjgxLDAuMjgxLDAsMCwwLC4yNy0wLjM1di0wLjE0bC0wLjU3LTMuNDYsMi40LTIuNDZBMC41MjYsMC41MjYsMCwwLDAsMTMyNSwxMzQwLjI2Wm0tMy40OCwyLjQ4LDAuNDcsMi45MS0yLjQ5LTEuMzgtMi41LDEuMzgsMC40OC0yLjkxLTIuMDItMi4wNiwyLjc5LS40MywxLjI1LTIuNjUsMS4yNSwyLjY1LDIuNzksMC40M1oiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0xMzE0IC0xMzM2KSIvPjwvc3ZnPg=="></div>
+                        <div class="card-tale__description"><a class="card-tale__description-name" href="javascript:void(0)">Алфавит в сезон простуд n60 таблеток</a><span class="card-tale__description-manufacturer">OOO Внешторг Фарма, Россия</span></div>
+                        <div class="card-tale__prices">
+                          <div class="card-tale__prices-current">
+                            <p>2 300 <span>р.</span>
+                            </p>
+                          </div>
+                          <div class="card-tale__prices-old">
+                            <p>5300 р.</p>
+                            <p class="economy"><span>1300</span> Экономия
+                            </p>
+                          </div>
+                        </div>
+                        <div class="card-tale__order">
+                          <div class="card-tale__order-count">
+                            <button class="card-tale__order-decrement">-</button>
+                            <input type="text" value="1">
+                            <button class="card-tale__order-increment">+</button>
+                          </div>
+                          <div class="card-tale__order-button">
+                            <input class="button-green" type="submit" value="Купить">
+                          </div>
+                        </div>
+                        <div class="card-tale__one-click"><a href="javascript:void(0)">Купить в 1 клик</a></div>
+                      </div>
+                    </div>
+                    <div class="card-tale catalog__card-tale">
+                      <div class="card-tale__inner">
+                        <div class="card-tale__inner-type-action">
+                          <div class="flag best-price"><span>Лучшая цена</span></div>
+                          <div class="flag hit"><span>Хит продаж</span></div>
+                          <div class="flag action"><span>Акция</span></div>
+                        </div>
+                        <div class="card-tale__inner-image"><a href="javascript:void(0)"><img src="image/imodium.png"></a></div>
+                        <div class="card-tale__rating"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMSIgaGVpZ2h0PSIxMSIgdmlld0JveD0iMCAwIDExIDExIj48ZGVmcz48c3R5bGU+LmNscy0xe2ZpbGw6I2Y2MDtmaWxsLXJ1bGU6ZXZlbm9kZDtvcGFjaXR5Oi44fTwvc3R5bGU+PC9kZWZzPjxwYXRoIGlkPSJTaGFwZV8yX2NvcHlfMyIgZGF0YS1uYW1lPSJTaGFwZSAyIGNvcHkgMyIgY2xhc3M9ImNscy0xIiBkPSJNMTI3OS44MiwxMzQwLjc5bC0yLjIzLDIuMjcsMC41MywzLjIyYTAuNjMsMC42MywwLDAsMS0uMjQuNiwwLjU0MywwLjU0MywwLDAsMS0uMzQuMTIsMC42ODEsMC42ODEsMCwwLDEtLjI4LTAuMDdsLTIuNzYtMS41Mi0yLjc2LDEuNTJhMC41NjEsMC41NjEsMCwwLDEtLjYyLTAuMDUsMC42MywwLjYzLDAsMCwxLS4yNC0wLjZsMC41My0zLjIyLTIuMjMtMi4yN2EwLjYzOCwwLjYzOCwwLDAsMS0uMTUtMC42MywwLjU3OCwwLjU3OCwwLDAsMSwuNDctMC40MmwzLjA5LS40NywxLjM4LTIuOTJhMC41ODUsMC41ODUsMCwwLDEsLjUzLTAuMzUsMC41OTIsMC41OTIsMCwwLDEsLjUzLjM0bDEuMzgsMi45MywzLjA5LDAuNDdhMC41NzgsMC41NzgsMCwwLDEsLjQ3LjQyQTAuNjM4LDAuNjM4LDAsMCwxLDEyNzkuODIsMTM0MC43OVoiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0xMjY5IC0xMzM2KSIvPjwvc3ZnPg=="><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMSIgaGVpZ2h0PSIxMSIgdmlld0JveD0iMCAwIDExIDExIj48ZGVmcz48c3R5bGU+LmNscy0xe2ZpbGw6I2Y2MDtmaWxsLXJ1bGU6ZXZlbm9kZDtvcGFjaXR5Oi44fTwvc3R5bGU+PC9kZWZzPjxwYXRoIGlkPSJTaGFwZV8yX2NvcHlfMyIgZGF0YS1uYW1lPSJTaGFwZSAyIGNvcHkgMyIgY2xhc3M9ImNscy0xIiBkPSJNMTI3OS44MiwxMzQwLjc5bC0yLjIzLDIuMjcsMC41MywzLjIyYTAuNjMsMC42MywwLDAsMS0uMjQuNiwwLjU0MywwLjU0MywwLDAsMS0uMzQuMTIsMC42ODEsMC42ODEsMCwwLDEtLjI4LTAuMDdsLTIuNzYtMS41Mi0yLjc2LDEuNTJhMC41NjEsMC41NjEsMCwwLDEtLjYyLTAuMDUsMC42MywwLjYzLDAsMCwxLS4yNC0wLjZsMC41My0zLjIyLTIuMjMtMi4yN2EwLjYzOCwwLjYzOCwwLDAsMS0uMTUtMC42MywwLjU3OCwwLjU3OCwwLDAsMSwuNDctMC40MmwzLjA5LS40NywxLjM4LTIuOTJhMC41ODUsMC41ODUsMCwwLDEsLjUzLTAuMzUsMC41OTIsMC41OTIsMCwwLDEsLjUzLjM0bDEuMzgsMi45MywzLjA5LDAuNDdhMC41NzgsMC41NzgsMCwwLDEsLjQ3LjQyQTAuNjM4LDAuNjM4LDAsMCwxLDEyNzkuODIsMTM0MC43OVoiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0xMjY5IC0xMzM2KSIvPjwvc3ZnPg=="><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMSIgaGVpZ2h0PSIxMSIgdmlld0JveD0iMCAwIDExIDExIj48ZGVmcz48c3R5bGU+LmNscy0xe2ZpbGw6I2Y2MDtmaWxsLXJ1bGU6ZXZlbm9kZDtvcGFjaXR5Oi44fTwvc3R5bGU+PC9kZWZzPjxwYXRoIGlkPSJTaGFwZV8yX2NvcHlfMyIgZGF0YS1uYW1lPSJTaGFwZSAyIGNvcHkgMyIgY2xhc3M9ImNscy0xIiBkPSJNMTI3OS44MiwxMzQwLjc5bC0yLjIzLDIuMjcsMC41MywzLjIyYTAuNjMsMC42MywwLDAsMS0uMjQuNiwwLjU0MywwLjU0MywwLDAsMS0uMzQuMTIsMC42ODEsMC42ODEsMCwwLDEtLjI4LTAuMDdsLTIuNzYtMS41Mi0yLjc2LDEuNTJhMC41NjEsMC41NjEsMCwwLDEtLjYyLTAuMDUsMC42MywwLjYzLDAsMCwxLS4yNC0wLjZsMC41My0zLjIyLTIuMjMtMi4yN2EwLjYzOCwwLjYzOCwwLDAsMS0uMTUtMC42MywwLjU3OCwwLjU3OCwwLDAsMSwuNDctMC40MmwzLjA5LS40NywxLjM4LTIuOTJhMC41ODUsMC41ODUsMCwwLDEsLjUzLTAuMzUsMC41OTIsMC41OTIsMCwwLDEsLjUzLjM0bDEuMzgsMi45MywzLjA5LDAuNDdhMC41NzgsMC41NzgsMCwwLDEsLjQ3LjQyQTAuNjM4LDAuNjM4LDAsMCwxLDEyNzkuODIsMTM0MC43OVoiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0xMjY5IC0xMzM2KSIvPjwvc3ZnPg=="><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMSIgaGVpZ2h0PSIxMSIgdmlld0JveD0iMCAwIDExIDExIj48ZGVmcz48c3R5bGU+LmNscy0xe2ZpbGw6I2Y2MDtmaWxsLXJ1bGU6ZXZlbm9kZH08L3N0eWxlPjwvZGVmcz48cGF0aCBpZD0iU2hhcGVfM19jb3B5XzIiIGRhdGEtbmFtZT0iU2hhcGUgMyBjb3B5IDIiIGNsYXNzPSJjbHMtMSIgZD0iTTEzMjUsMTM0MC4yNmEwLjM0OCwwLjM0OCwwLDAsMC0uMzctMC4zMmwtMy4zMi0uNS0xLjQ5LTMuMTZhMC4zMjMsMC4zMjMsMCwwLDAtLjY0LDBsLTEuNDksMy4xNi0zLjMyLjVhMC4zNDgsMC4zNDgsMCwwLDAtLjM3LjMyLDAuNTA1LDAuNTA1LDAsMCwwLC4xNi4zM2wyLjQxLDIuNDYtMC41NywzLjQ2YTAuODgsMC44OCwwLDAsMC0uMDEuMTQsMC40MDksMC40MDksMCwwLDAsLjA3LjI1LDAuMjM5LDAuMjM5LDAsMCwwLC4yMS4xLDAuNTA3LDAuNTA3LDAsMCwwLC4yNi0wLjA5bDIuOTctMS42MywyLjk3LDEuNjNhMC40NzksMC40NzksMCwwLDAsLjI2LjA5LDAuMjgxLDAuMjgxLDAsMCwwLC4yNy0wLjM1di0wLjE0bC0wLjU3LTMuNDYsMi40LTIuNDZBMC41MjYsMC41MjYsMCwwLDAsMTMyNSwxMzQwLjI2Wm0tMy40OCwyLjQ4LDAuNDcsMi45MS0yLjQ5LTEuMzgtMi41LDEuMzgsMC40OC0yLjkxLTIuMDItMi4wNiwyLjc5LS40MywxLjI1LTIuNjUsMS4yNSwyLjY1LDIuNzksMC40M1oiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0xMzE0IC0xMzM2KSIvPjwvc3ZnPg=="><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMSIgaGVpZ2h0PSIxMSIgdmlld0JveD0iMCAwIDExIDExIj48ZGVmcz48c3R5bGU+LmNscy0xe2ZpbGw6I2Y2MDtmaWxsLXJ1bGU6ZXZlbm9kZH08L3N0eWxlPjwvZGVmcz48cGF0aCBpZD0iU2hhcGVfM19jb3B5XzIiIGRhdGEtbmFtZT0iU2hhcGUgMyBjb3B5IDIiIGNsYXNzPSJjbHMtMSIgZD0iTTEzMjUsMTM0MC4yNmEwLjM0OCwwLjM0OCwwLDAsMC0uMzctMC4zMmwtMy4zMi0uNS0xLjQ5LTMuMTZhMC4zMjMsMC4zMjMsMCwwLDAtLjY0LDBsLTEuNDksMy4xNi0zLjMyLjVhMC4zNDgsMC4zNDgsMCwwLDAtLjM3LjMyLDAuNTA1LDAuNTA1LDAsMCwwLC4xNi4zM2wyLjQxLDIuNDYtMC41NywzLjQ2YTAuODgsMC44OCwwLDAsMC0uMDEuMTQsMC40MDksMC40MDksMCwwLDAsLjA3LjI1LDAuMjM5LDAuMjM5LDAsMCwwLC4yMS4xLDAuNTA3LDAuNTA3LDAsMCwwLC4yNi0wLjA5bDIuOTctMS42MywyLjk3LDEuNjNhMC40NzksMC40NzksMCwwLDAsLjI2LjA5LDAuMjgxLDAuMjgxLDAsMCwwLC4yNy0wLjM1di0wLjE0bC0wLjU3LTMuNDYsMi40LTIuNDZBMC41MjYsMC41MjYsMCwwLDAsMTMyNSwxMzQwLjI2Wm0tMy40OCwyLjQ4LDAuNDcsMi45MS0yLjQ5LTEuMzgtMi41LDEuMzgsMC40OC0yLjkxLTIuMDItMi4wNiwyLjc5LS40MywxLjI1LTIuNjUsMS4yNSwyLjY1LDIuNzksMC40M1oiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0xMzE0IC0xMzM2KSIvPjwvc3ZnPg=="></div>
+                        <div class="card-tale__description"><a class="card-tale__description-name" href="javascript:void(0)">Алфавит в сезон простуд n60 таблеток</a><span class="card-tale__description-manufacturer">OOO Внешторг Фарма, Россия</span></div>
+                        <div class="card-tale__prices">
+                          <div class="card-tale__prices-current">
+                            <p>2 300 <span>р.</span>
+                            </p>
+                          </div>
+                          <div class="card-tale__prices-old">
+                            <p>5300 р.</p>
+                            <p class="economy"><span>1300</span> Экономия
+                            </p>
+                          </div>
+                        </div>
+                        <div class="card-tale__order">
+                          <div class="card-tale__order-count">
+                            <button class="card-tale__order-decrement">-</button>
+                            <input type="text" value="1">
+                            <button class="card-tale__order-increment">+</button>
+                          </div>
+                          <div class="card-tale__order-button">
+                            <input class="button-green" type="submit" value="Купить">
+                          </div>
+                        </div>
+                        <div class="card-tale__one-click"><a href="javascript:void(0)">Купить в 1 клик</a></div>
+                      </div>
+                    </div>
+                    <div class="card-tale catalog__card-tale">
+                      <div class="card-tale__inner">
+                        <div class="card-tale__inner-type-action">
+                          <div class="flag best-price"><span>Лучшая цена</span></div>
+                          <div class="flag hit"><span>Хит продаж</span></div>
+                          <div class="flag action"><span>Акция</span></div>
+                        </div>
+                        <div class="card-tale__inner-image"><a href="javascript:void(0)"><img src="image/imodium.png"></a></div>
+                        <div class="card-tale__rating"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMSIgaGVpZ2h0PSIxMSIgdmlld0JveD0iMCAwIDExIDExIj48ZGVmcz48c3R5bGU+LmNscy0xe2ZpbGw6I2Y2MDtmaWxsLXJ1bGU6ZXZlbm9kZDtvcGFjaXR5Oi44fTwvc3R5bGU+PC9kZWZzPjxwYXRoIGlkPSJTaGFwZV8yX2NvcHlfMyIgZGF0YS1uYW1lPSJTaGFwZSAyIGNvcHkgMyIgY2xhc3M9ImNscy0xIiBkPSJNMTI3OS44MiwxMzQwLjc5bC0yLjIzLDIuMjcsMC41MywzLjIyYTAuNjMsMC42MywwLDAsMS0uMjQuNiwwLjU0MywwLjU0MywwLDAsMS0uMzQuMTIsMC42ODEsMC42ODEsMCwwLDEtLjI4LTAuMDdsLTIuNzYtMS41Mi0yLjc2LDEuNTJhMC41NjEsMC41NjEsMCwwLDEtLjYyLTAuMDUsMC42MywwLjYzLDAsMCwxLS4yNC0wLjZsMC41My0zLjIyLTIuMjMtMi4yN2EwLjYzOCwwLjYzOCwwLDAsMS0uMTUtMC42MywwLjU3OCwwLjU3OCwwLDAsMSwuNDctMC40MmwzLjA5LS40NywxLjM4LTIuOTJhMC41ODUsMC41ODUsMCwwLDEsLjUzLTAuMzUsMC41OTIsMC41OTIsMCwwLDEsLjUzLjM0bDEuMzgsMi45MywzLjA5LDAuNDdhMC41NzgsMC41NzgsMCwwLDEsLjQ3LjQyQTAuNjM4LDAuNjM4LDAsMCwxLDEyNzkuODIsMTM0MC43OVoiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0xMjY5IC0xMzM2KSIvPjwvc3ZnPg=="><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMSIgaGVpZ2h0PSIxMSIgdmlld0JveD0iMCAwIDExIDExIj48ZGVmcz48c3R5bGU+LmNscy0xe2ZpbGw6I2Y2MDtmaWxsLXJ1bGU6ZXZlbm9kZDtvcGFjaXR5Oi44fTwvc3R5bGU+PC9kZWZzPjxwYXRoIGlkPSJTaGFwZV8yX2NvcHlfMyIgZGF0YS1uYW1lPSJTaGFwZSAyIGNvcHkgMyIgY2xhc3M9ImNscy0xIiBkPSJNMTI3OS44MiwxMzQwLjc5bC0yLjIzLDIuMjcsMC41MywzLjIyYTAuNjMsMC42MywwLDAsMS0uMjQuNiwwLjU0MywwLjU0MywwLDAsMS0uMzQuMTIsMC42ODEsMC42ODEsMCwwLDEtLjI4LTAuMDdsLTIuNzYtMS41Mi0yLjc2LDEuNTJhMC41NjEsMC41NjEsMCwwLDEtLjYyLTAuMDUsMC42MywwLjYzLDAsMCwxLS4yNC0wLjZsMC41My0zLjIyLTIuMjMtMi4yN2EwLjYzOCwwLjYzOCwwLDAsMS0uMTUtMC42MywwLjU3OCwwLjU3OCwwLDAsMSwuNDctMC40MmwzLjA5LS40NywxLjM4LTIuOTJhMC41ODUsMC41ODUsMCwwLDEsLjUzLTAuMzUsMC41OTIsMC41OTIsMCwwLDEsLjUzLjM0bDEuMzgsMi45MywzLjA5LDAuNDdhMC41NzgsMC41NzgsMCwwLDEsLjQ3LjQyQTAuNjM4LDAuNjM4LDAsMCwxLDEyNzkuODIsMTM0MC43OVoiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0xMjY5IC0xMzM2KSIvPjwvc3ZnPg=="><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMSIgaGVpZ2h0PSIxMSIgdmlld0JveD0iMCAwIDExIDExIj48ZGVmcz48c3R5bGU+LmNscy0xe2ZpbGw6I2Y2MDtmaWxsLXJ1bGU6ZXZlbm9kZDtvcGFjaXR5Oi44fTwvc3R5bGU+PC9kZWZzPjxwYXRoIGlkPSJTaGFwZV8yX2NvcHlfMyIgZGF0YS1uYW1lPSJTaGFwZSAyIGNvcHkgMyIgY2xhc3M9ImNscy0xIiBkPSJNMTI3OS44MiwxMzQwLjc5bC0yLjIzLDIuMjcsMC41MywzLjIyYTAuNjMsMC42MywwLDAsMS0uMjQuNiwwLjU0MywwLjU0MywwLDAsMS0uMzQuMTIsMC42ODEsMC42ODEsMCwwLDEtLjI4LTAuMDdsLTIuNzYtMS41Mi0yLjc2LDEuNTJhMC41NjEsMC41NjEsMCwwLDEtLjYyLTAuMDUsMC42MywwLjYzLDAsMCwxLS4yNC0wLjZsMC41My0zLjIyLTIuMjMtMi4yN2EwLjYzOCwwLjYzOCwwLDAsMS0uMTUtMC42MywwLjU3OCwwLjU3OCwwLDAsMSwuNDctMC40MmwzLjA5LS40NywxLjM4LTIuOTJhMC41ODUsMC41ODUsMCwwLDEsLjUzLTAuMzUsMC41OTIsMC41OTIsMCwwLDEsLjUzLjM0bDEuMzgsMi45MywzLjA5LDAuNDdhMC41NzgsMC41NzgsMCwwLDEsLjQ3LjQyQTAuNjM4LDAuNjM4LDAsMCwxLDEyNzkuODIsMTM0MC43OVoiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0xMjY5IC0xMzM2KSIvPjwvc3ZnPg=="><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMSIgaGVpZ2h0PSIxMSIgdmlld0JveD0iMCAwIDExIDExIj48ZGVmcz48c3R5bGU+LmNscy0xe2ZpbGw6I2Y2MDtmaWxsLXJ1bGU6ZXZlbm9kZH08L3N0eWxlPjwvZGVmcz48cGF0aCBpZD0iU2hhcGVfM19jb3B5XzIiIGRhdGEtbmFtZT0iU2hhcGUgMyBjb3B5IDIiIGNsYXNzPSJjbHMtMSIgZD0iTTEzMjUsMTM0MC4yNmEwLjM0OCwwLjM0OCwwLDAsMC0uMzctMC4zMmwtMy4zMi0uNS0xLjQ5LTMuMTZhMC4zMjMsMC4zMjMsMCwwLDAtLjY0LDBsLTEuNDksMy4xNi0zLjMyLjVhMC4zNDgsMC4zNDgsMCwwLDAtLjM3LjMyLDAuNTA1LDAuNTA1LDAsMCwwLC4xNi4zM2wyLjQxLDIuNDYtMC41NywzLjQ2YTAuODgsMC44OCwwLDAsMC0uMDEuMTQsMC40MDksMC40MDksMCwwLDAsLjA3LjI1LDAuMjM5LDAuMjM5LDAsMCwwLC4yMS4xLDAuNTA3LDAuNTA3LDAsMCwwLC4yNi0wLjA5bDIuOTctMS42MywyLjk3LDEuNjNhMC40NzksMC40NzksMCwwLDAsLjI2LjA5LDAuMjgxLDAuMjgxLDAsMCwwLC4yNy0wLjM1di0wLjE0bC0wLjU3LTMuNDYsMi40LTIuNDZBMC41MjYsMC41MjYsMCwwLDAsMTMyNSwxMzQwLjI2Wm0tMy40OCwyLjQ4LDAuNDcsMi45MS0yLjQ5LTEuMzgtMi41LDEuMzgsMC40OC0yLjkxLTIuMDItMi4wNiwyLjc5LS40MywxLjI1LTIuNjUsMS4yNSwyLjY1LDIuNzksMC40M1oiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0xMzE0IC0xMzM2KSIvPjwvc3ZnPg=="><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMSIgaGVpZ2h0PSIxMSIgdmlld0JveD0iMCAwIDExIDExIj48ZGVmcz48c3R5bGU+LmNscy0xe2ZpbGw6I2Y2MDtmaWxsLXJ1bGU6ZXZlbm9kZH08L3N0eWxlPjwvZGVmcz48cGF0aCBpZD0iU2hhcGVfM19jb3B5XzIiIGRhdGEtbmFtZT0iU2hhcGUgMyBjb3B5IDIiIGNsYXNzPSJjbHMtMSIgZD0iTTEzMjUsMTM0MC4yNmEwLjM0OCwwLjM0OCwwLDAsMC0uMzctMC4zMmwtMy4zMi0uNS0xLjQ5LTMuMTZhMC4zMjMsMC4zMjMsMCwwLDAtLjY0LDBsLTEuNDksMy4xNi0zLjMyLjVhMC4zNDgsMC4zNDgsMCwwLDAtLjM3LjMyLDAuNTA1LDAuNTA1LDAsMCwwLC4xNi4zM2wyLjQxLDIuNDYtMC41NywzLjQ2YTAuODgsMC44OCwwLDAsMC0uMDEuMTQsMC40MDksMC40MDksMCwwLDAsLjA3LjI1LDAuMjM5LDAuMjM5LDAsMCwwLC4yMS4xLDAuNTA3LDAuNTA3LDAsMCwwLC4yNi0wLjA5bDIuOTctMS42MywyLjk3LDEuNjNhMC40NzksMC40NzksMCwwLDAsLjI2LjA5LDAuMjgxLDAuMjgxLDAsMCwwLC4yNy0wLjM1di0wLjE0bC0wLjU3LTMuNDYsMi40LTIuNDZBMC41MjYsMC41MjYsMCwwLDAsMTMyNSwxMzQwLjI2Wm0tMy40OCwyLjQ4LDAuNDcsMi45MS0yLjQ5LTEuMzgtMi41LDEuMzgsMC40OC0yLjkxLTIuMDItMi4wNiwyLjc5LS40MywxLjI1LTIuNjUsMS4yNSwyLjY1LDIuNzksMC40M1oiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0xMzE0IC0xMzM2KSIvPjwvc3ZnPg=="></div>
+                        <div class="card-tale__description"><a class="card-tale__description-name" href="javascript:void(0)">Алфавит в сезон простуд n60 таблеток</a><span class="card-tale__description-manufacturer">OOO Внешторг Фарма, Россия</span></div>
+                        <div class="card-tale__prices">
+                          <div class="card-tale__prices-current">
+                            <p>2 300 <span>р.</span>
+                            </p>
+                          </div>
+                          <div class="card-tale__prices-old">
+                            <p>5300 р.</p>
+                            <p class="economy"><span>1300</span> Экономия
+                            </p>
+                          </div>
+                        </div>
+                        <div class="card-tale__order">
+                          <div class="card-tale__order-count">
+                            <button class="card-tale__order-decrement">-</button>
+                            <input type="text" value="1">
+                            <button class="card-tale__order-increment">+</button>
+                          </div>
+                          <div class="card-tale__order-button">
+                            <input class="button-green" type="submit" value="Купить">
+                          </div>
+                        </div>
+                        <div class="card-tale__one-click"><a href="javascript:void(0)">Купить в 1 клик</a></div>
+                      </div>
+                    </div>
+                    <div class="card-tale catalog__card-tale">
+                      <div class="card-tale__inner">
+                        <div class="card-tale__inner-type-action">
+                          <div class="flag best-price"><span>Лучшая цена</span></div>
+                          <div class="flag hit"><span>Хит продаж</span></div>
+                          <div class="flag action"><span>Акция</span></div>
+                        </div>
+                        <div class="card-tale__inner-image"><a href="javascript:void(0)"><img src="image/imodium.png"></a></div>
+                        <div class="card-tale__rating"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMSIgaGVpZ2h0PSIxMSIgdmlld0JveD0iMCAwIDExIDExIj48ZGVmcz48c3R5bGU+LmNscy0xe2ZpbGw6I2Y2MDtmaWxsLXJ1bGU6ZXZlbm9kZDtvcGFjaXR5Oi44fTwvc3R5bGU+PC9kZWZzPjxwYXRoIGlkPSJTaGFwZV8yX2NvcHlfMyIgZGF0YS1uYW1lPSJTaGFwZSAyIGNvcHkgMyIgY2xhc3M9ImNscy0xIiBkPSJNMTI3OS44MiwxMzQwLjc5bC0yLjIzLDIuMjcsMC41MywzLjIyYTAuNjMsMC42MywwLDAsMS0uMjQuNiwwLjU0MywwLjU0MywwLDAsMS0uMzQuMTIsMC42ODEsMC42ODEsMCwwLDEtLjI4LTAuMDdsLTIuNzYtMS41Mi0yLjc2LDEuNTJhMC41NjEsMC41NjEsMCwwLDEtLjYyLTAuMDUsMC42MywwLjYzLDAsMCwxLS4yNC0wLjZsMC41My0zLjIyLTIuMjMtMi4yN2EwLjYzOCwwLjYzOCwwLDAsMS0uMTUtMC42MywwLjU3OCwwLjU3OCwwLDAsMSwuNDctMC40MmwzLjA5LS40NywxLjM4LTIuOTJhMC41ODUsMC41ODUsMCwwLDEsLjUzLTAuMzUsMC41OTIsMC41OTIsMCwwLDEsLjUzLjM0bDEuMzgsMi45MywzLjA5LDAuNDdhMC41NzgsMC41NzgsMCwwLDEsLjQ3LjQyQTAuNjM4LDAuNjM4LDAsMCwxLDEyNzkuODIsMTM0MC43OVoiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0xMjY5IC0xMzM2KSIvPjwvc3ZnPg=="><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMSIgaGVpZ2h0PSIxMSIgdmlld0JveD0iMCAwIDExIDExIj48ZGVmcz48c3R5bGU+LmNscy0xe2ZpbGw6I2Y2MDtmaWxsLXJ1bGU6ZXZlbm9kZDtvcGFjaXR5Oi44fTwvc3R5bGU+PC9kZWZzPjxwYXRoIGlkPSJTaGFwZV8yX2NvcHlfMyIgZGF0YS1uYW1lPSJTaGFwZSAyIGNvcHkgMyIgY2xhc3M9ImNscy0xIiBkPSJNMTI3OS44MiwxMzQwLjc5bC0yLjIzLDIuMjcsMC41MywzLjIyYTAuNjMsMC42MywwLDAsMS0uMjQuNiwwLjU0MywwLjU0MywwLDAsMS0uMzQuMTIsMC42ODEsMC42ODEsMCwwLDEtLjI4LTAuMDdsLTIuNzYtMS41Mi0yLjc2LDEuNTJhMC41NjEsMC41NjEsMCwwLDEtLjYyLTAuMDUsMC42MywwLjYzLDAsMCwxLS4yNC0wLjZsMC41My0zLjIyLTIuMjMtMi4yN2EwLjYzOCwwLjYzOCwwLDAsMS0uMTUtMC42MywwLjU3OCwwLjU3OCwwLDAsMSwuNDctMC40MmwzLjA5LS40NywxLjM4LTIuOTJhMC41ODUsMC41ODUsMCwwLDEsLjUzLTAuMzUsMC41OTIsMC41OTIsMCwwLDEsLjUzLjM0bDEuMzgsMi45MywzLjA5LDAuNDdhMC41NzgsMC41NzgsMCwwLDEsLjQ3LjQyQTAuNjM4LDAuNjM4LDAsMCwxLDEyNzkuODIsMTM0MC43OVoiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0xMjY5IC0xMzM2KSIvPjwvc3ZnPg=="><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMSIgaGVpZ2h0PSIxMSIgdmlld0JveD0iMCAwIDExIDExIj48ZGVmcz48c3R5bGU+LmNscy0xe2ZpbGw6I2Y2MDtmaWxsLXJ1bGU6ZXZlbm9kZDtvcGFjaXR5Oi44fTwvc3R5bGU+PC9kZWZzPjxwYXRoIGlkPSJTaGFwZV8yX2NvcHlfMyIgZGF0YS1uYW1lPSJTaGFwZSAyIGNvcHkgMyIgY2xhc3M9ImNscy0xIiBkPSJNMTI3OS44MiwxMzQwLjc5bC0yLjIzLDIuMjcsMC41MywzLjIyYTAuNjMsMC42MywwLDAsMS0uMjQuNiwwLjU0MywwLjU0MywwLDAsMS0uMzQuMTIsMC42ODEsMC42ODEsMCwwLDEtLjI4LTAuMDdsLTIuNzYtMS41Mi0yLjc2LDEuNTJhMC41NjEsMC41NjEsMCwwLDEtLjYyLTAuMDUsMC42MywwLjYzLDAsMCwxLS4yNC0wLjZsMC41My0zLjIyLTIuMjMtMi4yN2EwLjYzOCwwLjYzOCwwLDAsMS0uMTUtMC42MywwLjU3OCwwLjU3OCwwLDAsMSwuNDctMC40MmwzLjA5LS40NywxLjM4LTIuOTJhMC41ODUsMC41ODUsMCwwLDEsLjUzLTAuMzUsMC41OTIsMC41OTIsMCwwLDEsLjUzLjM0bDEuMzgsMi45MywzLjA5LDAuNDdhMC41NzgsMC41NzgsMCwwLDEsLjQ3LjQyQTAuNjM4LDAuNjM4LDAsMCwxLDEyNzkuODIsMTM0MC43OVoiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0xMjY5IC0xMzM2KSIvPjwvc3ZnPg=="><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMSIgaGVpZ2h0PSIxMSIgdmlld0JveD0iMCAwIDExIDExIj48ZGVmcz48c3R5bGU+LmNscy0xe2ZpbGw6I2Y2MDtmaWxsLXJ1bGU6ZXZlbm9kZH08L3N0eWxlPjwvZGVmcz48cGF0aCBpZD0iU2hhcGVfM19jb3B5XzIiIGRhdGEtbmFtZT0iU2hhcGUgMyBjb3B5IDIiIGNsYXNzPSJjbHMtMSIgZD0iTTEzMjUsMTM0MC4yNmEwLjM0OCwwLjM0OCwwLDAsMC0uMzctMC4zMmwtMy4zMi0uNS0xLjQ5LTMuMTZhMC4zMjMsMC4zMjMsMCwwLDAtLjY0LDBsLTEuNDksMy4xNi0zLjMyLjVhMC4zNDgsMC4zNDgsMCwwLDAtLjM3LjMyLDAuNTA1LDAuNTA1LDAsMCwwLC4xNi4zM2wyLjQxLDIuNDYtMC41NywzLjQ2YTAuODgsMC44OCwwLDAsMC0uMDEuMTQsMC40MDksMC40MDksMCwwLDAsLjA3LjI1LDAuMjM5LDAuMjM5LDAsMCwwLC4yMS4xLDAuNTA3LDAuNTA3LDAsMCwwLC4yNi0wLjA5bDIuOTctMS42MywyLjk3LDEuNjNhMC40NzksMC40NzksMCwwLDAsLjI2LjA5LDAuMjgxLDAuMjgxLDAsMCwwLC4yNy0wLjM1di0wLjE0bC0wLjU3LTMuNDYsMi40LTIuNDZBMC41MjYsMC41MjYsMCwwLDAsMTMyNSwxMzQwLjI2Wm0tMy40OCwyLjQ4LDAuNDcsMi45MS0yLjQ5LTEuMzgtMi41LDEuMzgsMC40OC0yLjkxLTIuMDItMi4wNiwyLjc5LS40MywxLjI1LTIuNjUsMS4yNSwyLjY1LDIuNzksMC40M1oiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0xMzE0IC0xMzM2KSIvPjwvc3ZnPg=="><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMSIgaGVpZ2h0PSIxMSIgdmlld0JveD0iMCAwIDExIDExIj48ZGVmcz48c3R5bGU+LmNscy0xe2ZpbGw6I2Y2MDtmaWxsLXJ1bGU6ZXZlbm9kZH08L3N0eWxlPjwvZGVmcz48cGF0aCBpZD0iU2hhcGVfM19jb3B5XzIiIGRhdGEtbmFtZT0iU2hhcGUgMyBjb3B5IDIiIGNsYXNzPSJjbHMtMSIgZD0iTTEzMjUsMTM0MC4yNmEwLjM0OCwwLjM0OCwwLDAsMC0uMzctMC4zMmwtMy4zMi0uNS0xLjQ5LTMuMTZhMC4zMjMsMC4zMjMsMCwwLDAtLjY0LDBsLTEuNDksMy4xNi0zLjMyLjVhMC4zNDgsMC4zNDgsMCwwLDAtLjM3LjMyLDAuNTA1LDAuNTA1LDAsMCwwLC4xNi4zM2wyLjQxLDIuNDYtMC41NywzLjQ2YTAuODgsMC44OCwwLDAsMC0uMDEuMTQsMC40MDksMC40MDksMCwwLDAsLjA3LjI1LDAuMjM5LDAuMjM5LDAsMCwwLC4yMS4xLDAuNTA3LDAuNTA3LDAsMCwwLC4yNi0wLjA5bDIuOTctMS42MywyLjk3LDEuNjNhMC40NzksMC40NzksMCwwLDAsLjI2LjA5LDAuMjgxLDAuMjgxLDAsMCwwLC4yNy0wLjM1di0wLjE0bC0wLjU3LTMuNDYsMi40LTIuNDZBMC41MjYsMC41MjYsMCwwLDAsMTMyNSwxMzQwLjI2Wm0tMy40OCwyLjQ4LDAuNDcsMi45MS0yLjQ5LTEuMzgtMi41LDEuMzgsMC40OC0yLjkxLTIuMDItMi4wNiwyLjc5LS40MywxLjI1LTIuNjUsMS4yNSwyLjY1LDIuNzksMC40M1oiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0xMzE0IC0xMzM2KSIvPjwvc3ZnPg=="></div>
+                        <div class="card-tale__description"><a class="card-tale__description-name" href="javascript:void(0)">Алфавит в сезон простуд n60 таблеток</a><span class="card-tale__description-manufacturer">OOO Внешторг Фарма, Россия</span></div>
+                        <div class="card-tale__prices">
+                          <div class="card-tale__prices-current">
+                            <p>2 300 <span>р.</span>
+                            </p>
+                          </div>
+                          <div class="card-tale__prices-old">
+                            <p>5300 р.</p>
+                            <p class="economy"><span>1300</span> Экономия
+                            </p>
+                          </div>
+                        </div>
+                        <div class="card-tale__order">
+                          <div class="card-tale__order-count">
+                            <button class="card-tale__order-decrement">-</button>
+                            <input type="text" value="1">
+                            <button class="card-tale__order-increment">+</button>
+                          </div>
+                          <div class="card-tale__order-button">
+                            <input class="button-green" type="submit" value="Купить">
+                          </div>
+                        </div>
+                        <div class="card-tale__one-click"><a href="javascript:void(0)">Купить в 1 клик</a></div>
+                      </div>
+                    </div>
+                    <div class="card-tale catalog__card-tale">
+                      <div class="card-tale__inner">
+                        <div class="card-tale__inner-type-action">
+                          <div class="flag best-price"><span>Лучшая цена</span></div>
+                          <div class="flag hit"><span>Хит продаж</span></div>
+                          <div class="flag action"><span>Акция</span></div>
+                        </div>
+                        <div class="card-tale__inner-image"><a href="javascript:void(0)"><img src="image/imodium.png"></a></div>
+                        <div class="card-tale__rating"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMSIgaGVpZ2h0PSIxMSIgdmlld0JveD0iMCAwIDExIDExIj48ZGVmcz48c3R5bGU+LmNscy0xe2ZpbGw6I2Y2MDtmaWxsLXJ1bGU6ZXZlbm9kZDtvcGFjaXR5Oi44fTwvc3R5bGU+PC9kZWZzPjxwYXRoIGlkPSJTaGFwZV8yX2NvcHlfMyIgZGF0YS1uYW1lPSJTaGFwZSAyIGNvcHkgMyIgY2xhc3M9ImNscy0xIiBkPSJNMTI3OS44MiwxMzQwLjc5bC0yLjIzLDIuMjcsMC41MywzLjIyYTAuNjMsMC42MywwLDAsMS0uMjQuNiwwLjU0MywwLjU0MywwLDAsMS0uMzQuMTIsMC42ODEsMC42ODEsMCwwLDEtLjI4LTAuMDdsLTIuNzYtMS41Mi0yLjc2LDEuNTJhMC41NjEsMC41NjEsMCwwLDEtLjYyLTAuMDUsMC42MywwLjYzLDAsMCwxLS4yNC0wLjZsMC41My0zLjIyLTIuMjMtMi4yN2EwLjYzOCwwLjYzOCwwLDAsMS0uMTUtMC42MywwLjU3OCwwLjU3OCwwLDAsMSwuNDctMC40MmwzLjA5LS40NywxLjM4LTIuOTJhMC41ODUsMC41ODUsMCwwLDEsLjUzLTAuMzUsMC41OTIsMC41OTIsMCwwLDEsLjUzLjM0bDEuMzgsMi45MywzLjA5LDAuNDdhMC41NzgsMC41NzgsMCwwLDEsLjQ3LjQyQTAuNjM4LDAuNjM4LDAsMCwxLDEyNzkuODIsMTM0MC43OVoiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0xMjY5IC0xMzM2KSIvPjwvc3ZnPg=="><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMSIgaGVpZ2h0PSIxMSIgdmlld0JveD0iMCAwIDExIDExIj48ZGVmcz48c3R5bGU+LmNscy0xe2ZpbGw6I2Y2MDtmaWxsLXJ1bGU6ZXZlbm9kZDtvcGFjaXR5Oi44fTwvc3R5bGU+PC9kZWZzPjxwYXRoIGlkPSJTaGFwZV8yX2NvcHlfMyIgZGF0YS1uYW1lPSJTaGFwZSAyIGNvcHkgMyIgY2xhc3M9ImNscy0xIiBkPSJNMTI3OS44MiwxMzQwLjc5bC0yLjIzLDIuMjcsMC41MywzLjIyYTAuNjMsMC42MywwLDAsMS0uMjQuNiwwLjU0MywwLjU0MywwLDAsMS0uMzQuMTIsMC42ODEsMC42ODEsMCwwLDEtLjI4LTAuMDdsLTIuNzYtMS41Mi0yLjc2LDEuNTJhMC41NjEsMC41NjEsMCwwLDEtLjYyLTAuMDUsMC42MywwLjYzLDAsMCwxLS4yNC0wLjZsMC41My0zLjIyLTIuMjMtMi4yN2EwLjYzOCwwLjYzOCwwLDAsMS0uMTUtMC42MywwLjU3OCwwLjU3OCwwLDAsMSwuNDctMC40MmwzLjA5LS40NywxLjM4LTIuOTJhMC41ODUsMC41ODUsMCwwLDEsLjUzLTAuMzUsMC41OTIsMC41OTIsMCwwLDEsLjUzLjM0bDEuMzgsMi45MywzLjA5LDAuNDdhMC41NzgsMC41NzgsMCwwLDEsLjQ3LjQyQTAuNjM4LDAuNjM4LDAsMCwxLDEyNzkuODIsMTM0MC43OVoiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0xMjY5IC0xMzM2KSIvPjwvc3ZnPg=="><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMSIgaGVpZ2h0PSIxMSIgdmlld0JveD0iMCAwIDExIDExIj48ZGVmcz48c3R5bGU+LmNscy0xe2ZpbGw6I2Y2MDtmaWxsLXJ1bGU6ZXZlbm9kZDtvcGFjaXR5Oi44fTwvc3R5bGU+PC9kZWZzPjxwYXRoIGlkPSJTaGFwZV8yX2NvcHlfMyIgZGF0YS1uYW1lPSJTaGFwZSAyIGNvcHkgMyIgY2xhc3M9ImNscy0xIiBkPSJNMTI3OS44MiwxMzQwLjc5bC0yLjIzLDIuMjcsMC41MywzLjIyYTAuNjMsMC42MywwLDAsMS0uMjQuNiwwLjU0MywwLjU0MywwLDAsMS0uMzQuMTIsMC42ODEsMC42ODEsMCwwLDEtLjI4LTAuMDdsLTIuNzYtMS41Mi0yLjc2LDEuNTJhMC41NjEsMC41NjEsMCwwLDEtLjYyLTAuMDUsMC42MywwLjYzLDAsMCwxLS4yNC0wLjZsMC41My0zLjIyLTIuMjMtMi4yN2EwLjYzOCwwLjYzOCwwLDAsMS0uMTUtMC42MywwLjU3OCwwLjU3OCwwLDAsMSwuNDctMC40MmwzLjA5LS40NywxLjM4LTIuOTJhMC41ODUsMC41ODUsMCwwLDEsLjUzLTAuMzUsMC41OTIsMC41OTIsMCwwLDEsLjUzLjM0bDEuMzgsMi45MywzLjA5LDAuNDdhMC41NzgsMC41NzgsMCwwLDEsLjQ3LjQyQTAuNjM4LDAuNjM4LDAsMCwxLDEyNzkuODIsMTM0MC43OVoiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0xMjY5IC0xMzM2KSIvPjwvc3ZnPg=="><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMSIgaGVpZ2h0PSIxMSIgdmlld0JveD0iMCAwIDExIDExIj48ZGVmcz48c3R5bGU+LmNscy0xe2ZpbGw6I2Y2MDtmaWxsLXJ1bGU6ZXZlbm9kZH08L3N0eWxlPjwvZGVmcz48cGF0aCBpZD0iU2hhcGVfM19jb3B5XzIiIGRhdGEtbmFtZT0iU2hhcGUgMyBjb3B5IDIiIGNsYXNzPSJjbHMtMSIgZD0iTTEzMjUsMTM0MC4yNmEwLjM0OCwwLjM0OCwwLDAsMC0uMzctMC4zMmwtMy4zMi0uNS0xLjQ5LTMuMTZhMC4zMjMsMC4zMjMsMCwwLDAtLjY0LDBsLTEuNDksMy4xNi0zLjMyLjVhMC4zNDgsMC4zNDgsMCwwLDAtLjM3LjMyLDAuNTA1LDAuNTA1LDAsMCwwLC4xNi4zM2wyLjQxLDIuNDYtMC41NywzLjQ2YTAuODgsMC44OCwwLDAsMC0uMDEuMTQsMC40MDksMC40MDksMCwwLDAsLjA3LjI1LDAuMjM5LDAuMjM5LDAsMCwwLC4yMS4xLDAuNTA3LDAuNTA3LDAsMCwwLC4yNi0wLjA5bDIuOTctMS42MywyLjk3LDEuNjNhMC40NzksMC40NzksMCwwLDAsLjI2LjA5LDAuMjgxLDAuMjgxLDAsMCwwLC4yNy0wLjM1di0wLjE0bC0wLjU3LTMuNDYsMi40LTIuNDZBMC41MjYsMC41MjYsMCwwLDAsMTMyNSwxMzQwLjI2Wm0tMy40OCwyLjQ4LDAuNDcsMi45MS0yLjQ5LTEuMzgtMi41LDEuMzgsMC40OC0yLjkxLTIuMDItMi4wNiwyLjc5LS40MywxLjI1LTIuNjUsMS4yNSwyLjY1LDIuNzksMC40M1oiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0xMzE0IC0xMzM2KSIvPjwvc3ZnPg=="><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMSIgaGVpZ2h0PSIxMSIgdmlld0JveD0iMCAwIDExIDExIj48ZGVmcz48c3R5bGU+LmNscy0xe2ZpbGw6I2Y2MDtmaWxsLXJ1bGU6ZXZlbm9kZH08L3N0eWxlPjwvZGVmcz48cGF0aCBpZD0iU2hhcGVfM19jb3B5XzIiIGRhdGEtbmFtZT0iU2hhcGUgMyBjb3B5IDIiIGNsYXNzPSJjbHMtMSIgZD0iTTEzMjUsMTM0MC4yNmEwLjM0OCwwLjM0OCwwLDAsMC0uMzctMC4zMmwtMy4zMi0uNS0xLjQ5LTMuMTZhMC4zMjMsMC4zMjMsMCwwLDAtLjY0LDBsLTEuNDksMy4xNi0zLjMyLjVhMC4zNDgsMC4zNDgsMCwwLDAtLjM3LjMyLDAuNTA1LDAuNTA1LDAsMCwwLC4xNi4zM2wyLjQxLDIuNDYtMC41NywzLjQ2YTAuODgsMC44OCwwLDAsMC0uMDEuMTQsMC40MDksMC40MDksMCwwLDAsLjA3LjI1LDAuMjM5LDAuMjM5LDAsMCwwLC4yMS4xLDAuNTA3LDAuNTA3LDAsMCwwLC4yNi0wLjA5bDIuOTctMS42MywyLjk3LDEuNjNhMC40NzksMC40NzksMCwwLDAsLjI2LjA5LDAuMjgxLDAuMjgxLDAsMCwwLC4yNy0wLjM1di0wLjE0bC0wLjU3LTMuNDYsMi40LTIuNDZBMC41MjYsMC41MjYsMCwwLDAsMTMyNSwxMzQwLjI2Wm0tMy40OCwyLjQ4LDAuNDcsMi45MS0yLjQ5LTEuMzgtMi41LDEuMzgsMC40OC0yLjkxLTIuMDItMi4wNiwyLjc5LS40MywxLjI1LTIuNjUsMS4yNSwyLjY1LDIuNzksMC40M1oiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0xMzE0IC0xMzM2KSIvPjwvc3ZnPg=="></div>
+                        <div class="card-tale__description"><a class="card-tale__description-name" href="javascript:void(0)">Алфавит в сезон простуд n60 таблеток</a><span class="card-tale__description-manufacturer">OOO Внешторг Фарма, Россия</span></div>
+                        <div class="card-tale__prices">
+                          <div class="card-tale__prices-current">
+                            <p>2 300 <span>р.</span>
+                            </p>
+                          </div>
+                          <div class="card-tale__prices-old">
+                            <p>5300 р.</p>
+                            <p class="economy"><span>1300</span> Экономия
+                            </p>
+                          </div>
+                        </div>
+                        <div class="card-tale__order">
+                          <div class="card-tale__order-count">
+                            <button class="card-tale__order-decrement">-</button>
+                            <input type="text" value="1">
+                            <button class="card-tale__order-increment">+</button>
+                          </div>
+                          <div class="card-tale__order-button">
+                            <input class="button-green" type="submit" value="Купить">
+                          </div>
+                        </div>
+                        <div class="card-tale__one-click"><a href="javascript:void(0)">Купить в 1 клик</a></div>
+                      </div>
+                    </div>
+                    <div class="card-tale catalog__card-tale">
+                      <div class="card-tale__inner">
+                        <div class="card-tale__inner-type-action">
+                          <div class="flag best-price"><span>Лучшая цена</span></div>
+                          <div class="flag hit"><span>Хит продаж</span></div>
+                          <div class="flag action"><span>Акция</span></div>
+                        </div>
+                        <div class="card-tale__inner-image"><a href="javascript:void(0)"><img src="image/imodium.png"></a></div>
+                        <div class="card-tale__rating"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMSIgaGVpZ2h0PSIxMSIgdmlld0JveD0iMCAwIDExIDExIj48ZGVmcz48c3R5bGU+LmNscy0xe2ZpbGw6I2Y2MDtmaWxsLXJ1bGU6ZXZlbm9kZDtvcGFjaXR5Oi44fTwvc3R5bGU+PC9kZWZzPjxwYXRoIGlkPSJTaGFwZV8yX2NvcHlfMyIgZGF0YS1uYW1lPSJTaGFwZSAyIGNvcHkgMyIgY2xhc3M9ImNscy0xIiBkPSJNMTI3OS44MiwxMzQwLjc5bC0yLjIzLDIuMjcsMC41MywzLjIyYTAuNjMsMC42MywwLDAsMS0uMjQuNiwwLjU0MywwLjU0MywwLDAsMS0uMzQuMTIsMC42ODEsMC42ODEsMCwwLDEtLjI4LTAuMDdsLTIuNzYtMS41Mi0yLjc2LDEuNTJhMC41NjEsMC41NjEsMCwwLDEtLjYyLTAuMDUsMC42MywwLjYzLDAsMCwxLS4yNC0wLjZsMC41My0zLjIyLTIuMjMtMi4yN2EwLjYzOCwwLjYzOCwwLDAsMS0uMTUtMC42MywwLjU3OCwwLjU3OCwwLDAsMSwuNDctMC40MmwzLjA5LS40NywxLjM4LTIuOTJhMC41ODUsMC41ODUsMCwwLDEsLjUzLTAuMzUsMC41OTIsMC41OTIsMCwwLDEsLjUzLjM0bDEuMzgsMi45MywzLjA5LDAuNDdhMC41NzgsMC41NzgsMCwwLDEsLjQ3LjQyQTAuNjM4LDAuNjM4LDAsMCwxLDEyNzkuODIsMTM0MC43OVoiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0xMjY5IC0xMzM2KSIvPjwvc3ZnPg=="><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMSIgaGVpZ2h0PSIxMSIgdmlld0JveD0iMCAwIDExIDExIj48ZGVmcz48c3R5bGU+LmNscy0xe2ZpbGw6I2Y2MDtmaWxsLXJ1bGU6ZXZlbm9kZDtvcGFjaXR5Oi44fTwvc3R5bGU+PC9kZWZzPjxwYXRoIGlkPSJTaGFwZV8yX2NvcHlfMyIgZGF0YS1uYW1lPSJTaGFwZSAyIGNvcHkgMyIgY2xhc3M9ImNscy0xIiBkPSJNMTI3OS44MiwxMzQwLjc5bC0yLjIzLDIuMjcsMC41MywzLjIyYTAuNjMsMC42MywwLDAsMS0uMjQuNiwwLjU0MywwLjU0MywwLDAsMS0uMzQuMTIsMC42ODEsMC42ODEsMCwwLDEtLjI4LTAuMDdsLTIuNzYtMS41Mi0yLjc2LDEuNTJhMC41NjEsMC41NjEsMCwwLDEtLjYyLTAuMDUsMC42MywwLjYzLDAsMCwxLS4yNC0wLjZsMC41My0zLjIyLTIuMjMtMi4yN2EwLjYzOCwwLjYzOCwwLDAsMS0uMTUtMC42MywwLjU3OCwwLjU3OCwwLDAsMSwuNDctMC40MmwzLjA5LS40NywxLjM4LTIuOTJhMC41ODUsMC41ODUsMCwwLDEsLjUzLTAuMzUsMC41OTIsMC41OTIsMCwwLDEsLjUzLjM0bDEuMzgsMi45MywzLjA5LDAuNDdhMC41NzgsMC41NzgsMCwwLDEsLjQ3LjQyQTAuNjM4LDAuNjM4LDAsMCwxLDEyNzkuODIsMTM0MC43OVoiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0xMjY5IC0xMzM2KSIvPjwvc3ZnPg=="><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMSIgaGVpZ2h0PSIxMSIgdmlld0JveD0iMCAwIDExIDExIj48ZGVmcz48c3R5bGU+LmNscy0xe2ZpbGw6I2Y2MDtmaWxsLXJ1bGU6ZXZlbm9kZDtvcGFjaXR5Oi44fTwvc3R5bGU+PC9kZWZzPjxwYXRoIGlkPSJTaGFwZV8yX2NvcHlfMyIgZGF0YS1uYW1lPSJTaGFwZSAyIGNvcHkgMyIgY2xhc3M9ImNscy0xIiBkPSJNMTI3OS44MiwxMzQwLjc5bC0yLjIzLDIuMjcsMC41MywzLjIyYTAuNjMsMC42MywwLDAsMS0uMjQuNiwwLjU0MywwLjU0MywwLDAsMS0uMzQuMTIsMC42ODEsMC42ODEsMCwwLDEtLjI4LTAuMDdsLTIuNzYtMS41Mi0yLjc2LDEuNTJhMC41NjEsMC41NjEsMCwwLDEtLjYyLTAuMDUsMC42MywwLjYzLDAsMCwxLS4yNC0wLjZsMC41My0zLjIyLTIuMjMtMi4yN2EwLjYzOCwwLjYzOCwwLDAsMS0uMTUtMC42MywwLjU3OCwwLjU3OCwwLDAsMSwuNDctMC40MmwzLjA5LS40NywxLjM4LTIuOTJhMC41ODUsMC41ODUsMCwwLDEsLjUzLTAuMzUsMC41OTIsMC41OTIsMCwwLDEsLjUzLjM0bDEuMzgsMi45MywzLjA5LDAuNDdhMC41NzgsMC41NzgsMCwwLDEsLjQ3LjQyQTAuNjM4LDAuNjM4LDAsMCwxLDEyNzkuODIsMTM0MC43OVoiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0xMjY5IC0xMzM2KSIvPjwvc3ZnPg=="><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMSIgaGVpZ2h0PSIxMSIgdmlld0JveD0iMCAwIDExIDExIj48ZGVmcz48c3R5bGU+LmNscy0xe2ZpbGw6I2Y2MDtmaWxsLXJ1bGU6ZXZlbm9kZH08L3N0eWxlPjwvZGVmcz48cGF0aCBpZD0iU2hhcGVfM19jb3B5XzIiIGRhdGEtbmFtZT0iU2hhcGUgMyBjb3B5IDIiIGNsYXNzPSJjbHMtMSIgZD0iTTEzMjUsMTM0MC4yNmEwLjM0OCwwLjM0OCwwLDAsMC0uMzctMC4zMmwtMy4zMi0uNS0xLjQ5LTMuMTZhMC4zMjMsMC4zMjMsMCwwLDAtLjY0LDBsLTEuNDksMy4xNi0zLjMyLjVhMC4zNDgsMC4zNDgsMCwwLDAtLjM3LjMyLDAuNTA1LDAuNTA1LDAsMCwwLC4xNi4zM2wyLjQxLDIuNDYtMC41NywzLjQ2YTAuODgsMC44OCwwLDAsMC0uMDEuMTQsMC40MDksMC40MDksMCwwLDAsLjA3LjI1LDAuMjM5LDAuMjM5LDAsMCwwLC4yMS4xLDAuNTA3LDAuNTA3LDAsMCwwLC4yNi0wLjA5bDIuOTctMS42MywyLjk3LDEuNjNhMC40NzksMC40NzksMCwwLDAsLjI2LjA5LDAuMjgxLDAuMjgxLDAsMCwwLC4yNy0wLjM1di0wLjE0bC0wLjU3LTMuNDYsMi40LTIuNDZBMC41MjYsMC41MjYsMCwwLDAsMTMyNSwxMzQwLjI2Wm0tMy40OCwyLjQ4LDAuNDcsMi45MS0yLjQ5LTEuMzgtMi41LDEuMzgsMC40OC0yLjkxLTIuMDItMi4wNiwyLjc5LS40MywxLjI1LTIuNjUsMS4yNSwyLjY1LDIuNzksMC40M1oiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0xMzE0IC0xMzM2KSIvPjwvc3ZnPg=="><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMSIgaGVpZ2h0PSIxMSIgdmlld0JveD0iMCAwIDExIDExIj48ZGVmcz48c3R5bGU+LmNscy0xe2ZpbGw6I2Y2MDtmaWxsLXJ1bGU6ZXZlbm9kZH08L3N0eWxlPjwvZGVmcz48cGF0aCBpZD0iU2hhcGVfM19jb3B5XzIiIGRhdGEtbmFtZT0iU2hhcGUgMyBjb3B5IDIiIGNsYXNzPSJjbHMtMSIgZD0iTTEzMjUsMTM0MC4yNmEwLjM0OCwwLjM0OCwwLDAsMC0uMzctMC4zMmwtMy4zMi0uNS0xLjQ5LTMuMTZhMC4zMjMsMC4zMjMsMCwwLDAtLjY0LDBsLTEuNDksMy4xNi0zLjMyLjVhMC4zNDgsMC4zNDgsMCwwLDAtLjM3LjMyLDAuNTA1LDAuNTA1LDAsMCwwLC4xNi4zM2wyLjQxLDIuNDYtMC41NywzLjQ2YTAuODgsMC44OCwwLDAsMC0uMDEuMTQsMC40MDksMC40MDksMCwwLDAsLjA3LjI1LDAuMjM5LDAuMjM5LDAsMCwwLC4yMS4xLDAuNTA3LDAuNTA3LDAsMCwwLC4yNi0wLjA5bDIuOTctMS42MywyLjk3LDEuNjNhMC40NzksMC40NzksMCwwLDAsLjI2LjA5LDAuMjgxLDAuMjgxLDAsMCwwLC4yNy0wLjM1di0wLjE0bC0wLjU3LTMuNDYsMi40LTIuNDZBMC41MjYsMC41MjYsMCwwLDAsMTMyNSwxMzQwLjI2Wm0tMy40OCwyLjQ4LDAuNDcsMi45MS0yLjQ5LTEuMzgtMi41LDEuMzgsMC40OC0yLjkxLTIuMDItMi4wNiwyLjc5LS40MywxLjI1LTIuNjUsMS4yNSwyLjY1LDIuNzksMC40M1oiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0xMzE0IC0xMzM2KSIvPjwvc3ZnPg=="></div>
+                        <div class="card-tale__description"><a class="card-tale__description-name" href="javascript:void(0)">Алфавит в сезон простуд n60 таблеток</a><span class="card-tale__description-manufacturer">OOO Внешторг Фарма, Россия</span></div>
+                        <div class="card-tale__prices">
+                          <div class="card-tale__prices-current">
+                            <p>2 300 <span>р.</span>
+                            </p>
+                          </div>
+                          <div class="card-tale__prices-old">
+                            <p>5300 р.</p>
+                            <p class="economy"><span>1300</span> Экономия
+                            </p>
+                          </div>
+                        </div>
+                        <div class="card-tale__order">
+                          <div class="card-tale__order-count">
+                            <button class="card-tale__order-decrement">-</button>
+                            <input type="text" value="1">
+                            <button class="card-tale__order-increment">+</button>
+                          </div>
+                          <div class="card-tale__order-button">
+                            <input class="button-green" type="submit" value="Купить">
+                          </div>
+                        </div>
+                        <div class="card-tale__one-click"><a href="javascript:void(0)">Купить в 1 клик</a></div>
+                      </div>
+                    </div>
+                    <div class="card-tale catalog__card-tale">
+                      <div class="card-tale__inner">
+                        <div class="card-tale__inner-type-action">
+                          <div class="flag best-price"><span>Лучшая цена</span></div>
+                          <div class="flag hit"><span>Хит продаж</span></div>
+                          <div class="flag action"><span>Акция</span></div>
+                        </div>
+                        <div class="card-tale__inner-image"><a href="javascript:void(0)"><img src="image/imodium.png"></a></div>
+                        <div class="card-tale__rating"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMSIgaGVpZ2h0PSIxMSIgdmlld0JveD0iMCAwIDExIDExIj48ZGVmcz48c3R5bGU+LmNscy0xe2ZpbGw6I2Y2MDtmaWxsLXJ1bGU6ZXZlbm9kZDtvcGFjaXR5Oi44fTwvc3R5bGU+PC9kZWZzPjxwYXRoIGlkPSJTaGFwZV8yX2NvcHlfMyIgZGF0YS1uYW1lPSJTaGFwZSAyIGNvcHkgMyIgY2xhc3M9ImNscy0xIiBkPSJNMTI3OS44MiwxMzQwLjc5bC0yLjIzLDIuMjcsMC41MywzLjIyYTAuNjMsMC42MywwLDAsMS0uMjQuNiwwLjU0MywwLjU0MywwLDAsMS0uMzQuMTIsMC42ODEsMC42ODEsMCwwLDEtLjI4LTAuMDdsLTIuNzYtMS41Mi0yLjc2LDEuNTJhMC41NjEsMC41NjEsMCwwLDEtLjYyLTAuMDUsMC42MywwLjYzLDAsMCwxLS4yNC0wLjZsMC41My0zLjIyLTIuMjMtMi4yN2EwLjYzOCwwLjYzOCwwLDAsMS0uMTUtMC42MywwLjU3OCwwLjU3OCwwLDAsMSwuNDctMC40MmwzLjA5LS40NywxLjM4LTIuOTJhMC41ODUsMC41ODUsMCwwLDEsLjUzLTAuMzUsMC41OTIsMC41OTIsMCwwLDEsLjUzLjM0bDEuMzgsMi45MywzLjA5LDAuNDdhMC41NzgsMC41NzgsMCwwLDEsLjQ3LjQyQTAuNjM4LDAuNjM4LDAsMCwxLDEyNzkuODIsMTM0MC43OVoiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0xMjY5IC0xMzM2KSIvPjwvc3ZnPg=="><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMSIgaGVpZ2h0PSIxMSIgdmlld0JveD0iMCAwIDExIDExIj48ZGVmcz48c3R5bGU+LmNscy0xe2ZpbGw6I2Y2MDtmaWxsLXJ1bGU6ZXZlbm9kZDtvcGFjaXR5Oi44fTwvc3R5bGU+PC9kZWZzPjxwYXRoIGlkPSJTaGFwZV8yX2NvcHlfMyIgZGF0YS1uYW1lPSJTaGFwZSAyIGNvcHkgMyIgY2xhc3M9ImNscy0xIiBkPSJNMTI3OS44MiwxMzQwLjc5bC0yLjIzLDIuMjcsMC41MywzLjIyYTAuNjMsMC42MywwLDAsMS0uMjQuNiwwLjU0MywwLjU0MywwLDAsMS0uMzQuMTIsMC42ODEsMC42ODEsMCwwLDEtLjI4LTAuMDdsLTIuNzYtMS41Mi0yLjc2LDEuNTJhMC41NjEsMC41NjEsMCwwLDEtLjYyLTAuMDUsMC42MywwLjYzLDAsMCwxLS4yNC0wLjZsMC41My0zLjIyLTIuMjMtMi4yN2EwLjYzOCwwLjYzOCwwLDAsMS0uMTUtMC42MywwLjU3OCwwLjU3OCwwLDAsMSwuNDctMC40MmwzLjA5LS40NywxLjM4LTIuOTJhMC41ODUsMC41ODUsMCwwLDEsLjUzLTAuMzUsMC41OTIsMC41OTIsMCwwLDEsLjUzLjM0bDEuMzgsMi45MywzLjA5LDAuNDdhMC41NzgsMC41NzgsMCwwLDEsLjQ3LjQyQTAuNjM4LDAuNjM4LDAsMCwxLDEyNzkuODIsMTM0MC43OVoiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0xMjY5IC0xMzM2KSIvPjwvc3ZnPg=="><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMSIgaGVpZ2h0PSIxMSIgdmlld0JveD0iMCAwIDExIDExIj48ZGVmcz48c3R5bGU+LmNscy0xe2ZpbGw6I2Y2MDtmaWxsLXJ1bGU6ZXZlbm9kZDtvcGFjaXR5Oi44fTwvc3R5bGU+PC9kZWZzPjxwYXRoIGlkPSJTaGFwZV8yX2NvcHlfMyIgZGF0YS1uYW1lPSJTaGFwZSAyIGNvcHkgMyIgY2xhc3M9ImNscy0xIiBkPSJNMTI3OS44MiwxMzQwLjc5bC0yLjIzLDIuMjcsMC41MywzLjIyYTAuNjMsMC42MywwLDAsMS0uMjQuNiwwLjU0MywwLjU0MywwLDAsMS0uMzQuMTIsMC42ODEsMC42ODEsMCwwLDEtLjI4LTAuMDdsLTIuNzYtMS41Mi0yLjc2LDEuNTJhMC41NjEsMC41NjEsMCwwLDEtLjYyLTAuMDUsMC42MywwLjYzLDAsMCwxLS4yNC0wLjZsMC41My0zLjIyLTIuMjMtMi4yN2EwLjYzOCwwLjYzOCwwLDAsMS0uMTUtMC42MywwLjU3OCwwLjU3OCwwLDAsMSwuNDctMC40MmwzLjA5LS40NywxLjM4LTIuOTJhMC41ODUsMC41ODUsMCwwLDEsLjUzLTAuMzUsMC41OTIsMC41OTIsMCwwLDEsLjUzLjM0bDEuMzgsMi45MywzLjA5LDAuNDdhMC41NzgsMC41NzgsMCwwLDEsLjQ3LjQyQTAuNjM4LDAuNjM4LDAsMCwxLDEyNzkuODIsMTM0MC43OVoiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0xMjY5IC0xMzM2KSIvPjwvc3ZnPg=="><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMSIgaGVpZ2h0PSIxMSIgdmlld0JveD0iMCAwIDExIDExIj48ZGVmcz48c3R5bGU+LmNscy0xe2ZpbGw6I2Y2MDtmaWxsLXJ1bGU6ZXZlbm9kZH08L3N0eWxlPjwvZGVmcz48cGF0aCBpZD0iU2hhcGVfM19jb3B5XzIiIGRhdGEtbmFtZT0iU2hhcGUgMyBjb3B5IDIiIGNsYXNzPSJjbHMtMSIgZD0iTTEzMjUsMTM0MC4yNmEwLjM0OCwwLjM0OCwwLDAsMC0uMzctMC4zMmwtMy4zMi0uNS0xLjQ5LTMuMTZhMC4zMjMsMC4zMjMsMCwwLDAtLjY0LDBsLTEuNDksMy4xNi0zLjMyLjVhMC4zNDgsMC4zNDgsMCwwLDAtLjM3LjMyLDAuNTA1LDAuNTA1LDAsMCwwLC4xNi4zM2wyLjQxLDIuNDYtMC41NywzLjQ2YTAuODgsMC44OCwwLDAsMC0uMDEuMTQsMC40MDksMC40MDksMCwwLDAsLjA3LjI1LDAuMjM5LDAuMjM5LDAsMCwwLC4yMS4xLDAuNTA3LDAuNTA3LDAsMCwwLC4yNi0wLjA5bDIuOTctMS42MywyLjk3LDEuNjNhMC40NzksMC40NzksMCwwLDAsLjI2LjA5LDAuMjgxLDAuMjgxLDAsMCwwLC4yNy0wLjM1di0wLjE0bC0wLjU3LTMuNDYsMi40LTIuNDZBMC41MjYsMC41MjYsMCwwLDAsMTMyNSwxMzQwLjI2Wm0tMy40OCwyLjQ4LDAuNDcsMi45MS0yLjQ5LTEuMzgtMi41LDEuMzgsMC40OC0yLjkxLTIuMDItMi4wNiwyLjc5LS40MywxLjI1LTIuNjUsMS4yNSwyLjY1LDIuNzksMC40M1oiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0xMzE0IC0xMzM2KSIvPjwvc3ZnPg=="><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMSIgaGVpZ2h0PSIxMSIgdmlld0JveD0iMCAwIDExIDExIj48ZGVmcz48c3R5bGU+LmNscy0xe2ZpbGw6I2Y2MDtmaWxsLXJ1bGU6ZXZlbm9kZH08L3N0eWxlPjwvZGVmcz48cGF0aCBpZD0iU2hhcGVfM19jb3B5XzIiIGRhdGEtbmFtZT0iU2hhcGUgMyBjb3B5IDIiIGNsYXNzPSJjbHMtMSIgZD0iTTEzMjUsMTM0MC4yNmEwLjM0OCwwLjM0OCwwLDAsMC0uMzctMC4zMmwtMy4zMi0uNS0xLjQ5LTMuMTZhMC4zMjMsMC4zMjMsMCwwLDAtLjY0LDBsLTEuNDksMy4xNi0zLjMyLjVhMC4zNDgsMC4zNDgsMCwwLDAtLjM3LjMyLDAuNTA1LDAuNTA1LDAsMCwwLC4xNi4zM2wyLjQxLDIuNDYtMC41NywzLjQ2YTAuODgsMC44OCwwLDAsMC0uMDEuMTQsMC40MDksMC40MDksMCwwLDAsLjA3LjI1LDAuMjM5LDAuMjM5LDAsMCwwLC4yMS4xLDAuNTA3LDAuNTA3LDAsMCwwLC4yNi0wLjA5bDIuOTctMS42MywyLjk3LDEuNjNhMC40NzksMC40NzksMCwwLDAsLjI2LjA5LDAuMjgxLDAuMjgxLDAsMCwwLC4yNy0wLjM1di0wLjE0bC0wLjU3LTMuNDYsMi40LTIuNDZBMC41MjYsMC41MjYsMCwwLDAsMTMyNSwxMzQwLjI2Wm0tMy40OCwyLjQ4LDAuNDcsMi45MS0yLjQ5LTEuMzgtMi41LDEuMzgsMC40OC0yLjkxLTIuMDItMi4wNiwyLjc5LS40MywxLjI1LTIuNjUsMS4yNSwyLjY1LDIuNzksMC40M1oiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0xMzE0IC0xMzM2KSIvPjwvc3ZnPg=="></div>
+                        <div class="card-tale__description"><a class="card-tale__description-name" href="javascript:void(0)">Алфавит в сезон простуд n60 таблеток</a><span class="card-tale__description-manufacturer">OOO Внешторг Фарма, Россия</span></div>
+                        <div class="card-tale__prices">
+                          <div class="card-tale__prices-current">
+                            <p>2 300 <span>р.</span>
+                            </p>
+                          </div>
+                          <div class="card-tale__prices-old">
+                            <p>5300 р.</p>
+                            <p class="economy"><span>1300</span> Экономия
+                            </p>
+                          </div>
+                        </div>
+                        <div class="card-tale__order">
+                          <div class="card-tale__order-count">
+                            <button class="card-tale__order-decrement">-</button>
+                            <input type="text" value="1">
+                            <button class="card-tale__order-increment">+</button>
+                          </div>
+                          <div class="card-tale__order-button">
+                            <input class="button-green" type="submit" value="Купить">
+                          </div>
+                        </div>
+                        <div class="card-tale__one-click"><a href="javascript:void(0)">Купить в 1 клик</a></div>
+                      </div>
+                    </div>
+                    <div class="card-tale catalog__card-tale">
+                      <div class="card-tale__inner">
+                        <div class="card-tale__inner-type-action">
+                          <div class="flag best-price"><span>Лучшая цена</span></div>
+                          <div class="flag hit"><span>Хит продаж</span></div>
+                          <div class="flag action"><span>Акция</span></div>
+                        </div>
+                        <div class="card-tale__inner-image"><a href="javascript:void(0)"><img src="image/imodium.png"></a></div>
+                        <div class="card-tale__rating"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMSIgaGVpZ2h0PSIxMSIgdmlld0JveD0iMCAwIDExIDExIj48ZGVmcz48c3R5bGU+LmNscy0xe2ZpbGw6I2Y2MDtmaWxsLXJ1bGU6ZXZlbm9kZDtvcGFjaXR5Oi44fTwvc3R5bGU+PC9kZWZzPjxwYXRoIGlkPSJTaGFwZV8yX2NvcHlfMyIgZGF0YS1uYW1lPSJTaGFwZSAyIGNvcHkgMyIgY2xhc3M9ImNscy0xIiBkPSJNMTI3OS44MiwxMzQwLjc5bC0yLjIzLDIuMjcsMC41MywzLjIyYTAuNjMsMC42MywwLDAsMS0uMjQuNiwwLjU0MywwLjU0MywwLDAsMS0uMzQuMTIsMC42ODEsMC42ODEsMCwwLDEtLjI4LTAuMDdsLTIuNzYtMS41Mi0yLjc2LDEuNTJhMC41NjEsMC41NjEsMCwwLDEtLjYyLTAuMDUsMC42MywwLjYzLDAsMCwxLS4yNC0wLjZsMC41My0zLjIyLTIuMjMtMi4yN2EwLjYzOCwwLjYzOCwwLDAsMS0uMTUtMC42MywwLjU3OCwwLjU3OCwwLDAsMSwuNDctMC40MmwzLjA5LS40NywxLjM4LTIuOTJhMC41ODUsMC41ODUsMCwwLDEsLjUzLTAuMzUsMC41OTIsMC41OTIsMCwwLDEsLjUzLjM0bDEuMzgsMi45MywzLjA5LDAuNDdhMC41NzgsMC41NzgsMCwwLDEsLjQ3LjQyQTAuNjM4LDAuNjM4LDAsMCwxLDEyNzkuODIsMTM0MC43OVoiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0xMjY5IC0xMzM2KSIvPjwvc3ZnPg=="><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMSIgaGVpZ2h0PSIxMSIgdmlld0JveD0iMCAwIDExIDExIj48ZGVmcz48c3R5bGU+LmNscy0xe2ZpbGw6I2Y2MDtmaWxsLXJ1bGU6ZXZlbm9kZDtvcGFjaXR5Oi44fTwvc3R5bGU+PC9kZWZzPjxwYXRoIGlkPSJTaGFwZV8yX2NvcHlfMyIgZGF0YS1uYW1lPSJTaGFwZSAyIGNvcHkgMyIgY2xhc3M9ImNscy0xIiBkPSJNMTI3OS44MiwxMzQwLjc5bC0yLjIzLDIuMjcsMC41MywzLjIyYTAuNjMsMC42MywwLDAsMS0uMjQuNiwwLjU0MywwLjU0MywwLDAsMS0uMzQuMTIsMC42ODEsMC42ODEsMCwwLDEtLjI4LTAuMDdsLTIuNzYtMS41Mi0yLjc2LDEuNTJhMC41NjEsMC41NjEsMCwwLDEtLjYyLTAuMDUsMC42MywwLjYzLDAsMCwxLS4yNC0wLjZsMC41My0zLjIyLTIuMjMtMi4yN2EwLjYzOCwwLjYzOCwwLDAsMS0uMTUtMC42MywwLjU3OCwwLjU3OCwwLDAsMSwuNDctMC40MmwzLjA5LS40NywxLjM4LTIuOTJhMC41ODUsMC41ODUsMCwwLDEsLjUzLTAuMzUsMC41OTIsMC41OTIsMCwwLDEsLjUzLjM0bDEuMzgsMi45MywzLjA5LDAuNDdhMC41NzgsMC41NzgsMCwwLDEsLjQ3LjQyQTAuNjM4LDAuNjM4LDAsMCwxLDEyNzkuODIsMTM0MC43OVoiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0xMjY5IC0xMzM2KSIvPjwvc3ZnPg=="><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMSIgaGVpZ2h0PSIxMSIgdmlld0JveD0iMCAwIDExIDExIj48ZGVmcz48c3R5bGU+LmNscy0xe2ZpbGw6I2Y2MDtmaWxsLXJ1bGU6ZXZlbm9kZDtvcGFjaXR5Oi44fTwvc3R5bGU+PC9kZWZzPjxwYXRoIGlkPSJTaGFwZV8yX2NvcHlfMyIgZGF0YS1uYW1lPSJTaGFwZSAyIGNvcHkgMyIgY2xhc3M9ImNscy0xIiBkPSJNMTI3OS44MiwxMzQwLjc5bC0yLjIzLDIuMjcsMC41MywzLjIyYTAuNjMsMC42MywwLDAsMS0uMjQuNiwwLjU0MywwLjU0MywwLDAsMS0uMzQuMTIsMC42ODEsMC42ODEsMCwwLDEtLjI4LTAuMDdsLTIuNzYtMS41Mi0yLjc2LDEuNTJhMC41NjEsMC41NjEsMCwwLDEtLjYyLTAuMDUsMC42MywwLjYzLDAsMCwxLS4yNC0wLjZsMC41My0zLjIyLTIuMjMtMi4yN2EwLjYzOCwwLjYzOCwwLDAsMS0uMTUtMC42MywwLjU3OCwwLjU3OCwwLDAsMSwuNDctMC40MmwzLjA5LS40NywxLjM4LTIuOTJhMC41ODUsMC41ODUsMCwwLDEsLjUzLTAuMzUsMC41OTIsMC41OTIsMCwwLDEsLjUzLjM0bDEuMzgsMi45MywzLjA5LDAuNDdhMC41NzgsMC41NzgsMCwwLDEsLjQ3LjQyQTAuNjM4LDAuNjM4LDAsMCwxLDEyNzkuODIsMTM0MC43OVoiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0xMjY5IC0xMzM2KSIvPjwvc3ZnPg=="><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMSIgaGVpZ2h0PSIxMSIgdmlld0JveD0iMCAwIDExIDExIj48ZGVmcz48c3R5bGU+LmNscy0xe2ZpbGw6I2Y2MDtmaWxsLXJ1bGU6ZXZlbm9kZH08L3N0eWxlPjwvZGVmcz48cGF0aCBpZD0iU2hhcGVfM19jb3B5XzIiIGRhdGEtbmFtZT0iU2hhcGUgMyBjb3B5IDIiIGNsYXNzPSJjbHMtMSIgZD0iTTEzMjUsMTM0MC4yNmEwLjM0OCwwLjM0OCwwLDAsMC0uMzctMC4zMmwtMy4zMi0uNS0xLjQ5LTMuMTZhMC4zMjMsMC4zMjMsMCwwLDAtLjY0LDBsLTEuNDksMy4xNi0zLjMyLjVhMC4zNDgsMC4zNDgsMCwwLDAtLjM3LjMyLDAuNTA1LDAuNTA1LDAsMCwwLC4xNi4zM2wyLjQxLDIuNDYtMC41NywzLjQ2YTAuODgsMC44OCwwLDAsMC0uMDEuMTQsMC40MDksMC40MDksMCwwLDAsLjA3LjI1LDAuMjM5LDAuMjM5LDAsMCwwLC4yMS4xLDAuNTA3LDAuNTA3LDAsMCwwLC4yNi0wLjA5bDIuOTctMS42MywyLjk3LDEuNjNhMC40NzksMC40NzksMCwwLDAsLjI2LjA5LDAuMjgxLDAuMjgxLDAsMCwwLC4yNy0wLjM1di0wLjE0bC0wLjU3LTMuNDYsMi40LTIuNDZBMC41MjYsMC41MjYsMCwwLDAsMTMyNSwxMzQwLjI2Wm0tMy40OCwyLjQ4LDAuNDcsMi45MS0yLjQ5LTEuMzgtMi41LDEuMzgsMC40OC0yLjkxLTIuMDItMi4wNiwyLjc5LS40MywxLjI1LTIuNjUsMS4yNSwyLjY1LDIuNzksMC40M1oiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0xMzE0IC0xMzM2KSIvPjwvc3ZnPg=="><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMSIgaGVpZ2h0PSIxMSIgdmlld0JveD0iMCAwIDExIDExIj48ZGVmcz48c3R5bGU+LmNscy0xe2ZpbGw6I2Y2MDtmaWxsLXJ1bGU6ZXZlbm9kZH08L3N0eWxlPjwvZGVmcz48cGF0aCBpZD0iU2hhcGVfM19jb3B5XzIiIGRhdGEtbmFtZT0iU2hhcGUgMyBjb3B5IDIiIGNsYXNzPSJjbHMtMSIgZD0iTTEzMjUsMTM0MC4yNmEwLjM0OCwwLjM0OCwwLDAsMC0uMzctMC4zMmwtMy4zMi0uNS0xLjQ5LTMuMTZhMC4zMjMsMC4zMjMsMCwwLDAtLjY0LDBsLTEuNDksMy4xNi0zLjMyLjVhMC4zNDgsMC4zNDgsMCwwLDAtLjM3LjMyLDAuNTA1LDAuNTA1LDAsMCwwLC4xNi4zM2wyLjQxLDIuNDYtMC41NywzLjQ2YTAuODgsMC44OCwwLDAsMC0uMDEuMTQsMC40MDksMC40MDksMCwwLDAsLjA3LjI1LDAuMjM5LDAuMjM5LDAsMCwwLC4yMS4xLDAuNTA3LDAuNTA3LDAsMCwwLC4yNi0wLjA5bDIuOTctMS42MywyLjk3LDEuNjNhMC40NzksMC40NzksMCwwLDAsLjI2LjA5LDAuMjgxLDAuMjgxLDAsMCwwLC4yNy0wLjM1di0wLjE0bC0wLjU3LTMuNDYsMi40LTIuNDZBMC41MjYsMC41MjYsMCwwLDAsMTMyNSwxMzQwLjI2Wm0tMy40OCwyLjQ4LDAuNDcsMi45MS0yLjQ5LTEuMzgtMi41LDEuMzgsMC40OC0yLjkxLTIuMDItMi4wNiwyLjc5LS40MywxLjI1LTIuNjUsMS4yNSwyLjY1LDIuNzksMC40M1oiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0xMzE0IC0xMzM2KSIvPjwvc3ZnPg=="></div>
+                        <div class="card-tale__description"><a class="card-tale__description-name" href="javascript:void(0)">Алфавит в сезон простуд n60 таблеток</a><span class="card-tale__description-manufacturer">OOO Внешторг Фарма, Россия</span></div>
+                        <div class="card-tale__prices">
+                          <div class="card-tale__prices-current">
+                            <p>2 300 <span>р.</span>
+                            </p>
+                          </div>
+                          <div class="card-tale__prices-old">
+                            <p>5300 р.</p>
+                            <p class="economy"><span>1300</span> Экономия
+                            </p>
+                          </div>
+                        </div>
+                        <div class="card-tale__order">
+                          <div class="card-tale__order-count">
+                            <button class="card-tale__order-decrement">-</button>
+                            <input type="text" value="1">
+                            <button class="card-tale__order-increment">+</button>
+                          </div>
+                          <div class="card-tale__order-button">
+                            <input class="button-green" type="submit" value="Купить">
+                          </div>
+                        </div>
+                        <div class="card-tale__one-click"><a href="javascript:void(0)">Купить в 1 клик</a></div>
+                      </div>
+                    </div>
+                    <div class="card-tale catalog__card-tale">
+                      <div class="card-tale__inner">
+                        <div class="card-tale__inner-type-action">
+                          <div class="flag best-price"><span>Лучшая цена</span></div>
+                          <div class="flag hit"><span>Хит продаж</span></div>
+                          <div class="flag action"><span>Акция</span></div>
+                        </div>
+                        <div class="card-tale__inner-image"><a href="javascript:void(0)"><img src="image/imodium.png"></a></div>
+                        <div class="card-tale__rating"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMSIgaGVpZ2h0PSIxMSIgdmlld0JveD0iMCAwIDExIDExIj48ZGVmcz48c3R5bGU+LmNscy0xe2ZpbGw6I2Y2MDtmaWxsLXJ1bGU6ZXZlbm9kZDtvcGFjaXR5Oi44fTwvc3R5bGU+PC9kZWZzPjxwYXRoIGlkPSJTaGFwZV8yX2NvcHlfMyIgZGF0YS1uYW1lPSJTaGFwZSAyIGNvcHkgMyIgY2xhc3M9ImNscy0xIiBkPSJNMTI3OS44MiwxMzQwLjc5bC0yLjIzLDIuMjcsMC41MywzLjIyYTAuNjMsMC42MywwLDAsMS0uMjQuNiwwLjU0MywwLjU0MywwLDAsMS0uMzQuMTIsMC42ODEsMC42ODEsMCwwLDEtLjI4LTAuMDdsLTIuNzYtMS41Mi0yLjc2LDEuNTJhMC41NjEsMC41NjEsMCwwLDEtLjYyLTAuMDUsMC42MywwLjYzLDAsMCwxLS4yNC0wLjZsMC41My0zLjIyLTIuMjMtMi4yN2EwLjYzOCwwLjYzOCwwLDAsMS0uMTUtMC42MywwLjU3OCwwLjU3OCwwLDAsMSwuNDctMC40MmwzLjA5LS40NywxLjM4LTIuOTJhMC41ODUsMC41ODUsMCwwLDEsLjUzLTAuMzUsMC41OTIsMC41OTIsMCwwLDEsLjUzLjM0bDEuMzgsMi45MywzLjA5LDAuNDdhMC41NzgsMC41NzgsMCwwLDEsLjQ3LjQyQTAuNjM4LDAuNjM4LDAsMCwxLDEyNzkuODIsMTM0MC43OVoiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0xMjY5IC0xMzM2KSIvPjwvc3ZnPg=="><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMSIgaGVpZ2h0PSIxMSIgdmlld0JveD0iMCAwIDExIDExIj48ZGVmcz48c3R5bGU+LmNscy0xe2ZpbGw6I2Y2MDtmaWxsLXJ1bGU6ZXZlbm9kZDtvcGFjaXR5Oi44fTwvc3R5bGU+PC9kZWZzPjxwYXRoIGlkPSJTaGFwZV8yX2NvcHlfMyIgZGF0YS1uYW1lPSJTaGFwZSAyIGNvcHkgMyIgY2xhc3M9ImNscy0xIiBkPSJNMTI3OS44MiwxMzQwLjc5bC0yLjIzLDIuMjcsMC41MywzLjIyYTAuNjMsMC42MywwLDAsMS0uMjQuNiwwLjU0MywwLjU0MywwLDAsMS0uMzQuMTIsMC42ODEsMC42ODEsMCwwLDEtLjI4LTAuMDdsLTIuNzYtMS41Mi0yLjc2LDEuNTJhMC41NjEsMC41NjEsMCwwLDEtLjYyLTAuMDUsMC42MywwLjYzLDAsMCwxLS4yNC0wLjZsMC41My0zLjIyLTIuMjMtMi4yN2EwLjYzOCwwLjYzOCwwLDAsMS0uMTUtMC42MywwLjU3OCwwLjU3OCwwLDAsMSwuNDctMC40MmwzLjA5LS40NywxLjM4LTIuOTJhMC41ODUsMC41ODUsMCwwLDEsLjUzLTAuMzUsMC41OTIsMC41OTIsMCwwLDEsLjUzLjM0bDEuMzgsMi45MywzLjA5LDAuNDdhMC41NzgsMC41NzgsMCwwLDEsLjQ3LjQyQTAuNjM4LDAuNjM4LDAsMCwxLDEyNzkuODIsMTM0MC43OVoiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0xMjY5IC0xMzM2KSIvPjwvc3ZnPg=="><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMSIgaGVpZ2h0PSIxMSIgdmlld0JveD0iMCAwIDExIDExIj48ZGVmcz48c3R5bGU+LmNscy0xe2ZpbGw6I2Y2MDtmaWxsLXJ1bGU6ZXZlbm9kZDtvcGFjaXR5Oi44fTwvc3R5bGU+PC9kZWZzPjxwYXRoIGlkPSJTaGFwZV8yX2NvcHlfMyIgZGF0YS1uYW1lPSJTaGFwZSAyIGNvcHkgMyIgY2xhc3M9ImNscy0xIiBkPSJNMTI3OS44MiwxMzQwLjc5bC0yLjIzLDIuMjcsMC41MywzLjIyYTAuNjMsMC42MywwLDAsMS0uMjQuNiwwLjU0MywwLjU0MywwLDAsMS0uMzQuMTIsMC42ODEsMC42ODEsMCwwLDEtLjI4LTAuMDdsLTIuNzYtMS41Mi0yLjc2LDEuNTJhMC41NjEsMC41NjEsMCwwLDEtLjYyLTAuMDUsMC42MywwLjYzLDAsMCwxLS4yNC0wLjZsMC41My0zLjIyLTIuMjMtMi4yN2EwLjYzOCwwLjYzOCwwLDAsMS0uMTUtMC42MywwLjU3OCwwLjU3OCwwLDAsMSwuNDctMC40MmwzLjA5LS40NywxLjM4LTIuOTJhMC41ODUsMC41ODUsMCwwLDEsLjUzLTAuMzUsMC41OTIsMC41OTIsMCwwLDEsLjUzLjM0bDEuMzgsMi45MywzLjA5LDAuNDdhMC41NzgsMC41NzgsMCwwLDEsLjQ3LjQyQTAuNjM4LDAuNjM4LDAsMCwxLDEyNzkuODIsMTM0MC43OVoiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0xMjY5IC0xMzM2KSIvPjwvc3ZnPg=="><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMSIgaGVpZ2h0PSIxMSIgdmlld0JveD0iMCAwIDExIDExIj48ZGVmcz48c3R5bGU+LmNscy0xe2ZpbGw6I2Y2MDtmaWxsLXJ1bGU6ZXZlbm9kZH08L3N0eWxlPjwvZGVmcz48cGF0aCBpZD0iU2hhcGVfM19jb3B5XzIiIGRhdGEtbmFtZT0iU2hhcGUgMyBjb3B5IDIiIGNsYXNzPSJjbHMtMSIgZD0iTTEzMjUsMTM0MC4yNmEwLjM0OCwwLjM0OCwwLDAsMC0uMzctMC4zMmwtMy4zMi0uNS0xLjQ5LTMuMTZhMC4zMjMsMC4zMjMsMCwwLDAtLjY0LDBsLTEuNDksMy4xNi0zLjMyLjVhMC4zNDgsMC4zNDgsMCwwLDAtLjM3LjMyLDAuNTA1LDAuNTA1LDAsMCwwLC4xNi4zM2wyLjQxLDIuNDYtMC41NywzLjQ2YTAuODgsMC44OCwwLDAsMC0uMDEuMTQsMC40MDksMC40MDksMCwwLDAsLjA3LjI1LDAuMjM5LDAuMjM5LDAsMCwwLC4yMS4xLDAuNTA3LDAuNTA3LDAsMCwwLC4yNi0wLjA5bDIuOTctMS42MywyLjk3LDEuNjNhMC40NzksMC40NzksMCwwLDAsLjI2LjA5LDAuMjgxLDAuMjgxLDAsMCwwLC4yNy0wLjM1di0wLjE0bC0wLjU3LTMuNDYsMi40LTIuNDZBMC41MjYsMC41MjYsMCwwLDAsMTMyNSwxMzQwLjI2Wm0tMy40OCwyLjQ4LDAuNDcsMi45MS0yLjQ5LTEuMzgtMi41LDEuMzgsMC40OC0yLjkxLTIuMDItMi4wNiwyLjc5LS40MywxLjI1LTIuNjUsMS4yNSwyLjY1LDIuNzksMC40M1oiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0xMzE0IC0xMzM2KSIvPjwvc3ZnPg=="><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMSIgaGVpZ2h0PSIxMSIgdmlld0JveD0iMCAwIDExIDExIj48ZGVmcz48c3R5bGU+LmNscy0xe2ZpbGw6I2Y2MDtmaWxsLXJ1bGU6ZXZlbm9kZH08L3N0eWxlPjwvZGVmcz48cGF0aCBpZD0iU2hhcGVfM19jb3B5XzIiIGRhdGEtbmFtZT0iU2hhcGUgMyBjb3B5IDIiIGNsYXNzPSJjbHMtMSIgZD0iTTEzMjUsMTM0MC4yNmEwLjM0OCwwLjM0OCwwLDAsMC0uMzctMC4zMmwtMy4zMi0uNS0xLjQ5LTMuMTZhMC4zMjMsMC4zMjMsMCwwLDAtLjY0LDBsLTEuNDksMy4xNi0zLjMyLjVhMC4zNDgsMC4zNDgsMCwwLDAtLjM3LjMyLDAuNTA1LDAuNTA1LDAsMCwwLC4xNi4zM2wyLjQxLDIuNDYtMC41NywzLjQ2YTAuODgsMC44OCwwLDAsMC0uMDEuMTQsMC40MDksMC40MDksMCwwLDAsLjA3LjI1LDAuMjM5LDAuMjM5LDAsMCwwLC4yMS4xLDAuNTA3LDAuNTA3LDAsMCwwLC4yNi0wLjA5bDIuOTctMS42MywyLjk3LDEuNjNhMC40NzksMC40NzksMCwwLDAsLjI2LjA5LDAuMjgxLDAuMjgxLDAsMCwwLC4yNy0wLjM1di0wLjE0bC0wLjU3LTMuNDYsMi40LTIuNDZBMC41MjYsMC41MjYsMCwwLDAsMTMyNSwxMzQwLjI2Wm0tMy40OCwyLjQ4LDAuNDcsMi45MS0yLjQ5LTEuMzgtMi41LDEuMzgsMC40OC0yLjkxLTIuMDItMi4wNiwyLjc5LS40MywxLjI1LTIuNjUsMS4yNSwyLjY1LDIuNzksMC40M1oiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0xMzE0IC0xMzM2KSIvPjwvc3ZnPg=="></div>
+                        <div class="card-tale__description"><a class="card-tale__description-name" href="javascript:void(0)">Алфавит в сезон простуд n60 таблеток</a><span class="card-tale__description-manufacturer">OOO Внешторг Фарма, Россия</span></div>
+                        <div class="card-tale__prices">
+                          <div class="card-tale__prices-current">
+                            <p>2 300 <span>р.</span>
+                            </p>
+                          </div>
+                          <div class="card-tale__prices-old">
+                            <p>5300 р.</p>
+                            <p class="economy"><span>1300</span> Экономия
+                            </p>
+                          </div>
+                        </div>
+                        <div class="card-tale__order">
+                          <div class="card-tale__order-count">
+                            <button class="card-tale__order-decrement">-</button>
+                            <input type="text" value="1">
+                            <button class="card-tale__order-increment">+</button>
+                          </div>
+                          <div class="card-tale__order-button">
+                            <input class="button-green" type="submit" value="Купить">
+                          </div>
+                        </div>
+                        <div class="card-tale__one-click"><a href="javascript:void(0)">Купить в 1 клик</a></div>
+                      </div>
+                    </div>
+                    <div class="card-tale catalog__card-tale">
+                      <div class="card-tale__inner">
+                        <div class="card-tale__inner-type-action">
+                          <div class="flag best-price"><span>Лучшая цена</span></div>
+                          <div class="flag hit"><span>Хит продаж</span></div>
+                          <div class="flag action"><span>Акция</span></div>
+                        </div>
+                        <div class="card-tale__inner-image"><a href="javascript:void(0)"><img src="image/imodium.png"></a></div>
+                        <div class="card-tale__rating"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMSIgaGVpZ2h0PSIxMSIgdmlld0JveD0iMCAwIDExIDExIj48ZGVmcz48c3R5bGU+LmNscy0xe2ZpbGw6I2Y2MDtmaWxsLXJ1bGU6ZXZlbm9kZDtvcGFjaXR5Oi44fTwvc3R5bGU+PC9kZWZzPjxwYXRoIGlkPSJTaGFwZV8yX2NvcHlfMyIgZGF0YS1uYW1lPSJTaGFwZSAyIGNvcHkgMyIgY2xhc3M9ImNscy0xIiBkPSJNMTI3OS44MiwxMzQwLjc5bC0yLjIzLDIuMjcsMC41MywzLjIyYTAuNjMsMC42MywwLDAsMS0uMjQuNiwwLjU0MywwLjU0MywwLDAsMS0uMzQuMTIsMC42ODEsMC42ODEsMCwwLDEtLjI4LTAuMDdsLTIuNzYtMS41Mi0yLjc2LDEuNTJhMC41NjEsMC41NjEsMCwwLDEtLjYyLTAuMDUsMC42MywwLjYzLDAsMCwxLS4yNC0wLjZsMC41My0zLjIyLTIuMjMtMi4yN2EwLjYzOCwwLjYzOCwwLDAsMS0uMTUtMC42MywwLjU3OCwwLjU3OCwwLDAsMSwuNDctMC40MmwzLjA5LS40NywxLjM4LTIuOTJhMC41ODUsMC41ODUsMCwwLDEsLjUzLTAuMzUsMC41OTIsMC41OTIsMCwwLDEsLjUzLjM0bDEuMzgsMi45MywzLjA5LDAuNDdhMC41NzgsMC41NzgsMCwwLDEsLjQ3LjQyQTAuNjM4LDAuNjM4LDAsMCwxLDEyNzkuODIsMTM0MC43OVoiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0xMjY5IC0xMzM2KSIvPjwvc3ZnPg=="><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMSIgaGVpZ2h0PSIxMSIgdmlld0JveD0iMCAwIDExIDExIj48ZGVmcz48c3R5bGU+LmNscy0xe2ZpbGw6I2Y2MDtmaWxsLXJ1bGU6ZXZlbm9kZDtvcGFjaXR5Oi44fTwvc3R5bGU+PC9kZWZzPjxwYXRoIGlkPSJTaGFwZV8yX2NvcHlfMyIgZGF0YS1uYW1lPSJTaGFwZSAyIGNvcHkgMyIgY2xhc3M9ImNscy0xIiBkPSJNMTI3OS44MiwxMzQwLjc5bC0yLjIzLDIuMjcsMC41MywzLjIyYTAuNjMsMC42MywwLDAsMS0uMjQuNiwwLjU0MywwLjU0MywwLDAsMS0uMzQuMTIsMC42ODEsMC42ODEsMCwwLDEtLjI4LTAuMDdsLTIuNzYtMS41Mi0yLjc2LDEuNTJhMC41NjEsMC41NjEsMCwwLDEtLjYyLTAuMDUsMC42MywwLjYzLDAsMCwxLS4yNC0wLjZsMC41My0zLjIyLTIuMjMtMi4yN2EwLjYzOCwwLjYzOCwwLDAsMS0uMTUtMC42MywwLjU3OCwwLjU3OCwwLDAsMSwuNDctMC40MmwzLjA5LS40NywxLjM4LTIuOTJhMC41ODUsMC41ODUsMCwwLDEsLjUzLTAuMzUsMC41OTIsMC41OTIsMCwwLDEsLjUzLjM0bDEuMzgsMi45MywzLjA5LDAuNDdhMC41NzgsMC41NzgsMCwwLDEsLjQ3LjQyQTAuNjM4LDAuNjM4LDAsMCwxLDEyNzkuODIsMTM0MC43OVoiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0xMjY5IC0xMzM2KSIvPjwvc3ZnPg=="><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMSIgaGVpZ2h0PSIxMSIgdmlld0JveD0iMCAwIDExIDExIj48ZGVmcz48c3R5bGU+LmNscy0xe2ZpbGw6I2Y2MDtmaWxsLXJ1bGU6ZXZlbm9kZDtvcGFjaXR5Oi44fTwvc3R5bGU+PC9kZWZzPjxwYXRoIGlkPSJTaGFwZV8yX2NvcHlfMyIgZGF0YS1uYW1lPSJTaGFwZSAyIGNvcHkgMyIgY2xhc3M9ImNscy0xIiBkPSJNMTI3OS44MiwxMzQwLjc5bC0yLjIzLDIuMjcsMC41MywzLjIyYTAuNjMsMC42MywwLDAsMS0uMjQuNiwwLjU0MywwLjU0MywwLDAsMS0uMzQuMTIsMC42ODEsMC42ODEsMCwwLDEtLjI4LTAuMDdsLTIuNzYtMS41Mi0yLjc2LDEuNTJhMC41NjEsMC41NjEsMCwwLDEtLjYyLTAuMDUsMC42MywwLjYzLDAsMCwxLS4yNC0wLjZsMC41My0zLjIyLTIuMjMtMi4yN2EwLjYzOCwwLjYzOCwwLDAsMS0uMTUtMC42MywwLjU3OCwwLjU3OCwwLDAsMSwuNDctMC40MmwzLjA5LS40NywxLjM4LTIuOTJhMC41ODUsMC41ODUsMCwwLDEsLjUzLTAuMzUsMC41OTIsMC41OTIsMCwwLDEsLjUzLjM0bDEuMzgsMi45MywzLjA5LDAuNDdhMC41NzgsMC41NzgsMCwwLDEsLjQ3LjQyQTAuNjM4LDAuNjM4LDAsMCwxLDEyNzkuODIsMTM0MC43OVoiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0xMjY5IC0xMzM2KSIvPjwvc3ZnPg=="><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMSIgaGVpZ2h0PSIxMSIgdmlld0JveD0iMCAwIDExIDExIj48ZGVmcz48c3R5bGU+LmNscy0xe2ZpbGw6I2Y2MDtmaWxsLXJ1bGU6ZXZlbm9kZH08L3N0eWxlPjwvZGVmcz48cGF0aCBpZD0iU2hhcGVfM19jb3B5XzIiIGRhdGEtbmFtZT0iU2hhcGUgMyBjb3B5IDIiIGNsYXNzPSJjbHMtMSIgZD0iTTEzMjUsMTM0MC4yNmEwLjM0OCwwLjM0OCwwLDAsMC0uMzctMC4zMmwtMy4zMi0uNS0xLjQ5LTMuMTZhMC4zMjMsMC4zMjMsMCwwLDAtLjY0LDBsLTEuNDksMy4xNi0zLjMyLjVhMC4zNDgsMC4zNDgsMCwwLDAtLjM3LjMyLDAuNTA1LDAuNTA1LDAsMCwwLC4xNi4zM2wyLjQxLDIuNDYtMC41NywzLjQ2YTAuODgsMC44OCwwLDAsMC0uMDEuMTQsMC40MDksMC40MDksMCwwLDAsLjA3LjI1LDAuMjM5LDAuMjM5LDAsMCwwLC4yMS4xLDAuNTA3LDAuNTA3LDAsMCwwLC4yNi0wLjA5bDIuOTctMS42MywyLjk3LDEuNjNhMC40NzksMC40NzksMCwwLDAsLjI2LjA5LDAuMjgxLDAuMjgxLDAsMCwwLC4yNy0wLjM1di0wLjE0bC0wLjU3LTMuNDYsMi40LTIuNDZBMC41MjYsMC41MjYsMCwwLDAsMTMyNSwxMzQwLjI2Wm0tMy40OCwyLjQ4LDAuNDcsMi45MS0yLjQ5LTEuMzgtMi41LDEuMzgsMC40OC0yLjkxLTIuMDItMi4wNiwyLjc5LS40MywxLjI1LTIuNjUsMS4yNSwyLjY1LDIuNzksMC40M1oiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0xMzE0IC0xMzM2KSIvPjwvc3ZnPg=="><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMSIgaGVpZ2h0PSIxMSIgdmlld0JveD0iMCAwIDExIDExIj48ZGVmcz48c3R5bGU+LmNscy0xe2ZpbGw6I2Y2MDtmaWxsLXJ1bGU6ZXZlbm9kZH08L3N0eWxlPjwvZGVmcz48cGF0aCBpZD0iU2hhcGVfM19jb3B5XzIiIGRhdGEtbmFtZT0iU2hhcGUgMyBjb3B5IDIiIGNsYXNzPSJjbHMtMSIgZD0iTTEzMjUsMTM0MC4yNmEwLjM0OCwwLjM0OCwwLDAsMC0uMzctMC4zMmwtMy4zMi0uNS0xLjQ5LTMuMTZhMC4zMjMsMC4zMjMsMCwwLDAtLjY0LDBsLTEuNDksMy4xNi0zLjMyLjVhMC4zNDgsMC4zNDgsMCwwLDAtLjM3LjMyLDAuNTA1LDAuNTA1LDAsMCwwLC4xNi4zM2wyLjQxLDIuNDYtMC41NywzLjQ2YTAuODgsMC44OCwwLDAsMC0uMDEuMTQsMC40MDksMC40MDksMCwwLDAsLjA3LjI1LDAuMjM5LDAuMjM5LDAsMCwwLC4yMS4xLDAuNTA3LDAuNTA3LDAsMCwwLC4yNi0wLjA5bDIuOTctMS42MywyLjk3LDEuNjNhMC40NzksMC40NzksMCwwLDAsLjI2LjA5LDAuMjgxLDAuMjgxLDAsMCwwLC4yNy0wLjM1di0wLjE0bC0wLjU3LTMuNDYsMi40LTIuNDZBMC41MjYsMC41MjYsMCwwLDAsMTMyNSwxMzQwLjI2Wm0tMy40OCwyLjQ4LDAuNDcsMi45MS0yLjQ5LTEuMzgtMi41LDEuMzgsMC40OC0yLjkxLTIuMDItMi4wNiwyLjc5LS40MywxLjI1LTIuNjUsMS4yNSwyLjY1LDIuNzksMC40M1oiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0xMzE0IC0xMzM2KSIvPjwvc3ZnPg=="></div>
+                        <div class="card-tale__description"><a class="card-tale__description-name" href="javascript:void(0)">Алфавит в сезон простуд n60 таблеток</a><span class="card-tale__description-manufacturer">OOO Внешторг Фарма, Россия</span></div>
+                        <div class="card-tale__prices">
+                          <div class="card-tale__prices-current">
+                            <p>2 300 <span>р.</span>
+                            </p>
+                          </div>
+                          <div class="card-tale__prices-old">
+                            <p>5300 р.</p>
+                            <p class="economy"><span>1300</span> Экономия
+                            </p>
+                          </div>
+                        </div>
+                        <div class="card-tale__order">
+                          <div class="card-tale__order-count">
+                            <button class="card-tale__order-decrement">-</button>
+                            <input type="text" value="1">
+                            <button class="card-tale__order-increment">+</button>
+                          </div>
+                          <div class="card-tale__order-button">
+                            <input class="button-green" type="submit" value="Купить">
+                          </div>
+                        </div>
+                        <div class="card-tale__one-click"><a href="javascript:void(0)">Купить в 1 клик</a></div>
+                      </div>
+                    </div>
+                    <div class="card-tale catalog__card-tale">
+                      <div class="card-tale__inner">
+                        <div class="card-tale__inner-type-action">
+                          <div class="flag best-price"><span>Лучшая цена</span></div>
+                          <div class="flag hit"><span>Хит продаж</span></div>
+                          <div class="flag action"><span>Акция</span></div>
+                        </div>
+                        <div class="card-tale__inner-image"><a href="javascript:void(0)"><img src="image/imodium.png"></a></div>
+                        <div class="card-tale__rating"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMSIgaGVpZ2h0PSIxMSIgdmlld0JveD0iMCAwIDExIDExIj48ZGVmcz48c3R5bGU+LmNscy0xe2ZpbGw6I2Y2MDtmaWxsLXJ1bGU6ZXZlbm9kZDtvcGFjaXR5Oi44fTwvc3R5bGU+PC9kZWZzPjxwYXRoIGlkPSJTaGFwZV8yX2NvcHlfMyIgZGF0YS1uYW1lPSJTaGFwZSAyIGNvcHkgMyIgY2xhc3M9ImNscy0xIiBkPSJNMTI3OS44MiwxMzQwLjc5bC0yLjIzLDIuMjcsMC41MywzLjIyYTAuNjMsMC42MywwLDAsMS0uMjQuNiwwLjU0MywwLjU0MywwLDAsMS0uMzQuMTIsMC42ODEsMC42ODEsMCwwLDEtLjI4LTAuMDdsLTIuNzYtMS41Mi0yLjc2LDEuNTJhMC41NjEsMC41NjEsMCwwLDEtLjYyLTAuMDUsMC42MywwLjYzLDAsMCwxLS4yNC0wLjZsMC41My0zLjIyLTIuMjMtMi4yN2EwLjYzOCwwLjYzOCwwLDAsMS0uMTUtMC42MywwLjU3OCwwLjU3OCwwLDAsMSwuNDctMC40MmwzLjA5LS40NywxLjM4LTIuOTJhMC41ODUsMC41ODUsMCwwLDEsLjUzLTAuMzUsMC41OTIsMC41OTIsMCwwLDEsLjUzLjM0bDEuMzgsMi45MywzLjA5LDAuNDdhMC41NzgsMC41NzgsMCwwLDEsLjQ3LjQyQTAuNjM4LDAuNjM4LDAsMCwxLDEyNzkuODIsMTM0MC43OVoiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0xMjY5IC0xMzM2KSIvPjwvc3ZnPg=="><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMSIgaGVpZ2h0PSIxMSIgdmlld0JveD0iMCAwIDExIDExIj48ZGVmcz48c3R5bGU+LmNscy0xe2ZpbGw6I2Y2MDtmaWxsLXJ1bGU6ZXZlbm9kZDtvcGFjaXR5Oi44fTwvc3R5bGU+PC9kZWZzPjxwYXRoIGlkPSJTaGFwZV8yX2NvcHlfMyIgZGF0YS1uYW1lPSJTaGFwZSAyIGNvcHkgMyIgY2xhc3M9ImNscy0xIiBkPSJNMTI3OS44MiwxMzQwLjc5bC0yLjIzLDIuMjcsMC41MywzLjIyYTAuNjMsMC42MywwLDAsMS0uMjQuNiwwLjU0MywwLjU0MywwLDAsMS0uMzQuMTIsMC42ODEsMC42ODEsMCwwLDEtLjI4LTAuMDdsLTIuNzYtMS41Mi0yLjc2LDEuNTJhMC41NjEsMC41NjEsMCwwLDEtLjYyLTAuMDUsMC42MywwLjYzLDAsMCwxLS4yNC0wLjZsMC41My0zLjIyLTIuMjMtMi4yN2EwLjYzOCwwLjYzOCwwLDAsMS0uMTUtMC42MywwLjU3OCwwLjU3OCwwLDAsMSwuNDctMC40MmwzLjA5LS40NywxLjM4LTIuOTJhMC41ODUsMC41ODUsMCwwLDEsLjUzLTAuMzUsMC41OTIsMC41OTIsMCwwLDEsLjUzLjM0bDEuMzgsMi45MywzLjA5LDAuNDdhMC41NzgsMC41NzgsMCwwLDEsLjQ3LjQyQTAuNjM4LDAuNjM4LDAsMCwxLDEyNzkuODIsMTM0MC43OVoiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0xMjY5IC0xMzM2KSIvPjwvc3ZnPg=="><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMSIgaGVpZ2h0PSIxMSIgdmlld0JveD0iMCAwIDExIDExIj48ZGVmcz48c3R5bGU+LmNscy0xe2ZpbGw6I2Y2MDtmaWxsLXJ1bGU6ZXZlbm9kZDtvcGFjaXR5Oi44fTwvc3R5bGU+PC9kZWZzPjxwYXRoIGlkPSJTaGFwZV8yX2NvcHlfMyIgZGF0YS1uYW1lPSJTaGFwZSAyIGNvcHkgMyIgY2xhc3M9ImNscy0xIiBkPSJNMTI3OS44MiwxMzQwLjc5bC0yLjIzLDIuMjcsMC41MywzLjIyYTAuNjMsMC42MywwLDAsMS0uMjQuNiwwLjU0MywwLjU0MywwLDAsMS0uMzQuMTIsMC42ODEsMC42ODEsMCwwLDEtLjI4LTAuMDdsLTIuNzYtMS41Mi0yLjc2LDEuNTJhMC41NjEsMC41NjEsMCwwLDEtLjYyLTAuMDUsMC42MywwLjYzLDAsMCwxLS4yNC0wLjZsMC41My0zLjIyLTIuMjMtMi4yN2EwLjYzOCwwLjYzOCwwLDAsMS0uMTUtMC42MywwLjU3OCwwLjU3OCwwLDAsMSwuNDctMC40MmwzLjA5LS40NywxLjM4LTIuOTJhMC41ODUsMC41ODUsMCwwLDEsLjUzLTAuMzUsMC41OTIsMC41OTIsMCwwLDEsLjUzLjM0bDEuMzgsMi45MywzLjA5LDAuNDdhMC41NzgsMC41NzgsMCwwLDEsLjQ3LjQyQTAuNjM4LDAuNjM4LDAsMCwxLDEyNzkuODIsMTM0MC43OVoiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0xMjY5IC0xMzM2KSIvPjwvc3ZnPg=="><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMSIgaGVpZ2h0PSIxMSIgdmlld0JveD0iMCAwIDExIDExIj48ZGVmcz48c3R5bGU+LmNscy0xe2ZpbGw6I2Y2MDtmaWxsLXJ1bGU6ZXZlbm9kZH08L3N0eWxlPjwvZGVmcz48cGF0aCBpZD0iU2hhcGVfM19jb3B5XzIiIGRhdGEtbmFtZT0iU2hhcGUgMyBjb3B5IDIiIGNsYXNzPSJjbHMtMSIgZD0iTTEzMjUsMTM0MC4yNmEwLjM0OCwwLjM0OCwwLDAsMC0uMzctMC4zMmwtMy4zMi0uNS0xLjQ5LTMuMTZhMC4zMjMsMC4zMjMsMCwwLDAtLjY0LDBsLTEuNDksMy4xNi0zLjMyLjVhMC4zNDgsMC4zNDgsMCwwLDAtLjM3LjMyLDAuNTA1LDAuNTA1LDAsMCwwLC4xNi4zM2wyLjQxLDIuNDYtMC41NywzLjQ2YTAuODgsMC44OCwwLDAsMC0uMDEuMTQsMC40MDksMC40MDksMCwwLDAsLjA3LjI1LDAuMjM5LDAuMjM5LDAsMCwwLC4yMS4xLDAuNTA3LDAuNTA3LDAsMCwwLC4yNi0wLjA5bDIuOTctMS42MywyLjk3LDEuNjNhMC40NzksMC40NzksMCwwLDAsLjI2LjA5LDAuMjgxLDAuMjgxLDAsMCwwLC4yNy0wLjM1di0wLjE0bC0wLjU3LTMuNDYsMi40LTIuNDZBMC41MjYsMC41MjYsMCwwLDAsMTMyNSwxMzQwLjI2Wm0tMy40OCwyLjQ4LDAuNDcsMi45MS0yLjQ5LTEuMzgtMi41LDEuMzgsMC40OC0yLjkxLTIuMDItMi4wNiwyLjc5LS40MywxLjI1LTIuNjUsMS4yNSwyLjY1LDIuNzksMC40M1oiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0xMzE0IC0xMzM2KSIvPjwvc3ZnPg=="><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMSIgaGVpZ2h0PSIxMSIgdmlld0JveD0iMCAwIDExIDExIj48ZGVmcz48c3R5bGU+LmNscy0xe2ZpbGw6I2Y2MDtmaWxsLXJ1bGU6ZXZlbm9kZH08L3N0eWxlPjwvZGVmcz48cGF0aCBpZD0iU2hhcGVfM19jb3B5XzIiIGRhdGEtbmFtZT0iU2hhcGUgMyBjb3B5IDIiIGNsYXNzPSJjbHMtMSIgZD0iTTEzMjUsMTM0MC4yNmEwLjM0OCwwLjM0OCwwLDAsMC0uMzctMC4zMmwtMy4zMi0uNS0xLjQ5LTMuMTZhMC4zMjMsMC4zMjMsMCwwLDAtLjY0LDBsLTEuNDksMy4xNi0zLjMyLjVhMC4zNDgsMC4zNDgsMCwwLDAtLjM3LjMyLDAuNTA1LDAuNTA1LDAsMCwwLC4xNi4zM2wyLjQxLDIuNDYtMC41NywzLjQ2YTAuODgsMC44OCwwLDAsMC0uMDEuMTQsMC40MDksMC40MDksMCwwLDAsLjA3LjI1LDAuMjM5LDAuMjM5LDAsMCwwLC4yMS4xLDAuNTA3LDAuNTA3LDAsMCwwLC4yNi0wLjA5bDIuOTctMS42MywyLjk3LDEuNjNhMC40NzksMC40NzksMCwwLDAsLjI2LjA5LDAuMjgxLDAuMjgxLDAsMCwwLC4yNy0wLjM1di0wLjE0bC0wLjU3LTMuNDYsMi40LTIuNDZBMC41MjYsMC41MjYsMCwwLDAsMTMyNSwxMzQwLjI2Wm0tMy40OCwyLjQ4LDAuNDcsMi45MS0yLjQ5LTEuMzgtMi41LDEuMzgsMC40OC0yLjkxLTIuMDItMi4wNiwyLjc5LS40MywxLjI1LTIuNjUsMS4yNSwyLjY1LDIuNzksMC40M1oiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0xMzE0IC0xMzM2KSIvPjwvc3ZnPg=="></div>
+                        <div class="card-tale__description"><a class="card-tale__description-name" href="javascript:void(0)">Алфавит в сезон простуд n60 таблеток</a><span class="card-tale__description-manufacturer">OOO Внешторг Фарма, Россия</span></div>
+                        <div class="card-tale__prices">
+                          <div class="card-tale__prices-current">
+                            <p>2 300 <span>р.</span>
+                            </p>
+                          </div>
+                          <div class="card-tale__prices-old">
+                            <p>5300 р.</p>
+                            <p class="economy"><span>1300</span> Экономия
+                            </p>
+                          </div>
+                        </div>
+                        <div class="card-tale__order">
+                          <div class="card-tale__order-count">
+                            <button class="card-tale__order-decrement">-</button>
+                            <input type="text" value="1">
+                            <button class="card-tale__order-increment">+</button>
+                          </div>
+                          <div class="card-tale__order-button">
+                            <input class="button-green" type="submit" value="Купить">
+                          </div>
+                        </div>
+                        <div class="card-tale__one-click"><a href="javascript:void(0)">Купить в 1 клик</a></div>
+                      </div>
+                    </div>
+                    <div class="card-tale catalog__card-tale">
+                      <div class="card-tale__inner">
+                        <div class="card-tale__inner-type-action">
+                          <div class="flag best-price"><span>Лучшая цена</span></div>
+                          <div class="flag hit"><span>Хит продаж</span></div>
+                          <div class="flag action"><span>Акция</span></div>
+                        </div>
+                        <div class="card-tale__inner-image"><a href="javascript:void(0)"><img src="image/imodium.png"></a></div>
+                        <div class="card-tale__rating"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMSIgaGVpZ2h0PSIxMSIgdmlld0JveD0iMCAwIDExIDExIj48ZGVmcz48c3R5bGU+LmNscy0xe2ZpbGw6I2Y2MDtmaWxsLXJ1bGU6ZXZlbm9kZDtvcGFjaXR5Oi44fTwvc3R5bGU+PC9kZWZzPjxwYXRoIGlkPSJTaGFwZV8yX2NvcHlfMyIgZGF0YS1uYW1lPSJTaGFwZSAyIGNvcHkgMyIgY2xhc3M9ImNscy0xIiBkPSJNMTI3OS44MiwxMzQwLjc5bC0yLjIzLDIuMjcsMC41MywzLjIyYTAuNjMsMC42MywwLDAsMS0uMjQuNiwwLjU0MywwLjU0MywwLDAsMS0uMzQuMTIsMC42ODEsMC42ODEsMCwwLDEtLjI4LTAuMDdsLTIuNzYtMS41Mi0yLjc2LDEuNTJhMC41NjEsMC41NjEsMCwwLDEtLjYyLTAuMDUsMC42MywwLjYzLDAsMCwxLS4yNC0wLjZsMC41My0zLjIyLTIuMjMtMi4yN2EwLjYzOCwwLjYzOCwwLDAsMS0uMTUtMC42MywwLjU3OCwwLjU3OCwwLDAsMSwuNDctMC40MmwzLjA5LS40NywxLjM4LTIuOTJhMC41ODUsMC41ODUsMCwwLDEsLjUzLTAuMzUsMC41OTIsMC41OTIsMCwwLDEsLjUzLjM0bDEuMzgsMi45MywzLjA5LDAuNDdhMC41NzgsMC41NzgsMCwwLDEsLjQ3LjQyQTAuNjM4LDAuNjM4LDAsMCwxLDEyNzkuODIsMTM0MC43OVoiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0xMjY5IC0xMzM2KSIvPjwvc3ZnPg=="><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMSIgaGVpZ2h0PSIxMSIgdmlld0JveD0iMCAwIDExIDExIj48ZGVmcz48c3R5bGU+LmNscy0xe2ZpbGw6I2Y2MDtmaWxsLXJ1bGU6ZXZlbm9kZDtvcGFjaXR5Oi44fTwvc3R5bGU+PC9kZWZzPjxwYXRoIGlkPSJTaGFwZV8yX2NvcHlfMyIgZGF0YS1uYW1lPSJTaGFwZSAyIGNvcHkgMyIgY2xhc3M9ImNscy0xIiBkPSJNMTI3OS44MiwxMzQwLjc5bC0yLjIzLDIuMjcsMC41MywzLjIyYTAuNjMsMC42MywwLDAsMS0uMjQuNiwwLjU0MywwLjU0MywwLDAsMS0uMzQuMTIsMC42ODEsMC42ODEsMCwwLDEtLjI4LTAuMDdsLTIuNzYtMS41Mi0yLjc2LDEuNTJhMC41NjEsMC41NjEsMCwwLDEtLjYyLTAuMDUsMC42MywwLjYzLDAsMCwxLS4yNC0wLjZsMC41My0zLjIyLTIuMjMtMi4yN2EwLjYzOCwwLjYzOCwwLDAsMS0uMTUtMC42MywwLjU3OCwwLjU3OCwwLDAsMSwuNDctMC40MmwzLjA5LS40NywxLjM4LTIuOTJhMC41ODUsMC41ODUsMCwwLDEsLjUzLTAuMzUsMC41OTIsMC41OTIsMCwwLDEsLjUzLjM0bDEuMzgsMi45MywzLjA5LDAuNDdhMC41NzgsMC41NzgsMCwwLDEsLjQ3LjQyQTAuNjM4LDAuNjM4LDAsMCwxLDEyNzkuODIsMTM0MC43OVoiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0xMjY5IC0xMzM2KSIvPjwvc3ZnPg=="><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMSIgaGVpZ2h0PSIxMSIgdmlld0JveD0iMCAwIDExIDExIj48ZGVmcz48c3R5bGU+LmNscy0xe2ZpbGw6I2Y2MDtmaWxsLXJ1bGU6ZXZlbm9kZDtvcGFjaXR5Oi44fTwvc3R5bGU+PC9kZWZzPjxwYXRoIGlkPSJTaGFwZV8yX2NvcHlfMyIgZGF0YS1uYW1lPSJTaGFwZSAyIGNvcHkgMyIgY2xhc3M9ImNscy0xIiBkPSJNMTI3OS44MiwxMzQwLjc5bC0yLjIzLDIuMjcsMC41MywzLjIyYTAuNjMsMC42MywwLDAsMS0uMjQuNiwwLjU0MywwLjU0MywwLDAsMS0uMzQuMTIsMC42ODEsMC42ODEsMCwwLDEtLjI4LTAuMDdsLTIuNzYtMS41Mi0yLjc2LDEuNTJhMC41NjEsMC41NjEsMCwwLDEtLjYyLTAuMDUsMC42MywwLjYzLDAsMCwxLS4yNC0wLjZsMC41My0zLjIyLTIuMjMtMi4yN2EwLjYzOCwwLjYzOCwwLDAsMS0uMTUtMC42MywwLjU3OCwwLjU3OCwwLDAsMSwuNDctMC40MmwzLjA5LS40NywxLjM4LTIuOTJhMC41ODUsMC41ODUsMCwwLDEsLjUzLTAuMzUsMC41OTIsMC41OTIsMCwwLDEsLjUzLjM0bDEuMzgsMi45MywzLjA5LDAuNDdhMC41NzgsMC41NzgsMCwwLDEsLjQ3LjQyQTAuNjM4LDAuNjM4LDAsMCwxLDEyNzkuODIsMTM0MC43OVoiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0xMjY5IC0xMzM2KSIvPjwvc3ZnPg=="><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMSIgaGVpZ2h0PSIxMSIgdmlld0JveD0iMCAwIDExIDExIj48ZGVmcz48c3R5bGU+LmNscy0xe2ZpbGw6I2Y2MDtmaWxsLXJ1bGU6ZXZlbm9kZH08L3N0eWxlPjwvZGVmcz48cGF0aCBpZD0iU2hhcGVfM19jb3B5XzIiIGRhdGEtbmFtZT0iU2hhcGUgMyBjb3B5IDIiIGNsYXNzPSJjbHMtMSIgZD0iTTEzMjUsMTM0MC4yNmEwLjM0OCwwLjM0OCwwLDAsMC0uMzctMC4zMmwtMy4zMi0uNS0xLjQ5LTMuMTZhMC4zMjMsMC4zMjMsMCwwLDAtLjY0LDBsLTEuNDksMy4xNi0zLjMyLjVhMC4zNDgsMC4zNDgsMCwwLDAtLjM3LjMyLDAuNTA1LDAuNTA1LDAsMCwwLC4xNi4zM2wyLjQxLDIuNDYtMC41NywzLjQ2YTAuODgsMC44OCwwLDAsMC0uMDEuMTQsMC40MDksMC40MDksMCwwLDAsLjA3LjI1LDAuMjM5LDAuMjM5LDAsMCwwLC4yMS4xLDAuNTA3LDAuNTA3LDAsMCwwLC4yNi0wLjA5bDIuOTctMS42MywyLjk3LDEuNjNhMC40NzksMC40NzksMCwwLDAsLjI2LjA5LDAuMjgxLDAuMjgxLDAsMCwwLC4yNy0wLjM1di0wLjE0bC0wLjU3LTMuNDYsMi40LTIuNDZBMC41MjYsMC41MjYsMCwwLDAsMTMyNSwxMzQwLjI2Wm0tMy40OCwyLjQ4LDAuNDcsMi45MS0yLjQ5LTEuMzgtMi41LDEuMzgsMC40OC0yLjkxLTIuMDItMi4wNiwyLjc5LS40MywxLjI1LTIuNjUsMS4yNSwyLjY1LDIuNzksMC40M1oiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0xMzE0IC0xMzM2KSIvPjwvc3ZnPg=="><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMSIgaGVpZ2h0PSIxMSIgdmlld0JveD0iMCAwIDExIDExIj48ZGVmcz48c3R5bGU+LmNscy0xe2ZpbGw6I2Y2MDtmaWxsLXJ1bGU6ZXZlbm9kZH08L3N0eWxlPjwvZGVmcz48cGF0aCBpZD0iU2hhcGVfM19jb3B5XzIiIGRhdGEtbmFtZT0iU2hhcGUgMyBjb3B5IDIiIGNsYXNzPSJjbHMtMSIgZD0iTTEzMjUsMTM0MC4yNmEwLjM0OCwwLjM0OCwwLDAsMC0uMzctMC4zMmwtMy4zMi0uNS0xLjQ5LTMuMTZhMC4zMjMsMC4zMjMsMCwwLDAtLjY0LDBsLTEuNDksMy4xNi0zLjMyLjVhMC4zNDgsMC4zNDgsMCwwLDAtLjM3LjMyLDAuNTA1LDAuNTA1LDAsMCwwLC4xNi4zM2wyLjQxLDIuNDYtMC41NywzLjQ2YTAuODgsMC44OCwwLDAsMC0uMDEuMTQsMC40MDksMC40MDksMCwwLDAsLjA3LjI1LDAuMjM5LDAuMjM5LDAsMCwwLC4yMS4xLDAuNTA3LDAuNTA3LDAsMCwwLC4yNi0wLjA5bDIuOTctMS42MywyLjk3LDEuNjNhMC40NzksMC40NzksMCwwLDAsLjI2LjA5LDAuMjgxLDAuMjgxLDAsMCwwLC4yNy0wLjM1di0wLjE0bC0wLjU3LTMuNDYsMi40LTIuNDZBMC41MjYsMC41MjYsMCwwLDAsMTMyNSwxMzQwLjI2Wm0tMy40OCwyLjQ4LDAuNDcsMi45MS0yLjQ5LTEuMzgtMi41LDEuMzgsMC40OC0yLjkxLTIuMDItMi4wNiwyLjc5LS40MywxLjI1LTIuNjUsMS4yNSwyLjY1LDIuNzksMC40M1oiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0xMzE0IC0xMzM2KSIvPjwvc3ZnPg=="></div>
+                        <div class="card-tale__description"><a class="card-tale__description-name" href="javascript:void(0)">Алфавит в сезон простуд n60 таблеток</a><span class="card-tale__description-manufacturer">OOO Внешторг Фарма, Россия</span></div>
+                        <div class="card-tale__prices">
+                          <div class="card-tale__prices-current">
+                            <p>2 300 <span>р.</span>
+                            </p>
+                          </div>
+                          <div class="card-tale__prices-old">
+                            <p>5300 р.</p>
+                            <p class="economy"><span>1300</span> Экономия
+                            </p>
+                          </div>
+                        </div>
+                        <div class="card-tale__order">
+                          <div class="card-tale__order-count">
+                            <button class="card-tale__order-decrement">-</button>
+                            <input type="text" value="1">
+                            <button class="card-tale__order-increment">+</button>
+                          </div>
+                          <div class="card-tale__order-button">
+                            <input class="button-green" type="submit" value="Купить">
+                          </div>
+                        </div>
+                        <div class="card-tale__one-click"><a href="javascript:void(0)">Купить в 1 клик</a></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="pagination catalog__pagination">
+                    <ul>
+                      <li class="pagination__first"><a href="javascript:void(0)">Первая</a></li>
+                      <li><a href="javascript:void(0)">1</a></li>
+                      <li class="pagination__active"><a href="javascript:void(0)">2</a></li>
+                      <li><a href="javascript:void(0)">3</a></li>
+                      <li class="pagination__last"><a href="javascript:void(0)">Последняя</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="section-white catalog__section-white">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="text-block">
+                <h2>Seo. Заголовок</h2>
+                <p>Пользуясь услугами нашей компании, вы можете купить в Москве оптом и в розницу товары для красоты и здоровья, а также лекарственные препараты по самым низким ценам. При этом иметь купоны на скидку и знать секретные промо коды совсем не обязательно — мы всегда предлагаем низкие цены и выгодные условия.</p>
+                <p>
+                  Интернет-аптека работает круглосуточно, поэтому наши клиенты имеют возможность уточнить список имеющихся препаратов с определенным действующим веществом, сравнить цены, проверить наличие лекарств в сетевых аптеках области и недорого заказать с доставкой на дом качественные товары фармацевтической отрасли в любое время суток. Главная ночная служба Eapteka.ru функционирует без перебоев.Интуитивно понятная система поиска и сравнения позволяет найти требуемое торговое наименование, узнать в справочной его рейтинг, уточнить, сколько оно стоит и продается ли без рецепта,за считанные секунды. Если лекарство нужно привезти срочно, вы можете воспользоваться услугой городской экспресс-доставки, которая предусматривает привоз заказа в течение трех часов (в ночное время услугу также можно заказать).</p>
               </div>
             </div>
           </div>
         </div>
       </div>
     </main>
+    <footer>
+      <div class="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-3 footer__logo"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMjciIGhlaWdodD0iODguNzgiIHZpZXdCb3g9IjAgMCAyMjcgODguNzgiPjxkZWZzPjxzdHlsZT4uY2xzLTF7ZmlsbDojZmZmO2ZpbGwtcnVsZTpldmVub2RkfTwvc3R5bGU+PC9kZWZzPjxwYXRoIGlkPSJTaGFwZV83MjJfY29weV8yIiBkYXRhLW5hbWU9IlNoYXBlIDcyMiBjb3B5IDIiIGNsYXNzPSJjbHMtMSIgZD0iTTUwMy45ODYsNDUxMC40OGMxMS4zMjQsMC4wMywzMC4wOTMuMDMsNDEuNDE3LDAuMDN2LTQ0LjNINTA0LjU5MWEyMi4xMzgsMjIuMTM4LDAsMCwwLS42MDUsNDQuMjdtODEuODI2LTU1LjI4aC04MWEzMy4wMjgsMzMuMDI4LDAsMCwwLS43NDksNjYuMDVjMjIuMzcyLDAuMDYsNTkuMzc0LjAxLDgxLjc0NywwLjAxQTMzLjExLDMzLjExLDAsMCwwLDYxOSw0NDg4LjIzQzYxOSw0NDY5Ljk5LDYwNi4wMzcsNDQ1NS4yLDU4NS44MTIsNDQ1NS4yWm0tMTMxLjIzMyw2MC41N2E1LjUxNiw1LjUxNiwwLDAsMCwxMS4wMzEsMGgwLjAxNnYtNTUuMDhINDY1LjYxYTUuNTE2LDUuNTE2LDAsMCwwLTExLjAzMSwwaC0wLjAxNnYyMi4wNGgtNTEuNXYtMjIuMDRoLTAuMDE1YTUuNTE2LDUuNTE2LDAsMCwwLTExLjAzMSwwSDM5MnY1NS4wOGgwLjAxNmE1LjUxNiw1LjUxNiwwLDAsMCwxMS4wMzEsMGgwLjAxNXYtMjIuMDNoNTEuNXYyMi4wM2gwLjAxNlptMTUxLjEzNSwyOC4xNCwxLjI0Mi05LjIyYTMuMSwzLjEsMCwwLDEsLjctMS43NSwxLjg0NCwxLjg0NCwwLDAsMSwxLjQyNy0uNjEsMS44ODIsMS44ODIsMCwwLDEsMS4zODIuNTUsMy4xMjgsMy4xMjgsMCwwLDEsLjgwOCwxLjU3bDAuNzQ0LDMuMTZhMTEuMDM3LDExLjAzNywwLDAsMSwuMzMzLDIuMTQsMTIuMTYyLDEyLjE2MiwwLDAsMSwuMzM0LTIuMTRsMC43NS0zLjE2YTMuMTI3LDMuMTI3LDAsMCwxLC44MDctMS41NywxLjg4MiwxLjg4MiwwLDAsMSwxLjM4Mi0uNTUsMS44NTIsMS44NTIsMCwwLDEsMS40My42MiwzLjA4NCwzLjA4NCwwLDAsMSwuNywxLjc0bDEuMjQyLDkuMjJoLTIuNzMybC0wLjYzOS03LjEzYy0wLjA1OC0uNzEtMC4xMDYtMS40LTAuMTQzLTIuMDktMC4wNS4yNi0uMTE5LDAuNi0wLjIsMS4wMnMtMC4xNTMuNzUtLjIwNiwwLjk5bC0xLjE5Miw1LjU1YTMuMTc2LDMuMTc2LDAsMCwxLS41NTYsMS4zMywxLjMyOCwxLjMyOCwwLDAsMS0xLjkzOCwwLDMuMTg5LDMuMTg5LDAsMCwxLS41NTYtMS4zM2wtMS4xOTItNS41NWMtMC4xLS40Ni0wLjE3NS0wLjg1LTAuMjM1LTEuMTdzLTAuMTIyLS41OS0wLjE3NS0wLjg0YzAsMC40OS0uMDQzLDEuMTktMC4xMjcsMi4wOWwtMC42MzgsNy4xM2gtMi43NDlabS0xNy45NTIsMHYtNy4zMmE0LjYwNiw0LjYwNiwwLDAsMSwuNTExLTIuMTcsMy43NzYsMy43NzYsMCwwLDEsMS40NjktMS41NCw0LjI0MSw0LjI0MSwwLDAsMSwyLjIxNC0uNTYsMy45MTcsMy45MTcsMCwwLDEsMi4wMjguNTUsNC4wNDMsNC4wNDMsMCwwLDEsMS40OTEsMS40NywzLjgzMywzLjgzMywwLDAsMSwuNTQ4LDIuMDEsNC4xOTQsNC4xOTQsMCwwLDEtLjU0LDIuMTEsMy44MjQsMy44MjQsMCwwLDEtMS41MzgsMS41LDQuNjM0LDQuNjM0LDAsMCwxLTIuMjkxLjU1bC0wLjUyNC0zLjAyYTEsMSwwLDAsMCwuODI2LjMsMS4xMjMsMS4xMjMsMCwwLDAsLjg3OS0wLjQsMS4zNTgsMS4zNTgsMCwwLDAsLjM2LTAuOTYsMS41NTksMS41NTksMCwwLDAtLjMxNS0xLDEuMTk0LDEuMTk0LDAsMCwwLS45OS0wLjM5LDEuMTQ2LDEuMTQ2LDAsMCwwLS42MTUuMTcsMS4zMzQsMS4zMzQsMCwwLDAtLjQ3NC41MywxLjgyNSwxLjgyNSwwLDAsMC0uMTguODN2Ny4zNGgtMi44NTlabS0xNC45NS04LjgzYTEuMzYzLDEuMzYzLDAsMCwwLTEuMTMxLjUsMi4yNjMsMi4yNjMsMCwwLDAtLjM5NCwxLjQzdjEuMjhoMy4wNjZ2LTEuNGExLjk4MiwxLjk4MiwwLDAsMC0uNDE4LTEuMzJBMS40MjEsMS40MjEsMCwwLDAsNTcyLjgxMiw0NTM1LjA4Wm0tNC4zNTMsOC44M3YtNi43NGE2LjIsNi4yLDAsMCwxLC4zMTUtMi4wMyw0LjM1LDQuMzUsMCwwLDEsLjktMS41MywzLjY1NiwzLjY1NiwwLDAsMSwxLjM4LS45Niw0Ljg2NCw0Ljg2NCwwLDAsMSwzLjUyMiwwLDMuNjc4LDMuNjc4LDAsMCwxLDEuMzg0Ljk2LDQuMjc1LDQuMjc1LDAsMCwxLC45MDYsMS41NCw2LjEsNi4xLDAsMCwxLC4zMTUsMi4wMnY2Ljc0aC0yLjgyOHYtMi45NGgtMy4wNjZ2Mi45NGgtMi44MjhabS0xOC42MDcsMHYtNy4zNGExLjc1NCwxLjc1NCwwLDAsMC0uMTgtMC44MiwxLjI2LDEuMjYsMCwwLDAtLjQ3Mi0wLjUzLDEuMTUxLDEuMTUxLDAsMCwwLS42MTktMC4xOCwxLjE5MywxLjE5MywwLDAsMC0uOTg4LjM5LDEuNTc5LDEuNTc5LDAsMCwwLS4zMTUsMSwxLjM2MSwxLjM2MSwwLDAsMCwuMzYzLjk2LDEuMTMsMS4xMywwLDAsMCwuODc2LjQsMC45OTIsMC45OTIsMCwwLDAsLjgyNy0wLjNsLTAuNTI3LDMuMDJhNC42Miw0LjYyLDAsMCwxLTIuMjg4LS41NSwzLjgyLDMuODIsMCwwLDEtMS41MzktMS41LDQuMTk0LDQuMTk0LDAsMCwxLS41NC0yLjExLDMuODQyLDMuODQyLDAsMCwxLC41NDgtMi4wMSw0LjAyOCw0LjAyOCwwLDAsMSwxLjQ5MS0xLjQ3LDMuOTMyLDMuOTMyLDAsMCwxLDIuMDI4LS41NSw0LjUzNSw0LjUzNSwwLDAsMCw1LjUyOSwwLDMuOSwzLjksMCwwLDEsMi4wMjMuNTUsNC4wNTgsNC4wNTgsMCwwLDEsMS40OTEsMS40NywzLjgyLDMuODIsMCwwLDEsLjU1NCwyLjAxLDQuMTk0LDQuMTk0LDAsMCwxLS41NCwyLjExLDMuODA4LDMuODA4LDAsMCwxLTEuNTM5LDEuNSw0LjYzOCw0LjYzOCwwLDAsMS0yLjI5LjU1bC0wLjUyNS0zLjAyYTEsMSwwLDAsMCwuODI2LjMsMS4xMjcsMS4xMjcsMCwwLDAsLjg4LTAuNCwxLjM2MywxLjM2MywwLDAsMCwuMzYtMC45NiwxLjU1NCwxLjU1NCwwLDAsMC0uMzE2LTEsMS4xODcsMS4xODcsMCwwLDAtLjk4NC0wLjM5LDEuMTU2LDEuMTU2LDAsMCwwLS44OTMuNDEsMS41ODEsMS41ODEsMCwwLDAtLjM4MSwxLjEydjcuMzRoLTIuODZabS0zNC4wNjUtOC44M2ExLjM2MSwxLjM2MSwwLDAsMC0xLjEzMS41LDIuMjYzLDIuMjYzLDAsMCwwLS4zOTQsMS40M3YxLjI4aDMuMDY2di0xLjRhMS45ODIsMS45ODIsMCwwLDAtLjQxOC0xLjMyQTEuNDE5LDEuNDE5LDAsMCwwLDUxNS43ODcsNDUzNS4wOFptLTQuMzUzLDguODN2LTYuNzRhNi4yLDYuMiwwLDAsMSwuMzE1LTIuMDMsNC4zNSw0LjM1LDAsMCwxLC45LTEuNTMsMy42NTYsMy42NTYsMCwwLDEsMS4zOC0uOTYsNC44NjEsNC44NjEsMCwwLDEsMy41MjEsMCwzLjY3NCwzLjY3NCwwLDAsMSwxLjM4NS45Niw0LjI3NSw0LjI3NSwwLDAsMSwuOTA2LDEuNTQsNi4xLDYuMSwwLDAsMSwuMzE1LDIuMDJ2Ni43NGgtMi44Mjh2LTIuOTRoLTMuMDY2djIuOTRoLTIuODI4Wm0tMTMuNjc5LTIuNzl2LTQuMDlhMi4xNzcsMi4xNzcsMCwwLDAtLjQtMS40MiwxLjM3OCwxLjM3OCwwLDAsMC0xLjE0MS0uNDksMS4zNTksMS4zNTksMCwwLDAtMS4xMjguNDksMi4xOTUsMi4xOTUsMCwwLDAtLjQsMS40MnY0LjA5aDMuMDY2Wm0tMS41MzgtOC43OWE0LjM2Myw0LjM2MywwLDAsMSwyLjI2MS41OSwzLjk0NCwzLjk0NCwwLDAsMSwxLjU0MSwxLjY4LDUuNzc4LDUuNzc4LDAsMCwxLC41NDgsMi41OXYzLjkzaDAuOHYyLjc5SDQ5MC45ODd2LTIuNzloMC44NzR2LTMuOTNhNS43NzgsNS43NzgsMCwwLDEsLjU0OC0yLjU5LDMuOTQ0LDMuOTQ0LDAsMCwxLDEuNTQxLTEuNjhBNC4zNzIsNC4zNzIsMCwwLDEsNDk2LjIxNyw0NTMyLjMzWm0tMjMuNTMyLjE5aDIuODQ0djQuNTRsMy4wNjYtNC41NWgzLjFsLTMuMyw0LjU1YTIuNTA2LDIuNTA2LDAsMCwxLDEuMzI0LjM1LDIuNDY1LDIuNDY1LDAsMCwxLDEuMTU0LDIuMDd2NC40M2gtMi44MTJ2LTMuODVhMS40NDUsMS40NDUsMCwwLDAtLjM1NS0wLjk4LDEuMjE1LDEuMjE1LDAsMCwwLS45NjQtMC40MSwxLjA4MywxLjA4MywwLDAsMC0uODg3LjM5LDEuNTE1LDEuNTE1LDAsMCwwLS4zMiwxdjMuODVoLTIuODQ0di0zLjg1YTEuNTA3LDEuNTA3LDAsMCwwLS4zMTgtMSwxLjA4MywxLjA4MywwLDAsMC0uODktMC4zOSwxLjIyMSwxLjIyMSwwLDAsMC0uOTYxLjQxLDEuNDM3LDEuNDM3LDAsMCwwLS4zNTguOTh2My44NWgtMi44MTF2LTQuNDNhMi40NDUsMi40NDUsMCwwLDEsLjI5My0xLjE1LDIuMzg2LDIuMzg2LDAsMCwxLC44NjMtMC45MiwyLjUsMi41LDAsMCwxLDEuMzIyLS4zNWwtMy4zMDUtNC41NWgzLjFsMy4wNjYsNC41NXYtNC41NFptLTIxLjk4OCwwaDYuMDM3djIuNjdoLTMuMTkzdjEuNDloMy4xOTN2Mi42NmgtMy4xOTN2MC43NGExLjA1MSwxLjA1MSwwLDAsMCwxLjIwNywxLjE3aDEuOTg2djIuNjZINDU0LjdhNC4yMiw0LjIyLDAsMCwxLTMuMDE2LS45NCwzLjc2OSwzLjc2OSwwLDAsMS0uOTg4LTIuODd2LTcuNThaTTQzNyw0NTQxLjEydi00LjA5YTIuMTgzLDIuMTgzLDAsMCwwLS40LTEuNDIsMS4zOCwxLjM4LDAsMCwwLTEuMTQyLS40OSwxLjM2LDEuMzYsMCwwLDAtMS4xMjguNDksMi4xOTUsMi4xOTUsMCwwLDAtLjQsMS40MnY0LjA5SDQzN1ptLTEuNTM4LTguNzlhNC4zNjcsNC4zNjcsMCwwLDEsMi4yNjIuNTksMy45NDIsMy45NDIsMCwwLDEsMS41NCwxLjY4LDUuNzY1LDUuNzY1LDAsMCwxLC41NDksMi41OXYzLjkzaDAuNzk0djIuNzlINDMwLjIzNHYtMi43OWgwLjg3NHYtMy45M2E1Ljc3OCw1Ljc3OCwwLDAsMSwuNTQ4LTIuNTksMy45NSwzLjk1LDAsMCwxLDEuNTQxLTEuNjhBNC4zNzgsNC4zNzgsMCwwLDEsNDM1LjQ2NCw0NTMyLjMzWm0tMTkuNjIzLDIuNzVhMS4zNjEsMS4zNjEsMCwwLDAtMS4xMzEuNSwyLjI2MywyLjI2MywwLDAsMC0uMzk0LDEuNDN2MS4yOGgzLjA2NnYtMS40YTEuOTc3LDEuOTc3LDAsMCwwLS40MTktMS4zMkExLjQxNywxLjQxNywwLDAsMCw0MTUuODQxLDQ1MzUuMDhabS00LjM1Myw4Ljgzdi02Ljc0YTYuMTc3LDYuMTc3LDAsMCwxLC4zMTUtMi4wMyw0LjMzNSw0LjMzNSwwLDAsMSwuOS0xLjUzLDMuNjYxLDMuNjYxLDAsMCwxLDEuMzc5LS45Niw0Ljg2NCw0Ljg2NCwwLDAsMSwzLjUyMiwwLDMuNjgyLDMuNjgyLDAsMCwxLDEuMzg1Ljk2LDQuMjc1LDQuMjc1LDAsMCwxLC45MDYsMS41NCw2LjEsNi4xLDAsMCwxLC4zMTUsMi4wMnY2Ljc0aC0yLjgyOHYtMi45NGgtMy4wNjZ2Mi45NGgtMi44MjhabS0xOS40MTUsMHYtMTEuMzloMi44NDV2NC4wM2gzLjAzNHYtNC4wM2gyLjgyOHYxMS4zOWgtMi44Mjh2LTQuNmgtMy4wMzR2NC42aC0yLjg0NVoiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0zOTIgLTQ0NTUuMjIpIi8+PC9zdmc+"></div>
+            <div class="col-md-2">
+              <ul>
+                <li><a href="javascript:void(0)">О компании</a></li>
+                <li><a href="javascript:void(0)">Лицензии</a></li>
+                <li><a href="javascript:void(0)">Доставка</a></li>
+                <li><a href="javascript:void(0)">Оплата</a></li>
+                <li><a href="javascript:void(0)">Отзывы</a></li>
+                <li><a href="javascript:void(0)">Баланс карты</a></li>
+                <li><a href="javascript:void(0)">География продаж</a></li>
+                <li><a href="javascript:void(0)">Контакты</a></li>
+              </ul>
+            </div>
+            <div class="col-md-2">
+              <ul>
+                <li><a href="javascript:void(0)">Бренды</a></li>
+                <li><a href="javascript:void(0)">Каталог по болезням</a></li>
+                <li><a href="javascript:void(0)">Новости</a></li>
+                <li><a href="javascript:void(0)">Статьи</a></li>
+                <li><a href="javascript:void(0)">Вопрос-ответ</a></li>
+              </ul>
+            </div>
+            <div class="col-md-2">
+              <ul>
+                <li><a href="javascript:void(0)">Лекарства</a></li>
+                <li><a href="javascript:void(0)">Бады</a></li>
+                <li><a href="javascript:void(0)">Гигиена и красота</a></li>
+                <li><a href="javascript:void(0)">Питание и спорт</a></li>
+                <li><a href="javascript:void(0)">Мед. приборы</a></li>
+                <li><a href="javascript:void(0)">Акции</a></li>
+              </ul>
+            </div>
+            <div class="col-md-3 footer__phone"><a href="javascript:void(0)">8-800-123-45-67<span>Время работы: <span>Круглосуточно</span></span></a></div>
+          </div>
+        </div>
+      </div>
+      <div class="developer">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6">
+              <p>Все права защищены (с)</p>
+            </div>
+            <div class="col-md-6 developer__logo"><a href="http:://vedita.ru" target="_blank"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1My43OCIgaGVpZ2h0PSIyMSIgdmlld0JveD0iMCAwIDUzLjc4IDIxIj48ZGVmcz48c3R5bGU+LmNscy0xe2ZpbGw6I2ZmZjtmaWxsLXJ1bGU6ZXZlbm9kZDtvcGFjaXR5Oi41fTwvc3R5bGU+PC9kZWZzPjxwYXRoIGNsYXNzPSJjbHMtMSIgZD0iTTE1MDcuOTUsNDcwMy42NGEwLjcsMC43LDAsMCwwLS43NC0wLjY0LDAuNzE5LDAuNzE5LDAsMCwwLS43NC42NnY1LjM1YTUuNzY4LDUuNzY4LDAsMCwwLTQuNzQtMS40OCw1LjExMyw1LjExMywwLDAsMC00LjM2LDUuNTEsNS4zLDUuMywwLDAsMCw3LjQsNC4xNiw1LjA0OSw1LjA0OSwwLDAsMCwzLjE3LTQuOTJDMTUwNy45NSw0NzEwLjg2LDE1MDcuOTUsNDcwNC42MSwxNTA3Ljk1LDQ3MDMuNjRabS01LjMyLDEyLjY0YTMuODA4LDMuODA4LDAsMCwxLTMuODYtMy43NSwzLjg1MywzLjg1MywwLDAsMSwzLjkxLTMuNzJBMy43MzYsMy43MzYsMCwxLDEsMTUwMi42Myw0NzE2LjI4Wm0tNi40LTMuOTZhNS4zMzgsNS4zMzgsMCwwLDAtNS4yMi00Ljg1LDUuMTUsNS4xNSwwLDEsMCwxLjEzLDEwLjE4aDAuMDFhNS40MzMsNS40MzMsMCwwLDAsMi43My0xLjUzLDAuNjM5LDAuNjM5LDAsMCwwLC4wMi0wLjk2LDAuNzE3LDAuNzE3LDAsMCwwLTEtLjAxYy0wLjE2LjE0LS4zMiwwLjI4LTAuNSwwLjQyYTQuMDQxLDQuMDQxLDAsMCwxLTYuMTUtMS43N2MtMC4xNi0uNDQtMC4xNS0wLjQ2LjM1LTAuNDZoNy42MkEwLjgzOCwwLjgzOCwwLDAsMCwxNDk2LjIzLDQ3MTIuMzJabS0xLjkyLS4zN2gtNi44MmMtMC4zMiwwLS40MS0wLjA4LTAuMzMtMC4zOWEzLjksMy45LDAsMCwxLDcuNDktLjA0QzE0OTQuNzQsNDcxMS44NSwxNDk0LjY2LDQ3MTEuOTUsMTQ5NC4zMSw0NzExLjk1Wm0zNS40NywwLjk1YTUuMDkzLDUuMDkzLDAsMCwwLTMuMTgtNC45Myw1LjMwNiw1LjMwNiwwLDAsMC03LjQsNC4xNyw1LjE3Nyw1LjE3NywwLDAsMCw0LjM2LDUuNTEsNS4zOCw1LjM4LDAsMCwwLDQuMTUtMS4wMWMwLjE2LS4xMi41OS0wLjQ3LDAuNTktMC40N3YwLjk4YTAuNzMyLDAuNzMyLDAsMCwwLC43NC42NiwwLjc2NiwwLjc2NiwwLDAsMCwuNTMtMC4yMSwwLjczLDAuNzMsMCwwLDAsLjIxLTAuNDRDMTUyOS43OCw0NzE2LjE5LDE1MjkuNzksNDcxNC4zMiwxNTI5Ljc4LDQ3MTIuOVptLTEuNDgtLjI5YTMuNzgxLDMuNzgxLDAsMCwxLTMuNzksMy43NiwzLjczOCwzLjczOCwwLDEsMS0uMDUtNy40N0EzLjc1MSwzLjc1MSwwLDAsMSwxNTI4LjMsNDcxMi42MVptLTEwLjM3LDQuMzZhMC43MjgsMC43MjgsMCwwLDEtLjc3LjY3LDQuNTg1LDQuNTg1LDAsMCwxLTMuNDctMS40Niw0Ljk0OSw0Ljk0OSwwLDAsMS0xLjI4LTMuNjVjLTAuMDEtMS4xMywwLTguODIsMC04LjgyYTAuNzM1LDAuNzM1LDAsMCwxLDEuNDcuMDF2NC43OGMwLDAuMzctLjA0LjU1LDAuMzMsMC41NWgzLjA4YTAuNjUsMC42NSwwLDAsMSwuNjcuNjMsMC42NzQsMC42NzQsMCwwLDEtLjIuNDcsMC42OTIsMC42OTIsMCwwLDEtLjQzLjJoLTMuMTVjLTAuMjEsMC0uMy4xNC0wLjMsMC40MSwwLjAxLDAuOSwwLC45NiwwLDIuMjZhMy4yMzcsMy4yMzcsMCwwLDAsMi45MSwzLjE5bDAuNDYsMC4wNkEwLjcwNiwwLjcwNiwwLDAsMSwxNTE3LjkzLDQ3MTYuOTdabS0zMi40OS05LjA3YTAuNjI2LDAuNjI2LDAsMCwxLS4wNi4yN2wtNC4wOSw4Ljk4YTAuNjczLDAuNjczLDAsMCwxLS41Ni4yOCwwLjc1OCwwLjc1OCwwLDAsMS0uNzItMC41Yy0wLjAzLS4wNi0zLjk0LTguODItMy45NC04LjgyYTAuNzA2LDAuNzA2LDAsMCwxLS4wNi0wLjI4LDAuNjczLDAuNjczLDAsMCwxLC40Mi0wLjYzLDAuNzE2LDAuNzE2LDAsMCwxLC45My4zNWwzLjM5LDcuNCwwLjAxLDAuMDEsMy4zMi03LjM0YTAuNzE4LDAuNzE4LDAsMCwxLC45My0wLjM1QTAuNywwLjcsMCwwLDEsMTQ4NS40NCw0NzA3LjlabTE3LjE5LDUuNThhMS4xLDEuMSwwLDAsMS0xLjA1LTEuMDYsMS4xMiwxLjEyLDAsMCwxLDEuMTItMS4wMSwxLjA5MywxLjA5MywwLDAsMSwxLjAzLDEuMDRBMS4xLDEuMSwwLDAsMSwxNTAyLjYzLDQ3MTMuNDhabTguMTIsOS45MmEwLjYxMywwLjYxMywwLDAsMS0uNjIuNmgtMC4xMWEwLjYsMC42LDAsMCwxLS42MS0wLjZ2LTE5LjgxYTAuNiwwLjYsMCwwLDEsLjYxLTAuNmgwLjExYTAuNjEzLDAuNjEzLDAsMCwxLC42Mi42djE5LjgxWiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTE0NzYgLTQ3MDMpIi8+PC9zdmc+"></a></div>
+          </div>
+        </div>
+      </div>
+    </footer>
   <script type="text/javascript" src="js/app.js"></script></body>
 </html>

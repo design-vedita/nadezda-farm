@@ -4,6 +4,8 @@ include ../blocks/header/header
 include ../blocks/breadrumbs/breadcrumbs
 include ../blocks/alphabet-substance/alphabet-substance
 include ../blocks/catalog/catalog
+include  ../blocks/text-block/text-block
+include ../blocks/footer/footer
 
 block header
     +header
@@ -18,4 +20,11 @@ block content
                 +alphabet-substance(class="catalog__alphabet-substance")
             .col-md-12
                 +catalog
-
+    .section-white.catalog__section-white
+        .container
+            .row
+                .col-md-12
+                    +text-block()
+block footer
+    footer
+        +footer
