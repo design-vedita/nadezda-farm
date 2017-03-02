@@ -26,4 +26,8 @@ export default class Map extends Module {
             prevButton: '.js-carousel-prev'
         });
     }
+
+    initSlider() {
+
+    }
 }

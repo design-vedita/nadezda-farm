@@ -35,7 +35,7 @@ mixin map()
                         p.map__only-prescription Отпускается только по рецепту
                     .map__all-forms
                         a(href="javascript:void(0)") Все формы Клерасил
-                    .map-manufacturer
+                    .map__manufacturer
                         p Производитель: Фамар Орлеан, Франция
                     .map__testimony
                         p.map__testimony-title Показания:
@@ -57,3 +57,11 @@ mixin map()
                         a(href="javascript:void(0)") Отложить
 
                     .map__card-order
+                        .map__order-count
+                            button.map__order-decrement -
+                            input(type="text" value="1")
+                            button.map__order-increment +
+                        .map__order-button
+                            input(type="submit" value="Купить").button-green
+                    .map__one-click
+                            a(href="javascript:void(0)") Купить в 1 клик

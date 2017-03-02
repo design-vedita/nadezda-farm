@@ -6,7 +6,7 @@ import './app.styl';
 //import './catalog-list.pug';
 //import './brand.pug';
 //import './catalog-alphabet.pug';
-//import './map.pug';
+import './map.pug';
 import App from '../includes/App.js';
 import Header from '../blocks/header/header.js';
 import SliderIndex from '../blocks/slider/slider.js';

@@ -5,15 +5,37 @@
         margin-bottom 33px
         
     &__card-image
-        width 34%
+        width 33%
+        
+    &__card-buy
+        padding-bottom 56px
+        padding-left 28px
+        width 26%
+        border-left 1px solid review-border-bottom
+        
+    &__card-description
+        margin-top -3px
+        width 40.5%
         
     &__image-slide
         position relative
         height 60px
         border 1px solid review-border
+        
+        &::before
+            position absolute
+            z-index 1
+            left 0
+            top 0
+            content ''
+            display block
+            width 'calc(%s - %s)' % (100% 2px)
+            height 'calc(%s - %s)' % (100% 2px)
+            border 2px solid green-base
     
         img
             position absolute
+            z-index 0
             left 0
             right 0
             top 0
@@ -23,10 +45,18 @@
     
     &__carousel-wrapper
         padding-right 15px
-        padding-left  58px
+        padding-left  41px
+        
+    &__articul
+        font-size 12px
+        font-weight normal
+        line-height normal
+        color manufacturer
             
     &__card
         position relative
+        padding-left 15px
+        padding-top 37px
         
         &::before
             position absolute
@@ -48,22 +78,30 @@
         align-content stretch
         
     &__rating
+        margin-top 7px
         
         img:not(:last-child)
             margin-right 4px
+  
+    &__stock
+        margin-top 7px
             
     &__in-stock
         padding-left 27px
         font-size 15px
         font-weight normal
         line-height normal
+        letter-spacing .35px
         color green-base
         background-image url(../../image/svg/in_stock.svg)
         background-position left center
         background-repeat no-repeat
         
+    &__life
+        margin-top 10px
+        
     &__shelf-life
-        padding-left 35px
+        padding-left 36px
         font-size 13px
         line-height 25px
         color orange-base
@@ -72,7 +110,8 @@
         background-repeat no-repeat
         
     &__only-prescription
-        padding-left 35px
+        margin-top 6px
+        padding-left 37px
         font-size 13px
         line-height 25px
         color orange-base
@@ -81,16 +120,29 @@
         background-repeat no-repeat
         
     &__all-forms
+        margin-top 10px
         
         a
             font-size 15px
             line-height normal
+            letter-spacing .4px
             color green-base
             
+    &__manufacturer
+        margin-top 10px
+        
+        p
+            font-size 15px
+            
     &__set-aside
+        margin-top 14px
         
         a
-            padding-left 35px
+            padding-left 25px
+            font-size 14px
+            line-height normal
+            color placeholder-gray
+            text-decoration none
             background-image url(../../image/svg/set-aside.svg)
             background-position left center
             background-repeat no-repeat
@@ -114,7 +166,7 @@
             content ''
             display block
             width 14px
-            height 3.5px
+            height 4px
             background-color carousel-arrow-map
             border-radius 5px
             transform rotate(-45deg)
@@ -126,15 +178,141 @@
             content ''
             display block
             width 14px
-            height 3.5px
+            height 4px
             background-color carousel-arrow-map
             border-radius 5px
             transform rotate(45deg)
     
     &__slide-prev
-        left 30px
+        left 15px
             
     &__slide-next
         right 0
         transform rotate(180deg)
+        
+    &__old-price
+        margin-top -9px
+        padding-left 5px
+        
+        p
+            font-size 20px
+            line-height normal
+            text-decoration line-through
+            color old-price
+                
+    &__price
+        margin-top 4px
+    
+        p
+            font-size 30px
+            line-height normal
+            font-weight bold
+            color green-base
+    
+        span
+            font-size 16px
+            font-weight normal
+                
+    &__economy
+        margin-top 9px
+        
+        p
+            font-size 16px
+            font-weight 600
+            line-height normal
+            text-decoration none
+            color dark-gray
+        
+            span
+                position relative
+                margin-right 3px
+                padding_x(7px)
+                color white
+            
+                &::before
+                    position absolute
+                    z-index -1
+                    left 0
+                    top 4px
+                    content ''
+                    display block
+                    width 100%
+                    height 'calc(%s - %s)' % (100% 6px)
+                    background-color pink
+                    
+    &__card-order
+        margin-top 18px
+    
+    &__order
+        margin-top 12px
+        display flex
+        justify-content space-between
+    
+    &__order-count
+        font-size 0
+        
+        button
+            width 30px
+            height 27px
+            font-size 18px
+            border 1px solid count-button
+            background-color white
+            cursor pointer
+            transition all .5s ease
+            
+            &:hover
+                color white
+                background-color green-hover
+                border-color green-hover
+        
+        input
+            width 65px
+            height 27px
+            font-size 18px
+            text-align center
+            border 1px solid count-button
+    
+    &__order-decrement
+        border-right none !important
+        border-radius 0
+    
+    &__order-increment
+        border-left none !important
+        border-radius 0
+    
+    &__order-button
+        margin-top 18px
+        
+        input
+            padding-left 46px
+            padding-right 23px
+            padding-top 3px
+            font-size 16px
+            color white
+            background-color green-base
+            background-image url(../../image/svg/add-card.svg)
+            background-repeat no-repeat
+            background-position 18px center
+            border none
+            cursor pointer
+            
+            @media all and (-webkit-min-device-pixel-ratio:0)
+                padding-bottom 1px
+    
+    &__one-click
+        margin-top 17px
+        
+        a
+            font-size 14px
+            font-weight bold
+            text-decoration none
+            letter-spacing .4px
+            color orange-base
+            transition all .5s ease
+            border-bottom 1px solid transparent
+            
+            &:hover
+                border-bottom-color orange-base
+        
+        
                 
