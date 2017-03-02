@@ -3,7 +3,7 @@ extends ../includes/layout
 include ../blocks/header/header
 include ../blocks/breadrumbs/breadcrumbs
 include ../blocks/alphabet-substance/alphabet-substance
-include ../blocks/catalog/catalog
+include ../blocks/brand-page/brand-page
 include  ../blocks/text-block/catalog-text
 include ../blocks/footer/footer
 
@@ -17,9 +17,11 @@ block content
                 +breadcrumbs
         .row
             .col-md-12
-                +alphabet-substance(class="catalog__alphabet-substance")
+                .inner-content
+                    h1 Производители
+                +alphabet-substance(class="brand__alphabet-substance")
             .col-md-12
-                +catalog
+                +brand-page
     .section-white.catalog__section-white
         .container
             .row

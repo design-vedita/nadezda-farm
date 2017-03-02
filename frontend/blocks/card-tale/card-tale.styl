@@ -130,8 +130,7 @@
             line-height 22px
             font-weight 600
             text-decoration line-through
-            
-            color dark-gray
+            color old-price
             
             &.economy
                 margin-top -5px
@@ -173,12 +172,19 @@
             border 1px solid count-button
             background-color white
             cursor pointer
+            transition all .5s ease
+            
+            &:hover
+                color white
+                background-color green-hover
+                border-color green-hover
         
         input
             width 56px
             height 27px
             font-size 18px
             text-align center
+            border 1px solid count-button
         
     &__order-decrement
         border-right none !important

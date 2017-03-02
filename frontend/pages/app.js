@@ -1,12 +1,17 @@
 'use strict';
 
 import './app.styl';
-import './index.pug';
-import './catalog.pug';
+//import './index.pug';
+//import './catalog.pug';
+//import './catalog-list.pug';
+//import './brand.pug';
+//import './catalog-alphabet.pug';
+//import './map.pug';
 import App from '../includes/App.js';
 import Header from '../blocks/header/header.js';
 import SliderIndex from '../blocks/slider/slider.js';
 import Filter from '../blocks/left-filter/left-filter';
+import Map from '../blocks/map/map';
 
 $(() => {
 
@@ -39,6 +44,7 @@ $(() => {
     App.modules.push(new Header);
     App.modules.push(new SliderIndex);
     App.modules.push(new Filter);
+    App.modules.push(new Map);
 
 });
 

@@ -1,0 +1,22 @@
+extends ../includes/layout
+
+include ../blocks/header/header
+include ../blocks/breadrumbs/breadcrumbs
+include ../blocks/map/map
+include ../blocks/footer/footer
+
+block header
+    +header
+
+block content
+    .container
+        .row
+            .col-md-12
+                +breadcrumbs
+        .row
+            .col-md-12
+                +map
+
+block footer
+    footer
+        +footer

@@ -19,10 +19,14 @@
             background-color orange-link
             
             &::before
-                background-color orange-link
+                background-color orange-link !important
+            
+            & ^[0]__submenu
+                opacity 1
+                visibility visible
                 
             
-        &::before
+        &:not(:last-child)::before
             position absolute
             left 5%
             bottom 0
@@ -34,6 +38,9 @@
             transition all .5s ease
 
     a
+        display block
+        width 100%
+        height 100%
         color white
         
         &:hover
@@ -51,3 +58,14 @@
         background-image url(../../image/svg/arrow-left-menu.svg)
         background-position center
         background-repeat no-repeat
+    
+    &__submenu
+        position absolute
+        z-index 3
+        left 100%
+        top 0
+        width 100%
+        opacity 0
+        visibility hidden
+        background-color green-base
+        transition all .5s ease

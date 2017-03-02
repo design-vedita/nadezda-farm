@@ -261,15 +261,18 @@ select
  * 2. Correct inability to style clickable `input` types in iOS.
  * 3. Improve usability and consistency of cursor style between image-type
  *    `input` and others.
+ *  4. Fix Ios
  */
 
 button,
 html input[type="button"], /* 1 */
 input[type="reset"],
 input[type="submit"]
-    -webkit-appearance button /* 2 */
+    //-webkit-appearance button /* 2 */
     cursor pointer /* 3 */
-
+    border-radius 0 /* 4 */
+    -webkit-appearance none /* 4 */
+    box-shadow none /* 4 */
 /**
  * Re-set default cursor for disabled elements.
  */
@@ -294,6 +297,9 @@ input::-moz-focus-inner
 
 input
     line-height normal
+    border-radius 0 /* 4 */
+    -webkit-appearance none /* 4 */
+    box-shadow none /* 4 */
 
 /**
  * It's recommended that you don't attempt to style these elements.

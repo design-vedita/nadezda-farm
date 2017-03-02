@@ -1,0 +1,59 @@
+mixin map()
+    .map.js-map
+        h1 Клерасил глубокое очищение, лосьон, 200 мл
+        .map__card
+            .map__card-inner
+                .map__card-image
+                    img(src=require("../image/immodium-card.jpg"))
+
+                    .map__carousel-wrapper
+                        .map__image-carousel.js-map-carousel.swiper-container
+                            .swiper-wrapper
+                                .map__image-slide.swiper-slide
+                                    img(src=require("../image/immodium-card.jpg"))
+                                .map__image-slide.swiper-slide
+                                    img(src=require("../image/immodium-card-2.jpg"))
+                                .map__image-slide.swiper-slide
+                                    img(src=require("../image/immodium-card.jpg"))
+                                .map__image-slide.swiper-slide
+                                    img(src=require("../image/immodium-card-2.jpg"))
+                        .map__slide-prev.js-carousel-prev
+                        .map__slide-next.js-carousel-next
+                .map__card-description
+                    p.map__articul Арт. 589R5-01
+                    .map__rating
+                        img(src=require("../image/svg/star-full.svg"))
+                        img(src=require("../image/svg/star-full.svg"))
+                        img(src=require("../image/svg/star-full.svg"))
+                        img(src=require("../image/svg/star-empty.svg"))
+                        img(src=require("../image/svg/star-empty.svg"))
+                    .map__stock
+                        p.map__in-stock Есть в наличии
+                    .map__life
+                        p.map__shelf-life Остаточный срок годности (годен до 15.12.2015 г.)
+                    .map__on-prescription
+                        p.map__only-prescription Отпускается только по рецепту
+                    .map__all-forms
+                        a(href="javascript:void(0)") Все формы Клерасил
+                    .map-manufacturer
+                        p Производитель: Фамар Орлеан, Франция
+                    .map__testimony
+                        p.map__testimony-title Показания:
+                        span Запор (в т.ч. с энкопрезом); подготовка к эндоскопическому (ректоскопия) и рентгенологическому исследованию ЖКТ.
+
+                .map__card-buy
+                    .map__old-price
+                        p 5 300 р.
+                    .map__price
+                        p 2 300
+                            = ' '
+                            span р.
+                    .map__economy
+                        p
+                            span 1 300
+                            = ' '
+                            | Экономия
+                    .map__set-aside
+                        a(href="javascript:void(0)") Отложить
+
+                    .map__card-order

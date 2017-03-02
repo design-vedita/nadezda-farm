@@ -1,5 +1,5 @@
-mixin brand-catalog(cl)
-    .brand-catalog(class=cl)
+mixin brand-catalog()
+    .brand-catalog&attributes(attributes)= name
         p.section-title Каталог по брендам
         a(href="javascript:void(0)").section-link Все бренды
         .brand-catalog__list

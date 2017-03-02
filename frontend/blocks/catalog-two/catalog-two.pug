@@ -1,0 +1,353 @@
+include ../../blocks/left-menu/left-menu
+include  ../../blocks/left-filter/left-filter
+include  ../../blocks/pagination/pagination
+include  ../../blocks/left-banner/left-banner
+
+mixin catalog-two
+    .catalog&attributes(attributes)= name
+        .row
+            .col-md-3
+                +left-menu
+
+                +left-filter
+
+                +left-banner
+
+            .col-md-9
+                h1 Мама и малыш
+                .catalog__sort
+                    .catalog__sort-type
+                        a(href="javascript:void(0)") По цене
+                            svg(xmlns="http://www.w3.org/2000/svg"
+                            width=7
+                            height=7
+                            viewBox="0 0 7 7").catalog__sort-arrow
+                                path(d="M738.5,402a0.764,0.764,0,0,0-.818.694v3.942l-1.258-1.066a0.959,0.959,0,0,0-1.2-.032,0.644,0.644,0,0,0,.039,1.013l2.627,2.226a0.958,0.958,0,0,0,1.2.033c0.008-.008.013-0.016,0.021-0.023s0.025-.015.037-0.025l2.591-2.2a0.638,0.638,0,0,0,.029-1.006,0.951,0.951,0,0,0-1.188.025l-1.261,1.069v-3.96A0.764,0.764,0,0,0,738.5,402Z"
+                                transform="translate(-735 -402)")
+                        a(href="javascript:void(0)") По популярности
+                            svg(xmlns="http://www.w3.org/2000/svg"
+                            width=7
+                            height=7
+                            viewBox="0 0 7 7").catalog__sort-arrow
+                                path(d="M738.5,402a0.764,0.764,0,0,0-.818.694v3.942l-1.258-1.066a0.959,0.959,0,0,0-1.2-.032,0.644,0.644,0,0,0,.039,1.013l2.627,2.226a0.958,0.958,0,0,0,1.2.033c0.008-.008.013-0.016,0.021-0.023s0.025-.015.037-0.025l2.591-2.2a0.638,0.638,0,0,0,.029-1.006,0.951,0.951,0,0,0-1.188.025l-1.261,1.069v-3.96A0.764,0.764,0,0,0,738.5,402Z"
+                                transform="translate(-735 -402)")
+                    .catalog__sort-view
+                        a(href="javascript:void(0)").catalog__sort-view-tale
+                            svg(xmlns="http://www.w3.org/2000/svg"
+                            width=13
+                            height=13
+                            viewBox="0 0 13 13").catalog__sort-view-ico
+                                path(d="M1498,397h6v6h-6v-6Zm7,0h6v6h-6v-6Zm-7,7h6v6h-6v-6Zm7,0h6v6h-6v-6Z"
+                                transform="translate(-1498 -397)")
+                        a(href="javascript:void(0)").catalog__sort-view-list
+                            svg(xmlns="http://www.w3.org/2000/svg"
+                            width=13
+                            height=13
+                            viewBox="0 0 13 13").catalog__sort-view-ico
+                                path(d="M1518,397h13v3h-13v-3Zm0,5h13v3h-13v-3Zm0,5h13v3h-13v-3Z"
+                                transform="translate(-1518 -397)")
+                .catalog__list
+                    .card-tale-list
+                        .card-tale__inner-type-action.card-tale-list__inner-type-action
+                            .flag.best-price
+                                span Лучшая цена
+                            .flag.hit
+                                span Хит продаж
+                            .flag.action
+                                span Акция
+                        .card-tale-list__image
+                            img(src=require("../image/imodium.png"))
+                        .card-tale-list__description
+                            .card-tale-list__rating
+                                img(src=require("../image/svg/star-full.svg"))
+                                img(src=require("../image/svg/star-full.svg"))
+                                img(src=require("../image/svg/star-full.svg"))
+                                img(src=require("../image/svg/star-empty.svg"))
+                                img(src=require("../image/svg/star-empty.svg"))
+                            a(href="javascript:void(0)").card-tale-list__description-name Клерасил глубокое очищение,
+                                br
+                                | лосьон, 200 мл
+                            span.card-tale-list__description-manufacturer Фамар Орлеан, Франция
+                            .card-tale-list__testimony
+                                p.card-tale-list__testimony-title Показания:
+                                span Запор (в т.ч. с энкопрезом); подготовка к эндоскопическому (ректоскопия) и рентгенологическому исследованию ЖКТ.
+                        .card-tale-list__buy-block
+                            .card-tale-list__prices-current
+                                p 2 300
+                                    =' '
+                                    span р.
+                            .card-tale-list__prices-old
+                                p 5300 р.
+                                p.economy
+                                    span 1300
+                                    =' '
+                                    | Экономия
+                            .card-tale-list__order
+                                .card-tale-list__order-count
+                                    button.card-tale-list__order-decrement -
+                                    input(type="text" value="1")
+                                    button.card-tale-list__order-increment +
+                                .card-tale-list__order-button
+                                    input(type="submit" value="Купить").button-green
+                            .card-tale-list__one-click
+                                a(href="javascript:void(0)") Купить в 1 клик
+                    .card-tale-list
+                        .card-tale-list__image
+                            img(src=require("../image/imodium.png"))
+                        .card-tale-list__description
+                            .card-tale-list__rating
+                                img(src=require("../image/svg/star-full.svg"))
+                                img(src=require("../image/svg/star-full.svg"))
+                                img(src=require("../image/svg/star-full.svg"))
+                                img(src=require("../image/svg/star-empty.svg"))
+                                img(src=require("../image/svg/star-empty.svg"))
+                            a(href="javascript:void(0)").card-tale-list__description-name Клерасил глубокое очищение,
+                                br
+                                | лосьон, 200 мл
+                            span.card-tale-list__description-manufacturer Фамар Орлеан, Франция
+                            .card-tale-list__testimony
+                                p.card-tale-list__testimony-title Показания:
+                                span Запор (в т.ч. с энкопрезом); подготовка к эндоскопическому (ректоскопия) и рентгенологическому исследованию ЖКТ.
+                        .card-tale-list__buy-block
+                            .card-tale-list__prices-current
+                                p 2 300
+                                    =' '
+                                    span р.
+                            .card-tale-list__prices-old
+                                p 5300 р.
+                                p.economy
+                                    span 1300
+                                    =' '
+                                    | Экономия
+                            .card-tale-list__order
+                                .card-tale-list__order-count
+                                    button.card-tale-list__order-decrement -
+                                    input(type="text" value="1")
+                                    button.card-tale-list__order-increment +
+                                .card-tale-list__order-button
+                                    input(type="submit" value="Купить").button-green
+                            .card-tale-list__one-click
+                                a(href="javascript:void(0)") Купить в 1 клик
+                    .card-tale-list
+                        .card-tale-list__image
+                            img(src=require("../image/imodium.png"))
+                        .card-tale-list__description
+                            .card-tale-list__rating
+                                img(src=require("../image/svg/star-full.svg"))
+                                img(src=require("../image/svg/star-full.svg"))
+                                img(src=require("../image/svg/star-full.svg"))
+                                img(src=require("../image/svg/star-empty.svg"))
+                                img(src=require("../image/svg/star-empty.svg"))
+                            a(href="javascript:void(0)").card-tale-list__description-name Клерасил глубокое очищение,
+                                br
+                                | лосьон, 200 мл
+                            span.card-tale-list__description-manufacturer Фамар Орлеан, Франция
+                            .card-tale-list__testimony
+                                p.card-tale-list__testimony-title Показания:
+                                span Запор (в т.ч. с энкопрезом); подготовка к эндоскопическому (ректоскопия) и рентгенологическому исследованию ЖКТ.
+                        .card-tale-list__buy-block
+                            .card-tale-list__prices-current
+                                p 2 300
+                                    =' '
+                                    span р.
+                            .card-tale-list__prices-old
+                                p 5300 р.
+                                p.economy
+                                    span 1300
+                                    =' '
+                                    | Экономия
+                            .card-tale-list__order
+                                .card-tale-list__order-count
+                                    button.card-tale-list__order-decrement -
+                                    input(type="text" value="1")
+                                    button.card-tale-list__order-increment +
+                                .card-tale-list__order-button
+                                    input(type="submit" value="Купить").button-green
+                            .card-tale-list__one-click
+                                a(href="javascript:void(0)") Купить в 1 клик
+                    .card-tale-list
+                        .card-tale-list__image
+                            img(src=require("../image/imodium.png"))
+                        .card-tale-list__description
+                            .card-tale-list__rating
+                                img(src=require("../image/svg/star-full.svg"))
+                                img(src=require("../image/svg/star-full.svg"))
+                                img(src=require("../image/svg/star-full.svg"))
+                                img(src=require("../image/svg/star-empty.svg"))
+                                img(src=require("../image/svg/star-empty.svg"))
+                            a(href="javascript:void(0)").card-tale-list__description-name Клерасил глубокое очищение,
+                                br
+                                | лосьон, 200 мл
+                            span.card-tale-list__description-manufacturer Фамар Орлеан, Франция
+                            .card-tale-list__testimony
+                                p.card-tale-list__testimony-title Показания:
+                                span Запор (в т.ч. с энкопрезом); подготовка к эндоскопическому (ректоскопия) и рентгенологическому исследованию ЖКТ.
+                        .card-tale-list__buy-block
+                            .card-tale-list__prices-current
+                                p 2 300
+                                    =' '
+                                    span р.
+                            .card-tale-list__prices-old
+                                p 5300 р.
+                                p.economy
+                                    span 1300
+                                    =' '
+                                    | Экономия
+                            .card-tale-list__order
+                                .card-tale-list__order-count
+                                    button.card-tale-list__order-decrement -
+                                    input(type="text" value="1")
+                                    button.card-tale-list__order-increment +
+                                .card-tale-list__order-button
+                                    input(type="submit" value="Купить").button-green
+                            .card-tale-list__one-click
+                                a(href="javascript:void(0)") Купить в 1 клик
+                    .card-tale-list
+                        .card-tale-list__image
+                            img(src=require("../image/imodium.png"))
+                        .card-tale-list__description
+                            .card-tale-list__rating
+                                img(src=require("../image/svg/star-full.svg"))
+                                img(src=require("../image/svg/star-full.svg"))
+                                img(src=require("../image/svg/star-full.svg"))
+                                img(src=require("../image/svg/star-empty.svg"))
+                                img(src=require("../image/svg/star-empty.svg"))
+                            a(href="javascript:void(0)").card-tale-list__description-name Клерасил глубокое очищение,
+                                br
+                                | лосьон, 200 мл
+                            span.card-tale-list__description-manufacturer Фамар Орлеан, Франция
+                            .card-tale-list__testimony
+                                p.card-tale-list__testimony-title Показания:
+                                span Запор (в т.ч. с энкопрезом); подготовка к эндоскопическому (ректоскопия) и рентгенологическому исследованию ЖКТ.
+                        .card-tale-list__buy-block
+                            .card-tale-list__prices-current
+                                p 2 300
+                                    =' '
+                                    span р.
+                            .card-tale-list__prices-old
+                                p 5300 р.
+                                p.economy
+                                    span 1300
+                                    =' '
+                                    | Экономия
+                            .card-tale-list__order
+                                .card-tale-list__order-count
+                                    button.card-tale-list__order-decrement -
+                                    input(type="text" value="1")
+                                    button.card-tale-list__order-increment +
+                                .card-tale-list__order-button
+                                    input(type="submit" value="Купить").button-green
+                            .card-tale-list__one-click
+                                a(href="javascript:void(0)") Купить в 1 клик
+                    .card-tale-list
+                        .card-tale-list__image
+                            img(src=require("../image/imodium.png"))
+                        .card-tale-list__description
+                            .card-tale-list__rating
+                                img(src=require("../image/svg/star-full.svg"))
+                                img(src=require("../image/svg/star-full.svg"))
+                                img(src=require("../image/svg/star-full.svg"))
+                                img(src=require("../image/svg/star-empty.svg"))
+                                img(src=require("../image/svg/star-empty.svg"))
+                            a(href="javascript:void(0)").card-tale-list__description-name Клерасил глубокое очищение,
+                                br
+                                | лосьон, 200 мл
+                            span.card-tale-list__description-manufacturer Фамар Орлеан, Франция
+                            .card-tale-list__testimony
+                                p.card-tale-list__testimony-title Показания:
+                                span Запор (в т.ч. с энкопрезом); подготовка к эндоскопическому (ректоскопия) и рентгенологическому исследованию ЖКТ.
+                        .card-tale-list__buy-block
+                            .card-tale-list__prices-current
+                                p 2 300
+                                    =' '
+                                    span р.
+                            .card-tale-list__prices-old
+                                p 5300 р.
+                                p.economy
+                                    span 1300
+                                    =' '
+                                    | Экономия
+                            .card-tale-list__order
+                                .card-tale-list__order-count
+                                    button.card-tale-list__order-decrement -
+                                    input(type="text" value="1")
+                                    button.card-tale-list__order-increment +
+                                .card-tale-list__order-button
+                                    input(type="submit" value="Купить").button-green
+                            .card-tale-list__one-click
+                                a(href="javascript:void(0)") Купить в 1 клик
+                    .card-tale-list
+                        .card-tale-list__image
+                            img(src=require("../image/imodium.png"))
+                        .card-tale-list__description
+                            .card-tale-list__rating
+                                img(src=require("../image/svg/star-full.svg"))
+                                img(src=require("../image/svg/star-full.svg"))
+                                img(src=require("../image/svg/star-full.svg"))
+                                img(src=require("../image/svg/star-empty.svg"))
+                                img(src=require("../image/svg/star-empty.svg"))
+                            a(href="javascript:void(0)").card-tale-list__description-name Клерасил глубокое очищение,
+                                br
+                                | лосьон, 200 мл
+                            span.card-tale-list__description-manufacturer Фамар Орлеан, Франция
+                            .card-tale-list__testimony
+                                p.card-tale-list__testimony-title Показания:
+                                span Запор (в т.ч. с энкопрезом); подготовка к эндоскопическому (ректоскопия) и рентгенологическому исследованию ЖКТ.
+                        .card-tale-list__buy-block
+                            .card-tale-list__prices-current
+                                p 2 300
+                                    =' '
+                                    span р.
+                            .card-tale-list__prices-old
+                                p 5300 р.
+                                p.economy
+                                    span 1300
+                                    =' '
+                                    | Экономия
+                            .card-tale-list__order
+                                .card-tale-list__order-count
+                                    button.card-tale-list__order-decrement -
+                                    input(type="text" value="1")
+                                    button.card-tale-list__order-increment +
+                                .card-tale-list__order-button
+                                    input(type="submit" value="Купить").button-green
+                            .card-tale-list__one-click
+                                a(href="javascript:void(0)") Купить в 1 клик
+                    .card-tale-list
+                        .card-tale-list__image
+                            img(src=require("../image/imodium.png"))
+                        .card-tale-list__description
+                            .card-tale-list__rating
+                                img(src=require("../image/svg/star-full.svg"))
+                                img(src=require("../image/svg/star-full.svg"))
+                                img(src=require("../image/svg/star-full.svg"))
+                                img(src=require("../image/svg/star-empty.svg"))
+                                img(src=require("../image/svg/star-empty.svg"))
+                            a(href="javascript:void(0)").card-tale-list__description-name Клерасил глубокое очищение,
+                                br
+                                | лосьон, 200 мл
+                            span.card-tale-list__description-manufacturer Фамар Орлеан, Франция
+                            .card-tale-list__testimony
+                                p.card-tale-list__testimony-title Показания:
+                                span Запор (в т.ч. с энкопрезом); подготовка к эндоскопическому (ректоскопия) и рентгенологическому исследованию ЖКТ.
+                        .card-tale-list__buy-block
+                            .card-tale-list__prices-current
+                                p 2 300
+                                    =' '
+                                    span р.
+                            .card-tale-list__prices-old
+                                p 5300 р.
+                                p.economy
+                                    span 1300
+                                    =' '
+                                    | Экономия
+                            .card-tale-list__order
+                                .card-tale-list__order-count
+                                    button.card-tale-list__order-decrement -
+                                    input(type="text" value="1")
+                                    button.card-tale-list__order-increment +
+                                .card-tale-list__order-button
+                                    input(type="submit" value="Купить").button-green
+                            .card-tale-list__one-click
+                                a(href="javascript:void(0)") Купить в 1 клик
+                +pagination(class="catalog__pagination")

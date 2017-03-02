@@ -49,7 +49,7 @@ var config = {
             },
             {
                 test: /\.styl/,
-                loader: ExtractTextPlugin.extract("style", "css!stylus?resolve url")
+                loader: ExtractTextPlugin.extract("style", "css!postcss!stylus?resolve url")
             },
             {
                 test: /\.(ttf|eot|woff|woff2)(\?v=\d+\.\d+\.\d+)?$/,
@@ -61,11 +61,18 @@ var config = {
             }
         ]
     },
+    postcss: () => {
+        return [
+            require('autoprefixer')({
+                browsers: ['last 2 versions', 'safari 8', 'android 4'],
+                remove: false
+            })
+        ];
+    },
     plugins: [
         new webpack.NoErrorsPlugin(),
         new webpack.ProvidePlugin({
-            $: 'jquery/dist/jquery.slim.js',
-            ui: 'jquery-ui-bundle/jquery.ui'
+            $: 'jquery/dist/jquery.slim.js'
         }),
         new HtmlWebpackPlugin({
             filename: 'index.html',
@@ -74,6 +81,22 @@ var config = {
         new HtmlWebpackPlugin({
             filename: 'catalog.html',
             template: './frontend/pages/catalog.pug'
+        }),
+        new HtmlWebpackPlugin({
+            filename: 'catalog-list.html',
+            template: './frontend/pages/catalog-list.pug'
+        }),
+        new HtmlWebpackPlugin({
+            filename: 'brand.html',
+            template: './frontend/pages/brand.pug'
+        }),
+        new HtmlWebpackPlugin({
+            filename: 'catalog-alphabet.html',
+            template: './frontend/pages/catalog-alphabet.pug'
+        }),
+        new HtmlWebpackPlugin({
+            filename: 'map.html',
+            template: './frontend/pages/map.pug'
         }),
         new ExtractTextPlugin("css/main.css")
     ],

@@ -1,10 +1,22 @@
-mixin alphabet-substance()
+mixin alphabet-substance(view_all)
     -var alphabet = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z']
+    -var alphabet_russia = ['а','б','в','г','д','е','ё','ж','з','и','к','л','м','н','о','п','р','с','т','у','ф','х','ц','ч','ш','щ','ъ','ь','э','ю','я']
+    -var numbers = ['1','2','3','4','5','6','7','8','9','0']
 
     .alphabet-substance&attributes(attributes)= name
         .alphabet-substance__title
-            p Вещество по алфавиту:
+            if view_all == 'true'
+                p Выберите букву:
+            else
+                p Вещество по алфавиту:
         .alphabet-substance__list
             ul
                 each symbol in alphabet
                     li: a(href="javascript:void(0)")=symbol
+            if view_all == 'true'
+                ul
+                    each symbol in alphabet_russia
+                        li: a(href="javascript:void(0)")=symbol
+                ul
+                    each symbol in numbers
+                        li: a(href="javascript:void(0)")=symbol
