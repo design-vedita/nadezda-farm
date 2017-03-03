@@ -46,29 +46,31 @@
 
 	/* WEBPACK VAR INJECTION */(function($) {'use strict';
 
-	__webpack_require__(8);
+	__webpack_require__(2);
 
-	__webpack_require__(32);
-
-	var _App = __webpack_require__(43);
+	var _App = __webpack_require__(27);
 
 	var _App2 = _interopRequireDefault(_App);
 
-	var _header = __webpack_require__(44);
+	var _header = __webpack_require__(28);
 
 	var _header2 = _interopRequireDefault(_header);
 
-	var _slider = __webpack_require__(46);
+	var _slider = __webpack_require__(30);
 
 	var _slider2 = _interopRequireDefault(_slider);
 
-	var _leftFilter = __webpack_require__(48);
+	var _leftFilter = __webpack_require__(32);
 
 	var _leftFilter2 = _interopRequireDefault(_leftFilter);
 
-	var _map = __webpack_require__(49);
+	var _map = __webpack_require__(33);
 
 	var _map2 = _interopRequireDefault(_map);
+
+	var _similar = __webpack_require__(34);
+
+	var _similar2 = _interopRequireDefault(_similar);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -77,6 +79,8 @@
 	//import './catalog-list.pug';
 	//import './brand.pug';
 	//import './catalog-alphabet.pug';
+	//import './map.pug';
+	//import './reviews.pug';
 	$(function () {
 
 	    if (_App2.default.is_ff) {
@@ -109,17 +113,12 @@
 	    _App2.default.modules.push(new _slider2.default());
 	    _App2.default.modules.push(new _leftFilter2.default());
 	    _App2.default.modules.push(new _map2.default());
+	    _App2.default.modules.push(new _similar2.default());
 	});
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(7)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
 /***/ },
-/* 1 */,
-/* 2 */,
-/* 3 */,
-/* 4 */,
-/* 5 */,
-/* 6 */,
-/* 7 */
+/* 1 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -8232,12 +8231,18 @@
 
 
 /***/ },
-/* 8 */
+/* 2 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ },
+/* 3 */,
+/* 4 */,
+/* 5 */,
+/* 6 */,
+/* 7 */,
+/* 8 */,
 /* 9 */,
 /* 10 */,
 /* 11 */,
@@ -8256,793 +8261,7 @@
 /* 24 */,
 /* 25 */,
 /* 26 */,
-/* 27 */,
-/* 28 */,
-/* 29 */,
-/* 30 */,
-/* 31 */,
-/* 32 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var pug = __webpack_require__(33);
-
-	function template(locals) {var pug_html = "", pug_mixins = {}, pug_interp;;var locals_for_with = (locals || {});(function (name) {var pug_indent = [];
-	pug_mixins["header"] = pug_interp = function(){
-	var block = (this && this.block), attributes = (this && this.attributes) || {};
-	pug_html = pug_html + "\n";
-	pug_html = pug_html + pug_indent.join("");
-	pug_html = pug_html + "\u003Cheader\u003E\n  ";
-	pug_html = pug_html + pug_indent.join("");
-	pug_html = pug_html + "\u003Cdiv class=\"header js-header\"\u003E\n    ";
-	pug_html = pug_html + pug_indent.join("");
-	pug_html = pug_html + "\u003Cdiv class=\"container\"\u003E\n      ";
-	pug_html = pug_html + pug_indent.join("");
-	pug_html = pug_html + "\u003Cdiv class=\"row\"\u003E\n        ";
-	pug_html = pug_html + pug_indent.join("");
-	pug_html = pug_html + "\u003Cdiv class=\"col-md-3\"\u003E\n          ";
-	pug_html = pug_html + pug_indent.join("");
-	pug_html = pug_html + "\u003Cdiv class=\"header__logo\"\u003E\u003Ca href=\"javascript:void(0)\"\u003E\u003Cimg" + (pug.attr("src", __webpack_require__(35), true, true)) + "\u003E\u003C\u002Fa\u003E\u003C\u002Fdiv\u003E\n        ";
-	pug_html = pug_html + pug_indent.join("");
-	pug_html = pug_html + "\u003C\u002Fdiv\u003E\n        ";
-	pug_html = pug_html + pug_indent.join("");
-	pug_html = pug_html + "\u003Cdiv class=\"col-md-9\"\u003E\n          ";
-	pug_html = pug_html + pug_indent.join("");
-	pug_html = pug_html + "\u003Cdiv class=\"header__top\"\u003E\n            ";
-	pug_html = pug_html + pug_indent.join("");
-	pug_html = pug_html + "\u003Cdiv class=\"header__city\"\u003E\u003Ca class=\"js-city-link\" href=\"javascript:void(0)\"\u003EТамбов\u003C\u002Fa\u003E\n              ";
-	pug_html = pug_html + pug_indent.join("");
-	pug_html = pug_html + "\u003Cul class=\"header__city-list js-city-list\"\u003E\n                ";
-	pug_html = pug_html + pug_indent.join("");
-	pug_html = pug_html + "\u003Cli\u003E\u003Ca href=\"javascript:void(0)\"\u003EМосква\u003C\u002Fa\u003E\u003C\u002Fli\u003E\n                ";
-	pug_html = pug_html + pug_indent.join("");
-	pug_html = pug_html + "\u003Cli\u003E\u003Ca href=\"javascript:void(0)\"\u003EСанкт-Петербург\u003C\u002Fa\u003E\u003C\u002Fli\u003E\n                ";
-	pug_html = pug_html + pug_indent.join("");
-	pug_html = pug_html + "\u003Cli\u003E\u003Ca href=\"javascript:void(0)\"\u003EРостов-на-Дону\u003C\u002Fa\u003E\u003C\u002Fli\u003E\n                ";
-	pug_html = pug_html + pug_indent.join("");
-	pug_html = pug_html + "\u003Cli\u003E\u003Ca href=\"javascript:void(0)\"\u003EВолгоград\u003C\u002Fa\u003E\u003C\u002Fli\u003E\n                ";
-	pug_html = pug_html + pug_indent.join("");
-	pug_html = pug_html + "\u003Cli\u003E\u003Ca href=\"javascript:void(0)\"\u003EУфа\u003C\u002Fa\u003E\u003C\u002Fli\u003E\n                ";
-	pug_html = pug_html + pug_indent.join("");
-	pug_html = pug_html + "\u003Cli\u003E\u003Ca href=\"javascript:void(0)\"\u003EМичуринск\u003C\u002Fa\u003E\u003C\u002Fli\u003E\n                ";
-	pug_html = pug_html + pug_indent.join("");
-	pug_html = pug_html + "\u003Cli\u003E\u003Ca href=\"javascript:void(0)\"\u003EТамбов\u003C\u002Fa\u003E\u003C\u002Fli\u003E\n                ";
-	pug_html = pug_html + pug_indent.join("");
-	pug_html = pug_html + "\u003Cli\u003E\u003Ca href=\"javascript:void(0)\"\u003EВоронеж\u003C\u002Fa\u003E\u003C\u002Fli\u003E\n              ";
-	pug_html = pug_html + pug_indent.join("");
-	pug_html = pug_html + "\u003C\u002Ful\u003E\n            ";
-	pug_html = pug_html + pug_indent.join("");
-	pug_html = pug_html + "\u003C\u002Fdiv\u003E\n            ";
-	pug_html = pug_html + pug_indent.join("");
-	pug_html = pug_html + "\u003Cdiv class=\"header__phone\"\u003E\u003Ca href=\"javascript:void(0)\"\u003E8-800-123-45-67\u003Cspan\u003EКруглосуточно\u003C\u002Fspan\u003E\u003C\u002Fa\u003E\u003C\u002Fdiv\u003E\n            ";
-	pug_html = pug_html + pug_indent.join("");
-	pug_html = pug_html + "\u003Cdiv class=\"header__login\"\u003E\u003Ca class=\"header__enter\" href=\"Javascript:void(0)\"\u003EВход\u003C\u002Fa\u003E\u003Ca class=\"header__reg\" href=\"Javascript:void(0)\"\u003EРегистрация\u003C\u002Fa\u003E\u003C\u002Fdiv\u003E\n            ";
-	pug_html = pug_html + pug_indent.join("");
-	pug_html = pug_html + "\u003Cdiv class=\"header__cart\"\u003E\n              ";
-	pug_html = pug_html + pug_indent.join("");
-	pug_html = pug_html + "\u003Cdiv class=\"header__cart-ico\"\u003E\u003Ca href=\"javascript:void(0)\"\u003E\n                  ";
-	pug_html = pug_html + pug_indent.join("");
-	pug_html = pug_html + "\u003Cdiv class=\"header__cart-counter\"\u003E\u003Cspan\u003E3\u003C\u002Fspan\u003E\u003C\u002Fdiv\u003E\u003C\u002Fa\u003E\u003C\u002Fdiv\u003E\n              ";
-	pug_html = pug_html + pug_indent.join("");
-	pug_html = pug_html + "\u003Cdiv class=\"header__cart-price\"\u003E\u003Ca href=\"javascript:void(0)\"\u003E\u003Cspan\u003EВаша корзина\u003C\u002Fspan\u003E\u003Cspan\u003E130 510 руб\u003C\u002Fspan\u003E\u003C\u002Fa\u003E\u003C\u002Fdiv\u003E\n            ";
-	pug_html = pug_html + pug_indent.join("");
-	pug_html = pug_html + "\u003C\u002Fdiv\u003E\n          ";
-	pug_html = pug_html + pug_indent.join("");
-	pug_html = pug_html + "\u003C\u002Fdiv\u003E\n          ";
-	pug_html = pug_html + pug_indent.join("");
-	pug_html = pug_html + "\u003Cdiv class=\"header__bottom\"\u003E\n            ";
-	pug_html = pug_html + pug_indent.join("");
-	pug_html = pug_html + "\u003Cform class=\"header__form\"\u003E\n              ";
-	pug_html = pug_html + pug_indent.join("");
-	pug_html = pug_html + "\u003Cinput class=\"header__input-text\" type=\"text\" value=\"\" placeholder=\"Поиск: введите название, производителя, симптом, основное вещество\"\u003E\n              ";
-	pug_html = pug_html + pug_indent.join("");
-	pug_html = pug_html + "\u003Cinput class=\"header__input-submit button-green\" type=\"submit\" value=\"\"\u003E\n            ";
-	pug_html = pug_html + pug_indent.join("");
-	pug_html = pug_html + "\u003C\u002Fform\u003E\n          ";
-	pug_html = pug_html + pug_indent.join("");
-	pug_html = pug_html + "\u003C\u002Fdiv\u003E\n        ";
-	pug_html = pug_html + pug_indent.join("");
-	pug_html = pug_html + "\u003C\u002Fdiv\u003E\n      ";
-	pug_html = pug_html + pug_indent.join("");
-	pug_html = pug_html + "\u003C\u002Fdiv\u003E\n    ";
-	pug_html = pug_html + pug_indent.join("");
-	pug_html = pug_html + "\u003C\u002Fdiv\u003E\n    ";
-	pug_html = pug_html + pug_indent.join("");
-	pug_html = pug_html + "\u003Cdiv class=\"header__menu\"\u003E\n      ";
-	pug_html = pug_html + pug_indent.join("");
-	pug_html = pug_html + "\u003Cdiv class=\"container\"\u003E\n        ";
-	pug_html = pug_html + pug_indent.join("");
-	pug_html = pug_html + "\u003Cdiv class=\"row\"\u003E\n          ";
-	pug_html = pug_html + pug_indent.join("");
-	pug_html = pug_html + "\u003Cdiv class=\"col-md-12\"\u003E\n            ";
-	pug_html = pug_html + pug_indent.join("");
-	pug_html = pug_html + "\u003Cnav\u003E\n              ";
-	pug_html = pug_html + pug_indent.join("");
-	pug_html = pug_html + "\u003Cul class=\"header__ul\"\u003E\n                ";
-	pug_html = pug_html + pug_indent.join("");
-	pug_html = pug_html + "\u003Cli class=\"header__li js-header-menu\"\u003E\u003Ca href=\"javascript:void(0)\"\u003EКаталог\u003C\u002Fa\u003E\n                  ";
-	pug_html = pug_html + pug_indent.join("");
-	pug_html = pug_html + "\u003Cul class=\"header__submenu-one js-header-submenu\"\u003E\n                    ";
-	pug_html = pug_html + pug_indent.join("");
-	pug_html = pug_html + "\u003Cli\u003E\u003Ca href=\"javascript:void(0)\"\u003EБады\u003C\u002Fa\u003E\u003C\u002Fli\u003E\n                    ";
-	pug_html = pug_html + pug_indent.join("");
-	pug_html = pug_html + "\u003Cli\u003E\u003Ca href=\"javascript:void(0)\"\u003EГигиена и красота\u003C\u002Fa\u003E\u003C\u002Fli\u003E\n                    ";
-	pug_html = pug_html + pug_indent.join("");
-	pug_html = pug_html + "\u003Cli\u003E\u003Ca href=\"javascript:void(0)\"\u003EЛекарства\u003C\u002Fa\u003E\n                      ";
-	pug_html = pug_html + pug_indent.join("");
-	pug_html = pug_html + "\u003Cul class=\"header__submenu-two\"\u003E\n                        ";
-	pug_html = pug_html + pug_indent.join("");
-	pug_html = pug_html + "\u003Cli\u003E\u003Ca href=\"javascript:void(0)\"\u003EАнтибактериальные препараты\u003C\u002Fa\u003E\u003C\u002Fli\u003E\n                        ";
-	pug_html = pug_html + pug_indent.join("");
-	pug_html = pug_html + "\u003Cli\u003E\u003Ca href=\"javascript:void(0)\"\u003EАнтисептические и дезинфицирующие средства\u003C\u002Fa\u003E\u003C\u002Fli\u003E\n                        ";
-	pug_html = pug_html + pug_indent.join("");
-	pug_html = pug_html + "\u003Cli\u003E\u003Ca href=\"javascript:void(0)\"\u003EВитамины\u003C\u002Fa\u003E\u003C\u002Fli\u003E\n                        ";
-	pug_html = pug_html + pug_indent.join("");
-	pug_html = pug_html + "\u003Cli\u003E\u003Ca href=\"javascript:void(0)\"\u003EВредные привычки\u003C\u002Fa\u003E\u003C\u002Fli\u003E\n                        ";
-	pug_html = pug_html + pug_indent.join("");
-	pug_html = pug_html + "\u003Cli\u003E\u003Ca href=\"javascript:void(0)\"\u003EГомеопатические препараты\u003C\u002Fa\u003E\u003C\u002Fli\u003E\n                        ";
-	pug_html = pug_html + pug_indent.join("");
-	pug_html = pug_html + "\u003Cli\u003E\u003Ca href=\"javascript:void(0)\"\u003EГормональные препараты\u003C\u002Fa\u003E\u003C\u002Fli\u003E\n                        ";
-	pug_html = pug_html + pug_indent.join("");
-	pug_html = pug_html + "\u003Cli\u003E\u003Ca href=\"javascript:void(0)\"\u003EАнтибактериальные препараты\u003C\u002Fa\u003E\u003C\u002Fli\u003E\n                        ";
-	pug_html = pug_html + pug_indent.join("");
-	pug_html = pug_html + "\u003Cli\u003E\u003Ca href=\"javascript:void(0)\"\u003EАнтисептические и дезинфицирующие средства\u003C\u002Fa\u003E\u003C\u002Fli\u003E\n                        ";
-	pug_html = pug_html + pug_indent.join("");
-	pug_html = pug_html + "\u003Cli\u003E\u003Ca href=\"javascript:void(0)\"\u003EВитамины\u003C\u002Fa\u003E\u003C\u002Fli\u003E\n                        ";
-	pug_html = pug_html + pug_indent.join("");
-	pug_html = pug_html + "\u003Cli\u003E\u003Ca href=\"javascript:void(0)\"\u003EВредные привычки\u003C\u002Fa\u003E\u003C\u002Fli\u003E\n                        ";
-	pug_html = pug_html + pug_indent.join("");
-	pug_html = pug_html + "\u003Cli\u003E\u003Ca href=\"javascript:void(0)\"\u003EГомеопатические препараты\u003C\u002Fa\u003E\u003C\u002Fli\u003E\n                        ";
-	pug_html = pug_html + pug_indent.join("");
-	pug_html = pug_html + "\u003Cli\u003E\u003Ca href=\"javascript:void(0)\"\u003EГормональные препараты\u003C\u002Fa\u003E\u003C\u002Fli\u003E\n                        ";
-	pug_html = pug_html + pug_indent.join("");
-	pug_html = pug_html + "\u003Cli\u003E\u003Ca href=\"javascript:void(0)\"\u003EАнтибактериальные препараты\u003C\u002Fa\u003E\u003C\u002Fli\u003E\n                        ";
-	pug_html = pug_html + pug_indent.join("");
-	pug_html = pug_html + "\u003Cli\u003E\u003Ca href=\"javascript:void(0)\"\u003EАнтисептические и дезинфицирующие средства\u003C\u002Fa\u003E\u003C\u002Fli\u003E\n                        ";
-	pug_html = pug_html + pug_indent.join("");
-	pug_html = pug_html + "\u003Cli\u003E\u003Ca href=\"javascript:void(0)\"\u003EВитамины\u003C\u002Fa\u003E\u003C\u002Fli\u003E\n                        ";
-	pug_html = pug_html + pug_indent.join("");
-	pug_html = pug_html + "\u003Cli\u003E\u003Ca href=\"javascript:void(0)\"\u003EВредные привычки\u003C\u002Fa\u003E\u003C\u002Fli\u003E\n                        ";
-	pug_html = pug_html + pug_indent.join("");
-	pug_html = pug_html + "\u003Cli\u003E\u003Ca href=\"javascript:void(0)\"\u003EГомеопатические препараты\u003C\u002Fa\u003E\u003C\u002Fli\u003E\n                        ";
-	pug_html = pug_html + pug_indent.join("");
-	pug_html = pug_html + "\u003Cli\u003E\u003Ca href=\"javascript:void(0)\"\u003EГормональные препараты\u003C\u002Fa\u003E\u003C\u002Fli\u003E\n                      ";
-	pug_html = pug_html + pug_indent.join("");
-	pug_html = pug_html + "\u003C\u002Ful\u003E\n                    ";
-	pug_html = pug_html + pug_indent.join("");
-	pug_html = pug_html + "\u003C\u002Fli\u003E\n                    ";
-	pug_html = pug_html + pug_indent.join("");
-	pug_html = pug_html + "\u003Cli\u003E\u003Ca href=\"javascript:void(0)\"\u003EМама и малыш\u003C\u002Fa\u003E\u003C\u002Fli\u003E\n                    ";
-	pug_html = pug_html + pug_indent.join("");
-	pug_html = pug_html + "\u003Cli\u003E\u003Ca href=\"javascript:void(0)\"\u003EМедизделия и приборы\u003C\u002Fa\u003E\u003C\u002Fli\u003E\n                    ";
-	pug_html = pug_html + pug_indent.join("");
-	pug_html = pug_html + "\u003Cli\u003E\u003Ca href=\"javascript:void(0)\"\u003EОптика\u003C\u002Fa\u003E\u003C\u002Fli\u003E\n                    ";
-	pug_html = pug_html + pug_indent.join("");
-	pug_html = pug_html + "\u003Cli\u003E\u003Ca href=\"javascript:void(0)\"\u003EПитание и спорт\u003C\u002Fa\u003E\u003C\u002Fli\u003E\n                  ";
-	pug_html = pug_html + pug_indent.join("");
-	pug_html = pug_html + "\u003C\u002Ful\u003E\n                ";
-	pug_html = pug_html + pug_indent.join("");
-	pug_html = pug_html + "\u003C\u002Fli\u003E\n                ";
-	pug_html = pug_html + pug_indent.join("");
-	pug_html = pug_html + "\u003Cli class=\"header__li\"\u003E\u003Ca href=\"javascript:void(0)\"\u003EО компании\u003C\u002Fa\u003E\u003C\u002Fli\u003E\n                ";
-	pug_html = pug_html + pug_indent.join("");
-	pug_html = pug_html + "\u003Cli class=\"header__li\"\u003E\u003Ca href=\"javascript:void(0)\"\u003EКонтакты\u003C\u002Fa\u003E\u003C\u002Fli\u003E\n              ";
-	pug_html = pug_html + pug_indent.join("");
-	pug_html = pug_html + "\u003C\u002Ful\u003E\n            ";
-	pug_html = pug_html + pug_indent.join("");
-	pug_html = pug_html + "\u003C\u002Fnav\u003E\n          ";
-	pug_html = pug_html + pug_indent.join("");
-	pug_html = pug_html + "\u003C\u002Fdiv\u003E\n        ";
-	pug_html = pug_html + pug_indent.join("");
-	pug_html = pug_html + "\u003C\u002Fdiv\u003E\n      ";
-	pug_html = pug_html + pug_indent.join("");
-	pug_html = pug_html + "\u003C\u002Fdiv\u003E\n    ";
-	pug_html = pug_html + pug_indent.join("");
-	pug_html = pug_html + "\u003C\u002Fdiv\u003E\n  ";
-	pug_html = pug_html + pug_indent.join("");
-	pug_html = pug_html + "\u003C\u002Fdiv\u003E\n";
-	pug_html = pug_html + pug_indent.join("");
-	pug_html = pug_html + "\u003C\u002Fheader\u003E";
-	};
-	pug_mixins["breadcrumbs"] = pug_interp = function(){
-	var block = (this && this.block), attributes = (this && this.attributes) || {};
-	pug_html = pug_html + "\n";
-	pug_html = pug_html + pug_indent.join("");
-	pug_html = pug_html + "\u003Cdiv" + (pug.attrs(pug.merge([{"class": "breadcrumbs"},attributes]), true)) + "\u003E" + (pug.escape(null == (pug_interp = name) ? "" : pug_interp)) + "\n  ";
-	pug_html = pug_html + pug_indent.join("");
-	pug_html = pug_html + "\u003Cul class=\"breadcrumbs__list\"\u003E\n    ";
-	pug_html = pug_html + pug_indent.join("");
-	pug_html = pug_html + "\u003Cli\u003E\u003Ca href=\"javascript:void(0)\"\u003E\n        ";
-	pug_html = pug_html + pug_indent.join("");
-	pug_html = pug_html + "\u003Csvg class=\"breadcrumbs__home\" xmlns=\"http:\u002F\u002Fwww.w3.org\u002F2000\u002Fsvg\" width=\"12\" height=\"12\" viewBox=\"0 0 12 12\"\u003E\n          ";
-	pug_html = pug_html + pug_indent.join("");
-	pug_html = pug_html + "\u003Cpath d=\"M404.847,207.855a0.606,0.606,0,0,0-.047-0.846l-5.361-4.85a0.652,0.652,0,0,0-.871.01l-5.379,5.1a0.6,0.6,0,0,0-.026.845l0.135,0.145a0.575,0.575,0,0,0,.808.064l0.4-.372V213.4a0.6,0.6,0,0,0,.585.6h2.1a0.6,0.6,0,0,0,.585-0.6v-3.812h2.674V213.4a0.565,0.565,0,0,0,.55.6h2.222a0.6,0.6,0,0,0,.585-0.6v-5.372l0.248,0.225a0.518,0.518,0,0,0,.642-0.223Z\" transform=\"translate(-393 -202)\"\u003E\u003C\u002Fpath\u003E\n        ";
-	pug_html = pug_html + pug_indent.join("");
-	pug_html = pug_html + "\u003C\u002Fsvg\u003E\u003C\u002Fa\u003E\u003C\u002Fli\u003E\n    ";
-	pug_html = pug_html + pug_indent.join("");
-	pug_html = pug_html + "\u003Cli\u003E\u003Ca href=\"javascript:void(0)\"\u003EКаталог\u003C\u002Fa\u003E\u003C\u002Fli\u003E\n    ";
-	pug_html = pug_html + pug_indent.join("");
-	pug_html = pug_html + "\u003Cli\u003E\u003Cspan\u003EМед. обородувание\u003C\u002Fspan\u003E\u003C\u002Fli\u003E\n  ";
-	pug_html = pug_html + pug_indent.join("");
-	pug_html = pug_html + "\u003C\u002Ful\u003E\n";
-	pug_html = pug_html + pug_indent.join("");
-	pug_html = pug_html + "\u003C\u002Fdiv\u003E";
-	};
-	pug_mixins["map"] = pug_interp = function(){
-	var block = (this && this.block), attributes = (this && this.attributes) || {};
-	pug_html = pug_html + "\n";
-	pug_html = pug_html + pug_indent.join("");
-	pug_html = pug_html + "\u003Cdiv class=\"map js-map\"\u003E\n  ";
-	pug_html = pug_html + pug_indent.join("");
-	pug_html = pug_html + "\u003Ch1\u003EКлерасил глубокое очищение, лосьон, 200 мл\u003C\u002Fh1\u003E\n  ";
-	pug_html = pug_html + pug_indent.join("");
-	pug_html = pug_html + "\u003Cdiv class=\"map__card\"\u003E\n    ";
-	pug_html = pug_html + pug_indent.join("");
-	pug_html = pug_html + "\u003Cdiv class=\"map__card-inner\"\u003E\n      ";
-	pug_html = pug_html + pug_indent.join("");
-	pug_html = pug_html + "\u003Cdiv class=\"map__card-image\"\u003E\u003Cimg" + (pug.attr("src", __webpack_require__(36), true, true)) + "\u003E\n        ";
-	pug_html = pug_html + pug_indent.join("");
-	pug_html = pug_html + "\u003Cdiv class=\"map__carousel-wrapper\"\u003E\n          ";
-	pug_html = pug_html + pug_indent.join("");
-	pug_html = pug_html + "\u003Cdiv class=\"map__image-carousel js-map-carousel swiper-container\"\u003E\n            ";
-	pug_html = pug_html + pug_indent.join("");
-	pug_html = pug_html + "\u003Cdiv class=\"swiper-wrapper\"\u003E\n              ";
-	pug_html = pug_html + pug_indent.join("");
-	pug_html = pug_html + "\u003Cdiv class=\"map__image-slide swiper-slide\"\u003E\u003Cimg" + (pug.attr("src", __webpack_require__(36), true, true)) + "\u003E\u003C\u002Fdiv\u003E\n              ";
-	pug_html = pug_html + pug_indent.join("");
-	pug_html = pug_html + "\u003Cdiv class=\"map__image-slide swiper-slide\"\u003E\u003Cimg" + (pug.attr("src", __webpack_require__(37), true, true)) + "\u003E\u003C\u002Fdiv\u003E\n              ";
-	pug_html = pug_html + pug_indent.join("");
-	pug_html = pug_html + "\u003Cdiv class=\"map__image-slide swiper-slide\"\u003E\u003Cimg" + (pug.attr("src", __webpack_require__(36), true, true)) + "\u003E\u003C\u002Fdiv\u003E\n              ";
-	pug_html = pug_html + pug_indent.join("");
-	pug_html = pug_html + "\u003Cdiv class=\"map__image-slide swiper-slide\"\u003E\u003Cimg" + (pug.attr("src", __webpack_require__(37), true, true)) + "\u003E\u003C\u002Fdiv\u003E\n            ";
-	pug_html = pug_html + pug_indent.join("");
-	pug_html = pug_html + "\u003C\u002Fdiv\u003E\n          ";
-	pug_html = pug_html + pug_indent.join("");
-	pug_html = pug_html + "\u003C\u002Fdiv\u003E\n          ";
-	pug_html = pug_html + pug_indent.join("");
-	pug_html = pug_html + "\u003Cdiv class=\"map__slide-prev js-carousel-prev\"\u003E\u003C\u002Fdiv\u003E\n          ";
-	pug_html = pug_html + pug_indent.join("");
-	pug_html = pug_html + "\u003Cdiv class=\"map__slide-next js-carousel-next\"\u003E\u003C\u002Fdiv\u003E\n        ";
-	pug_html = pug_html + pug_indent.join("");
-	pug_html = pug_html + "\u003C\u002Fdiv\u003E\n      ";
-	pug_html = pug_html + pug_indent.join("");
-	pug_html = pug_html + "\u003C\u002Fdiv\u003E\n      ";
-	pug_html = pug_html + pug_indent.join("");
-	pug_html = pug_html + "\u003Cdiv class=\"map__card-description\"\u003E\n        ";
-	pug_html = pug_html + pug_indent.join("");
-	pug_html = pug_html + "\u003Cp class=\"map__articul\"\u003EАрт. 589R5-01\u003C\u002Fp\u003E\n        ";
-	pug_html = pug_html + pug_indent.join("");
-	pug_html = pug_html + "\u003Cdiv class=\"map__rating\"\u003E\u003Cimg" + (pug.attr("src", __webpack_require__(38), true, true)) + "\u003E\u003Cimg" + (pug.attr("src", __webpack_require__(38), true, true)) + "\u003E\u003Cimg" + (pug.attr("src", __webpack_require__(38), true, true)) + "\u003E\u003Cimg" + (pug.attr("src", __webpack_require__(39), true, true)) + "\u003E\u003Cimg" + (pug.attr("src", __webpack_require__(39), true, true)) + "\u003E\u003C\u002Fdiv\u003E\n        ";
-	pug_html = pug_html + pug_indent.join("");
-	pug_html = pug_html + "\u003Cdiv class=\"map__stock\"\u003E\n          ";
-	pug_html = pug_html + pug_indent.join("");
-	pug_html = pug_html + "\u003Cp class=\"map__in-stock\"\u003EЕсть в наличии\u003C\u002Fp\u003E\n        ";
-	pug_html = pug_html + pug_indent.join("");
-	pug_html = pug_html + "\u003C\u002Fdiv\u003E\n        ";
-	pug_html = pug_html + pug_indent.join("");
-	pug_html = pug_html + "\u003Cdiv class=\"map__life\"\u003E\n          ";
-	pug_html = pug_html + pug_indent.join("");
-	pug_html = pug_html + "\u003Cp class=\"map__shelf-life\"\u003EОстаточный срок годности (годен до 15.12.2015 г.)\u003C\u002Fp\u003E\n        ";
-	pug_html = pug_html + pug_indent.join("");
-	pug_html = pug_html + "\u003C\u002Fdiv\u003E\n        ";
-	pug_html = pug_html + pug_indent.join("");
-	pug_html = pug_html + "\u003Cdiv class=\"map__on-prescription\"\u003E\n          ";
-	pug_html = pug_html + pug_indent.join("");
-	pug_html = pug_html + "\u003Cp class=\"map__only-prescription\"\u003EОтпускается только по рецепту\u003C\u002Fp\u003E\n        ";
-	pug_html = pug_html + pug_indent.join("");
-	pug_html = pug_html + "\u003C\u002Fdiv\u003E\n        ";
-	pug_html = pug_html + pug_indent.join("");
-	pug_html = pug_html + "\u003Cdiv class=\"map__all-forms\"\u003E\u003Ca href=\"javascript:void(0)\"\u003EВсе формы Клерасил\u003C\u002Fa\u003E\u003C\u002Fdiv\u003E\n        ";
-	pug_html = pug_html + pug_indent.join("");
-	pug_html = pug_html + "\u003Cdiv class=\"map__manufacturer\"\u003E\n          ";
-	pug_html = pug_html + pug_indent.join("");
-	pug_html = pug_html + "\u003Cp\u003EПроизводитель: Фамар Орлеан, Франция\u003C\u002Fp\u003E\n        ";
-	pug_html = pug_html + pug_indent.join("");
-	pug_html = pug_html + "\u003C\u002Fdiv\u003E\n        ";
-	pug_html = pug_html + pug_indent.join("");
-	pug_html = pug_html + "\u003Cdiv class=\"map__testimony\"\u003E\n          ";
-	pug_html = pug_html + pug_indent.join("");
-	pug_html = pug_html + "\u003Cp class=\"map__testimony-title\"\u003EПоказания:\u003C\u002Fp\u003E\u003Cspan\u003EЗапор (в т.ч. с энкопрезом); подготовка к эндоскопическому (ректоскопия) и рентгенологическому исследованию ЖКТ.\u003C\u002Fspan\u003E\n        ";
-	pug_html = pug_html + pug_indent.join("");
-	pug_html = pug_html + "\u003C\u002Fdiv\u003E\n      ";
-	pug_html = pug_html + pug_indent.join("");
-	pug_html = pug_html + "\u003C\u002Fdiv\u003E\n      ";
-	pug_html = pug_html + pug_indent.join("");
-	pug_html = pug_html + "\u003Cdiv class=\"map__card-buy\"\u003E\n        ";
-	pug_html = pug_html + pug_indent.join("");
-	pug_html = pug_html + "\u003Cdiv class=\"map__old-price\"\u003E\n          ";
-	pug_html = pug_html + pug_indent.join("");
-	pug_html = pug_html + "\u003Cp\u003E5 300 р.\u003C\u002Fp\u003E\n        ";
-	pug_html = pug_html + pug_indent.join("");
-	pug_html = pug_html + "\u003C\u002Fdiv\u003E\n        ";
-	pug_html = pug_html + pug_indent.join("");
-	pug_html = pug_html + "\u003Cdiv class=\"map__price\"\u003E\n          ";
-	pug_html = pug_html + pug_indent.join("");
-	pug_html = pug_html + "\u003Cp\u003E2 300" + (pug.escape(null == (pug_interp = ' ') ? "" : pug_interp)) + "\u003Cspan\u003Eр.\u003C\u002Fspan\u003E\n          ";
-	pug_html = pug_html + pug_indent.join("");
-	pug_html = pug_html + "\u003C\u002Fp\u003E\n        ";
-	pug_html = pug_html + pug_indent.join("");
-	pug_html = pug_html + "\u003C\u002Fdiv\u003E\n        ";
-	pug_html = pug_html + pug_indent.join("");
-	pug_html = pug_html + "\u003Cdiv class=\"map__economy\"\u003E\n          ";
-	pug_html = pug_html + pug_indent.join("");
-	pug_html = pug_html + "\u003Cp\u003E\u003Cspan\u003E1 300\u003C\u002Fspan\u003E" + (pug.escape(null == (pug_interp = ' ') ? "" : pug_interp)) + "Экономия\n          ";
-	pug_html = pug_html + pug_indent.join("");
-	pug_html = pug_html + "\u003C\u002Fp\u003E\n        ";
-	pug_html = pug_html + pug_indent.join("");
-	pug_html = pug_html + "\u003C\u002Fdiv\u003E\n        ";
-	pug_html = pug_html + pug_indent.join("");
-	pug_html = pug_html + "\u003Cdiv class=\"map__set-aside\"\u003E\u003Ca href=\"javascript:void(0)\"\u003EОтложить\u003C\u002Fa\u003E\u003C\u002Fdiv\u003E\n        ";
-	pug_html = pug_html + pug_indent.join("");
-	pug_html = pug_html + "\u003Cdiv class=\"map__card-order\"\u003E\n          ";
-	pug_html = pug_html + pug_indent.join("");
-	pug_html = pug_html + "\u003Cdiv class=\"map__order-count\"\u003E\n            ";
-	pug_html = pug_html + pug_indent.join("");
-	pug_html = pug_html + "\u003Cbutton class=\"map__order-decrement\"\u003E-\u003C\u002Fbutton\u003E\n            ";
-	pug_html = pug_html + pug_indent.join("");
-	pug_html = pug_html + "\u003Cinput type=\"text\" value=\"1\"\u003E\n            ";
-	pug_html = pug_html + pug_indent.join("");
-	pug_html = pug_html + "\u003Cbutton class=\"map__order-increment\"\u003E+\u003C\u002Fbutton\u003E\n          ";
-	pug_html = pug_html + pug_indent.join("");
-	pug_html = pug_html + "\u003C\u002Fdiv\u003E\n          ";
-	pug_html = pug_html + pug_indent.join("");
-	pug_html = pug_html + "\u003Cdiv class=\"map__order-button\"\u003E\n            ";
-	pug_html = pug_html + pug_indent.join("");
-	pug_html = pug_html + "\u003Cinput class=\"button-green\" type=\"submit\" value=\"Купить\"\u003E\n          ";
-	pug_html = pug_html + pug_indent.join("");
-	pug_html = pug_html + "\u003C\u002Fdiv\u003E\n        ";
-	pug_html = pug_html + pug_indent.join("");
-	pug_html = pug_html + "\u003C\u002Fdiv\u003E\n        ";
-	pug_html = pug_html + pug_indent.join("");
-	pug_html = pug_html + "\u003Cdiv class=\"map__one-click\"\u003E\u003Ca href=\"javascript:void(0)\"\u003EКупить в 1 клик\u003C\u002Fa\u003E\u003C\u002Fdiv\u003E\n      ";
-	pug_html = pug_html + pug_indent.join("");
-	pug_html = pug_html + "\u003C\u002Fdiv\u003E\n    ";
-	pug_html = pug_html + pug_indent.join("");
-	pug_html = pug_html + "\u003C\u002Fdiv\u003E\n  ";
-	pug_html = pug_html + pug_indent.join("");
-	pug_html = pug_html + "\u003C\u002Fdiv\u003E\n";
-	pug_html = pug_html + pug_indent.join("");
-	pug_html = pug_html + "\u003C\u002Fdiv\u003E";
-	};
-	pug_mixins["footer"] = pug_interp = function(){
-	var block = (this && this.block), attributes = (this && this.attributes) || {};
-	pug_html = pug_html + "\n";
-	pug_html = pug_html + pug_indent.join("");
-	pug_html = pug_html + "\u003Cdiv class=\"footer\"\u003E\n  ";
-	pug_html = pug_html + pug_indent.join("");
-	pug_html = pug_html + "\u003Cdiv class=\"container\"\u003E\n    ";
-	pug_html = pug_html + pug_indent.join("");
-	pug_html = pug_html + "\u003Cdiv class=\"row\"\u003E\n      ";
-	pug_html = pug_html + pug_indent.join("");
-	pug_html = pug_html + "\u003Cdiv class=\"col-md-3 footer__logo\"\u003E\u003Cimg" + (pug.attr("src", __webpack_require__(40), true, true)) + "\u003E\u003C\u002Fdiv\u003E\n      ";
-	pug_html = pug_html + pug_indent.join("");
-	pug_html = pug_html + "\u003Cdiv class=\"col-md-2\"\u003E\n        ";
-	pug_html = pug_html + pug_indent.join("");
-	pug_html = pug_html + "\u003Cul\u003E\n          ";
-	pug_html = pug_html + pug_indent.join("");
-	pug_html = pug_html + "\u003Cli\u003E\u003Ca href=\"javascript:void(0)\"\u003EО компании\u003C\u002Fa\u003E\u003C\u002Fli\u003E\n          ";
-	pug_html = pug_html + pug_indent.join("");
-	pug_html = pug_html + "\u003Cli\u003E\u003Ca href=\"javascript:void(0)\"\u003EЛицензии\u003C\u002Fa\u003E\u003C\u002Fli\u003E\n          ";
-	pug_html = pug_html + pug_indent.join("");
-	pug_html = pug_html + "\u003Cli\u003E\u003Ca href=\"javascript:void(0)\"\u003EДоставка\u003C\u002Fa\u003E\u003C\u002Fli\u003E\n          ";
-	pug_html = pug_html + pug_indent.join("");
-	pug_html = pug_html + "\u003Cli\u003E\u003Ca href=\"javascript:void(0)\"\u003EОплата\u003C\u002Fa\u003E\u003C\u002Fli\u003E\n          ";
-	pug_html = pug_html + pug_indent.join("");
-	pug_html = pug_html + "\u003Cli\u003E\u003Ca href=\"javascript:void(0)\"\u003EОтзывы\u003C\u002Fa\u003E\u003C\u002Fli\u003E\n          ";
-	pug_html = pug_html + pug_indent.join("");
-	pug_html = pug_html + "\u003Cli\u003E\u003Ca href=\"javascript:void(0)\"\u003EБаланс карты\u003C\u002Fa\u003E\u003C\u002Fli\u003E\n          ";
-	pug_html = pug_html + pug_indent.join("");
-	pug_html = pug_html + "\u003Cli\u003E\u003Ca href=\"javascript:void(0)\"\u003EГеография продаж\u003C\u002Fa\u003E\u003C\u002Fli\u003E\n          ";
-	pug_html = pug_html + pug_indent.join("");
-	pug_html = pug_html + "\u003Cli\u003E\u003Ca href=\"javascript:void(0)\"\u003EКонтакты\u003C\u002Fa\u003E\u003C\u002Fli\u003E\n        ";
-	pug_html = pug_html + pug_indent.join("");
-	pug_html = pug_html + "\u003C\u002Ful\u003E\n      ";
-	pug_html = pug_html + pug_indent.join("");
-	pug_html = pug_html + "\u003C\u002Fdiv\u003E\n      ";
-	pug_html = pug_html + pug_indent.join("");
-	pug_html = pug_html + "\u003Cdiv class=\"col-md-2\"\u003E\n        ";
-	pug_html = pug_html + pug_indent.join("");
-	pug_html = pug_html + "\u003Cul\u003E\n          ";
-	pug_html = pug_html + pug_indent.join("");
-	pug_html = pug_html + "\u003Cli\u003E\u003Ca href=\"javascript:void(0)\"\u003EБренды\u003C\u002Fa\u003E\u003C\u002Fli\u003E\n          ";
-	pug_html = pug_html + pug_indent.join("");
-	pug_html = pug_html + "\u003Cli\u003E\u003Ca href=\"javascript:void(0)\"\u003EКаталог по болезням\u003C\u002Fa\u003E\u003C\u002Fli\u003E\n          ";
-	pug_html = pug_html + pug_indent.join("");
-	pug_html = pug_html + "\u003Cli\u003E\u003Ca href=\"javascript:void(0)\"\u003EНовости\u003C\u002Fa\u003E\u003C\u002Fli\u003E\n          ";
-	pug_html = pug_html + pug_indent.join("");
-	pug_html = pug_html + "\u003Cli\u003E\u003Ca href=\"javascript:void(0)\"\u003EСтатьи\u003C\u002Fa\u003E\u003C\u002Fli\u003E\n          ";
-	pug_html = pug_html + pug_indent.join("");
-	pug_html = pug_html + "\u003Cli\u003E\u003Ca href=\"javascript:void(0)\"\u003EВопрос-ответ\u003C\u002Fa\u003E\u003C\u002Fli\u003E\n        ";
-	pug_html = pug_html + pug_indent.join("");
-	pug_html = pug_html + "\u003C\u002Ful\u003E\n      ";
-	pug_html = pug_html + pug_indent.join("");
-	pug_html = pug_html + "\u003C\u002Fdiv\u003E\n      ";
-	pug_html = pug_html + pug_indent.join("");
-	pug_html = pug_html + "\u003Cdiv class=\"col-md-2\"\u003E\n        ";
-	pug_html = pug_html + pug_indent.join("");
-	pug_html = pug_html + "\u003Cul\u003E\n          ";
-	pug_html = pug_html + pug_indent.join("");
-	pug_html = pug_html + "\u003Cli\u003E\u003Ca href=\"javascript:void(0)\"\u003EЛекарства\u003C\u002Fa\u003E\u003C\u002Fli\u003E\n          ";
-	pug_html = pug_html + pug_indent.join("");
-	pug_html = pug_html + "\u003Cli\u003E\u003Ca href=\"javascript:void(0)\"\u003EБады\u003C\u002Fa\u003E\u003C\u002Fli\u003E\n          ";
-	pug_html = pug_html + pug_indent.join("");
-	pug_html = pug_html + "\u003Cli\u003E\u003Ca href=\"javascript:void(0)\"\u003EГигиена и красота\u003C\u002Fa\u003E\u003C\u002Fli\u003E\n          ";
-	pug_html = pug_html + pug_indent.join("");
-	pug_html = pug_html + "\u003Cli\u003E\u003Ca href=\"javascript:void(0)\"\u003EПитание и спорт\u003C\u002Fa\u003E\u003C\u002Fli\u003E\n          ";
-	pug_html = pug_html + pug_indent.join("");
-	pug_html = pug_html + "\u003Cli\u003E\u003Ca href=\"javascript:void(0)\"\u003EМед. приборы\u003C\u002Fa\u003E\u003C\u002Fli\u003E\n          ";
-	pug_html = pug_html + pug_indent.join("");
-	pug_html = pug_html + "\u003Cli\u003E\u003Ca href=\"javascript:void(0)\"\u003EАкции\u003C\u002Fa\u003E\u003C\u002Fli\u003E\n        ";
-	pug_html = pug_html + pug_indent.join("");
-	pug_html = pug_html + "\u003C\u002Ful\u003E\n      ";
-	pug_html = pug_html + pug_indent.join("");
-	pug_html = pug_html + "\u003C\u002Fdiv\u003E\n      ";
-	pug_html = pug_html + pug_indent.join("");
-	pug_html = pug_html + "\u003Cdiv class=\"col-md-3 footer__phone\"\u003E\u003Ca href=\"javascript:void(0)\"\u003E8-800-123-45-67\u003Cspan\u003EВремя работы:" + (pug.escape(null == (pug_interp = ' ') ? "" : pug_interp)) + "\u003Cspan\u003EКруглосуточно\u003C\u002Fspan\u003E\u003C\u002Fspan\u003E\u003C\u002Fa\u003E\u003C\u002Fdiv\u003E\n    ";
-	pug_html = pug_html + pug_indent.join("");
-	pug_html = pug_html + "\u003C\u002Fdiv\u003E\n  ";
-	pug_html = pug_html + pug_indent.join("");
-	pug_html = pug_html + "\u003C\u002Fdiv\u003E\n";
-	pug_html = pug_html + pug_indent.join("");
-	pug_html = pug_html + "\u003C\u002Fdiv\u003E\n";
-	pug_html = pug_html + pug_indent.join("");
-	pug_html = pug_html + "\u003Cdiv class=\"developer\"\u003E\n  ";
-	pug_html = pug_html + pug_indent.join("");
-	pug_html = pug_html + "\u003Cdiv class=\"container\"\u003E\n    ";
-	pug_html = pug_html + pug_indent.join("");
-	pug_html = pug_html + "\u003Cdiv class=\"row\"\u003E\n      ";
-	pug_html = pug_html + pug_indent.join("");
-	pug_html = pug_html + "\u003Cdiv class=\"col-md-6\"\u003E\n        ";
-	pug_html = pug_html + pug_indent.join("");
-	pug_html = pug_html + "\u003Cp\u003EВсе права защищены (с)\u003C\u002Fp\u003E\n      ";
-	pug_html = pug_html + pug_indent.join("");
-	pug_html = pug_html + "\u003C\u002Fdiv\u003E\n      ";
-	pug_html = pug_html + pug_indent.join("");
-	pug_html = pug_html + "\u003Cdiv class=\"col-md-6 developer__logo\"\u003E\u003Ca href=\"http::\u002F\u002Fvedita.ru\" target=\"_blank\"\u003E\u003Cimg" + (pug.attr("src", __webpack_require__(41), true, true)) + "\u003E\u003C\u002Fa\u003E\u003C\u002Fdiv\u003E\n    ";
-	pug_html = pug_html + pug_indent.join("");
-	pug_html = pug_html + "\u003C\u002Fdiv\u003E\n  ";
-	pug_html = pug_html + pug_indent.join("");
-	pug_html = pug_html + "\u003C\u002Fdiv\u003E\n";
-	pug_html = pug_html + pug_indent.join("");
-	pug_html = pug_html + "\u003C\u002Fdiv\u003E";
-	};
-	pug_html = pug_html + (null == (pug_interp = __webpack_require__(42).call(this, locals)) ? "" : pug_interp) + "\u003C!DOCTYPE html\u003E\n\u003Chtml\u003E\n  \u003Chead\u003E\n    \u003Cmeta charset=\"utf-8\"\u003E\n    \u003Cmeta name=\"viewport\" content=\"width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1\"\u003E\n    \u003Cmeta http-equiv=\"X-UA-Compatible\" content=\"IE=edge,chrome=1\"\u003E\n    \u003Cmeta name=\"format-detection\" content=\"telephone=no\"\u003E\n    \u003Cmeta name=\"format-detection\" content=\"address=no\"\u003E\n    \u003Cmeta name=\"description\" content=\"\"\u003E\n    \u003Cmeta name=\"keywords\" content=\"\"\u003E\n  \u003C\u002Fhead\u003E\n  \u003Cbody\u003E";
-	pug_indent.push('    ');
-	pug_mixins["header"]();
-	pug_indent.pop();
-	pug_html = pug_html + "\n    \u003Cmain\u003E\n      \u003Cdiv class=\"container\"\u003E\n        \u003Cdiv class=\"row\"\u003E\n          \u003Cdiv class=\"col-md-12\"\u003E";
-	pug_indent.push('            ');
-	pug_mixins["breadcrumbs"]();
-	pug_indent.pop();
-	pug_html = pug_html + "\n          \u003C\u002Fdiv\u003E\n        \u003C\u002Fdiv\u003E\n        \u003Cdiv class=\"row\"\u003E\n          \u003Cdiv class=\"col-md-12\"\u003E";
-	pug_indent.push('            ');
-	pug_mixins["map"]();
-	pug_indent.pop();
-	pug_html = pug_html + "\n          \u003C\u002Fdiv\u003E\n        \u003C\u002Fdiv\u003E\n      \u003C\u002Fdiv\u003E\n    \u003C\u002Fmain\u003E\n    \u003Cfooter\u003E";
-	pug_indent.push('      ');
-	pug_mixins["footer"]();
-	pug_indent.pop();
-	pug_html = pug_html + "\n    \u003C\u002Ffooter\u003E\n  \u003C\u002Fbody\u003E\n\u003C\u002Fhtml\u003E";}.call(this,"name" in locals_for_with?locals_for_with.name:typeof name!=="undefined"?name:undefined));;return pug_html;};
-	module.exports = template;
-
-/***/ },
-/* 33 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	var pug_has_own_property = Object.prototype.hasOwnProperty;
-
-	/**
-	 * Merge two attribute objects giving precedence
-	 * to values in object `b`. Classes are special-cased
-	 * allowing for arrays and merging/joining appropriately
-	 * resulting in a string.
-	 *
-	 * @param {Object} a
-	 * @param {Object} b
-	 * @return {Object} a
-	 * @api private
-	 */
-
-	exports.merge = pug_merge;
-	function pug_merge(a, b) {
-	  if (arguments.length === 1) {
-	    var attrs = a[0];
-	    for (var i = 1; i < a.length; i++) {
-	      attrs = pug_merge(attrs, a[i]);
-	    }
-	    return attrs;
-	  }
-
-	  for (var key in b) {
-	    if (key === 'class') {
-	      var valA = a[key] || [];
-	      a[key] = (Array.isArray(valA) ? valA : [valA]).concat(b[key] || []);
-	    } else if (key === 'style') {
-	      var valA = pug_style(a[key]);
-	      var valB = pug_style(b[key]);
-	      a[key] = valA + valB;
-	    } else {
-	      a[key] = b[key];
-	    }
-	  }
-
-	  return a;
-	};
-
-	/**
-	 * Process array, object, or string as a string of classes delimited by a space.
-	 *
-	 * If `val` is an array, all members of it and its subarrays are counted as
-	 * classes. If `escaping` is an array, then whether or not the item in `val` is
-	 * escaped depends on the corresponding item in `escaping`. If `escaping` is
-	 * not an array, no escaping is done.
-	 *
-	 * If `val` is an object, all the keys whose value is truthy are counted as
-	 * classes. No escaping is done.
-	 *
-	 * If `val` is a string, it is counted as a class. No escaping is done.
-	 *
-	 * @param {(Array.<string>|Object.<string, boolean>|string)} val
-	 * @param {?Array.<string>} escaping
-	 * @return {String}
-	 */
-	exports.classes = pug_classes;
-	function pug_classes_array(val, escaping) {
-	  var classString = '', className, padding = '', escapeEnabled = Array.isArray(escaping);
-	  for (var i = 0; i < val.length; i++) {
-	    className = pug_classes(val[i]);
-	    if (!className) continue;
-	    escapeEnabled && escaping[i] && (className = pug_escape(className));
-	    classString = classString + padding + className;
-	    padding = ' ';
-	  }
-	  return classString;
-	}
-	function pug_classes_object(val) {
-	  var classString = '', padding = '';
-	  for (var key in val) {
-	    if (key && val[key] && pug_has_own_property.call(val, key)) {
-	      classString = classString + padding + key;
-	      padding = ' ';
-	    }
-	  }
-	  return classString;
-	}
-	function pug_classes(val, escaping) {
-	  if (Array.isArray(val)) {
-	    return pug_classes_array(val, escaping);
-	  } else if (val && typeof val === 'object') {
-	    return pug_classes_object(val);
-	  } else {
-	    return val || '';
-	  }
-	}
-
-	/**
-	 * Convert object or string to a string of CSS styles delimited by a semicolon.
-	 *
-	 * @param {(Object.<string, string>|string)} val
-	 * @return {String}
-	 */
-
-	exports.style = pug_style;
-	function pug_style(val) {
-	  if (!val) return '';
-	  if (typeof val === 'object') {
-	    var out = '';
-	    for (var style in val) {
-	      /* istanbul ignore else */
-	      if (pug_has_own_property.call(val, style)) {
-	        out = out + style + ':' + val[style] + ';';
-	      }
-	    }
-	    return out;
-	  } else {
-	    val += '';
-	    if (val[val.length - 1] !== ';') 
-	      return val + ';';
-	    return val;
-	  }
-	};
-
-	/**
-	 * Render the given attribute.
-	 *
-	 * @param {String} key
-	 * @param {String} val
-	 * @param {Boolean} escaped
-	 * @param {Boolean} terse
-	 * @return {String}
-	 */
-	exports.attr = pug_attr;
-	function pug_attr(key, val, escaped, terse) {
-	  if (val === false || val == null || !val && (key === 'class' || key === 'style')) {
-	    return '';
-	  }
-	  if (val === true) {
-	    return ' ' + (terse ? key : key + '="' + key + '"');
-	  }
-	  if (typeof val.toJSON === 'function') {
-	    val = val.toJSON();
-	  }
-	  if (typeof val !== 'string') {
-	    val = JSON.stringify(val);
-	    if (!escaped && val.indexOf('"') !== -1) {
-	      return ' ' + key + '=\'' + val.replace(/'/g, '&#39;') + '\'';
-	    }
-	  }
-	  if (escaped) val = pug_escape(val);
-	  return ' ' + key + '="' + val + '"';
-	};
-
-	/**
-	 * Render the given attributes object.
-	 *
-	 * @param {Object} obj
-	 * @param {Object} terse whether to use HTML5 terse boolean attributes
-	 * @return {String}
-	 */
-	exports.attrs = pug_attrs;
-	function pug_attrs(obj, terse){
-	  var attrs = '';
-
-	  for (var key in obj) {
-	    if (pug_has_own_property.call(obj, key)) {
-	      var val = obj[key];
-
-	      if ('class' === key) {
-	        val = pug_classes(val);
-	        attrs = pug_attr(key, val, false, terse) + attrs;
-	        continue;
-	      }
-	      if ('style' === key) {
-	        val = pug_style(val);
-	      }
-	      attrs += pug_attr(key, val, false, terse);
-	    }
-	  }
-
-	  return attrs;
-	};
-
-	/**
-	 * Escape the given string of `html`.
-	 *
-	 * @param {String} html
-	 * @return {String}
-	 * @api private
-	 */
-
-	var pug_match_html = /["&<>]/;
-	exports.escape = pug_escape;
-	function pug_escape(_html){
-	  var html = '' + _html;
-	  var regexResult = pug_match_html.exec(html);
-	  if (!regexResult) return _html;
-
-	  var result = '';
-	  var i, lastIndex, escape;
-	  for (i = regexResult.index, lastIndex = 0; i < html.length; i++) {
-	    switch (html.charCodeAt(i)) {
-	      case 34: escape = '&quot;'; break;
-	      case 38: escape = '&amp;'; break;
-	      case 60: escape = '&lt;'; break;
-	      case 62: escape = '&gt;'; break;
-	      default: continue;
-	    }
-	    if (lastIndex !== i) result += html.substring(lastIndex, i);
-	    lastIndex = i + 1;
-	    result += escape;
-	  }
-	  if (lastIndex !== i) return result + html.substring(lastIndex, i);
-	  else return result;
-	};
-
-	/**
-	 * Re-throw the given `err` in context to the
-	 * the pug in `filename` at the given `lineno`.
-	 *
-	 * @param {Error} err
-	 * @param {String} filename
-	 * @param {String} lineno
-	 * @param {String} str original source
-	 * @api private
-	 */
-
-	exports.rethrow = pug_rethrow;
-	function pug_rethrow(err, filename, lineno, str){
-	  if (!(err instanceof Error)) throw err;
-	  if ((typeof window != 'undefined' || !filename) && !str) {
-	    err.message += ' on line ' + lineno;
-	    throw err;
-	  }
-	  try {
-	    str = str || __webpack_require__(34).readFileSync(filename, 'utf8')
-	  } catch (ex) {
-	    pug_rethrow(err, null, lineno)
-	  }
-	  var context = 3
-	    , lines = str.split('\n')
-	    , start = Math.max(lineno - context, 0)
-	    , end = Math.min(lines.length, lineno + context);
-
-	  // Error context
-	  var context = lines.slice(start, end).map(function(line, i){
-	    var curr = i + start + 1;
-	    return (curr == lineno ? '  > ' : '    ')
-	      + curr
-	      + '| '
-	      + line;
-	  }).join('\n');
-
-	  // Alter exception message
-	  err.path = filename;
-	  err.message = (filename || 'Pug') + ':' + lineno
-	    + '\n' + context + '\n\n' + err.message;
-	  throw err;
-	};
-
-
-/***/ },
-/* 34 */
-/***/ function(module, exports) {
-
-	/* (ignored) */
-
-/***/ },
-/* 35 */
-/***/ function(module, exports) {
-
-	module.exports = "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNDEiIGhlaWdodD0iOTQiIHZpZXdCb3g9IjAgMCAyNDEgOTQiPjxkZWZzPjxzdHlsZT4uY2xzLTF7ZmlsbDojMDA4YzgyO2ZpbGwtcnVsZTpldmVub2RkfTwvc3R5bGU+PC9kZWZzPjxwYXRoIGNsYXNzPSJjbHMtMSIgZD0iTTUxMi44OTMsODguNTEyYzEyLjAyMiwwLjAzMSwzMS45NDkuMDMzLDQzLjk3MSwwLjAyOHYtNDYuOUg1MTMuNTM1YTIzLjQzNywyMy40MzcsMCwwLDAtLjY0Miw0Ni44N204Ni44NzItNTguNTI1SDUxMy43NzFhMzQuOTY1LDM0Ljk2NSwwLDAsMC0uNzk1LDY5LjkyNGMyMy43NTMsMC4wNjIsNjMuMDM3LjAxLDg2Ljc4OSwwLjAxQTM1LjEsMzUuMSwwLDAsMCw2MzUsNjQuOTU1QzYzNSw0NS42NDIsNjIxLjIzOCwyOS45ODgsNTk5Ljc2NSwyOS45ODhaTTQ2MC40MzksOTQuMTExYTUuODU2LDUuODU2LDAsMCwwLDExLjcxMSwwaDAuMDE2VjM1LjhINDcyLjE1YTUuODU2LDUuODU2LDAsMCwwLTExLjcxMSwwaC0wLjAxN1Y1OS4xMjdINDA1Ljc0NVYzNS44aC0wLjAxN2E1Ljg1Niw1Ljg1NiwwLDAsMC0xMS43MTEsMEgzOTRWOTQuMTExaDAuMDE3YTUuODU2LDUuODU2LDAsMCwwLDExLjcxMSwwaDAuMDE3VjcwLjc4M2g1NC42NzdWOTQuMTExaDAuMDE3Wk02MjAuODk0LDEyMy45bDEuMzE5LTkuNzZhMy4yNjYsMy4yNjYsMCwwLDEsLjc0NS0xLjg0NywxLjk2NiwxLjk2NiwwLDAsMSwxLjUxNS0uNjQ3LDIuMDMyLDIuMDMyLDAsMCwxLDEuNDY3LjU3NCwzLjM0MiwzLjM0MiwwLDAsMSwuODU4LDEuNjY5bDAuNzksMy4zNDhhMTEuNTI4LDExLjUyOCwwLDAsMSwuMzU0LDIuMjYsMTIuNzU4LDEyLjc1OCwwLDAsMSwuMzU1LTIuMjZsMC44LTMuMzQ4YTMuMzQyLDMuMzQyLDAsMCwxLC44NTctMS42NjksMi4wMzIsMi4wMzIsMCwwLDEsMS40NjctLjU3NCwxLjk1OCwxLjk1OCwwLDAsMSwxLjUxOC42NTMsMy4yNDksMy4yNDksMCwwLDEsLjc0MywxLjg0MUw2MzUsMTIzLjloLTIuOWwtMC42NzgtNy41NXEtMC4wOTMtMS4xMTMtLjE1Mi0yLjIxYy0wLjA1My4yNzQtLjEyNywwLjYzNC0wLjIxNiwxLjA4M3MtMC4xNjMuOC0uMjE5LDEuMDQzbC0xLjI2NSw1Ljg3NmEzLjQwOSwzLjQwOSwwLDAsMS0uNTkxLDEuNDE1LDEuNDE0LDEuNDE0LDAsMCwxLTIuMDU4LDAsMy40MDksMy40MDksMCwwLDEtLjU5LTEuNDE1bC0xLjI2NS01Ljg3NmMtMC4xLS40ODUtMC4xODYtMC45LTAuMjUtMS4yM3MtMC4xMy0uNjMxLTAuMTg2LTAuOWMwLDAuNTIyLS4wNDUsMS4yNjEtMC4xMzUsMi4yMWwtMC42NzcsNy41NWgtMi45MTlabS0xOS4wNTksMFYxMTYuMTVhNC44NSw0Ljg1LDAsMCwxLC41NDMtMi4yOTEsNC4wMyw0LjAzLDAsMCwxLDEuNTYtMS42MzIsNC41NDIsNC41NDIsMCwwLDEsMi4zNS0uNiw0LjI1Myw0LjI1MywwLDAsMSwyLjE1My41ODMsNC4zNDUsNC4zNDUsMCwwLDEsMS41ODMsMS41NTcsNC4wOTIsNC4wOTIsMCwwLDEsLjU4MiwyLjEyOSw0LjQ1MSw0LjQ1MSwwLDAsMS0uNTczLDIuMjM4LDQuMTMzLDQuMTMzLDAsMCwxLTEuNjM0LDEuNTg3LDUsNSwwLDAsMS0yLjQzMi41NzhsLTAuNTU2LTMuMmExLjA2LDEuMDYsMCwwLDAsLjg3Ny4zMTgsMS4yMTYsMS4yMTYsMCwwLDAsLjkzMy0wLjQxNiwxLjQ0NCwxLjQ0NCwwLDAsMCwuMzgzLTEuMDIxLDEuNjQ1LDEuNjQ1LDAsMCwwLS4zMzUtMS4wNTcsMS4yNTksMS4yNTksMCwwLDAtMS4wNTItLjQxOSwxLjI0MywxLjI0MywwLDAsMC0uNjUxLjE4NywxLjM3NiwxLjM3NiwwLDAsMC0uNS41NjEsMS45MDUsMS45MDUsMCwwLDAtLjE5MS44NzZWMTIzLjloLTMuMDM2Wm0tMTUuODcyLTkuMzQxYTEuNDQxLDEuNDQxLDAsMCwwLTEuMi41MjcsMi4zOTEsMi4zOTEsMCwwLDAtLjQxOSwxLjUxNXYxLjM1Nkg1ODcuNnYtMS40OWEyLjA2NiwyLjA2NiwwLDAsMC0uNDQ1LTEuMzkyQTEuNDg4LDEuNDg4LDAsMCwwLDU4NS45NjMsMTE0LjU2Wm0tNC42MjEsOS4zNDF2LTcuMTMyYTYuNSw2LjUsMCwwLDEsLjMzNC0yLjE0NSw0LjYzNSw0LjYzNSwwLDAsMSwuOTU2LTEuNjMsNC4wOTMsNC4wOTMsMCwwLDEsMS40NjQtMS4wMTUsNS4xODQsNS4xODQsMCwwLDEsMy43NCwwLDQuMDk0LDQuMDk0LDAsMCwxLDEuNDcsMS4wMTgsNC42MzEsNC42MzEsMCwwLDEsLjk2MSwxLjYyOSw2LjQ4MSw2LjQ4MSwwLDAsMSwuMzM1LDIuMTQzVjEyMy45aC0zdi0zLjExNGgtMy4yNTZWMTIzLjloLTNabS0xOS43NTUsMHYtNy43NjhhMS44NzEsMS44NzEsMCwwLDAtLjE5MS0wLjg3MywxLjM4LDEuMzgsMCwwLDAtLjUtMC41NjEsMS40LDEuNCwwLDAsMC0xLjcwNy4yMzIsMS42NCwxLjY0LDAsMCwwLS4zMzQsMS4wNTQsMS40NDUsMS40NDUsMCwwLDAsLjM4NSwxLjAyMSwxLjIyNCwxLjIyNCwwLDAsMCwuOTMuNDE2LDEuMDU1LDEuMDU1LDAsMCwwLC44NzgtMC4zMThsLTAuNTYsMy4yYTQuOTksNC45OSwwLDAsMS0yLjQyOS0uNTc4LDQuMTI0LDQuMTI0LDAsMCwxLTEuNjMzLTEuNTg3LDQuNDQyLDQuNDQyLDAsMCwxLS41NzQtMi4yMzgsNC4wNzQsNC4wNzQsMCwwLDEsLjU4Mi0yLjEyNiw0LjMzLDQuMzMsMCwwLDEsMS41ODMtMS41NTcsNC4yNDMsNC4yNDMsMCwwLDEsMi4xNTMtLjU4Niw0LjgsNC44LDAsMCwwLDUuODcsMCw0LjIzMiw0LjIzMiwwLDAsMSwyLjE0OC41ODMsNC4zODQsNC4zODQsMCwwLDEsMS41ODMsMS41NTQsNC4wNzEsNC4wNzEsMCwwLDEsLjU4NywyLjEzMiw0LjQ1MSw0LjQ1MSwwLDAsMS0uNTczLDIuMjM4LDQuMSw0LjEsMCwwLDEtMS42MzMsMS41ODcsNS4wMSw1LjAxLDAsMCwxLTIuNDMyLjU3OGwtMC41NTctMy4yYTEuMDYyLDEuMDYyLDAsMCwwLC44NzcuMzE4LDEuMjE3LDEuMjE3LDAsMCwwLC45MzQtMC40MTYsMS40NDMsMS40NDMsMCwwLDAsLjM4Mi0xLjAyMSwxLjYzOSwxLjYzOSwwLDAsMC0uMzM1LTEuMDU3LDEuMzczLDEuMzczLDAsMCwwLTEuOTkzLjAxNywxLjY3OSwxLjY3OSwwLDAsMC0uNCwxLjE4OFYxMjMuOWgtMy4wMzdabS0zNi4xNjYtOS4zNDFhMS40NCwxLjQ0LDAsMCwwLTEuMi41MjcsMi4zODksMi4zODksMCwwLDAtLjQxOSwxLjUxNXYxLjM1NmgzLjI1NXYtMS40OWEyLjA2NSwyLjA2NSwwLDAsMC0uNDQ0LTEuMzkyQTEuNDg4LDEuNDg4LDAsMCwwLDUyNS40MjEsMTE0LjU2Wk01MjAuOCwxMjMuOXYtNy4xMzJhNi41LDYuNSwwLDAsMSwuMzM1LTIuMTQ1LDQuNjIsNC42MiwwLDAsMSwuOTU2LTEuNjMsNC4wODgsNC4wODgsMCwwLDEsMS40NjUtMS4wMTUsNS4xODIsNS4xODIsMCwwLDEsMy43MzksMCw0LjA5NCw0LjA5NCwwLDAsMSwxLjQ3LDEuMDE4LDQuNjMxLDQuNjMxLDAsMCwxLC45NjEsMS42MjksNi40NTUsNi40NTUsMCwwLDEsLjMzNSwyLjE0M1YxMjMuOWgtM3YtMy4xMTRINTIzLjhWMTIzLjloLTNabS0xNC41MjItMi45NDd2LTQuMzM4YTIuMzE2LDIuMzE2LDAsMCwwLS40MjQtMS41LDEuNDcsMS40NywwLDAsMC0xLjIxMi0uNTIyLDEuNDQ2LDEuNDQ2LDAsMCwwLTEuMi41MjIsMi4zMjgsMi4zMjgsMCwwLDAtLjQyMiwxLjV2NC4zMzhoMy4yNTVabS0xLjYzMy05LjMwN2E0LjYzOSw0LjYzOSwwLDAsMSwyLjQuNjE5LDQuMTc2LDQuMTc2LDAsMCwxLDEuNjM2LDEuNzgzLDYuMDY0LDYuMDY0LDAsMCwxLC41ODIsMi43Mzd2NC4xNjhoMC44NDNWMTIzLjlINDk5LjA5MnYtMi45NDdoMC45Mjd2LTQuMTY4YTYuMDY0LDYuMDY0LDAsMCwxLC41ODMtMi43MzcsNC4xNjgsNC4xNjgsMCwwLDEsMS42MzUtMS43ODNBNC42NTMsNC42NTMsMCwwLDEsNTA0LjY0NCwxMTEuNjQ3Wm0tMjQuOTgzLjJoMy4wMTl2NC44bDMuMjU2LTQuODE4aDMuMjg5bC0zLjUwOSw0LjgxOGEyLjYsMi42LDAsMCwxLDEuNDA2LjM3NywyLjU2LDIuNTYsMCwwLDEsLjkxNC45NzEsMi41ODksMi41ODksMCwwLDEsLjMxMiwxLjIxN1YxMjMuOWgtMi45ODZ2LTQuMDY4YTEuNTQxLDEuNTQxLDAsMCwwLS4zNzYtMS4wNDQsMS4yODgsMS4yODgsMCwwLDAtMS4wMjQtLjQyOSwxLjE1MywxLjE1MywwLDAsMC0uOTQyLjQwNywxLjYxMywxLjYxMywwLDAsMC0uMzQsMS4wNjZWMTIzLjloLTMuMDE5di00LjA2OGExLjYyNiwxLjYyNiwwLDAsMC0uMzM3LTEuMDY4LDEuMTU5LDEuMTU5LDAsMCwwLS45NDUtMC40MDUsMS4yOTIsMS4yOTIsMCwwLDAtMS4wMjEuNDI5LDEuNTI5LDEuNTI5LDAsMCwwLS4zNzksMS4wNDRWMTIzLjloLTIuOTg1di00LjY4N2EyLjYsMi42LDAsMCwxLC4zMTEtMS4yMTksMi41NDEsMi41NDEsMCwwLDEsLjkxNy0wLjk3MiwyLjYyMiwyLjYyMiwwLDAsMSwxLjQtLjM3NGwtMy41MDktNC44MThoMy4yOWwzLjI1NSw0LjgxOHYtNC44Wm0tMjMuMzQ0LDBoNi40MXYyLjgyOWgtMy4zOXYxLjU3M2gzLjM5djIuODEzaC0zLjM5djAuNzg3YTEuMTE0LDEuMTE0LDAsMCwwLDEuMjgxLDEuMjM4aDIuMTA5VjEyMy45aC0yLjE2YTQuNTE0LDQuNTE0LDAsMCwxLTMuMi0uOTkxLDQsNCwwLDAsMS0xLjA0OC0zLjA0M3YtOC4wMTlabS0xNC41MzksOS4xMDZ2LTQuMzM4YTIuMzE2LDIuMzE2LDAsMCwwLS40MjUtMS41LDEuNDcsMS40NywwLDAsMC0xLjIxMi0uNTIyLDEuNDQ4LDEuNDQ4LDAsMCwwLTEuMi41MjIsMi4zMzQsMi4zMzQsMCwwLDAtLjQyMSwxLjV2NC4zMzhoMy4yNTVabS0xLjYzMy05LjMwN2E0LjY0Miw0LjY0MiwwLDAsMSwyLjQuNjE5LDQuMTc0LDQuMTc0LDAsMCwxLDEuNjM1LDEuNzgzLDYuMDY0LDYuMDY0LDAsMCwxLC41ODIsMi43Mzd2NC4xNjhoMC44NDRWMTIzLjlINDM0LjU5MnYtMi45NDdoMC45Mjh2LTQuMTY4YTYuMDY0LDYuMDY0LDAsMCwxLC41ODItMi43MzcsNC4xNzYsNC4xNzYsMCwwLDEsMS42MzYtMS43ODNBNC42NTEsNC42NTEsMCwwLDEsNDQwLjE0NSwxMTEuNjQ3Wm0tMjAuODM0LDIuOTEzYTEuNDQsMS40NCwwLDAsMC0xLjIuNTI3LDIuNCwyLjQsMCwwLDAtLjQxOSwxLjUxNXYxLjM1NmgzLjI1NXYtMS40OWEyLjA3MSwyLjA3MSwwLDAsMC0uNDQ0LTEuMzkyQTEuNDg5LDEuNDg5LDAsMCwwLDQxOS4zMTEsMTE0LjU2Wm0tNC42MjIsOS4zNDF2LTcuMTMyYTYuNSw2LjUsMCwwLDEsLjMzNS0yLjE0NSw0LjYyLDQuNjIsMCwwLDEsLjk1Ni0xLjYzLDQuMDkzLDQuMDkzLDAsMCwxLDEuNDY0LTEuMDE1LDUuMTgyLDUuMTgyLDAsMCwxLDMuNzM5LDBBNC4xLDQuMSwwLDAsMSw0MjIuNjU0LDExM2E0LjYzMSw0LjYzMSwwLDAsMSwuOTYxLDEuNjI5LDYuNDgxLDYuNDgxLDAsMCwxLC4zMzUsMi4xNDNWMTIzLjloLTN2LTMuMTE0aC0zLjI1NVYxMjMuOWgtM1ptLTIwLjYxMSwwVjExMS44NDhIMzk3LjF2NC4yNjhoMy4yMjJ2LTQuMjY4aDNWMTIzLjloLTN2LTQuODcySDM5Ny4xVjEyMy45aC0zLjAxOVoiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0zOTQgLTMwKSIvPjwvc3ZnPg=="
-
-/***/ },
-/* 36 */
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "image/immodium-card.jpg";
-
-/***/ },
-/* 37 */
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "image/immodium-card-2.jpg";
-
-/***/ },
-/* 38 */
-/***/ function(module, exports) {
-
-	module.exports = "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMSIgaGVpZ2h0PSIxMSIgdmlld0JveD0iMCAwIDExIDExIj48ZGVmcz48c3R5bGU+LmNscy0xe2ZpbGw6I2Y2MDtmaWxsLXJ1bGU6ZXZlbm9kZDtvcGFjaXR5Oi44fTwvc3R5bGU+PC9kZWZzPjxwYXRoIGlkPSJTaGFwZV8yX2NvcHlfMyIgZGF0YS1uYW1lPSJTaGFwZSAyIGNvcHkgMyIgY2xhc3M9ImNscy0xIiBkPSJNMTI3OS44MiwxMzQwLjc5bC0yLjIzLDIuMjcsMC41MywzLjIyYTAuNjMsMC42MywwLDAsMS0uMjQuNiwwLjU0MywwLjU0MywwLDAsMS0uMzQuMTIsMC42ODEsMC42ODEsMCwwLDEtLjI4LTAuMDdsLTIuNzYtMS41Mi0yLjc2LDEuNTJhMC41NjEsMC41NjEsMCwwLDEtLjYyLTAuMDUsMC42MywwLjYzLDAsMCwxLS4yNC0wLjZsMC41My0zLjIyLTIuMjMtMi4yN2EwLjYzOCwwLjYzOCwwLDAsMS0uMTUtMC42MywwLjU3OCwwLjU3OCwwLDAsMSwuNDctMC40MmwzLjA5LS40NywxLjM4LTIuOTJhMC41ODUsMC41ODUsMCwwLDEsLjUzLTAuMzUsMC41OTIsMC41OTIsMCwwLDEsLjUzLjM0bDEuMzgsMi45MywzLjA5LDAuNDdhMC41NzgsMC41NzgsMCwwLDEsLjQ3LjQyQTAuNjM4LDAuNjM4LDAsMCwxLDEyNzkuODIsMTM0MC43OVoiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0xMjY5IC0xMzM2KSIvPjwvc3ZnPg=="
-
-/***/ },
-/* 39 */
-/***/ function(module, exports) {
-
-	module.exports = "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMSIgaGVpZ2h0PSIxMSIgdmlld0JveD0iMCAwIDExIDExIj48ZGVmcz48c3R5bGU+LmNscy0xe2ZpbGw6I2Y2MDtmaWxsLXJ1bGU6ZXZlbm9kZH08L3N0eWxlPjwvZGVmcz48cGF0aCBpZD0iU2hhcGVfM19jb3B5XzIiIGRhdGEtbmFtZT0iU2hhcGUgMyBjb3B5IDIiIGNsYXNzPSJjbHMtMSIgZD0iTTEzMjUsMTM0MC4yNmEwLjM0OCwwLjM0OCwwLDAsMC0uMzctMC4zMmwtMy4zMi0uNS0xLjQ5LTMuMTZhMC4zMjMsMC4zMjMsMCwwLDAtLjY0LDBsLTEuNDksMy4xNi0zLjMyLjVhMC4zNDgsMC4zNDgsMCwwLDAtLjM3LjMyLDAuNTA1LDAuNTA1LDAsMCwwLC4xNi4zM2wyLjQxLDIuNDYtMC41NywzLjQ2YTAuODgsMC44OCwwLDAsMC0uMDEuMTQsMC40MDksMC40MDksMCwwLDAsLjA3LjI1LDAuMjM5LDAuMjM5LDAsMCwwLC4yMS4xLDAuNTA3LDAuNTA3LDAsMCwwLC4yNi0wLjA5bDIuOTctMS42MywyLjk3LDEuNjNhMC40NzksMC40NzksMCwwLDAsLjI2LjA5LDAuMjgxLDAuMjgxLDAsMCwwLC4yNy0wLjM1di0wLjE0bC0wLjU3LTMuNDYsMi40LTIuNDZBMC41MjYsMC41MjYsMCwwLDAsMTMyNSwxMzQwLjI2Wm0tMy40OCwyLjQ4LDAuNDcsMi45MS0yLjQ5LTEuMzgtMi41LDEuMzgsMC40OC0yLjkxLTIuMDItMi4wNiwyLjc5LS40MywxLjI1LTIuNjUsMS4yNSwyLjY1LDIuNzksMC40M1oiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0xMzE0IC0xMzM2KSIvPjwvc3ZnPg=="
-
-/***/ },
-/* 40 */
-/***/ function(module, exports) {
-
-	module.exports = "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMjciIGhlaWdodD0iODguNzgiIHZpZXdCb3g9IjAgMCAyMjcgODguNzgiPjxkZWZzPjxzdHlsZT4uY2xzLTF7ZmlsbDojZmZmO2ZpbGwtcnVsZTpldmVub2RkfTwvc3R5bGU+PC9kZWZzPjxwYXRoIGlkPSJTaGFwZV83MjJfY29weV8yIiBkYXRhLW5hbWU9IlNoYXBlIDcyMiBjb3B5IDIiIGNsYXNzPSJjbHMtMSIgZD0iTTUwMy45ODYsNDUxMC40OGMxMS4zMjQsMC4wMywzMC4wOTMuMDMsNDEuNDE3LDAuMDN2LTQ0LjNINTA0LjU5MWEyMi4xMzgsMjIuMTM4LDAsMCwwLS42MDUsNDQuMjdtODEuODI2LTU1LjI4aC04MWEzMy4wMjgsMzMuMDI4LDAsMCwwLS43NDksNjYuMDVjMjIuMzcyLDAuMDYsNTkuMzc0LjAxLDgxLjc0NywwLjAxQTMzLjExLDMzLjExLDAsMCwwLDYxOSw0NDg4LjIzQzYxOSw0NDY5Ljk5LDYwNi4wMzcsNDQ1NS4yLDU4NS44MTIsNDQ1NS4yWm0tMTMxLjIzMyw2MC41N2E1LjUxNiw1LjUxNiwwLDAsMCwxMS4wMzEsMGgwLjAxNnYtNTUuMDhINDY1LjYxYTUuNTE2LDUuNTE2LDAsMCwwLTExLjAzMSwwaC0wLjAxNnYyMi4wNGgtNTEuNXYtMjIuMDRoLTAuMDE1YTUuNTE2LDUuNTE2LDAsMCwwLTExLjAzMSwwSDM5MnY1NS4wOGgwLjAxNmE1LjUxNiw1LjUxNiwwLDAsMCwxMS4wMzEsMGgwLjAxNXYtMjIuMDNoNTEuNXYyMi4wM2gwLjAxNlptMTUxLjEzNSwyOC4xNCwxLjI0Mi05LjIyYTMuMSwzLjEsMCwwLDEsLjctMS43NSwxLjg0NCwxLjg0NCwwLDAsMSwxLjQyNy0uNjEsMS44ODIsMS44ODIsMCwwLDEsMS4zODIuNTUsMy4xMjgsMy4xMjgsMCwwLDEsLjgwOCwxLjU3bDAuNzQ0LDMuMTZhMTEuMDM3LDExLjAzNywwLDAsMSwuMzMzLDIuMTQsMTIuMTYyLDEyLjE2MiwwLDAsMSwuMzM0LTIuMTRsMC43NS0zLjE2YTMuMTI3LDMuMTI3LDAsMCwxLC44MDctMS41NywxLjg4MiwxLjg4MiwwLDAsMSwxLjM4Mi0uNTUsMS44NTIsMS44NTIsMCwwLDEsMS40My42MiwzLjA4NCwzLjA4NCwwLDAsMSwuNywxLjc0bDEuMjQyLDkuMjJoLTIuNzMybC0wLjYzOS03LjEzYy0wLjA1OC0uNzEtMC4xMDYtMS40LTAuMTQzLTIuMDktMC4wNS4yNi0uMTE5LDAuNi0wLjIsMS4wMnMtMC4xNTMuNzUtLjIwNiwwLjk5bC0xLjE5Miw1LjU1YTMuMTc2LDMuMTc2LDAsMCwxLS41NTYsMS4zMywxLjMyOCwxLjMyOCwwLDAsMS0xLjkzOCwwLDMuMTg5LDMuMTg5LDAsMCwxLS41NTYtMS4zM2wtMS4xOTItNS41NWMtMC4xLS40Ni0wLjE3NS0wLjg1LTAuMjM1LTEuMTdzLTAuMTIyLS41OS0wLjE3NS0wLjg0YzAsMC40OS0uMDQzLDEuMTktMC4xMjcsMi4wOWwtMC42MzgsNy4xM2gtMi43NDlabS0xNy45NTIsMHYtNy4zMmE0LjYwNiw0LjYwNiwwLDAsMSwuNTExLTIuMTcsMy43NzYsMy43NzYsMCwwLDEsMS40NjktMS41NCw0LjI0MSw0LjI0MSwwLDAsMSwyLjIxNC0uNTYsMy45MTcsMy45MTcsMCwwLDEsMi4wMjguNTUsNC4wNDMsNC4wNDMsMCwwLDEsMS40OTEsMS40NywzLjgzMywzLjgzMywwLDAsMSwuNTQ4LDIuMDEsNC4xOTQsNC4xOTQsMCwwLDEtLjU0LDIuMTEsMy44MjQsMy44MjQsMCwwLDEtMS41MzgsMS41LDQuNjM0LDQuNjM0LDAsMCwxLTIuMjkxLjU1bC0wLjUyNC0zLjAyYTEsMSwwLDAsMCwuODI2LjMsMS4xMjMsMS4xMjMsMCwwLDAsLjg3OS0wLjQsMS4zNTgsMS4zNTgsMCwwLDAsLjM2LTAuOTYsMS41NTksMS41NTksMCwwLDAtLjMxNS0xLDEuMTk0LDEuMTk0LDAsMCwwLS45OS0wLjM5LDEuMTQ2LDEuMTQ2LDAsMCwwLS42MTUuMTcsMS4zMzQsMS4zMzQsMCwwLDAtLjQ3NC41MywxLjgyNSwxLjgyNSwwLDAsMC0uMTguODN2Ny4zNGgtMi44NTlabS0xNC45NS04LjgzYTEuMzYzLDEuMzYzLDAsMCwwLTEuMTMxLjUsMi4yNjMsMi4yNjMsMCwwLDAtLjM5NCwxLjQzdjEuMjhoMy4wNjZ2LTEuNGExLjk4MiwxLjk4MiwwLDAsMC0uNDE4LTEuMzJBMS40MjEsMS40MjEsMCwwLDAsNTcyLjgxMiw0NTM1LjA4Wm0tNC4zNTMsOC44M3YtNi43NGE2LjIsNi4yLDAsMCwxLC4zMTUtMi4wMyw0LjM1LDQuMzUsMCwwLDEsLjktMS41MywzLjY1NiwzLjY1NiwwLDAsMSwxLjM4LS45Niw0Ljg2NCw0Ljg2NCwwLDAsMSwzLjUyMiwwLDMuNjc4LDMuNjc4LDAsMCwxLDEuMzg0Ljk2LDQuMjc1LDQuMjc1LDAsMCwxLC45MDYsMS41NCw2LjEsNi4xLDAsMCwxLC4zMTUsMi4wMnY2Ljc0aC0yLjgyOHYtMi45NGgtMy4wNjZ2Mi45NGgtMi44MjhabS0xOC42MDcsMHYtNy4zNGExLjc1NCwxLjc1NCwwLDAsMC0uMTgtMC44MiwxLjI2LDEuMjYsMCwwLDAtLjQ3Mi0wLjUzLDEuMTUxLDEuMTUxLDAsMCwwLS42MTktMC4xOCwxLjE5MywxLjE5MywwLDAsMC0uOTg4LjM5LDEuNTc5LDEuNTc5LDAsMCwwLS4zMTUsMSwxLjM2MSwxLjM2MSwwLDAsMCwuMzYzLjk2LDEuMTMsMS4xMywwLDAsMCwuODc2LjQsMC45OTIsMC45OTIsMCwwLDAsLjgyNy0wLjNsLTAuNTI3LDMuMDJhNC42Miw0LjYyLDAsMCwxLTIuMjg4LS41NSwzLjgyLDMuODIsMCwwLDEtMS41MzktMS41LDQuMTk0LDQuMTk0LDAsMCwxLS41NC0yLjExLDMuODQyLDMuODQyLDAsMCwxLC41NDgtMi4wMSw0LjAyOCw0LjAyOCwwLDAsMSwxLjQ5MS0xLjQ3LDMuOTMyLDMuOTMyLDAsMCwxLDIuMDI4LS41NSw0LjUzNSw0LjUzNSwwLDAsMCw1LjUyOSwwLDMuOSwzLjksMCwwLDEsMi4wMjMuNTUsNC4wNTgsNC4wNTgsMCwwLDEsMS40OTEsMS40NywzLjgyLDMuODIsMCwwLDEsLjU1NCwyLjAxLDQuMTk0LDQuMTk0LDAsMCwxLS41NCwyLjExLDMuODA4LDMuODA4LDAsMCwxLTEuNTM5LDEuNSw0LjYzOCw0LjYzOCwwLDAsMS0yLjI5LjU1bC0wLjUyNS0zLjAyYTEsMSwwLDAsMCwuODI2LjMsMS4xMjcsMS4xMjcsMCwwLDAsLjg4LTAuNCwxLjM2MywxLjM2MywwLDAsMCwuMzYtMC45NiwxLjU1NCwxLjU1NCwwLDAsMC0uMzE2LTEsMS4xODcsMS4xODcsMCwwLDAtLjk4NC0wLjM5LDEuMTU2LDEuMTU2LDAsMCwwLS44OTMuNDEsMS41ODEsMS41ODEsMCwwLDAtLjM4MSwxLjEydjcuMzRoLTIuODZabS0zNC4wNjUtOC44M2ExLjM2MSwxLjM2MSwwLDAsMC0xLjEzMS41LDIuMjYzLDIuMjYzLDAsMCwwLS4zOTQsMS40M3YxLjI4aDMuMDY2di0xLjRhMS45ODIsMS45ODIsMCwwLDAtLjQxOC0xLjMyQTEuNDE5LDEuNDE5LDAsMCwwLDUxNS43ODcsNDUzNS4wOFptLTQuMzUzLDguODN2LTYuNzRhNi4yLDYuMiwwLDAsMSwuMzE1LTIuMDMsNC4zNSw0LjM1LDAsMCwxLC45LTEuNTMsMy42NTYsMy42NTYsMCwwLDEsMS4zOC0uOTYsNC44NjEsNC44NjEsMCwwLDEsMy41MjEsMCwzLjY3NCwzLjY3NCwwLDAsMSwxLjM4NS45Niw0LjI3NSw0LjI3NSwwLDAsMSwuOTA2LDEuNTQsNi4xLDYuMSwwLDAsMSwuMzE1LDIuMDJ2Ni43NGgtMi44Mjh2LTIuOTRoLTMuMDY2djIuOTRoLTIuODI4Wm0tMTMuNjc5LTIuNzl2LTQuMDlhMi4xNzcsMi4xNzcsMCwwLDAtLjQtMS40MiwxLjM3OCwxLjM3OCwwLDAsMC0xLjE0MS0uNDksMS4zNTksMS4zNTksMCwwLDAtMS4xMjguNDksMi4xOTUsMi4xOTUsMCwwLDAtLjQsMS40MnY0LjA5aDMuMDY2Wm0tMS41MzgtOC43OWE0LjM2Myw0LjM2MywwLDAsMSwyLjI2MS41OSwzLjk0NCwzLjk0NCwwLDAsMSwxLjU0MSwxLjY4LDUuNzc4LDUuNzc4LDAsMCwxLC41NDgsMi41OXYzLjkzaDAuOHYyLjc5SDQ5MC45ODd2LTIuNzloMC44NzR2LTMuOTNhNS43NzgsNS43NzgsMCwwLDEsLjU0OC0yLjU5LDMuOTQ0LDMuOTQ0LDAsMCwxLDEuNTQxLTEuNjhBNC4zNzIsNC4zNzIsMCwwLDEsNDk2LjIxNyw0NTMyLjMzWm0tMjMuNTMyLjE5aDIuODQ0djQuNTRsMy4wNjYtNC41NWgzLjFsLTMuMyw0LjU1YTIuNTA2LDIuNTA2LDAsMCwxLDEuMzI0LjM1LDIuNDY1LDIuNDY1LDAsMCwxLDEuMTU0LDIuMDd2NC40M2gtMi44MTJ2LTMuODVhMS40NDUsMS40NDUsMCwwLDAtLjM1NS0wLjk4LDEuMjE1LDEuMjE1LDAsMCwwLS45NjQtMC40MSwxLjA4MywxLjA4MywwLDAsMC0uODg3LjM5LDEuNTE1LDEuNTE1LDAsMCwwLS4zMiwxdjMuODVoLTIuODQ0di0zLjg1YTEuNTA3LDEuNTA3LDAsMCwwLS4zMTgtMSwxLjA4MywxLjA4MywwLDAsMC0uODktMC4zOSwxLjIyMSwxLjIyMSwwLDAsMC0uOTYxLjQxLDEuNDM3LDEuNDM3LDAsMCwwLS4zNTguOTh2My44NWgtMi44MTF2LTQuNDNhMi40NDUsMi40NDUsMCwwLDEsLjI5My0xLjE1LDIuMzg2LDIuMzg2LDAsMCwxLC44NjMtMC45MiwyLjUsMi41LDAsMCwxLDEuMzIyLS4zNWwtMy4zMDUtNC41NWgzLjFsMy4wNjYsNC41NXYtNC41NFptLTIxLjk4OCwwaDYuMDM3djIuNjdoLTMuMTkzdjEuNDloMy4xOTN2Mi42NmgtMy4xOTN2MC43NGExLjA1MSwxLjA1MSwwLDAsMCwxLjIwNywxLjE3aDEuOTg2djIuNjZINDU0LjdhNC4yMiw0LjIyLDAsMCwxLTMuMDE2LS45NCwzLjc2OSwzLjc2OSwwLDAsMS0uOTg4LTIuODd2LTcuNThaTTQzNyw0NTQxLjEydi00LjA5YTIuMTgzLDIuMTgzLDAsMCwwLS40LTEuNDIsMS4zOCwxLjM4LDAsMCwwLTEuMTQyLS40OSwxLjM2LDEuMzYsMCwwLDAtMS4xMjguNDksMi4xOTUsMi4xOTUsMCwwLDAtLjQsMS40MnY0LjA5SDQzN1ptLTEuNTM4LTguNzlhNC4zNjcsNC4zNjcsMCwwLDEsMi4yNjIuNTksMy45NDIsMy45NDIsMCwwLDEsMS41NCwxLjY4LDUuNzY1LDUuNzY1LDAsMCwxLC41NDksMi41OXYzLjkzaDAuNzk0djIuNzlINDMwLjIzNHYtMi43OWgwLjg3NHYtMy45M2E1Ljc3OCw1Ljc3OCwwLDAsMSwuNTQ4LTIuNTksMy45NSwzLjk1LDAsMCwxLDEuNTQxLTEuNjhBNC4zNzgsNC4zNzgsMCwwLDEsNDM1LjQ2NCw0NTMyLjMzWm0tMTkuNjIzLDIuNzVhMS4zNjEsMS4zNjEsMCwwLDAtMS4xMzEuNSwyLjI2MywyLjI2MywwLDAsMC0uMzk0LDEuNDN2MS4yOGgzLjA2NnYtMS40YTEuOTc3LDEuOTc3LDAsMCwwLS40MTktMS4zMkExLjQxNywxLjQxNywwLDAsMCw0MTUuODQxLDQ1MzUuMDhabS00LjM1Myw4Ljgzdi02Ljc0YTYuMTc3LDYuMTc3LDAsMCwxLC4zMTUtMi4wMyw0LjMzNSw0LjMzNSwwLDAsMSwuOS0xLjUzLDMuNjYxLDMuNjYxLDAsMCwxLDEuMzc5LS45Niw0Ljg2NCw0Ljg2NCwwLDAsMSwzLjUyMiwwLDMuNjgyLDMuNjgyLDAsMCwxLDEuMzg1Ljk2LDQuMjc1LDQuMjc1LDAsMCwxLC45MDYsMS41NCw2LjEsNi4xLDAsMCwxLC4zMTUsMi4wMnY2Ljc0aC0yLjgyOHYtMi45NGgtMy4wNjZ2Mi45NGgtMi44MjhabS0xOS40MTUsMHYtMTEuMzloMi44NDV2NC4wM2gzLjAzNHYtNC4wM2gyLjgyOHYxMS4zOWgtMi44Mjh2LTQuNmgtMy4wMzR2NC42aC0yLjg0NVoiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0zOTIgLTQ0NTUuMjIpIi8+PC9zdmc+"
-
-/***/ },
-/* 41 */
-/***/ function(module, exports) {
-
-	module.exports = "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1My43OCIgaGVpZ2h0PSIyMSIgdmlld0JveD0iMCAwIDUzLjc4IDIxIj48ZGVmcz48c3R5bGU+LmNscy0xe2ZpbGw6I2ZmZjtmaWxsLXJ1bGU6ZXZlbm9kZDtvcGFjaXR5Oi41fTwvc3R5bGU+PC9kZWZzPjxwYXRoIGNsYXNzPSJjbHMtMSIgZD0iTTE1MDcuOTUsNDcwMy42NGEwLjcsMC43LDAsMCwwLS43NC0wLjY0LDAuNzE5LDAuNzE5LDAsMCwwLS43NC42NnY1LjM1YTUuNzY4LDUuNzY4LDAsMCwwLTQuNzQtMS40OCw1LjExMyw1LjExMywwLDAsMC00LjM2LDUuNTEsNS4zLDUuMywwLDAsMCw3LjQsNC4xNiw1LjA0OSw1LjA0OSwwLDAsMCwzLjE3LTQuOTJDMTUwNy45NSw0NzEwLjg2LDE1MDcuOTUsNDcwNC42MSwxNTA3Ljk1LDQ3MDMuNjRabS01LjMyLDEyLjY0YTMuODA4LDMuODA4LDAsMCwxLTMuODYtMy43NSwzLjg1MywzLjg1MywwLDAsMSwzLjkxLTMuNzJBMy43MzYsMy43MzYsMCwxLDEsMTUwMi42Myw0NzE2LjI4Wm0tNi40LTMuOTZhNS4zMzgsNS4zMzgsMCwwLDAtNS4yMi00Ljg1LDUuMTUsNS4xNSwwLDEsMCwxLjEzLDEwLjE4aDAuMDFhNS40MzMsNS40MzMsMCwwLDAsMi43My0xLjUzLDAuNjM5LDAuNjM5LDAsMCwwLC4wMi0wLjk2LDAuNzE3LDAuNzE3LDAsMCwwLTEtLjAxYy0wLjE2LjE0LS4zMiwwLjI4LTAuNSwwLjQyYTQuMDQxLDQuMDQxLDAsMCwxLTYuMTUtMS43N2MtMC4xNi0uNDQtMC4xNS0wLjQ2LjM1LTAuNDZoNy42MkEwLjgzOCwwLjgzOCwwLDAsMCwxNDk2LjIzLDQ3MTIuMzJabS0xLjkyLS4zN2gtNi44MmMtMC4zMiwwLS40MS0wLjA4LTAuMzMtMC4zOWEzLjksMy45LDAsMCwxLDcuNDktLjA0QzE0OTQuNzQsNDcxMS44NSwxNDk0LjY2LDQ3MTEuOTUsMTQ5NC4zMSw0NzExLjk1Wm0zNS40NywwLjk1YTUuMDkzLDUuMDkzLDAsMCwwLTMuMTgtNC45Myw1LjMwNiw1LjMwNiwwLDAsMC03LjQsNC4xNyw1LjE3Nyw1LjE3NywwLDAsMCw0LjM2LDUuNTEsNS4zOCw1LjM4LDAsMCwwLDQuMTUtMS4wMWMwLjE2LS4xMi41OS0wLjQ3LDAuNTktMC40N3YwLjk4YTAuNzMyLDAuNzMyLDAsMCwwLC43NC42NiwwLjc2NiwwLjc2NiwwLDAsMCwuNTMtMC4yMSwwLjczLDAuNzMsMCwwLDAsLjIxLTAuNDRDMTUyOS43OCw0NzE2LjE5LDE1MjkuNzksNDcxNC4zMiwxNTI5Ljc4LDQ3MTIuOVptLTEuNDgtLjI5YTMuNzgxLDMuNzgxLDAsMCwxLTMuNzksMy43NiwzLjczOCwzLjczOCwwLDEsMS0uMDUtNy40N0EzLjc1MSwzLjc1MSwwLDAsMSwxNTI4LjMsNDcxMi42MVptLTEwLjM3LDQuMzZhMC43MjgsMC43MjgsMCwwLDEtLjc3LjY3LDQuNTg1LDQuNTg1LDAsMCwxLTMuNDctMS40Niw0Ljk0OSw0Ljk0OSwwLDAsMS0xLjI4LTMuNjVjLTAuMDEtMS4xMywwLTguODIsMC04LjgyYTAuNzM1LDAuNzM1LDAsMCwxLDEuNDcuMDF2NC43OGMwLDAuMzctLjA0LjU1LDAuMzMsMC41NWgzLjA4YTAuNjUsMC42NSwwLDAsMSwuNjcuNjMsMC42NzQsMC42NzQsMCwwLDEtLjIuNDcsMC42OTIsMC42OTIsMCwwLDEtLjQzLjJoLTMuMTVjLTAuMjEsMC0uMy4xNC0wLjMsMC40MSwwLjAxLDAuOSwwLC45NiwwLDIuMjZhMy4yMzcsMy4yMzcsMCwwLDAsMi45MSwzLjE5bDAuNDYsMC4wNkEwLjcwNiwwLjcwNiwwLDAsMSwxNTE3LjkzLDQ3MTYuOTdabS0zMi40OS05LjA3YTAuNjI2LDAuNjI2LDAsMCwxLS4wNi4yN2wtNC4wOSw4Ljk4YTAuNjczLDAuNjczLDAsMCwxLS41Ni4yOCwwLjc1OCwwLjc1OCwwLDAsMS0uNzItMC41Yy0wLjAzLS4wNi0zLjk0LTguODItMy45NC04LjgyYTAuNzA2LDAuNzA2LDAsMCwxLS4wNi0wLjI4LDAuNjczLDAuNjczLDAsMCwxLC40Mi0wLjYzLDAuNzE2LDAuNzE2LDAsMCwxLC45My4zNWwzLjM5LDcuNCwwLjAxLDAuMDEsMy4zMi03LjM0YTAuNzE4LDAuNzE4LDAsMCwxLC45My0wLjM1QTAuNywwLjcsMCwwLDEsMTQ4NS40NCw0NzA3LjlabTE3LjE5LDUuNThhMS4xLDEuMSwwLDAsMS0xLjA1LTEuMDYsMS4xMiwxLjEyLDAsMCwxLDEuMTItMS4wMSwxLjA5MywxLjA5MywwLDAsMSwxLjAzLDEuMDRBMS4xLDEuMSwwLDAsMSwxNTAyLjYzLDQ3MTMuNDhabTguMTIsOS45MmEwLjYxMywwLjYxMywwLDAsMS0uNjIuNmgtMC4xMWEwLjYsMC42LDAsMCwxLS42MS0wLjZ2LTE5LjgxYTAuNiwwLjYsMCwwLDEsLjYxLTAuNmgwLjExYTAuNjEzLDAuNjEzLDAsMCwxLC42Mi42djE5LjgxWiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTE0NzYgLTQ3MDMpIi8+PC9zdmc+"
-
-/***/ },
-/* 42 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var pug = __webpack_require__(33);
-
-	function template(locals) {var pug_html = "", pug_mixins = {}, pug_interp;var pug_indent = [];;return pug_html;};
-	module.exports = template;
-
-/***/ },
-/* 43 */
+/* 27 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function($) {'use strict';
@@ -9073,10 +8292,10 @@
 	};
 
 	exports.default = App;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(7)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
 /***/ },
-/* 44 */
+/* 28 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function($) {'use strict';
@@ -9087,11 +8306,11 @@
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-	var _Module2 = __webpack_require__(45);
+	var _Module2 = __webpack_require__(29);
 
 	var _Module3 = _interopRequireDefault(_Module2);
 
-	var _App = __webpack_require__(43);
+	var _App = __webpack_require__(27);
 
 	var _App2 = _interopRequireDefault(_App);
 
@@ -9185,10 +8404,10 @@
 	}(_Module3.default);
 
 	exports.default = Header;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(7)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
 /***/ },
-/* 45 */
+/* 29 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function($) {'use strict';
@@ -9226,10 +8445,10 @@
 	}();
 
 	exports.default = Module;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(7)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
 /***/ },
-/* 46 */
+/* 30 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -9240,11 +8459,11 @@
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-	var _Module2 = __webpack_require__(45);
+	var _Module2 = __webpack_require__(29);
 
 	var _Module3 = _interopRequireDefault(_Module2);
 
-	var _swiper = __webpack_require__(47);
+	var _swiper = __webpack_require__(31);
 
 	var _swiper2 = _interopRequireDefault(_swiper);
 
@@ -9295,7 +8514,7 @@
 	exports.default = SliderIndex;
 
 /***/ },
-/* 47 */
+/* 31 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -9320,7 +8539,7 @@
 
 
 /***/ },
-/* 48 */
+/* 32 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function($) {'use strict';
@@ -9331,11 +8550,11 @@
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-	var _Module2 = __webpack_require__(45);
+	var _Module2 = __webpack_require__(29);
 
 	var _Module3 = _interopRequireDefault(_Module2);
 
-	var _App = __webpack_require__(43);
+	var _App = __webpack_require__(27);
 
 	var _App2 = _interopRequireDefault(_App);
 
@@ -9396,10 +8615,10 @@
 	}(_Module3.default);
 
 	exports.default = Filter;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(7)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
 /***/ },
-/* 49 */
+/* 33 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function($) {'use strict';
@@ -9410,11 +8629,11 @@
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-	var _Module2 = __webpack_require__(45);
+	var _Module2 = __webpack_require__(29);
 
 	var _Module3 = _interopRequireDefault(_Module2);
 
-	var _swiper = __webpack_require__(47);
+	var _swiper = __webpack_require__(31);
 
 	var _swiper2 = _interopRequireDefault(_swiper);
 
@@ -9441,32 +8660,152 @@
 	    _createClass(Map, [{
 	        key: 'init',
 	        value: function init() {
-
-	            this.$carosuel = $('.js-map-carousel', this.$root);
+	            this.$slider = $('.js-map-slider', this.$root);
+	            this.$carosuel = $('.js-map-thumbs', this.$root);
 	            this.initCarousel();
+
+	            this.$titles = $('.js-map-ico', this.$root);
+	            this.$titles.on('click', $.proxy(this.openCategoryDescription, this));
+
+	            this.$tabs_link = $('.js-map-tabs-link', this.$root);
+	            this.$tabs = $('.js-map-tab', this.$root);
+	            this.$tabs_link.on('click', $.proxy(this.openTab, this));
 	        }
+
+	        // Карусель инициализация
+
 	    }, {
 	        key: 'initCarousel',
 	        value: function initCarousel() {
-	            this.$slider = new _swiper2.default(this.$carosuel, {
+	            this.$gallery = new _swiper2.default(this.$slider, {
+	                spaceBetween: 10,
+	                centeredSlides: true,
+	                slidesPerView: 1
+	            });
+
+	            this.$thumbs = new _swiper2.default(this.$carosuel, {
 	                slidesPerView: 4,
 	                spaceBetween: 12,
 	                loop: true,
-	                paginationClickable: true,
+	                touchRatio: 0.2,
+	                centeredSlides: false,
+	                slideToClickedSlide: true,
 	                nextButton: '.js-carousel-next',
 	                prevButton: '.js-carousel-prev'
 	            });
+
+	            this.$gallery.params.control = this.$thumbs;
+	            this.$thumbs.params.control = this.$gallery;
 	        }
+
+	        // Открытие разделов в описании
+
 	    }, {
-	        key: 'initSlider',
-	        value: function initSlider() {}
+	        key: 'openCategoryDescription',
+	        value: function openCategoryDescription(e) {
+	            var target = e.currentTarget;
+	            $(target).toggleClass('map__characteristics-ico--click');
+
+	            var $parent = $(target).parent();
+	            $parent.find('.js-map-characteristics-text').toggleClass('map__characteristics-text--visible');
+	        }
+	        // Открытие табов
+
+	    }, {
+	        key: 'openTab',
+	        value: function openTab(e) {
+
+	            this.$tabs_link.each(function () {
+	                $(this).removeClass('map__tabs-links--active');
+	            });
+
+	            var target = e.currentTarget;
+	            $(target).addClass('map__tabs-links--active');
+
+	            var $type_tab = $(target).attr('data-tab');
+
+	            this.$tabs.each(function () {
+
+	                $(this).removeClass('map__tabs-description--active');
+
+	                if ($(this).attr('data-tab') == $type_tab) {
+	                    $(this).addClass('map__tabs-description--active');
+	                }
+	            });
+	        }
 	    }]);
 
 	    return Map;
 	}(_Module3.default);
 
 	exports.default = Map;
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(7)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
+
+/***/ },
+/* 34 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/* WEBPACK VAR INJECTION */(function($) {'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _Module2 = __webpack_require__(29);
+
+	var _Module3 = _interopRequireDefault(_Module2);
+
+	var _swiper = __webpack_require__(31);
+
+	var _swiper2 = _interopRequireDefault(_swiper);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var Map = function (_Module) {
+	    _inherits(Map, _Module);
+
+	    function Map() {
+	        _classCallCheck(this, Map);
+
+	        return _possibleConstructorReturn(this, (Map.__proto__ || Object.getPrototypeOf(Map)).call(this, {
+	            name: 'Similar',
+	            self: '.js-similar'
+	        }));
+	    }
+
+	    _createClass(Map, [{
+	        key: 'init',
+	        value: function init() {
+	            this.$carousel = $('.js-similar-carousel', this.$root);
+	            this.initSimilarCarousel();
+	        }
+	        // Карусель инициализация
+
+	    }, {
+	        key: 'initSimilarCarousel',
+	        value: function initSimilarCarousel() {
+	            this.$gallery = new _swiper2.default(this.$carousel, {
+	                //spaceBetween: 2,
+	                slidesPerView: 4,
+	                nextButton: '.js-similar-carousel-next',
+	                prevButton: '.js-similar-carousel-prev'
+	            });
+	        }
+	    }]);
+
+	    return Map;
+	}(_Module3.default);
+
+	exports.default = Map;
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
 /***/ }
 /******/ ]);

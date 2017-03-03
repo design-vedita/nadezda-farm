@@ -1,4 +1,5 @@
 mixin left-banner()
+    // Левый баннер
     .left-banner&attributes(attributes)= name
         .left-banner__image(style="background-image: url(" + require('../image/left-banner.jpg') + ")")
         .left-banner__description
@@ -8,3 +9,4 @@ mixin left-banner()
                 =' '
                 span р.
             a(href="javascript:void(0)").left-banner__description-more.button-orange Подробнее
+    //

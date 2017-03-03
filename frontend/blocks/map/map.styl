@@ -1,6 +1,7 @@
 .map
     margin-top 15px
     
+    // Карточка
     h1
         margin-bottom 33px
         
@@ -14,10 +15,20 @@
         border-left 1px solid review-border-bottom
         
     &__card-description
+        padding-left 2px
         margin-top -3px
         width 40.5%
         
-    &__image-slide
+    &__slider-wrapper
+        padding-right 30px
+        
+    &__slide
+        
+        img
+            margin-left auto
+            margin-right auto
+        
+    &__image-thumb
         position relative
         height 60px
         border 1px solid review-border
@@ -25,13 +36,18 @@
         &::before
             position absolute
             z-index 1
-            left 0
-            top 0
+            left -1px
+            top -1px
             content ''
             display block
             width 'calc(%s - %s)' % (100% 2px)
             height 'calc(%s - %s)' % (100% 2px)
-            border 2px solid green-base
+            border 2px solid transparent
+            
+        &.swiper-slide-active
+        
+            &::before
+                border-color green-base
     
         img
             position absolute
@@ -57,6 +73,7 @@
         position relative
         padding-left 15px
         padding-top 37px
+        padding-bottom 35px
         
         &::before
             position absolute
@@ -127,6 +144,10 @@
             line-height normal
             letter-spacing .4px
             color green-base
+            transition all .5s ease
+            
+            &:hover
+                color green-hover
             
     &__manufacturer
         margin-top 10px
@@ -146,9 +167,29 @@
             background-image url(../../image/svg/set-aside.svg)
             background-position left center
             background-repeat no-repeat
+            transform all .5s ease
+            &:hover
+                color green-base
+                background-image url(../../image/svg/set-aside-green.svg)
             
-    &__carousel-wrapper
+    &__testimony
+        margin-top 11px
+        
+        p
+            letter-spacing .4px
+            
+        span
+            margin-top 4px
+            display block
+            font-size 14px
+            line-height 20px
+            color testimony
+            
+    &__thumbs-wrapper
         position relative
+        margin-top 79px
+        padding-right 48px
+        padding-left 43px
         
     &__slide-prev,
     &__slide-next
@@ -187,7 +228,7 @@
         left 15px
             
     &__slide-next
-        right 0
+        right 25px
         transform rotate(180deg)
         
     &__old-price
@@ -233,7 +274,7 @@
                     position absolute
                     z-index -1
                     left 0
-                    top 4px
+                    top 3px
                     content ''
                     display block
                     width 100%
@@ -247,6 +288,14 @@
         margin-top 12px
         display flex
         justify-content space-between
+        
+    &__post
+    
+        a
+            padding-left 14px
+            padding-right 13px
+            padding_y(2px)
+            display inline-block
     
     &__order-count
         font-size 0
@@ -313,6 +362,182 @@
             
             &:hover
                 border-bottom-color orange-base
+    // Табы
+    &__tabs
+        margin-top 29px
+        
+    &__tabs-links
+        
+        a
+            padding-left 26px
+            padding-right 25px
+            padding-top 17px
+            padding-bottom 18px
+            display inline-block
+            font-size 18px
+            font-weight 600
+            text-decoration none
+            color white
+            background-color tab-links
+            transition all .5s ease
+            
+            &:hover
+                background-color tab-links-hover
+                
+        &--active
+            background-color green-base !important
+            
+            &:hover
+                background-color green-hover !important
+        
+    &__tabs-content
+        border-top 5px green-base solid
+        background-color white
+            
+    &__characteristics
+        position relative
+        
+        &:not(:first-child)
+            margin-top 7px
+            
+        &:hover ^[0]__characteristics-ico
+                          
+            &::before,
+            &::after
+                background-color white
+                
+        &:hover ^[0]__characteristics-title
+            background-color green-base
+            color white
+                
+     
+    &__characteristics-text
+        padding-left 15px
+        display none
+        
+        &--visible
+            display block
+        
+        & > *
+            font-size 14px
+            line-height 24px
+            
+        p
+            margin-bottom 25px
+    
+            
+    &__characteristics-ico
+        position absolute
+        left 0
+        top 0
+        display block
+        width 100%
+        height 100%
+        cursor pointer
+        
+        
+        &::before
+            position absolute
+            right 13px
+            top 14px
+            content ''
+            display block
+            width 8px
+            height 3px
+            border-radius 2px
+            background-color green-base
+            transform rotate(45deg)
+            transition all .5s ease
+        
+        &::after
+            position absolute
+            right 9px
+            top 14px
+            content ''
+            display block
+            width 8px
+            height 3px
+            border-radius 2px
+            background-color green-base
+            transform rotate(-45deg)
+            transition all .5s ease
+            
+        &--click
+        
+            &::before
+                transform rotate(-45deg)
+                
+            &::after
+                transform rotate(45deg)
+    
+    &__characteristics-title
+        margin-bottom 6px
+        padding_x(17px)
+        font-size 14px
+        font-weight normal
+        line-height 28px
+        color tabs-title-color
+        background-color tabs-title
+        transition all .5s ease
+        
+    &__tabs-description,
+    &__tabs-reviews
+        display none
+            
+        &--active
+            display block
+                
+    &__register
+        margin-top 17px
+        font-size 13px
+        line-height 24px
+        color register
+            
+    &__reviews
+        
+        .reviews
+        
+            &__list
+                margin-top 0
+    
+            &__tale-text
+        
+                &::before
+                    display none
+    
+            &__tale
+        
+                &:not(:first-child)
+                    margin-top 30px
+    
+                &:not(:last-child) .reviews__tale-description
+                    border-bottom 1px solid review-border
+    
+            &__tale-image
+                margin-top 7px
+    
+            &__tale-description
+                padding-bottom 33px
+
+        
+    &__tabs-description
+        padding-top 23px
+        padding-right 32px
+        padding-left 25px
+        padding-bottom 21px
+        
+    &__reviews
+        padding-top 23px
+        padding-right 32px
+        padding-left 25px
+        
+    &__order-review
+        padding_x(19px)
+            
+        .order-review
+            
+            &__button
+                margin-top 28px
         
         
                 

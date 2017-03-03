@@ -1,21 +1,50 @@
+include ../reviews/reviews
+include ../order-review/order-review
+
 mixin map()
     .map.js-map
         h1 Клерасил глубокое очищение, лосьон, 200 мл
+        // Карточка основная информация
         .map__card
             .map__card-inner
                 .map__card-image
-                    img(src=require("../image/immodium-card.jpg"))
-
-                    .map__carousel-wrapper
-                        .map__image-carousel.js-map-carousel.swiper-container
+                    .map__slider-wrapper
+                        .map__card-slider.swiper-container.js-map-slider
                             .swiper-wrapper
-                                .map__image-slide.swiper-slide
+                                .map__slide.swiper-slide
                                     img(src=require("../image/immodium-card.jpg"))
-                                .map__image-slide.swiper-slide
+                                .map__slide.swiper-slide
                                     img(src=require("../image/immodium-card-2.jpg"))
-                                .map__image-slide.swiper-slide
+                                .map__slide.swiper-slide
                                     img(src=require("../image/immodium-card.jpg"))
-                                .map__image-slide.swiper-slide
+                                .map__slide.swiper-slide
+                                    img(src=require("../image/immodium-card-2.jpg"))
+                                .map__slide.swiper-slide
+                                    img(src=require("../image/immodium-card.jpg"))
+                                .map__slide.swiper-slide
+                                    img(src=require("../image/immodium-card-2.jpg"))
+                                .map__slide.swiper-slide
+                                    img(src=require("../image/immodium-card.jpg"))
+                                .map__slide.swiper-slide
+                                    img(src=require("../image/immodium-card-2.jpg"))
+                    .map__thumbs-wrapper
+                        .map__image-thumbs.js-map-thumbs.swiper-container
+                            .swiper-wrapper
+                                .map__image-thumb.swiper-slide
+                                    img(src=require("../image/immodium-card.jpg"))
+                                .map__image-thumb.swiper-slide
+                                    img(src=require("../image/immodium-card-2.jpg"))
+                                .map__image-thumb.swiper-slide
+                                    img(src=require("../image/immodium-card.jpg"))
+                                .map__image-thumb.swiper-slide
+                                    img(src=require("../image/immodium-card-2.jpg"))
+                                .map__image-thumb.swiper-slide
+                                    img(src=require("../image/immodium-card.jpg"))
+                                .map__image-thumb.swiper-slide
+                                    img(src=require("../image/immodium-card-2.jpg"))
+                                .map__image-thumb.swiper-slide
+                                    img(src=require("../image/immodium-card.jpg"))
+                                .map__image-thumb.swiper-slide
                                     img(src=require("../image/immodium-card-2.jpg"))
                         .map__slide-prev.js-carousel-prev
                         .map__slide-next.js-carousel-next
@@ -63,5 +92,76 @@ mixin map()
                             button.map__order-increment +
                         .map__order-button
                             input(type="submit" value="Купить").button-green
+                        // Если нет в наличии, то эта кнопка
+                        .map__post
+                            a(href="javascript:void(0)").button-green Сообщить о поступлении
+                        //
                     .map__one-click
                             a(href="javascript:void(0)") Купить в 1 клик
+        //
+        // Карточка табы
+        .map__tabs
+            .map__tabs-links
+                a(href="javascript:void(0)" data-tab="desc").map__tabs-links--active.js-map-tabs-link Описание
+                a(href="javascript:void(0)" data-tab="reviews").js-map-tabs-link Отзывы
+            .map__tabs-content
+                .map__tabs-description(data-tab="desc").map__tabs-description--active.js-map-tab
+                    .map__characteristics
+                        p.map__characteristics-title Название
+                        span.map__characteristics-ico.js-map-ico
+                        .map__characteristics-text.js-map-characteristics-text
+                            p Цефаклор Штада® гран. д/сусп. для приема внутрь 125 мг/5 мл
+                    .map__characteristics
+                        span.map__characteristics-ico.js-map-ico
+                        p.map__characteristics-title Производитель
+                        .map__characteristics-text.js-map-characteristics-text
+                            p Stada Arzneimittel AG, Германия
+                    .map__characteristics
+                        span.map__characteristics-ico.js-map-ico
+                        p.map__characteristics-title Состав
+                        .map__characteristics-text.js-map-characteristics-text
+                            p Stada Arzneimittel AG, Германия
+                    .map__characteristics
+                        span.map__characteristics-ico.js-map-ico
+                        p.map__characteristics-title Фармакодинамика
+                        .map__characteristics-text.js-map-characteristics-text
+                            p Цефаклор Стада действует при инфекциях, вызванных следующими грамположительными и грамотрицательными возбудителями: Bacteroides spp., Citrobacter diversus, Escherichia coli, Haemophilus influenzae, включая штаммы, резистентные к ампициллину, Klebsiella, Moraxella catarrhalis, Neisseria gonorrhea, включая пенициллинообразующие штаммы, Peptococcus spp., Peptostreptococcus spp., Propionibacterium, Proteus mirabilis, стафилококки, включая коагулазоположительные, коагулазоотрицательные и пенициллинообразующие штаммы, бета- гемолитические и другие стрептококки, Streptococcus pneumoniae.
+                            p При инфекциях, вызванных следующими возбудителями, действие Цефаклора Стада следует проверить: Bacteroides fragilis, Citrobacter freundii, индолположительные Proteus spp., Streptococcus viridans.
+                            p Цефаклор Стада не действует при инфекциях, вызванных: Acinetobacter, хламидиями, большинством видов энтеробактерий, энтерококками (Enterococcus faecalis и faecium), Morganella morganii, микобактериями, микоплазмой, грибами, Proteus vulgaris, Protozoen, Providencia, Pseudomonas, Serratia, резистентными к метициллину стафилококками.
+                    .map__characteristics
+                        span.map__characteristics-ico.js-map-ico
+                        p.map__characteristics-title Показания
+                        .map__characteristics-text.js-map-characteristics-text
+                            p Stada Arzneimittel AG, Германия
+                    .map__characteristics
+                        span.map__characteristics-ico.js-map-ico
+                        p.map__characteristics-title Противопоказания
+                        .map__characteristics-text.js-map-characteristics-text
+                            p Stada Arzneimittel AG, Германия
+                    .map__characteristics
+                        span.map__characteristics-ico.js-map-ico
+                        p.map__characteristics-title Побочные действия
+                        .map__characteristics-text.js-map-characteristics-text
+                            p Stada Arzneimittel AG, Германия
+                    .map__characteristics
+                        span.map__characteristics-ico.js-map-ico
+                        p.map__characteristics-title Взаимодействие
+                        .map__characteristics-text.js-map-characteristics-text
+                            p Stada Arzneimittel AG, Германия
+                    .map__characteristics
+                        span.map__characteristics-ico.js-map-ico
+                        p.map__characteristics-title Способы применения и дозы
+                        .map__characteristics-text.js-map-characteristics-text
+                            p Stada Arzneimittel AG, Германия
+                    .map__characteristics
+                        span.map__characteristics-ico.js-map-ico
+                        p.map__characteristics-title Передозировка
+                        .map__characteristics-text.js-map-characteristics-text
+                            p Stada Arzneimittel AG, Германия
+                    p.map__register «Регистр лекарственных стредств россии» ®
+                .map__tabs-reviews(data-tab="reviews").js-map-tab
+                    +reviews('all')(class="map__reviews")
+                    .section-light.map__section-light
+                        +order-review(class="map__order-review")
+        //
+

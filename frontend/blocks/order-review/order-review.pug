@@ -1,0 +1,20 @@
+mixin order-review()
+    .order-review&attributes(attributes)= name
+        p.order-review__title Написать отзыв
+        form.order-review__form
+            .row
+                .col-md-3
+                    label Ваше имя
+                    input(type="text").order-review__input
+                .col-md-3
+                    label E-mail
+                    input(type="text").order-review__input
+                .col-md-6
+                .col-md-12
+                    label Сообщение
+                    textarea.order-review__textarea
+            .order-review__button
+                .order-review__captcha
+                    p Тут капча
+                .order-review__submit
+                    input(type="submit" value="Отправить").button-green

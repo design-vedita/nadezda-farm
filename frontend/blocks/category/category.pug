@@ -1,5 +1,6 @@
-mixin category(cl)
-    .category(class=cl)
+mixin category()
+    // Категории
+    .category&attributes(attributes)= name
         .category__tale
             a(href="javascript:void(0)")
                 .category__tale-content
@@ -42,3 +43,4 @@ mixin category(cl)
                 .category__tale-content
                     img(src=require("../image/svg/actions.svg"))
                     p Акции
+    //

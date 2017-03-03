@@ -1,4 +1,5 @@
 mixin pagination()
+    // Пагинация
     .pagination&attributes(attributes)= name
         ul
             li.pagination__first: a(href="javascript:void(0)") Первая
@@ -6,3 +7,4 @@ mixin pagination()
             li.pagination__active: a(href="javascript:void(0)") 2
             li: a(href="javascript:void(0)") 3
             li.pagination__last: a(href="javascript:void(0)") Последняя
+    //

@@ -1,0 +1,77 @@
+.similar
+    margin-top 30px
+    
+    &__carousel
+        padding-right 1px
+        padding_y(30px)
+    
+    &__title
+        font-size 20px
+        font-weight bold
+        color green-base
+        
+    &__card-tale
+        width 100%
+    
+        &:hover
+            box-shadow initial
+        
+        &:hover::before
+            transform scale(1)
+            
+    &__wrapper
+        position relative
+        
+    &__carousel-prev,
+    &__carousel-next
+        position absolute
+        z-index 2
+        top 'calc(%s - %s)' % (50% 15px)
+        width 30px
+        height 30px
+        background-color green-base
+        cursor pointer
+        
+        &::before
+            position absolute
+            top 9px
+            content ''
+            display block
+            width 12px
+            height 2px
+            background-color white
+            border-radius 1px
+            
+        &::after
+            position absolute
+            top 16px
+            content ''
+            display block
+            width 12px
+            height 2px
+            background-color white
+            border-radius 1px
+            
+    &__carousel-prev
+        left -45px
+        
+        &::before
+            left 7px
+            transform rotate(-45deg)
+            
+        &::after
+            left 7px
+            transform rotate(45deg)
+        
+    &__carousel-next
+        right -45px
+    
+        &::before
+            right 7px
+            transform rotate(45deg)
+    
+        &::after
+            right 7px
+            transform rotate(-45deg)
+        
+        

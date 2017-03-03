@@ -3,6 +3,7 @@ extends ../includes/layout
 include ../blocks/header/header
 include ../blocks/breadrumbs/breadcrumbs
 include ../blocks/map/map
+include ../blocks/similar/similar
 include ../blocks/footer/footer
 
 block header
@@ -16,6 +17,8 @@ block content
         .row
             .col-md-12
                 +map
+
+                +similar
 
 block footer
     footer

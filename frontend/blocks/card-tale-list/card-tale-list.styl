@@ -9,6 +9,9 @@
 	align-items stretch
 	width 100%
 	
+	&:hover::before
+		transform scale(1.07)
+	
 	&::before
 		position absolute
 		z-index 1
@@ -22,6 +25,10 @@
 		background-color #fff
 		transform scale(1)
 		transition all .5s ease
+		
+	&:hover
+		z-index 2
+		box-shadow 0 0 18px 0 rgba(black, 38%)
 	
 	&:not(:last-child)
 		margin-bottom 2px
@@ -62,6 +69,10 @@
 		font-weight 600
 		text-decoration none
 		color dark-gray
+		transition all .5s ease
+		
+		&:hover
+			color orange-link
 	
 	&__description-manufacturer
 		margin-top 3px

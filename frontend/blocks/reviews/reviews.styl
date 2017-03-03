@@ -77,3 +77,38 @@
         font-weight normal
         text-decoration none
         color white
+        
+    &__all-page
+        margin-top 26px
+        padding-top 26px
+        padding-left 29px
+        padding-right 30px
+        background-color white
+        
+        & ^[0]__list
+            margin-top 0
+        
+        & ^[0]__tale-text
+              
+          &::before
+              display none
+              
+        & ^[0]__tale
+        
+            &:not(:first-child)
+                margin-top 30px
+        
+            &:not(:last-child) ^[0]__tale-description
+                border-bottom 1px solid review-border
+                                       
+        & ^[0]__tale-image
+            margin-top 7px
+            
+        & ^[0]__tale-description
+            padding-bottom 33px
+                  
+    &__pagination
+        margin-top 25px
+        margin-bottom 30px
+              
+              

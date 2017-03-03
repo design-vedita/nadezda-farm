@@ -49,7 +49,7 @@ var config = {
             },
             {
                 test: /\.styl/,
-                loader: ExtractTextPlugin.extract("style", "css!postcss!stylus?resolve url")
+                loader: ExtractTextPlugin.extract("style", "css!stylus?resolve url")
             },
             {
                 test: /\.(ttf|eot|woff|woff2)(\?v=\d+\.\d+\.\d+)?$/,
@@ -61,18 +61,11 @@ var config = {
             }
         ]
     },
-    postcss: () => {
-        return [
-            require('autoprefixer')({
-                browsers: ['last 2 versions', 'safari 8', 'android 4'],
-                remove: false
-            })
-        ];
-    },
     plugins: [
         new webpack.NoErrorsPlugin(),
         new webpack.ProvidePlugin({
-            $: 'jquery/dist/jquery.slim.js'
+            $: 'jquery/dist/jquery.slim.js',
+            ui: 'jquery-ui-bundle/jquery.ui'
         }),
         new HtmlWebpackPlugin({
             filename: 'index.html',
@@ -91,12 +84,12 @@ var config = {
             template: './frontend/pages/brand.pug'
         }),
         new HtmlWebpackPlugin({
-            filename: 'catalog-alphabet.html',
-            template: './frontend/pages/catalog-alphabet.pug'
-        }),
-        new HtmlWebpackPlugin({
             filename: 'map.html',
             template: './frontend/pages/map.pug'
+        }),
+        new HtmlWebpackPlugin({
+            filename: 'reviews.html',
+            template: './frontend/pages/reviews.pug'
         }),
         new ExtractTextPlugin("css/main.css")
     ],

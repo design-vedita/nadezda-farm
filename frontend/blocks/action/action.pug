@@ -1,5 +1,5 @@
-mixin action(cl)
-    .action(class=cl)
+mixin action()
+    .action&attributes(attributes)= name
         p.section-title Товары по акции
         a(href="javascript:void(0)").section-link Все акционные товары
         .action__list.section-list
