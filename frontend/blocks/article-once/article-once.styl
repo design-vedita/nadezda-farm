@@ -1,0 +1,54 @@
+.article-once
+	
+	&__wrapper
+		padding-top 28px
+		padding_x(25px)
+		background-color white
+		box-shadow 0 0 10px 0 rgba(black, 8%)
+		overflow auto
+		
+	p
+		margin-bottom 15px
+		
+		span
+			position relative
+			top -5px
+		
+		&.quotes
+			text-indent 2.2em
+							
+			span
+			
+				&.quotes
+										
+					&::before
+						position absolute
+						left -2.3em
+						top 2px
+						content ''
+						display block
+						width 20px
+						height 16px
+						background-image url(../../image/svg/quotes.svg)
+						background-position left top
+						background-repeat no-repeat
+						
+				&.italic
+					margin-top 13px
+					padding-right 6px
+					display block
+					font-size 18px
+					line-height 24px
+					font-style italic
+					font-weight normal
+					text-align right
+					
+		img
+			margin-right 30px
+			margin-bottom 15px
+			float left
+			
+	&__similar
+		margin-bottom 30px
+		margin-top 24px
+	

@@ -1,6 +1,8 @@
+import $ from 'jquery';
 import Module from '../../includes/Module';
 import App from '../../includes/App';
 
+// Шапка сайта
 export default class Header extends Module {
 
     constructor() {
@@ -20,29 +22,48 @@ export default class Header extends Module {
         // Обработка кликов меню
         this.$menu.on('click',  $.proxy(this.openMenu, this));
         App.doc.on('click', $.proxy(this.closeMenu, this));
+        App.win.on('resize', $.proxy(this.addMarkerClass, this));
+        this.addMarkerClass();
 
         // Обработка кликов списка городов
         this.$link_city.on('click', $.proxy(this.openListCity, this));
         App.doc.on('click', $.proxy(this.closeListCity, this));
+
     }
 
     // Открытие меню
     openMenu(e) {
-        const target = e.currentTarget;
+        let clientWidth = document.documentElement.clientWidth;
+
+        if (clientWidth < 1200) {
+            const target = e.currentTarget;
             $(target).toggleClass('header__li--open');
             this.$submenu.toggleClass('header__submenu-one--open');
+        }
     }
 
     // Закрытие меню при клике не в меню
     closeMenu(e) {
-        if($(e.target).closest(this.$menu).length) return;
+        let clientWidth = document.documentElement.clientWidth;
+        if (clientWidth < 1200) {
+            if($(e.target).closest(this.$menu).length) return;
 
-        if (!$(e.target).closest( this.$menu ).length) {
-            this.$menu.removeClass('header__li--open');
-            this.$submenu.removeClass('header__submenu-one--open');
+            if (!$(e.target).closest( this.$menu ).length) {
+                this.$menu.removeClass('header__li--open');
+                this.$submenu.removeClass('header__submenu-one--open');
+            }
+
+            e.stopPropagation();
         }
+    }
 
-        e.stopPropagation();
+    addMarkerClass() {
+        let clientWidth = document.documentElement.clientWidth;
+        if (clientWidth >= 1200) {
+            this.$menu.addClass('header__li--desktop');
+        } else {
+            this.$menu.removeClass('header__li--desktop');
+        }
     }
 
     // Показываем список городов

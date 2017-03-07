@@ -1,3 +1,5 @@
+import $ from 'jquery';
+
 export default class Module {
     constructor(opt1) {
         this.options = {

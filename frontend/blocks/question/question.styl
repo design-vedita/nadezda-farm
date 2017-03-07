@@ -1,0 +1,81 @@
+.question
+    
+    &__wrap
+        margin-bottom 30px
+        padding_y(23px)
+        padding_x(22px)
+        background-color white
+        box-shadow 0 0 10px 0 rgba(black, 8%)
+        
+    &__tale
+        padding_y(11px)
+        padding_x(8px)
+        display flex
+        flex-wrap wrap
+        flex-direction row
+        justify-content space-between
+        background-color body-color
+        border-radius 3px
+        
+        &:not(:last-child)
+            margin-bottom 10px
+        
+    &__tale-ico
+        width 32px
+        height 26px
+        text-align center
+        background-image url(../../image/svg/quest.svg)
+        background-size cover
+        background-position center
+        background-repeat no-repeat
+        
+        span
+            font-size 15px
+            font-weight 600
+            line-height 24px
+            color white
+        
+    &__tale-text
+        width 'calc(%s - %s)' % (100% 43px)
+        letter-spacing .6px
+        
+    &__link
+        padding-right 2px
+        text-align right
+        
+        a
+            font-size 13px
+            line-height normal
+            text-decoration none
+            color green-base
+            border-bottom 1px green-base dashed
+            
+    &__answer
+        padding-bottom 20px
+        margin-top 23px
+        display  none
+        flex-wrap wrap
+        flex-direction row
+        justify-content space-between
+        
+        &--visible
+            display flex
+            
+    &__answer-ico
+        width 76px
+        height 22px
+        background-image url(../../image/svg/nf-ico.svg)
+        background-size cover
+        background-position center
+        background-repeat no-repeat
+        
+    &__answer-text
+        padding_y(13px)
+        padding_x(15px)
+        width 'calc(%s - %s)' % (100% 89px)
+        letter-spacing .6px
+        background-color green-base
+        border-radius 3px
+        
+        p
+            color white

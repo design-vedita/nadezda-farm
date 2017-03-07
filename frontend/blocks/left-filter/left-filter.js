@@ -1,7 +1,9 @@
 import Module from '../../includes/Module';
-import App from '../../includes/App';
+import $ from 'jquery';
+require('jquery-ui');
+require('ui-slider');
 
-
+// Левый фильтр
 export default class Filter extends Module {
 
     constructor() {
@@ -21,7 +23,7 @@ export default class Filter extends Module {
         this.$title = $('.js-left-filter-category-title', this.$root);
 
         this.$title.on('click', $.proxy(this.openParams, this));
-       // this.initSlider();
+        this.initSlider();
     }
 
     // Клик по заголовку открытие
@@ -33,7 +35,6 @@ export default class Filter extends Module {
         $parent
             .find('.js-left-filter-hide')
             .toggleClass('left-filter__hide--show');
-
     }
 
     initSlider() {
@@ -41,5 +42,4 @@ export default class Filter extends Module {
 
         });
     }
-
 }

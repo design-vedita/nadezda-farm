@@ -1,6 +1,6 @@
-mixin order-review()
+mixin order-review(text)
     .order-review&attributes(attributes)= name
-        p.order-review__title Написать отзыв
+        p.order-review__title= text
         form.order-review__form
             .row
                 .col-md-3

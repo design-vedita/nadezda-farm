@@ -1,0 +1,73 @@
+.catalog-all
+	
+	&__wrapper
+		margin_x(-1px)
+		margin-top 30px
+		display flex
+		flex-wrap wrap
+		flex-direction row
+		align-content stretch
+		
+	&__tale
+		position relative
+		z-index 1
+		padding_x(1px)
+		margin-bottom 2px
+		width 25%
+		
+		&::before
+			position absolute
+			z-index -1
+			left 0
+			top 0
+			content ''
+			display block
+			width 'calc(%s - %s)' % (100% 2px)
+			height 100%
+			background-color white
+			box-shadow 0 0 10px 0 rgba(black, 8%)
+			transform scale(1)
+			transition all .5s ease
+			
+		&:hover
+			z-index 2
+			
+			&::before
+				box-shadow 0 0 18px 0 rgba(black, 38%)
+				transform scale(1.05)
+			
+	&__inner
+		padding-left 11px
+		padding-right 13px
+		padding-top 8px
+		
+		img
+			width 100%
+			height auto
+		
+	&__image
+		position relative
+		
+		&::after
+			position absolute
+			left 0
+			bottom -1px
+			content ''
+			display block
+			width 100%
+			height 1px
+			background-color line-card
+	
+	&__name
+		margin-top 22px
+		padding-bottom 17px
+		text-align center
+		
+		a
+			font-size 15px
+			line-height normal
+			text-decoration none
+			color dark-gray
+			
+	&__pagination
+		margin_y(30px)

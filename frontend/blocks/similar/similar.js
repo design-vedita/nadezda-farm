@@ -1,7 +1,9 @@
+import $ from 'jquery';
 import Module from '../../includes/Module';
 import Swiper from '../../../node_modules/swiper/dist/js/swiper.min';
 
-export default class Map extends Module {
+// Пожожие товары
+export default class Similar extends Module {
 
     constructor() {
         super({

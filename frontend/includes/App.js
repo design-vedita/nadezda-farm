@@ -1,3 +1,5 @@
+import $ from 'jquery';
+
 // Доп параметры
 const App = {
     doc: $(document),

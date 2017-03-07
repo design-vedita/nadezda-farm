@@ -1,0 +1,55 @@
+include ../pagination/pagination
+
+mixin catalog-all()
+    .catalog-all
+        .catalog-all__wrapper
+            .catalog-all__tale
+                .catalog-all__inner
+                    .catalog-all__image
+                        a(href="javascript:void(0)")
+                            img(src=require('../image/bad.jpg'))
+                    p.catalog-all__name: a(href="javascript:void(0)") Бады
+            .catalog-all__tale
+                .catalog-all__inner
+                    .catalog-all__image
+                        a(href="javascript:void(0)")
+                            img(src=require('../image/gigiena.jpg'))
+                    p.catalog-all__name: a(href="javascript:void(0)") Гигиена и красота
+            .catalog-all__tale
+                .catalog-all__inner
+                    .catalog-all__image
+                        a(href="javascript:void(0)")
+                            img(src=require('../image/mother.jpg'))
+                    p.catalog-all__name: a(href="javascript:void(0)") Мама и малыш
+            .catalog-all__tale
+                .catalog-all__inner
+                    .catalog-all__image
+                        a(href="javascript:void(0)")
+                            img(src=require('../image/med-oborud.jpg'))
+                    p.catalog-all__name: a(href="javascript:void(0)") Мед приборы и изделия
+            .catalog-all__tale
+                .catalog-all__inner
+                    .catalog-all__image
+                        a(href="javascript:void(0)")
+                            img(src=require('../image/vitamin.jpg'))
+                    p.catalog-all__name: a(href="javascript:void(0)") Витамины
+            .catalog-all__tale
+                .catalog-all__inner
+                    .catalog-all__image
+                        a(href="javascript:void(0)")
+                            img(src=require('../image/cosmetic.jpg'))
+                    p.catalog-all__name: a(href="javascript:void(0)") Косметика
+            .catalog-all__tale
+                .catalog-all__inner
+                    .catalog-all__image
+                        a(href="javascript:void(0)")
+                            img(src=require('../image/optic.jpg'))
+                    p.catalog-all__name: a(href="javascript:void(0)") Оптика
+            .catalog-all__tale
+                .catalog-all__inner
+                    .catalog-all__image
+                        a(href="javascript:void(0)")
+                            img(src=require('../image/medicine.jpg'))
+                    p.catalog-all__name: a(href="javascript:void(0)") Лекарства
+
+        +pagination(class="catalog-all__pagination")

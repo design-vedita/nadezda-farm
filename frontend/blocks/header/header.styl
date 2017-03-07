@@ -19,9 +19,15 @@
         width 33.3333%
         text-align center
                 
+        &^[0]__li--desktop:hover
+            
+            & > ul
+                opacity 1
+                visibility visible
+        
         &:not(:last-child)
             border-right 1px white solid
-        
+            
         &--open
             
             & > a
@@ -55,6 +61,12 @@
                 padding_y(8px)
             
             &:hover
+                color white
+                background-color green-hover
+                
+        &--active
+            
+            a
                 color white
                 background-color green-hover
                 
@@ -161,7 +173,17 @@
                 padding_y(5px)
                 padding-left 17px
                 display block
+                
+    &__submenu
         
+        &--active
+            background-color orange-link !important
+            
+            a
+                color white
+                
+            &::after
+                background-color white !important
                 
     &__top
         display flex

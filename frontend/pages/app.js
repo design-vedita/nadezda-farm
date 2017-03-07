@@ -1,20 +1,32 @@
 'use strict';
 
-
+import $ from 'jquery';
 import './app.styl';
-//import './index.pug';
-//import './catalog.pug';
-//import './catalog-list.pug';
-//import './brand.pug';
-//import './catalog-alphabet.pug';
-//import './map.pug';
-//import './reviews.pug';
+/*import './main.pug';
+import './catalog.pug';
+import './catalog-list.pug';
+import './brand.pug';
+import './catalog-alphabet.pug';
+import './map.pug';
+import './reviews.pug';
+import './articles.pug';
+import './article_once.pug';
+import './news.pug';
+import './news_once.pug';
+import './catalog-all.pug';
+import './active-substance.pug';*/
+import './vacancy.pug';
+/*import './question.pug';
+import './license.pug';*/
+
 import App from '../includes/App.js';
 import Header from '../blocks/header/header.js';
 import SliderIndex from '../blocks/slider/slider.js';
 import Filter from '../blocks/left-filter/left-filter';
 import Map from '../blocks/map/map';
 import Similar from '../blocks/similar/similar';
+import NewsOnce from '../blocks/news-once/news-once';
+import Question from '../blocks/question/question'
 
 $(() => {
 
@@ -49,6 +61,8 @@ $(() => {
     App.modules.push(new Filter);
     App.modules.push(new Map);
     App.modules.push(new Similar);
+    App.modules.push(new NewsOnce);
+    App.modules.push(new Question);
 
 });
 

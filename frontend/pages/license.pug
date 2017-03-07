@@ -1,0 +1,25 @@
+extends ../includes/layout
+
+include ../blocks/header/header
+include ../blocks/breadrumbs/breadcrumbs
+include ../blocks/footer/footer
+
+block header
+    +header
+
+block content
+    .container
+        .row
+            .col-md-12
+                +breadcrumbs
+        .row
+            .col-md-12
+                .inner-content
+                    h1 Лицензии
+
+                    .inner-content__container
+
+
+block footer
+    footer
+        +footer

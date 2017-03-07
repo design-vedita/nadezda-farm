@@ -1,0 +1,32 @@
+extends ../includes/layout
+
+include ../blocks/header/header
+include ../blocks/breadrumbs/breadcrumbs
+include ../blocks/question/question
+include ../blocks/pagination/pagination
+include ../blocks/order-review/order-review
+include ../blocks/footer/footer
+
+block header
+    +header
+
+block content
+    .container
+        .row
+            .col-md-12
+                +breadcrumbs
+        .row
+            .col-md-12
+                .inner-content
+                    h1 Вопрос-ответ
+                    +question
+                    +pagination
+    .section-light
+        .container
+            .row
+                .col-md-12
+                    +order-review('Задать вопрос')
+
+block footer
+    footer
+        +footer

@@ -1,0 +1,24 @@
+extends ../includes/layout
+
+include ../blocks/header/header
+include ../blocks/breadrumbs/breadcrumbs
+include  ../blocks/article-once/article-once
+include ../blocks/footer/footer
+
+block header
+    +header
+
+block content
+    .container
+        .row
+            .col-md-12
+                +breadcrumbs
+        .row
+            .col-md-12
+                .inner-content
+                    h1 Синусовая брадикардия сердца: что это такое?
+                    +article-once
+
+block footer
+    footer
+        +footer

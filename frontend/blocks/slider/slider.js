@@ -1,3 +1,4 @@
+import $ from 'jquery';
 import Module from '../../includes/Module';
 import Swiper from '../../../node_modules/swiper/dist/js/swiper.min';
 

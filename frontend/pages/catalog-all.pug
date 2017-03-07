@@ -1,0 +1,34 @@
+extends ../includes/layout
+
+include ../blocks/header/header
+include ../blocks/breadrumbs/breadcrumbs
+include ../blocks/alphabet-substance/alphabet-substance
+include ../blocks/catalog-all/catalog-all
+include ../blocks/pagination/pagination
+include ../blocks/text-block/catalog-text
+include ../blocks/footer/footer
+
+block header
+    +header
+
+block content
+    .container
+        .row
+            .col-md-12
+                +breadcrumbs
+        .row
+            .col-md-12
+                .inner-content
+                    h1 Каталог
+
+                    +alphabet-substance
+
+                    +catalog-all
+    .section-white.catalog__section-white
+        .container
+            .row
+                .col-md-12
+                    +catalog-text
+block footer
+    footer
+        +footer

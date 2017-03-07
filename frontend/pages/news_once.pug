@@ -1,0 +1,23 @@
+extends ../includes/layout
+
+include ../blocks/header/header
+include ../blocks/breadrumbs/breadcrumbs
+include  ../blocks/news-once/news-once
+include ../blocks/footer/footer
+
+block header
+    +header
+
+block content
+    .container
+        .row
+            .col-md-12
+                +breadcrumbs
+        .row
+            .col-md-12
+                .inner-content
+                    +news-once
+
+block footer
+    footer
+        +footer

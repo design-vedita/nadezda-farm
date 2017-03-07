@@ -1,0 +1,57 @@
+.vacancy
+    padding-top 29px
+    padding_x(25px)
+    background-color white
+    box-shadow 0 0 10px 0 rgba(black, 8%)
+    
+    &__title
+        margin-bottom 21px
+        font-size 16px
+        line-height normal
+        color green-base
+        
+    &__subtitle
+        margin-bottom 2px
+        font-weight bold
+        
+    ul
+        margin-bottom 26px
+        
+    li
+        position relative
+        padding-left 14px
+        font-size 14px
+        letter-spacing .3px
+        color gray-text
+        
+        &:not(:last-child)
+            margin-bottom 4px
+        
+        &::before
+            position absolute
+            left 4px
+            top 'calc(%s - %s)' % (50% 2px)
+            content ''
+            display block
+            width 4px
+            height 4px
+            background-color green-base
+            border-radius 50%
+            
+    &__phone
+        font-weight bold
+        color green-base
+        
+        span
+            font-size 14px
+            font-weight 600
+            line-height 24px
+            color gray-text
+    
+    &__block
+        margin-bottom 30px
+        padding-bottom 22px
+        
+        &:not(:last-child)
+            margin-bottom 30px
+            border-bottom 1px solid article-border

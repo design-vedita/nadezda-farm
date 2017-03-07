@@ -1,0 +1,28 @@
+extends ../includes/layout
+
+include ../blocks/header/header
+include ../blocks/breadrumbs/breadcrumbs
+include ../blocks/active-substance/active-substance
+include ../blocks/active-substance-goods/active-substance-goods
+include ../blocks/footer/footer
+
+block header
+    +header
+
+block content
+    .container
+        .row
+            .col-md-12
+                +breadcrumbs
+        .row
+            .col-md-12
+                .inner-content
+                    h1 Действующее вещество
+
+                    +active-substance
+
+                    +active-substance-goods
+
+block footer
+    footer
+        +footer

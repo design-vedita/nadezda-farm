@@ -19,7 +19,8 @@ block content
             .col-md-12
                 .inner-content
                     h1 Отзывы
-                    +reviews('all')(class="reviews__all-page")
+                    .inner-content__container
+                        +reviews('all')(class="reviews__all-page")
 
                     +pagination(class="reviews__pagination")
     .section-light

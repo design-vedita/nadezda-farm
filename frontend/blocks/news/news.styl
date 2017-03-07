@@ -1,0 +1,69 @@
+.news
+	
+	&__wrapper
+		padding-top 28px
+		padding_x(25px)
+		background-color white
+		box-shadow 0 0 10px 0 rgba(black, 8%)
+		
+	&__tale
+		padding-bottom 20px
+		display flex
+		flex-wrap wrap
+		flex-direction row
+		justify-content space-between
+		
+		&:not(:first-child)
+			margin-top 30px
+		
+		&:not(:last-child)
+			border-bottom 1px solid article-border
+		
+	&__image
+		width 164px
+		
+	&__introtext
+		width 'calc(%s - %s)' % (100% 195px)
+		
+	&__title
+		margin-top -5px
+		
+		a
+			font-size 20px
+			font-weight 600
+			text-decoration none
+			color green-base
+			transition all .5s ease
+			
+			&:hover
+				color  green-hover
+		
+	&__date
+		margin-top 5px
+		padding-left 23px
+		font-size 11px
+		font-weight normal
+		color manufacturer
+		background-image url(../../image/svg/calendar.svg)
+		background-position 3px center
+		background-repeat no-repeat
+		
+	&__description
+		margin-top 4px
+		
+	&__more
+		margin-top 8px
+		display block
+		font-size 14px
+		font-weight 600
+		color price-tale-list
+		transition all .5s ease
+		
+		&:hover
+			text-decoration none
+			color orange-base
+		
+	&__pagination
+		margin_y(30px)
+		
+		
