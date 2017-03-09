@@ -7,6 +7,7 @@
     
     &:hover::before
         transform scale(1.07)
+        box-shadow 0 0 18px 0 rgba(black, 38%)
     
     &::before
         position absolute
@@ -24,7 +25,6 @@
         
     &:hover
         z-index 2
-        box-shadow 0 0 18px 0 rgba(black, 38%)
         
     &__inner
         position relative
@@ -96,6 +96,10 @@
         font-weight 600
         text-decoration none
         color dark-gray
+        transition all .5s ease
+        
+        &:hover
+            color orange-base
             
     &__description-manufacturer
         margin-top 4px

@@ -6,6 +6,9 @@ include ../blocks/news/news
 include ../blocks/pagination/pagination
 include ../blocks/footer/footer
 
+block append head
+    title Новости
+
 block header
     +header
 
@@ -13,12 +16,13 @@ block content
     .container
         .row
             .col-md-12
-                +breadcrumbs
+                +breadcrumbs('Новости')
         .row
             .col-md-12
                 .inner-content
                     h1 Новости
-                    +news
+                    .inner-content__container
+                        +news
                     +pagination(class="news__pagination")
 block footer
     footer

@@ -98,10 +98,14 @@
 	import './news.pug';
 	import './news_once.pug';
 	import './catalog-all.pug';
-	import './active-substance.pug';
-	import './vacancy.pug';
-	import './question.pug';
+	import './active-substance.pug';*/
+	//import './vacancy.pug';
+	/*import './question.pug';
 	import './license.pug';*/
+	//import './actions.pug';
+	//import './action-one.pug';
+	//import './brand-one.pug';
+	//import './about-company.pug';
 
 	(0, _jquery2.default)(function () {
 

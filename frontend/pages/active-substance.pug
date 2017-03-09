@@ -6,6 +6,9 @@ include ../blocks/active-substance/active-substance
 include ../blocks/active-substance-goods/active-substance-goods
 include ../blocks/footer/footer
 
+block append head
+    title Действующее вещество
+
 block header
     +header
 
@@ -13,7 +16,7 @@ block content
     .container
         .row
             .col-md-12
-                +breadcrumbs
+                +breadcrumbs('Действующее вещество')
         .row
             .col-md-12
                 .inner-content

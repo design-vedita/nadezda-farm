@@ -7,6 +7,9 @@ include ../blocks/pagination/pagination
 include ../blocks/order-review/order-review
 include ../blocks/footer/footer
 
+block append head
+    title Отзывы
+
 block header
     +header
 
@@ -14,7 +17,7 @@ block content
     .container
         .row
             .col-md-12
-                +breadcrumbs
+                +breadcrumbs('Отзывы')
         .row
             .col-md-12
                 .inner-content

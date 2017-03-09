@@ -1,0 +1,38 @@
+.license
+    
+    &__list
+        margin_x(-15px)
+        display flex
+        flex-wrap wrap
+        flex-direction row
+        align-content stretch
+        justify-content center
+    
+    &__tale
+        position relative
+        margin-bottom 25px
+        padding_x(15px)
+        width 25%
+        
+        a
+            position relative
+            z-index 2
+        
+        &::before
+            position absolute
+            z-index 1
+            left 8px
+            top -7px
+            content ''
+            display block
+            width 'calc(%s - %s)' % (100% 31px)
+            height 'calc(%s - %s)' % (100% 8px)
+            border 7px solid transparent
+            transition all .5s ease
+            
+        &:hover::before
+            border-color green-base
+        
+        img
+            width 100%
+            height auto

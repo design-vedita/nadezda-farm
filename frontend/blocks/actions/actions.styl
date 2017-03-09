@@ -1,0 +1,65 @@
+.actions
+  
+    &__row
+        position relative
+        margin_x(-15px)
+        display flex
+        flex-wrap wrap
+        flex-direction row
+        align-items stretch
+        
+        &:not(:last-child)
+            margin-bottom 22px
+            padding-bottom 31px
+        
+            &::after
+                position absolute
+                left 15px
+                bottom 0
+                content ''
+                display block
+                width 'calc(%s - %s)' % (100% 30px)
+                height 1px
+                background-color article-border
+        
+    &__tale
+        padding_x(15px)
+        width 50%
+        
+    &__image
+        margin-top 21px
+        
+        img
+            width 100%
+            height auto
+            
+    &__title
+        
+        a
+            font-size 20px
+            text-decoration none
+            color green-base
+            transition all .5s ease
+            
+            &:hover
+                color green-hover
+                
+    &__stock
+        margin-top 12px
+        font-size 16px
+        color orange-base
+        transition all .5s ease
+        
+    &__introtext
+        margin-top 11px
+        
+    &__more
+        margin-top 13px
+        display inline-block
+        font-size 14px
+        font-weight 600
+        color price-tale-list
+        
+        &:hover
+            color orange-base
+            transition all .5s ease

@@ -1,0 +1,26 @@
+extends ../includes/layout
+
+include ../blocks/header/header
+include ../blocks/breadrumbs/breadcrumbs
+include  ../blocks/action-one/action-one
+include ../blocks/footer/footer
+
+block append head
+    title Одиночная акция
+
+block header
+    +header
+
+block content
+    .container
+        .row
+            .col-md-12
+                +breadcrumbs('Купи сейча - плати потом !')
+        .row
+            .col-md-12
+                .inner-content
+                    +action-one
+
+block footer
+    footer
+        +footer

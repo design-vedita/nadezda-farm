@@ -1,0 +1,37 @@
+extends ../includes/layout
+
+include ../blocks/header/header
+include ../blocks/breadrumbs/breadcrumbs
+include ../blocks/about-company/about-company
+include ../blocks/about-company-preview/about-company-preview
+include ../blocks/about-company-gallery/about-company-gallery
+
+block append head
+    title О компании
+
+block header
+    +header
+
+block content
+    .container
+        .row
+            .col-md-12
+                +breadcrumbs('О компании')
+        .row
+            .col-md-12
+                .inner-content
+                    h1 О компании
+                    .inner-content__container
+                        +about-company
+
+    +about-company-preview
+
+    .container
+        .row
+            .col-md-12
+                +about-company-gallery
+
+
+block footer
+    footer
+        +footer

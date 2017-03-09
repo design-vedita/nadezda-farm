@@ -1,0 +1,32 @@
+extends ../includes/layout
+
+include ../blocks/header/header
+include ../blocks/breadrumbs/breadcrumbs
+include ../blocks/alphabet-substance/alphabet-substance
+include ../blocks/brand-one/brand-one
+include ../blocks/brand-one-list/brand-one-list
+include ../blocks/footer/footer
+
+block append head
+    title Одиночный бренд
+
+block header
+    +header
+
+block content
+    .container
+        .row
+            .col-md-12
+                +breadcrumbs('Название производителя')
+        .row
+            .col-md-12
+                .inner-content
+                    h1 Название производителя
+                    .inner-content__container
+                        +brand-one
+
+                    +brand-one-list
+
+block footer
+    footer
+        +footer

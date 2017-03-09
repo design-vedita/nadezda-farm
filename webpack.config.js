@@ -133,8 +133,28 @@ var config = {
             template: './frontend/pages/question.pug'
         }),
         new HtmlWebpackPlugin({
+            filename: 'vacancy.html',
+            template: './frontend/pages/vacancy.pug'
+        }),
+        new HtmlWebpackPlugin({
             filename: 'license.html',
             template: './frontend/pages/license.pug'
+        }),
+        new HtmlWebpackPlugin({
+            filename: 'actions.html',
+            template: './frontend/pages/actions.pug'
+        }),
+        new HtmlWebpackPlugin({
+            filename: 'action-one.html',
+            template: './frontend/pages/action-one.pug'
+        }),
+        new HtmlWebpackPlugin({
+            filename: 'brand-one.html',
+            template: './frontend/pages/brand-one.pug'
+        }),
+        new HtmlWebpackPlugin({
+            filename: 'about-company.html',
+            template: './frontend/pages/about-company.pug'
         }),
         new ExtractTextPlugin("css/main.css")
     ],

@@ -8,6 +8,9 @@ include ../blocks/pagination/pagination
 include ../blocks/text-block/catalog-text
 include ../blocks/footer/footer
 
+block append head
+    title Каталог общий
+
 block header
     +header
 
@@ -15,7 +18,7 @@ block content
     .container
         .row
             .col-md-12
-                +breadcrumbs
+                +breadcrumbs('Каталог')
         .row
             .col-md-12
                 .inner-content

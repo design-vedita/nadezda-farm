@@ -6,6 +6,9 @@ include ../blocks/articles/articles
 include ../blocks/pagination/pagination
 include ../blocks/footer/footer
 
+block append head
+    title Статьи
+
 block header
     +header
 
@@ -13,7 +16,7 @@ block content
     .container
         .row
             .col-md-12
-                +breadcrumbs
+                +breadcrumbs('Статьи')
         .row
             .col-md-12
                 .inner-content
