@@ -22,6 +22,7 @@ import './license.pug';*/
 //import './action-one.pug';
 //import './brand-one.pug';
 //import './about-company.pug';
+import './contacts.pug';
 
 import App from '../includes/App.js';
 import Header from '../blocks/header/header.js';
@@ -32,7 +33,6 @@ import Similar from '../blocks/similar/similar';
 import NewsOnce from '../blocks/news-once/news-once';
 import Question from '../blocks/question/question'
 import Popup from '../blocks/popups/popup'
-//import PopupAddCart from '../blocks/popups/popup-add-cart/popup-add-cart'
 
 $(() => {
 
@@ -69,7 +69,6 @@ $(() => {
     App.modules.push(new Similar);
     App.modules.push(new NewsOnce);
     App.modules.push(new Question);
-    //App.modules.push(new PopupAddCart);
     App.modules.push(new Popup);
 
 });

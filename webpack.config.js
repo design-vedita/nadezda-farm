@@ -156,6 +156,10 @@ var config = {
             filename: 'about-company.html',
             template: './frontend/pages/about-company.pug'
         }),
+        new HtmlWebpackPlugin({
+            filename: 'contacts.html',
+            template: './frontend/pages/contacts.pug'
+        }),
         new ExtractTextPlugin("css/main.css")
     ],
     output: {

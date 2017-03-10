@@ -1,0 +1,28 @@
+extends ../includes/layout
+
+include ../blocks/header/header
+include ../blocks/breadrumbs/breadcrumbs
+include ../blocks/contacts/contacts
+include ../blocks/footer/footer
+
+block append head
+    title Контакты
+
+block header
+    +header
+
+block content
+    .container
+        .row
+            .col-md-12
+                +breadcrumbs('Контакты')
+        .row
+            .col-md-12
+                .inner-content
+                    h1 Контакты
+                    .inner-content__container
+                        +contacts
+
+block footer
+    footer
+        +footer

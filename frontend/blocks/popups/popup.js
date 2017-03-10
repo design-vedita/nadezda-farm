@@ -23,7 +23,7 @@ export default class Popup extends Module {
         let $parent = $(target).parents('.js-popup');
         $parent.removeClass('popup--visible');
 
-        // Показываем затемнение за попапом
+        // Удаляем затемнение за попапом
         App.body.removeClass('open--popup');
 
     }
