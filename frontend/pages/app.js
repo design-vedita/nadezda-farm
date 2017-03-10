@@ -31,6 +31,8 @@ import Map from '../blocks/map/map';
 import Similar from '../blocks/similar/similar';
 import NewsOnce from '../blocks/news-once/news-once';
 import Question from '../blocks/question/question'
+import Popup from '../blocks/popups/popup'
+//import PopupAddCart from '../blocks/popups/popup-add-cart/popup-add-cart'
 
 $(() => {
 
@@ -67,6 +69,8 @@ $(() => {
     App.modules.push(new Similar);
     App.modules.push(new NewsOnce);
     App.modules.push(new Question);
+    //App.modules.push(new PopupAddCart);
+    App.modules.push(new Popup);
 
 });
 

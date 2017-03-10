@@ -64,7 +64,7 @@ var config = {
             },
             {
                 test: /\.(png|jpg|gif)$/,
-                loader: "url?&limit=4096&name=image/[name].[ext]"
+                loader: "url?&limit=4096&name=../image/[name].[ext]"
             }
         ]
     },

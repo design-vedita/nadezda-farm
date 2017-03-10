@@ -1,0 +1,58 @@
+.about-company-gallery
+    margin-bottom 30px
+    padding_x(25px)
+    padding-bottom 12px
+    padding-top 20px
+    background-color white
+    box-shadow 0 0 10px 0 rgba(black, 8%)
+    
+    &__text
+        column-count 2
+        column-gap 2em
+        
+        p
+            margin-bottom 25px
+            
+        h2
+            margin-bottom 6px
+            
+    &__album
+        margin_x(-15px)
+        display flex
+        flex-wrap wrap
+        flex-direction row
+        justify-content space-between
+        align-content stretch
+        
+    &__album-tale
+        margin-bottom 15px
+        position relative
+        padding_x(15px)
+        width 33.3333%
+        box-sizing border-box
+        
+        &::before
+            position absolute
+            z-index 0
+            left 8px
+            top -7px
+            content ''
+            display block
+            opacity 0
+            visibility hidden
+            width 'calc(%s - %s)' % (100% 16px)
+            height 'calc(%s + %s)' % (100% 7px)
+            border 7px green-base solid
+            box-sizing border-box
+            transition all .5s ease
+        
+        &:hover::before
+            opacity 1
+            visibility visible
+            
+        a
+            position relative
+            z-index 1
+        
+        img
+            width 100%

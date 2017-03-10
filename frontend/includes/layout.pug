@@ -1,4 +1,6 @@
 include mixin
+include ../blocks/popups/popup-add-cart/popup-add-cart
+include ../blocks/popups/popup-buy-one-click/popup-buy-one-click
 
 doctype html
 html
@@ -15,4 +17,8 @@ html
         block header
         main
             block content
+
         block footer
+
+        //+popup-add-cart
+        +popup-buy-one-click
