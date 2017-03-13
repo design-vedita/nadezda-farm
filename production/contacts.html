@@ -9,6 +9,7 @@
     <meta name="description" content="">
     <meta name="keywords" content="">
     <title>Контакты</title>
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
   <link href="css/main.css" rel="stylesheet"></head>
   <body>
     <!-- Шапка сайта-->
@@ -122,12 +123,52 @@
             <div class="inner-content">
               <h1>Контакты</h1>
               <div class="inner-content__container">
-                <div class="contacts"></div>
+                <div class="contacts">
+                  <div class="row">
+                    <div class="col-md-6">
+                      <p class="contacts__title">Главный офис. Тамбов</p>
+                      <p class="contacts__point point">г. Москва, ул.Красная площадь, д.1, к.1, оф.2</p>
+                      <p class="contacts__phone phone">Отдел продаж: +7 (495) 123-45-67</p>
+                      <p class="contacts__phone phone">Отдел закупок +7 (495) 123-45-67</p>
+                      <p class="contacts__phone phone">Диллерам: +7 (495) 123-45-67</p>
+                      <p class="contacts__phone phone">Клиентам: +7 (495) 123-45-67</p>
+                      <p class="contacts__mail mail">Farm@Mail.com</p>
+                    </div>
+                    <div class="col-md-6">
+                      <p class="contacts__title">Обратная связь</p>
+                      <form class="contacts__form">
+                        <div class="row">
+                          <div class="col-md-6">
+                            <label>Ваше имя</label>
+                            <input class="contacts__input" type="text">
+                          </div>
+                          <div class="col-md-6">
+                            <label>E-mail</label>
+                            <input class="contacts__input" type="text">
+                          </div>
+                          <div class="col-md-12">
+                            <label>Сообщение</label>
+                            <textarea class="contacts__input"></textarea>
+                          </div>
+                        </div>
+                        <div class="contacts__button">
+                          <div class="contacts__captcha">
+                            <p>Тут капча</p>
+                          </div>
+                          <div class="contacts__submit">
+                            <input class="button-green" type="submit" value="Отправить">
+                          </div>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
+      <div class="yandex-map-contacts js-yandex-map-contacts" id="map"></div>
     </main>
     <footer>
       <!-- Подвал сайта-->

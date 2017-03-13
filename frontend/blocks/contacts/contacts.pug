@@ -1,2 +1,31 @@
+include ../order-review/order-review
+
 mixin contacts()
     .contacts&attributes(attributes)= name
+        .row
+            .col-md-6
+                p.contacts__title Главный офис. Тамбов
+                p.contacts__point.point г. Москва, ул.Красная площадь, д.1, к.1, оф.2
+                p.contacts__phone.phone Отдел продаж: +7 (495) 123-45-67
+                p.contacts__phone.phone Отдел закупок +7 (495) 123-45-67
+                p.contacts__phone.phone Диллерам: +7 (495) 123-45-67
+                p.contacts__phone.phone Клиентам: +7 (495) 123-45-67
+                p.contacts__mail.mail Farm@Mail.com
+            .col-md-6
+                p.contacts__title Обратная связь
+                form.contacts__form
+                    .row
+                        .col-md-6
+                            label Ваше имя
+                            input(type="text").contacts__input
+                        .col-md-6
+                            label E-mail
+                            input(type="text").contacts__input
+                        .col-md-12
+                            label Сообщение
+                            textarea.contacts__input
+                    .contacts__button
+                        .contacts__captcha
+                            p Тут капча
+                        .contacts__submit
+                            input(type="submit" value="Отправить").button-green

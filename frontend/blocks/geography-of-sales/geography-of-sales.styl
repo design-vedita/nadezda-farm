@@ -1,0 +1,50 @@
+.map
+    height 480px
+
+.geography-of-sales
+    margin-bottom 30px
+    
+    &__list
+        padding-top 20px
+        padding_x(24px)
+        background-color white
+        box-shadow 0 0 10px 0 rgba(black, 8%)
+        
+    &__title
+        margin-bottom 12px
+        font-size 16px
+        line-height normal
+        
+    &__wrapper
+        margin_x(-15px)
+        
+    &__item
+        margin-bottom 20px
+        padding_x(15px)
+        width 50%
+        
+    &__point,
+    &__phone
+        line-height 30px
+        
+        
+    section
+        display none
+        flex-wrap wrap
+        flex-direction row
+        justify-content space-between
+        
+        &^[0]--visible
+            display flex
+                 
+    &__link
+        margin-top 4px
+        display block
+        font-size 14px
+        line-height 30px
+        color link-geography
+        transition all .5s ease
+        
+        &:hover
+            text-decoration none
+            color green-base

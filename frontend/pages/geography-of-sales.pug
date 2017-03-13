@@ -1,0 +1,32 @@
+extends ../includes/layout
+
+include ../blocks/header/header
+include ../blocks/breadrumbs/breadcrumbs
+include ../blocks/geography-of-sales/geography-of-sales
+include ../blocks/footer/footer
+
+block append head
+    title География продаж
+    script(src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&mode=debug" type="text/javascript")
+
+block header
+    +header
+
+block content
+    .container
+        .row
+            .col-md-12
+                +breadcrumbs('Пункт выдачи заказов')
+        .row
+            .col-md-12
+                .inner-content
+                    h1 Пункт выдачи заказов
+
+                    +geography-of-sales
+
+    #map2.map
+
+
+block footer
+    footer
+        +footer

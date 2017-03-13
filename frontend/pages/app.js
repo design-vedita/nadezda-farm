@@ -22,7 +22,8 @@ import './license.pug';*/
 //import './action-one.pug';
 //import './brand-one.pug';
 //import './about-company.pug';
-import './contacts.pug';
+//import './contacts.pug';
+import './geography-of-sales.pug';
 
 import App from '../includes/App.js';
 import Header from '../blocks/header/header.js';
@@ -33,6 +34,8 @@ import Similar from '../blocks/similar/similar';
 import NewsOnce from '../blocks/news-once/news-once';
 import Question from '../blocks/question/question'
 import Popup from '../blocks/popups/popup'
+import YandexMapContacts from '../blocks/yandex-map-contacts/yandex-map-contacts'
+import GeographyOfSales from '../blocks/geography-of-sales/geography-of-sales'
 
 $(() => {
 
@@ -70,6 +73,9 @@ $(() => {
     App.modules.push(new NewsOnce);
     App.modules.push(new Question);
     App.modules.push(new Popup);
+    App.modules.push(new GeographyOfSales);
+    App.modules.push(new YandexMapContacts);
+
 
 });
 

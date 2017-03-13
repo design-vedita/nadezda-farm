@@ -1,34 +1,54 @@
-mixin left-menu()
+mixin left-menu(title)
     // Левое меню
     .left-menu&attributes(attributes)= name
-        p.left-menu__title Каталог
-        nav.left-menu__list
-            ul
-                li: a(href="javascript:void(0)") Лекарства и БАДы
-                    .left-menu__arrow.js-arrow-left-menu
-                li: a(href="javascript:void(0)") Гигиена
-                    .left-menu__arrow.js-arrow-left-menu
-                li: a(href="javascript:void(0)") Мама и малыш
-                    .left-menu__arrow.js-arrow-left-menu
-                    ul.left-menu__submenu
-                        li: a(href="javascript:void(0)") Лекарства и БАДы
-                        li: a(href="javascript:void(0)") Гигиена
-                        li: a(href="javascript:void(0)") Мама и малыш
-                        li: a(href="javascript:void(0)") Мед. приборы и изделия
-                        li: a(href="javascript:void(0)") Спорт и фитнес
-                        li: a(href="javascript:void(0)") Косметика
-                        li: a(href="javascript:void(0)") Линзы
-                        li: a(href="javascript:void(0)") Каталог по болезням
-                        li: a(href="javascript:void(0)") Бренды
-                        li: a(href="javascript:void(0)") Каталог по действующему веществу
-                li: a(href="javascript:void(0)") Мед. приборы и изделия
-                    .left-menu__arrow.js-arrow-left-menu
-                li: a(href="javascript:void(0)") Спорт и фитнес
-                    .left-menu__arrow.js-arrow-left-menu
-                li: a(href="javascript:void(0)") Косметика
-                    .left-menu__arrow.js-arrow-left-menu
-                li: a(href="javascript:void(0)") Линзы
-                li: a(href="javascript:void(0)") Каталог по болезням
-                li: a(href="javascript:void(0)") Бренды
-                li: a(href="javascript:void(0)") Каталог по действующему веществу
+        p.left-menu__title= title
+        if title == 'Каталог'
+            nav.left-menu__list
+                ul
+                    li: a(href="javascript:void(0)") Лекарства и БАДы
+                        .left-menu__arrow.js-arrow-left-menu
+                    li: a(href="javascript:void(0)") Гигиена
+                        .left-menu__arrow.js-arrow-left-menu
+                    li: a(href="javascript:void(0)") Мама и малыш
+                        .left-menu__arrow.js-arrow-left-menu
+                        ul.left-menu__submenu
+                            li: a(href="javascript:void(0)") Лекарства и БАДы
+                            li: a(href="javascript:void(0)") Гигиена
+                            li: a(href="javascript:void(0)") Мама и малыш
+                            li: a(href="javascript:void(0)") Мед. приборы и изделия
+                            li: a(href="javascript:void(0)") Спорт и фитнес
+                            li: a(href="javascript:void(0)") Косметика
+                            li: a(href="javascript:void(0)") Линзы
+                            li: a(href="javascript:void(0)") Каталог по болезням
+                            li: a(href="javascript:void(0)") Бренды
+                            li: a(href="javascript:void(0)") Каталог по действующему веществу
+                    li: a(href="javascript:void(0)") Мед. приборы и изделия
+                        .left-menu__arrow.js-arrow-left-menu
+                    li: a(href="javascript:void(0)") Спорт и фитнес
+                        .left-menu__arrow.js-arrow-left-menu
+                    li: a(href="javascript:void(0)") Косметика
+                        .left-menu__arrow.js-arrow-left-menu
+                    li: a(href="javascript:void(0)") Линзы
+                    li: a(href="javascript:void(0)") Каталог по болезням
+                    li: a(href="javascript:void(0)") Бренды
+                    li: a(href="javascript:void(0)") Каталог по действующему веществу
+        else
+            nav.left-menu__list
+                ul
+                    li.left-menu--active: a(href="javascript:void(0)" data-region="belgorod").js-link-region Белгородская область
+                    li: a(href="javascript:void(0)" data-region="bryansk").js-link-region Брянская область
+                    li: a(href="javascript:void(0)" data-region="volgograd").js-link-region Волгоградская область
+                    li: a(href="javascript:void(0)" data-region="voronezh").js-link-region Воронежская область
+                    li: a(href="javascript:void(0)" data-region="kursk").js-link-region Курская область
+                    li: a(href="javascript:void(0)" data-region="lipetsk").js-link-region Липецкая область
+                    li: a(href="javascript:void(0)" data-region="mordoviya").js-link-region Республика Мордовия
+                    li: a(href="javascript:void(0)" data-region="nizniy").js-link-region Нижегородская область
+                    li: a(href="javascript:void(0)" data-region="orel").js-link-region Орловская область
+                    li: a(href="javascript:void(0)" data-region="penza").js-link-region Пензенская область
+                    li: a(href="javascript:void(0)" data-region="ryazan").js-link-region Рязанская область
+                    li: a(href="javascript:void(0)" data-region="saratov").js-link-region Саратовская область
+                    li: a(href="javascript:void(0)" data-region="smolensk").js-link-region Смоленская область
+                    li: a(href="javascript:void(0)" data-region="tambov").js-link-region Тамбовская область
+                    li: a(href="javascript:void(0)" data-region="tula").js-link-region Тульская область
+
     //

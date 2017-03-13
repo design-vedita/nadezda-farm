@@ -64,7 +64,7 @@ var config = {
             },
             {
                 test: /\.(png|jpg|gif)$/,
-                loader: "url?&limit=4096&name=../image/[name].[ext]"
+                loader: "url?&limit=4096&name=image/[name].[ext]"
             }
         ]
     },
@@ -159,6 +159,10 @@ var config = {
         new HtmlWebpackPlugin({
             filename: 'contacts.html',
             template: './frontend/pages/contacts.pug'
+        }),
+        new HtmlWebpackPlugin({
+            filename: 'geography-of-sales.html',
+            template: './frontend/pages/geography-of-sales.pug'
         }),
         new ExtractTextPlugin("css/main.css")
     ],

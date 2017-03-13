@@ -3,10 +3,12 @@ extends ../includes/layout
 include ../blocks/header/header
 include ../blocks/breadrumbs/breadcrumbs
 include ../blocks/contacts/contacts
+include ../blocks/yandex-map-contacts/yandex-map-contacts
 include ../blocks/footer/footer
 
 block append head
     title Контакты
+    script(src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript")
 
 block header
     +header
@@ -22,6 +24,9 @@ block content
                     h1 Контакты
                     .inner-content__container
                         +contacts
+
+    +yandex-map-contacts
+
 
 block footer
     footer
