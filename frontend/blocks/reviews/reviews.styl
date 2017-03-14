@@ -31,10 +31,17 @@
         background-position center
         border 3px solid review-border
         border-radius 50%
+    
+        @media (min-width 768px) and (max-width 1199px)
+            width 51px
+            height 51px
         
     &__tale-description
         padding-bottom 30px
         width 'calc(%s - %s)' % (100% 126px)
+    
+        @media (min-width 768px) and (max-width 1199px)
+            width 'calc(%s - %s)' % (100% 64px)
         
     &__tale-name
         font-size 15px

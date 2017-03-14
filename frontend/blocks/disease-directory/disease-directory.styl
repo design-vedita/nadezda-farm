@@ -10,6 +10,12 @@
     &__ul
         padding_x(16px)
         width 25%
+    
+        @media (min-width 768px) and (max-width 1199px)
+            width 50%
+            
+            &:not(:last-child)
+                margin-bottom 20px
         
         li
             list-style-type none

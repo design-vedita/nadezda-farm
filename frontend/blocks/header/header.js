@@ -15,6 +15,7 @@ export default class Header extends Module {
     init() {
         this.$menu = $('.js-header-menu', this.$root);
         this.$submenu = $('.js-header-submenu', this.$root);
+        this.$two_submenu = $('.js-header-submenu-two', this.$root);
 
         this.$list_city = $('.js-city-list', this.$root);
         this.$link_city = $('.js-city-link', this.$root);
@@ -23,6 +24,8 @@ export default class Header extends Module {
         this.$menu.on('click',  $.proxy(this.openMenu, this));
         App.doc.on('click', $.proxy(this.closeMenu, this));
         App.win.on('resize', $.proxy(this.addMarkerClass, this));
+
+
         this.addMarkerClass();
 
         // Обработка кликов списка городов
@@ -35,17 +38,41 @@ export default class Header extends Module {
     openMenu(e) {
         let clientWidth = document.documentElement.clientWidth;
 
-        if (clientWidth < 1200) {
+        if (clientWidth < 1200 && clientWidth > 767) {
             const target = e.currentTarget;
             $(target).toggleClass('header__li--open');
             this.$submenu.toggleClass('header__submenu-one--open');
+        }
+
+        // Обработчик под мобильные устройства
+        if (clientWidth < 767) {
+
+            let target = e.currentTarget;
+
+            if (!$(e.target).hasClass('js-header-submenu-two')) {
+
+                $(target).toggleClass('header__li--open');
+                this.$submenu.toggleClass('header__submenu-one--open');
+
+            } else {
+
+                e.preventDefault();
+                let targets = e.target;
+
+                $(targets)
+                    .toggleClass('open')
+                    .parent()
+                    .toggleClass('open')
+                    .find('.header__submenu-two')
+                    .toggleClass('header__submenu-two--open');
+            }
         }
     }
 
     // Закрытие меню при клике не в меню
     closeMenu(e) {
         let clientWidth = document.documentElement.clientWidth;
-        if (clientWidth < 1200) {
+        if (clientWidth < 1200 && clientWidth > 767) {
             if($(e.target).closest(this.$menu).length) return;
 
             if (!$(e.target).closest( this.$menu ).length) {

@@ -4,8 +4,16 @@
     width 20%
     background-color white
     
-    &:not(:nth-of-type(5n))
-        border-right 1px solid border-brand
+    @media (min-width 768px) and (max-width 1199px)
+        width 33.3333%
+    
+        &:not(:nth-of-type(3n))
+            border-right 1px solid border-brand
+    
+    @media (min-width 1200px)
+        
+        &:not(:nth-of-type(5n))
+            border-right 1px solid border-brand
     
     &:hover &__name
         a
@@ -22,7 +30,9 @@
             right 0
             bottom 0
             margin auto
+            
     &__name
+        padding_x(5px)
         line-height 20px
         text-align center
         

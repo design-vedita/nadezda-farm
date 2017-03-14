@@ -11,12 +11,15 @@ mixin left-filter()
                 .left-filter__hide.js-left-filter-hide
                     .left-filter__from
                         label От
-                        input(type="text" value="3").js-left-filter-from
+                        input(type="text" value="3").js-left-filter-from-age
                     .left-filter__to
                         label до
-                        input(type="text" value="50").js-left-filter-to
+                        input(type="text" value="50").js-left-filter-to-age
                     .clear
-                    .left-filter__slider.js-left-filter-slider
+                    .left-filter__points
+                        span 0 лет
+                        span 80 лет
+                    .left-filter__slider.js-left-filter-age
             fieldset
                 p.left-filter__category-title.js-left-filter-category-title Пол
                 .left-filter__hide.js-left-filter-hide
@@ -36,6 +39,17 @@ mixin left-filter()
             fieldset
                 p.left-filter__category-title.js-left-filter-category-title Цена
                 .left-filter__hide.js-left-filter-hide
+                    .left-filter__from
+                        label От
+                        input(type="text" value="3").js-left-filter-from-price
+                    .left-filter__to
+                        label до
+                        input(type="text" value="50").js-left-filter-to-price
+                    .clear
+                    .left-filter__points
+                        span 250 р.
+                        span 5800 р.
+                    .left-filter__slider.js-left-filter-price
 
             fieldset
                 input(type="checkbox")#sales

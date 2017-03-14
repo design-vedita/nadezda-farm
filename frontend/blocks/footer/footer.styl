@@ -10,9 +10,16 @@ footer
         display block
         width 250px
         height 350px
+        opacity 1
+        visibility visible
         background-image url(../../image/svg/pattern-left-90deg.svg)
         background-repeat no-repeat
         background-position center
+        transition all .5s ease
+    
+        @media (min-width 768px) and (max-width 1199px)
+            opacity 0
+            visibility hidden
 
     &::after
         position absolute
@@ -22,14 +29,24 @@ footer
         display block
         width 350px
         height 250px
+        opacity 1
+        visibility visible
         background-image url(../../image/svg/pattern-right.svg)
         background-repeat no-repeat
         background-position center
+        transition all .5s ease
+    
+        @media (min-width 768px) and (max-width 1199px)
+            opacity 0
+            visibility hidden
         
 .footer
     padding-top 37px
     padding-bottom 26px
     background-color green-base
+    
+    @media (min-width 768px) and (max-width 1199px)
+        padding-top 22px
     
     ul
         
@@ -44,6 +61,9 @@ footer
         
     &__phone
         text-align right
+    
+        @media (min-width 768px) and (max-width 1199px)
+            margin-top 6px
                 
         a
             padding-left 39px
@@ -58,6 +78,12 @@ footer
             
             &:hover
                 color orange-link
+                
+            @media (min-width 768px) and (max-width 1199px)
+                padding-bottom 3px
+                font-size 16px !important
+                background-size 23px 23px
+                background-position 0 2px
         
         span
             margin-top -1px
@@ -66,13 +92,25 @@ footer
             font-weight 600
             text-align right
             color myata
+    
+            @media (min-width 768px) and (max-width 1199px)
+                margin-top 5px
+                line-height 16px
             
             span
                 display inline
                 color white
+                
+            @media (min-width 768px) and (max-width 1199px)
+                text-align left
     
     &__logo
         margin-top 10px
+    
+        @media (min-width 768px) and (max-width 1199px)
+            
+            img
+                width 100%
 
 .developer
     padding-top 17px

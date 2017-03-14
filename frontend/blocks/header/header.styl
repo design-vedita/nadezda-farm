@@ -2,22 +2,47 @@
     padding-top 22px
     background-color white
     
+    @media (max-width 767px)
+        padding-top 14px
+    
     &__logo
+        order 1
         margin-top 7px
+        
+        @media (min-width 768px) and (max-width 1199px)
+            width 215px
+            
+            img
+                width 100%
+                height auto
+            
+        @media (max-width 767px)
+            width 100%
+            text-align center
     
     &__menu
         margin-top 13px
         background-color green-base
+    
+        @media (min-width 768px) and (max-width 1199px)
+            margin-top 16px
         
     &__ul
         padding 0
         font-size 0
+    
+        @media (max-width 767px)
+            margin_x(-15px)
     
     &__li
         position relative
         display inline-block
         width 33.3333%
         text-align center
+    
+        @media (max-width 767px)
+            width 100%
+            text-align left
                 
         &^[0]__li--desktop:hover
             
@@ -27,6 +52,9 @@
         
         &:not(:last-child)
             border-right 1px white solid
+    
+            @media (max-width 767px)
+                border-right none
             
         &--open
             
@@ -41,6 +69,14 @@
                 background-image url(../../image/svg/ico-catalog.svg)
                 background-repeat no-repeat
                 background-position 37% center
+    
+                @media (min-width 768px) and (max-width 1199px)
+                    padding-left 23px
+                    background-position 26% center
+    
+                @media (max-width 767px)
+                    padding-left 45px
+                    background-position 15px center
                 
                 &:hover
                     background-color orange-link
@@ -56,6 +92,11 @@
             text-transform uppercase
             color white
             transition all .5s ease
+    
+            @media (max-width 767px)
+                padding-top 11px
+                padding-bottom 12px
+                padding-left 15px
     
             @media all and (-webkit-min-device-pixel-ratio:0)
                 padding_y(8px)
@@ -87,6 +128,11 @@
         &--open
             opacity 1
             visibility visible
+    
+            @media (max-width 767px)
+                position static
+                border-top none
+                box-shadow none
         
         & > li
             position relative
@@ -111,6 +157,14 @@
                 background-color placeholder-gray
                 transform rotate(-45deg)
                 transition all .5s ease
+                
+                @media (max-width 767px)
+                    right: 17px;
+                    top: 17px;
+                    width: 6px;
+                    height: 2px;
+                    border-radius 2px
+                    background-color arrow-menu-phone
             
             &::before
                 position absolute
@@ -123,6 +177,14 @@
                 background-color placeholder-gray
                 transform rotate(45deg)
                 transition all .5s ease
+    
+                @media (max-width 767px)
+                    right 20px
+                    top 17px
+                    width 6px
+                    height 2px
+                    border-radius 2px
+                    background-color arrow-menu-phone
                 
             &:hover
                 background-color orange-link
@@ -133,11 +195,28 @@
                 
                 & > a
                     color white
+                    
+            &.open
+
+                &::before,
+                &::after
+                    background-color white
+                    
+                &::before
+                    transform rotate(-45deg)
+                    
+                &::after
+                    transform rotate(45deg)
+                    
             & > a
                 padding_y(5px)
                 padding-left 17px
                 display block
                 text-transform uppercase
+                
+                &.open
+                    background-color orange-link
+                    color white
             
     &__submenu-two
         position absolute
@@ -156,12 +235,31 @@
         box-shadow 9px 9px 18px 0 rgba(black, 38%)
         transition all .5s ease
         
+        @media (max-width 767px)
+            padding_y(10px)
+            width 100%
+            background-color submenu-phone
+            box-shadow none
+        
+        &--open
+            position static
+            opacity 1
+            visibility visible
+        
         li
             padding-right 25px
             width 50%
+    
+            @media (max-width 767px)
+                padding-right 0
+                width 100%
             
             &:nth-of-type(odd)
                 border-right 1px solid submenu-border
+                
+                @media (max-width 767px)
+                    border-right none
+                
             
             &:hover
             
@@ -173,6 +271,9 @@
                 padding_y(5px)
                 padding-left 17px
                 display block
+    
+                @media (max-width 767px)
+                    padding-left 25px
                 
     &__submenu
         
@@ -189,9 +290,21 @@
         display flex
         flex-direction row
         
+        @media (max-width 767px)
+            flex-wrap wrap
+        
     &__city
+        order 2
         position relative
         width 25%
+    
+        @media (min-width 768px) and (max-width 1199px)
+            padding-left 28px
+            padding-top 15px
+            
+        @media (max-width 767px)
+            width 100%
+            order 3
                 
         & > a
             position relative
@@ -247,9 +360,31 @@
         opacity 0
         visibility hidden
         transition all .3s ease
+    
+        @media (max-width 767px)
+            margin-bottom 19px
+            margin-left -15px
+            padding-top 0
+            padding-left 0
+            padding-bottom 9px
+            width 'calc(%s + %s)' % (100% 30px)
+            border-top none
+            border-bottom 1px solid border-gray
+            box-shadow none
         
         li
             list-style-type none
+    
+            @media (max-width 767px)
+                padding-left 27px
+                
+                &:hover
+                    background-color orange-base
+                
+                    a
+                        display block
+                        height 100%
+                        color white
             
         a
             font-size 14px
@@ -264,16 +399,31 @@
     &__city-list--open
         opacity 1
         visibility visible
+        
+        @media (max-width 767px)
+            position static
     
     &__phone
+        order 3
+        position relative
         padding-left 15px
         padding-right 28px
-        width 32%
+        width 31%
         text-align right
         background-image url(../../image/svg/phone.svg)
         background-position 23% 5px
         background-repeat no-repeat
-                
+    
+        @media (min-width 768px) and (max-width 1199px)
+            background-position 7% 24px
+            
+        @media (max-width 767px)
+            margin-top 10px
+            width 100%
+            order 2
+            text-align center
+            background-image none
+            
         a
             padding-left 35px
             font-size 20px
@@ -281,6 +431,15 @@
             text-decoration none
             color dark-gray
             transition all .5s ease
+            
+            @media (min-width 768px) and (max-width 1199px)
+                position absolute
+                left 14px
+                top 17px
+                font-size 15px
+    
+            @media (max-width 767px)
+                padding-left 0
             
             &:hover
                 color green-base
@@ -293,6 +452,12 @@
             font-weight 600
             text-align right
             color light-gray
+    
+            @media (min-width 768px) and (max-width 1199px)
+                font-size 14px
+    
+            @media (max-width 767px)
+                text-align center
             
     &__form
         position relative
@@ -330,6 +495,8 @@
             padding_y(12px)
             
     &__login
+        order 4
+        position relative
         margin-top 2px
         margin-left 2px
         padding-left 58px
@@ -338,12 +505,39 @@
         background-position 15% 5px
         background-repeat no-repeat
         border-left 1px solid border-gray
+    
+        @media (min-width 768px) and (max-width 1199px)
+            padding-left 52px
+            padding-top 16px
+            width 28%
+            background-position 12% 20px
+            border none
+    
+            &::before
+                position absolute
+                left 0
+                top 'calc(%s - %s)' % (50% 19px)
+                content ''
+                display block
+                width 1px
+                height 38px
+                background-color border-gray
+            
+        @media (max-width 767px)
+            padding-left 32px
+            margin-left 0
+            width 50%
+            background-position left 5px
+            border-left none
         
         a
             display block
             font 600 15px/19px open-sans
             text-decoration none
             transition all .3s ease
+    
+            @media (min-width 768px) and (max-width 1199px)
+                font-size 14px
             
             &:hover
                 color green-base
@@ -355,10 +549,40 @@
         color light-gray
             
     &__cart
+        order 5
+        position relative
         display flex
         justify-content flex-end
         width 'calc(%s + %s)' % (21% 2px)
         border-left 1px solid border-gray
+    
+        @media (min-width 768px) and (max-width 1199px)
+            width 13.5%
+            border-left none
+    
+            &::before
+                position absolute
+                left 0
+                top 'calc(%s - %s)' % (50% 19px)
+                content ''
+                display block
+                width 1px
+                height 38px
+                background-color border-gray
+            
+        @media (max-width 767px)
+            width 50%
+            border-left none
+    
+            &::before
+                position absolute
+                left 0
+                top 'calc(%s - %s)' % (50% 33px)
+                content ''
+                display block
+                width 1px
+                height 38px
+                background-color border-gray
         
     &__cart-ico
         position relative
@@ -369,6 +593,13 @@
         background-image url(../../image/svg/cart.svg)
         background-size cover
         background-position center
+    
+        @media (min-width 768px) and (max-width 1199px)
+            margin-top 17px
+            margin-right 24%
+    
+        @media (max-width 767px)
+            margin-right 12%
     
     &__cart-counter
         position absolute
@@ -390,6 +621,9 @@
             
     &__cart-price
         width 56%
+    
+        @media (max-width 767px)
+            width 58%
         
         a
             text-decoration none
@@ -406,6 +640,9 @@
                 font-size 16px
                 font-weight 600
                 color dark-gray
+    
+                @media (max-width 767px)
+                    font-size 15px
         
         &:hover
             span
@@ -413,6 +650,13 @@
                 
     &__bottom
         margin-top 14px
+        
+        @media (min-width 768px) and (max-width 1199px)
+            margin-top 11px
+    
+        @media (max-width 767px)
+            margin-top 18px
+        
         
         
             

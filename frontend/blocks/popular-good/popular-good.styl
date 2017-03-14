@@ -19,7 +19,10 @@
 			background-image url(../../image/svg/pattern-left.svg)
 			background-repeat no-repeat
 			background-position left -47px
-		
+			
+			@media (min-width 768px) and (max-width 1199px)
+				left -23%
+			
 		&::after
 			position absolute
 			right 0
@@ -31,6 +34,9 @@
 			background-image url(../../image/svg/pattern-right.svg)
 			background-repeat no-repeat
 			background-position right -47px
+			
+			@media (min-width 768px) and (max-width 1199px)
+				right -20.5%
 		
 		.section-title
 			text-align center
@@ -49,3 +55,8 @@
 		
 	&__wrapper
 		margin-top -32px
+		
+	.card-tale
+		
+		@media (min-width 768px) and (max-width 1199px)
+			margin-bottom 3px
