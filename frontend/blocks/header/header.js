@@ -53,6 +53,7 @@ export default class Header extends Module {
 
                 $(target).toggleClass('header__li--open');
                 this.$submenu.toggleClass('header__submenu-one--open');
+                e.preventDefault();
 
             } else {
 

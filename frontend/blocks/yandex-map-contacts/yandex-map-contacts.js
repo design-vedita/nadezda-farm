@@ -17,14 +17,14 @@ export default class YandexMapContacts extends Module {
 
     createMap() {
 
-        ymaps.ready(function(){
+        let $map = $('#map');
 
-            let myMap;
-            let myPlacemark;
+        if ($map.length > 0) {
+            ymaps.ready(function(){
 
-            let $map = $('#map');
+                let myMap;
+                let myPlacemark;
 
-            if ($map.length > 0) {
                 myMap = new ymaps.Map("map", {
                     center: [55.740730068997635,37.634999499999985],
                     zoom: 12
@@ -38,9 +38,8 @@ export default class YandexMapContacts extends Module {
                 });
 
                 myMap.geoObjects.add(myPlacemark);
-            }
-        });
-
+            });
+        }
 
     }
 }

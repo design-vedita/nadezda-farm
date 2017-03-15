@@ -123,7 +123,7 @@
         background-color white
         border-top 4px solid orange-link
         box-shadow 9px 9px 18px 0 rgba(black, 38%)
-        transition all .5s ease
+        transition all .2s ease
         
         &--open
             opacity 1
@@ -140,51 +140,57 @@
             background-color transparent
             transition all .5 ease
             
+            
+            &^[0]__submenu-one--has-menu
+
+                &::after
+                    position absolute
+                    right 6px
+                    top 17px
+                    content ''
+                    display block
+                    width 7px
+                    height 1px
+                    background-color placeholder-gray
+                    transform rotate(-45deg)
+                    transition all .5s ease
+                
+                    @media (max-width 767px)
+                        right: 17px;
+                        top: 17px;
+                        width: 6px;
+                        height: 2px;
+                        border-radius 2px
+                        background-color arrow-menu-phone
+                
+                &::before
+                    position absolute
+                    right 6px
+                    top 13px
+                    content ''
+                    display block
+                    width 7px
+                    height 1px
+                    background-color placeholder-gray
+                    transform rotate(45deg)
+                    transition all .5s ease
+                    
+                    @media (max-width 767px)
+                        right 20px
+                        top 17px
+                        width 6px
+                        height 2px
+                        border-radius 2px
+                        background-color arrow-menu-phone
+                
+
             &:hover
                 
-                & ^[0]__submenu-two
-                    opacity 1
-                    visibility visible
-            
-            &::after
-                position absolute
-                right 6px
-                top 17px
-                content ''
-                display block
-                width 7px
-                height 1px
-                background-color placeholder-gray
-                transform rotate(-45deg)
-                transition all .5s ease
+                @media (min-width 767px)
                 
-                @media (max-width 767px)
-                    right: 17px;
-                    top: 17px;
-                    width: 6px;
-                    height: 2px;
-                    border-radius 2px
-                    background-color arrow-menu-phone
-            
-            &::before
-                position absolute
-                right 6px
-                top 13px
-                content ''
-                display block
-                width 7px
-                height 1px
-                background-color placeholder-gray
-                transform rotate(45deg)
-                transition all .5s ease
-    
-                @media (max-width 767px)
-                    right 20px
-                    top 17px
-                    width 6px
-                    height 2px
-                    border-radius 2px
-                    background-color arrow-menu-phone
+                    & ^[0]__submenu-two
+                        opacity 1
+                        visibility visible
                 
             &:hover
                 background-color orange-link
@@ -212,6 +218,7 @@
                 padding_y(5px)
                 padding-left 17px
                 display block
+                text-decoration none
                 text-transform uppercase
                 
                 &.open
@@ -236,6 +243,7 @@
         transition all .5s ease
         
         @media (max-width 767px)
+            left 0
             padding_y(10px)
             width 100%
             background-color submenu-phone

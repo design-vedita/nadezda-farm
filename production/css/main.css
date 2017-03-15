@@ -3066,7 +3066,7 @@ input {
   display: block;
   width: 233px;
   height: 339px;
-  background-image: url(../image/about-company-left.png);
+  background-image: url(image/about-company-left.png);
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -3078,7 +3078,7 @@ input {
   display: block;
   width: 204px;
   height: 339px;
-  background-image: url(../image/about-company-right.png);
+  background-image: url(image/about-company-right.png);
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -3772,6 +3772,9 @@ input {
   padding-right: 9px;
   position: relative;
   display: inline-block;
+}
+.breadcrumbs__list li:first-child {
+  margin-right: 5px;
 }
 .breadcrumbs__list li:not(:last-child)::after {
   position: absolute;
@@ -5227,8 +5230,8 @@ footer::after {
   background-color: #fff;
   border-top: 4px solid #ff8400;
   box-shadow: 9px 9px 18px 0 rgba(0,0,0,0.38);
-  -webkit-transition: all 0.5s ease;
-  transition: all 0.5s ease;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
 }
 .header__submenu-one--open {
   opacity: 1;
@@ -5248,11 +5251,7 @@ footer::after {
   -webkit-transition: all 0.5 ease;
   transition: all 0.5 ease;
 }
-.header__submenu-one > li:hover .header__submenu-two {
-  opacity: 1;
-  visibility: visible;
-}
-.header__submenu-one > li::after {
+.header__submenu-one > li.header__submenu-one--has-menu::after {
   position: absolute;
   right: 6px;
   top: 17px;
@@ -5267,7 +5266,7 @@ footer::after {
   transition: all 0.5s ease;
 }
 @media (max-width: 767px) {
-  .header__submenu-one > li::after {
+  .header__submenu-one > li.header__submenu-one--has-menu::after {
     right: 17px;
     top: 17px;
     width: 6px;
@@ -5276,7 +5275,7 @@ footer::after {
     background-color: #bbb order-radius 2px;
   }
 }
-.header__submenu-one > li::before {
+.header__submenu-one > li.header__submenu-one--has-menu::before {
   position: absolute;
   right: 6px;
   top: 13px;
@@ -5291,13 +5290,19 @@ footer::after {
   transition: all 0.5s ease;
 }
 @media (max-width: 767px) {
-  .header__submenu-one > li::before {
+  .header__submenu-one > li.header__submenu-one--has-menu::before {
     right: 20px;
     top: 17px;
     width: 6px;
     height: 2px;
     border-radius: 2px;
     background-color: #bbb order-radius 2px;
+  }
+}
+@media (min-width: 767px) {
+  .header__submenu-one > li:hover .header__submenu-two {
+    opacity: 1;
+    visibility: visible;
   }
 }
 .header__submenu-one > li:hover {
@@ -5327,6 +5332,7 @@ footer::after {
   padding-bottom: 5px;
   padding-left: 17px;
   display: block;
+  text-decoration: none;
   text-transform: uppercase;
 }
 .header__submenu-one > li > a.open {
@@ -5368,6 +5374,7 @@ footer::after {
 }
 @media (max-width: 767px) {
   .header__submenu-two {
+    left: 0;
     padding-top: 10px;
     padding-bottom: 10px;
     width: 100%;

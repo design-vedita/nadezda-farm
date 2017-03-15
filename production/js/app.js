@@ -350,6 +350,7 @@
 
 	                    (0, _jquery2.default)(_target).toggleClass('header__li--open');
 	                    this.$submenu.toggleClass('header__submenu-one--open');
+	                    e.preventDefault();
 	                } else {
 
 	                    e.preventDefault();
@@ -4996,14 +4997,14 @@
 	        key: 'createMap',
 	        value: function createMap() {
 
-	            ymaps.ready(function () {
+	            var $map = (0, _jquery2.default)('#map');
 
-	                var myMap = void 0;
-	                var myPlacemark = void 0;
+	            if ($map.length > 0) {
+	                ymaps.ready(function () {
 
-	                var $map = (0, _jquery2.default)('#map');
+	                    var myMap = void 0;
+	                    var myPlacemark = void 0;
 
-	                if ($map.length > 0) {
 	                    myMap = new ymaps.Map("map", {
 	                        center: [55.740730068997635, 37.634999499999985],
 	                        zoom: 12
@@ -5017,8 +5018,8 @@
 	                    });
 
 	                    myMap.geoObjects.add(myPlacemark);
-	                }
-	            });
+	                });
+	            }
 	        }
 	    }]);
 
