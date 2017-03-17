@@ -2,18 +2,21 @@ include ../../blocks/left-menu/left-menu
 include  ../../blocks/left-filter/left-filter
 include  ../../blocks/pagination/pagination
 include  ../../blocks/left-banner/left-banner
+include  ../../blocks/active-substance/active-substance
 
 mixin catalog()
     .catalog&attributes(attributes)= name
         .row
-            .col-md-3
+            .col-lg-3.col-md-12
                 +left-menu('Каталог')
 
                 +left-filter
 
+                +alphabet-substance(class="catalog__alphabet-substance").hidden-lg.hidden-xs
+
                 +left-banner
 
-            .col-md-9
+            .col-lg-9.col-md-12
                 h1 Мама и малыш
                 .catalog__sort
                     .catalog__sort-type

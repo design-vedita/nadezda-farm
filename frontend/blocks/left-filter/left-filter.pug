@@ -1,7 +1,7 @@
 mixin left-filter()
     // Левый фильтр
     .left-filter.js-left-filter&attributes()= name
-        p.left-filter__title Фильтр
+        p.left-filter__title.js-left-filter-title Фильтр
         form
             fieldset.left-filter__checkbox-fieldset
                 input(type="checkbox")#jvls
@@ -16,10 +16,11 @@ mixin left-filter()
                         label до
                         input(type="text" value="50").js-left-filter-to-age
                     .clear
-                    .left-filter__points
-                        span 0 лет
-                        span 80 лет
-                    .left-filter__slider.js-left-filter-age
+                    .left-filter__wrapper-slider
+                        .left-filter__points
+                            span 0 лет
+                            span 80 лет
+                        .left-filter__slider.js-left-filter-age
             fieldset
                 p.left-filter__category-title.js-left-filter-category-title Пол
                 .left-filter__hide.js-left-filter-hide
@@ -46,11 +47,11 @@ mixin left-filter()
                         label до
                         input(type="text" value="50").js-left-filter-to-price
                     .clear
-                    .left-filter__points
-                        span 250 р.
-                        span 5800 р.
-                    .left-filter__slider.js-left-filter-price
-
+                    .left-filter__wrapper-slider
+                        .left-filter__points
+                            span 250 р.
+                            span 5800 р.
+                        .left-filter__slider.js-left-filter-price
             fieldset
                 input(type="checkbox")#sales
                 label(for="sales") Скидка

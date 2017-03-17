@@ -12,7 +12,9 @@ mixin header()
                             .header__top
                                 .header__logo.hidden-lg
                                     a(href="javascript:void(0)"): img(src=require("../image/svg/logo.svg"))
-                                .header__city
+                                .header__button-view-menu.visible-xs
+                                    button.button-green.js-open-header-mobile Меню
+                                .header__city.js-visible-mobile
                                     a(href="javascript:void(0)").js-city-link Тамбов
                                     ul.header__city-list.js-city-list
                                         li: a(href="javascript:void(0)") Москва
@@ -26,10 +28,10 @@ mixin header()
                                 .header__phone
                                     a(href="javascript:void(0)") 8-800-123-45-67
                                         span Круглосуточно
-                                .header__login
+                                .header__login.js-visible-mobile
                                     a.header__enter(href="Javascript:void(0)") Вход
                                     a.header__reg(href="Javascript:void(0)") Регистрация
-                                .header__cart
+                                .header__cart.js-visible-mobile
                                     .header__cart-ico
                                         a(href="javascript:void(0)")
                                             .header__cart-counter
@@ -40,25 +42,25 @@ mixin header()
                                             span.visible-lg Ваша корзина
                                             span 15 510 руб
 
-                            .header__bottom
+                            .header__bottom.js-visible-mobile
                                 form.header__form
                                     input(type="text" value="" placeholder="Поиск: введите название, производителя, симптом, основное вещество").header__input-text
                                     input(type="submit" value="").header__input-submit.button-green
-                .header__menu
+                .header__menu.js-visible-mobile
                     .container
                         .row
                             .col-md-12
                                 nav
                                     ul.header__ul
                                         li.header__li.js-header-menu
-                                            a(href="javascript:void(0)") Каталог
+                                            a(href="http://vedita.ru") Каталог
                                             ul.header__submenu-one.js-header-submenu
                                                 li: a(href="javascript:void(0)") Бады
                                                 li: a(href="javascript:void(0)") Гигиена и красота
                                                 li.header__submenu-one--has-menu
                                                     a(href="http://vedita.ru").js-header-submenu-two Лекарства
                                                     ul.header__submenu-two
-                                                        li: a(href="javascript:void(0)") Антибактериальные препараты
+                                                        li: a(href="http://vedita.ru") Антибактериальные препараты
                                                         li: a(href="javascript:void(0)") Антисептические и дезинфицирующие средства
                                                         li: a(href="javascript:void(0)") Витамины
                                                         li: a(href="javascript:void(0)") Вредные привычки

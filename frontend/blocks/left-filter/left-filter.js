@@ -1,4 +1,5 @@
 import Module from '../../includes/Module';
+import App from '../../includes/App';
 import $ from 'jquery';
 require('jquery-ui');
 require('ui-slider');
@@ -26,6 +27,11 @@ export default class Filter extends Module {
         this.$title.on('click', $.proxy(this.openParams, this));
         this.initSliderAge();
         this.initSliderPrice();
+
+        //переменная заголовка
+        this.$filter_title = $('.js-left-filter-title', this.$root);
+        App.win.on('resize', $.proxy(this.getClientWidth, this));
+
     }
 
     // Клик по заголовку открытие
@@ -73,5 +79,19 @@ export default class Filter extends Module {
         $('.js-left-filter-from-price').val($( ".js-left-filter-price" ).slider( "values", 0 ));
 
         $('.js-left-filter-to-price').val($( ".js-left-filter-price" ).slider( "values", 1 ));
+    }
+
+    getClientWidth() {
+        let clientWidth = document.documentElement.clientWidth;
+
+        return clientWidth;
+    }
+
+    // На мобильных прячем, показываем фильтр
+    openFilter(e) {
+
+        if (this.getClientWidth() < 767) {
+
+        }
     }
 }

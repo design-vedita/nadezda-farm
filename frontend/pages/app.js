@@ -14,6 +14,7 @@ import Question from '../blocks/question/question'
 import Popup from '../blocks/popups/popup'
 import YandexMapContacts from '../blocks/yandex-map-contacts/yandex-map-contacts'
 import GeographyOfSales from '../blocks/geography-of-sales/geography-of-sales'
+import DiseaseDirectory from '../blocks/disease-directory/disease-directory'
 
 $(() => {
 
@@ -53,6 +54,7 @@ $(() => {
     App.modules.push(new Popup);
     App.modules.push(new GeographyOfSales);
     App.modules.push(new YandexMapContacts);
+    App.modules.push(new DiseaseDirectory);
 
 
 });

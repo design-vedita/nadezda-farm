@@ -4,7 +4,59 @@
     
     @media (max-width 767px)
         padding-top 14px
+        
+    &__button-view-menu
+        position relative
+        display none
+        
+        @media (max-width 767px)
+            margin-top 19px
+            margin_x(-15px)
+            display block
+            width 'calc(%s + %s)' % (100% 30px)
+            order 2
+        
+            button
+                padding_x(15px)
+                padding_y(10px)
+                width 100%
+                text-align left
+                border none
+
+                &::after
+                    position absolute
+                    right 18px
+                    top 50%
+                    content ''
+                    display block
+                    width 6px;
+                    height 2px;
+                    border-radius 2px
+                    background-color white
+                    transform rotate(45deg)
+                    transition all .5s ease
+
+                &::before
+                    position absolute
+                    right 15px
+                    top 50%
+                    content ''
+                    display block
+                    width 6px
+                    height 2px;
+                    border-radius 2px
+                    background-color white
+                    transform rotate(-45deg)
+                    transition all .5s ease
+                    
+                &.button--open
     
+                    &::after
+                        transform rotate(-45deg)
+    
+                    &::before
+                        transform rotate(45deg)
+                        
     &__logo
         order 1
         margin-top 7px
@@ -26,6 +78,9 @@
     
         @media (min-width 768px) and (max-width 1199px)
             margin-top 16px
+    
+        @media (max-width 767px)
+            display none
         
     &__ul
         padding 0
@@ -91,7 +146,7 @@
             text-decoration none
             text-transform uppercase
             color white
-            transition all .5s ease
+            transition background-color .5s ease
     
             @media (max-width 767px)
                 padding-top 11px
@@ -138,7 +193,7 @@
             position relative
             text-align left
             background-color transparent
-            transition all .5 ease
+            transition background-color .5 ease
             
             
             &^[0]__submenu-one--has-menu
@@ -161,7 +216,7 @@
                         width: 6px;
                         height: 2px;
                         border-radius 2px
-                        background-color arrow-menu-phone
+                        background-color placeholder-gray
                 
                 &::before
                     position absolute
@@ -181,8 +236,7 @@
                         width 6px
                         height 2px
                         border-radius 2px
-                        background-color arrow-menu-phone
-                
+                        background-color placeholder-gray
 
             &:hover
                 
@@ -313,6 +367,7 @@
         @media (max-width 767px)
             width 100%
             order 3
+            display none
                 
         & > a
             position relative
@@ -369,6 +424,9 @@
         visibility hidden
         transition all .3s ease
     
+        @media (min-width 768px) and (max-width 1199px)
+            top 41px
+        
         @media (max-width 767px)
             margin-bottom 19px
             margin-left -15px
@@ -427,8 +485,9 @@
             
         @media (max-width 767px)
             margin-top 10px
+            padding_x(auto)
             width 100%
-            order 2
+            order 1
             text-align center
             background-image none
             
@@ -497,6 +556,7 @@
         background-repeat no-repeat
         background-color green-base
         border none
+        box-shadow none
         cursor pointer
     
         @media all and (-webkit-min-device-pixel-ratio:0)
@@ -534,6 +594,7 @@
         @media (max-width 767px)
             padding-left 32px
             margin-left 0
+            display none
             width 50%
             background-position left 5px
             border-left none
@@ -563,6 +624,9 @@
         justify-content flex-end
         width 'calc(%s + %s)' % (21% 2px)
         border-left 1px solid border-gray
+        
+        &--flex
+            display flex !important
     
         @media (min-width 768px) and (max-width 1199px)
             width 13.5%
@@ -579,13 +643,14 @@
                 background-color border-gray
             
         @media (max-width 767px)
+            display none
             width 50%
             border-left none
     
             &::before
                 position absolute
                 left 0
-                top 'calc(%s - %s)' % (50% 33px)
+                top 'calc(%s - %s)' % (50% 19px)
                 content ''
                 display block
                 width 1px
@@ -598,7 +663,7 @@
         margin-right 11%
         width 30px
         height 37px
-        background-image url(../../image/svg/cart.svg)
+        background-image url(../../image/cart.png)
         background-size cover
         background-position center
     
@@ -664,6 +729,7 @@
     
         @media (max-width 767px)
             margin-top 18px
+            display none
         
         
         

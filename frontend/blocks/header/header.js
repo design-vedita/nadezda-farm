@@ -20,6 +20,9 @@ export default class Header extends Module {
         this.$list_city = $('.js-city-list', this.$root);
         this.$link_city = $('.js-city-link', this.$root);
 
+        this.$button_open_header = $('.js-open-header-mobile', this.$root);
+        this.$blocks_visible = $('.js-visible-mobile', this.$root);
+
         // Обработка кликов меню
         this.$menu.on('click',  $.proxy(this.openMenu, this));
         App.doc.on('click', $.proxy(this.closeMenu, this));
@@ -32,6 +35,8 @@ export default class Header extends Module {
         this.$link_city.on('click', $.proxy(this.openListCity, this));
         App.doc.on('click', $.proxy(this.closeListCity, this));
 
+        // Обработка клика на кнопку меню в шапке на мобильниках
+        this.$button_open_header.on('click', $.proxy(this.openMobileHeader, this));
     }
 
     // Открытие меню
@@ -39,7 +44,12 @@ export default class Header extends Module {
         let clientWidth = document.documentElement.clientWidth;
 
         if (clientWidth < 1200 && clientWidth > 767) {
-            const target = e.currentTarget;
+            let target = e.currentTarget;
+
+            if ($(e.target.parentElement).hasClass('js-header-menu')) {
+                e.preventDefault();
+            }
+
             $(target).toggleClass('header__li--open');
             this.$submenu.toggleClass('header__submenu-one--open');
         }
@@ -49,23 +59,28 @@ export default class Header extends Module {
 
             let target = e.currentTarget;
 
+            // Отключаем переход по ссылке Каталог
+            if ($(e.target.parentElement).hasClass('js-header-menu')) {
+                e.preventDefault();
+            }
+
             if (!$(e.target).hasClass('js-header-submenu-two')) {
 
                 $(target).toggleClass('header__li--open');
                 this.$submenu.toggleClass('header__submenu-one--open');
-                e.preventDefault();
 
             } else {
-
+                // Отключаем переход при клике во 2 уровне меню по ссылке
                 e.preventDefault();
                 let targets = e.target;
 
+                // Если есть поменю, то показываем его
                 $(targets)
-                    .toggleClass('open')
-                    .parent()
-                    .toggleClass('open')
-                    .find('.header__submenu-two')
-                    .toggleClass('header__submenu-two--open');
+                        .toggleClass('open')
+                        .parent()
+                        .toggleClass('open')
+                        .find('.header__submenu-two')
+                        .toggleClass('header__submenu-two--open');
             }
         }
     }
@@ -80,7 +95,6 @@ export default class Header extends Module {
                 this.$menu.removeClass('header__li--open');
                 this.$submenu.removeClass('header__submenu-one--open');
             }
-
             e.stopPropagation();
         }
     }
@@ -108,5 +122,22 @@ export default class Header extends Module {
         }
 
         e.stopPropagation();
+    }
+
+    // На телефонах по клику на кнопку меню показываем все элементы шапки
+    openMobileHeader(e) {
+
+        let target = e.currentTarget;
+
+        $(target).toggleClass('button--open');
+
+        this.$blocks_visible.toggle();
+
+        // Т.к. флексбокс используется, то вешаем на нужный блок его
+        this.$blocks_visible.each(function(){
+            if ($(this).hasClass('header__cart')) {
+                $(this).toggleClass('header__cart--flex');
+            }
+        });
     }
 }

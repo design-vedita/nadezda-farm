@@ -1,4 +1,5 @@
 .brand-tale
+    position relative
     margin-bottom 27px
     padding-bottom 23px
     width 20%
@@ -14,6 +15,21 @@
         
         &:not(:nth-of-type(5n))
             border-right 1px solid border-brand
+        
+    @media (max-width 767px)
+        width 100%
+    
+        &:not(last-child)
+            
+            &::before
+                position absolute
+                left 13.5%
+                bottom 0
+                content ''
+                display block
+                width 74%
+                height 1px
+                background-color border-brand
     
     &:hover &__name
         a

@@ -52,49 +52,53 @@
 
 	__webpack_require__(3);
 
-	var _App = __webpack_require__(63);
+	var _App = __webpack_require__(44);
 
 	var _App2 = _interopRequireDefault(_App);
 
-	var _header = __webpack_require__(64);
+	var _header = __webpack_require__(45);
 
 	var _header2 = _interopRequireDefault(_header);
 
-	var _slider = __webpack_require__(66);
+	var _slider = __webpack_require__(47);
 
 	var _slider2 = _interopRequireDefault(_slider);
 
-	var _leftFilter = __webpack_require__(68);
+	var _leftFilter = __webpack_require__(49);
 
 	var _leftFilter2 = _interopRequireDefault(_leftFilter);
 
-	var _map = __webpack_require__(75);
+	var _map = __webpack_require__(56);
 
 	var _map2 = _interopRequireDefault(_map);
 
-	var _similar = __webpack_require__(76);
+	var _similar = __webpack_require__(57);
 
 	var _similar2 = _interopRequireDefault(_similar);
 
-	var _newsOnce = __webpack_require__(77);
+	var _newsOnce = __webpack_require__(58);
 
 	var _newsOnce2 = _interopRequireDefault(_newsOnce);
 
-	var _question = __webpack_require__(79);
+	var _question = __webpack_require__(60);
 
 	var _question2 = _interopRequireDefault(_question);
 
-	var _popup = __webpack_require__(80);
+	var _popup = __webpack_require__(61);
 
 	var _popup2 = _interopRequireDefault(_popup);
 
-	var _yandexMapContacts = __webpack_require__(81);
+	var _yandexMapContacts = __webpack_require__(62);
 
 	var _yandexMapContacts2 = _interopRequireDefault(_yandexMapContacts);
 
-	var _geographyOfSales = __webpack_require__(82);
+	var _geographyOfSales = __webpack_require__(63);
 
 	var _geographyOfSales2 = _interopRequireDefault(_geographyOfSales);
+
+	var _diseaseDirectory = __webpack_require__(64);
+
+	var _diseaseDirectory2 = _interopRequireDefault(_diseaseDirectory);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -136,6 +140,7 @@
 	    _App2.default.modules.push(new _popup2.default());
 	    _App2.default.modules.push(new _geographyOfSales2.default());
 	    _App2.default.modules.push(new _yandexMapContacts2.default());
+	    _App2.default.modules.push(new _diseaseDirectory2.default());
 	});
 
 /***/ },
@@ -203,26 +208,7 @@
 /* 41 */,
 /* 42 */,
 /* 43 */,
-/* 44 */,
-/* 45 */,
-/* 46 */,
-/* 47 */,
-/* 48 */,
-/* 49 */,
-/* 50 */,
-/* 51 */,
-/* 52 */,
-/* 53 */,
-/* 54 */,
-/* 55 */,
-/* 56 */,
-/* 57 */,
-/* 58 */,
-/* 59 */,
-/* 60 */,
-/* 61 */,
-/* 62 */,
-/* 63 */
+/* 44 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -262,7 +248,7 @@
 	exports.default = App;
 
 /***/ },
-/* 64 */
+/* 45 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -277,11 +263,11 @@
 
 	var _jquery2 = _interopRequireDefault(_jquery);
 
-	var _Module2 = __webpack_require__(65);
+	var _Module2 = __webpack_require__(46);
 
 	var _Module3 = _interopRequireDefault(_Module2);
 
-	var _App = __webpack_require__(63);
+	var _App = __webpack_require__(44);
 
 	var _App2 = _interopRequireDefault(_App);
 
@@ -316,6 +302,9 @@
 	            this.$list_city = (0, _jquery2.default)('.js-city-list', this.$root);
 	            this.$link_city = (0, _jquery2.default)('.js-city-link', this.$root);
 
+	            this.$button_open_header = (0, _jquery2.default)('.js-open-header-mobile', this.$root);
+	            this.$blocks_visible = (0, _jquery2.default)('.js-visible-mobile', this.$root);
+
 	            // Обработка кликов меню
 	            this.$menu.on('click', _jquery2.default.proxy(this.openMenu, this));
 	            _App2.default.doc.on('click', _jquery2.default.proxy(this.closeMenu, this));
@@ -326,6 +315,9 @@
 	            // Обработка кликов списка городов
 	            this.$link_city.on('click', _jquery2.default.proxy(this.openListCity, this));
 	            _App2.default.doc.on('click', _jquery2.default.proxy(this.closeListCity, this));
+
+	            // Обработка клика на кнопку меню в шапке на мобильниках
+	            this.$button_open_header.on('click', _jquery2.default.proxy(this.openMobileHeader, this));
 	        }
 
 	        // Открытие меню
@@ -337,6 +329,11 @@
 
 	            if (clientWidth < 1200 && clientWidth > 767) {
 	                var target = e.currentTarget;
+
+	                if ((0, _jquery2.default)(e.target.parentElement).hasClass('js-header-menu')) {
+	                    e.preventDefault();
+	                }
+
 	                (0, _jquery2.default)(target).toggleClass('header__li--open');
 	                this.$submenu.toggleClass('header__submenu-one--open');
 	            }
@@ -346,16 +343,21 @@
 
 	                var _target = e.currentTarget;
 
+	                // Отключаем переход по ссылке Каталог
+	                if ((0, _jquery2.default)(e.target.parentElement).hasClass('js-header-menu')) {
+	                    e.preventDefault();
+	                }
+
 	                if (!(0, _jquery2.default)(e.target).hasClass('js-header-submenu-two')) {
 
 	                    (0, _jquery2.default)(_target).toggleClass('header__li--open');
 	                    this.$submenu.toggleClass('header__submenu-one--open');
-	                    e.preventDefault();
 	                } else {
-
+	                    // Отключаем переход при клике во 2 уровне меню по ссылке
 	                    e.preventDefault();
 	                    var targets = e.target;
 
+	                    // Если есть поменю, то показываем его
 	                    (0, _jquery2.default)(targets).toggleClass('open').parent().toggleClass('open').find('.header__submenu-two').toggleClass('header__submenu-two--open');
 	                }
 	            }
@@ -374,7 +376,6 @@
 	                    this.$menu.removeClass('header__li--open');
 	                    this.$submenu.removeClass('header__submenu-one--open');
 	                }
-
 	                e.stopPropagation();
 	            }
 	        }
@@ -410,6 +411,26 @@
 
 	            e.stopPropagation();
 	        }
+
+	        // На телефонах по клику на кнопку меню показываем все элементы шапки
+
+	    }, {
+	        key: 'openMobileHeader',
+	        value: function openMobileHeader(e) {
+
+	            var target = e.currentTarget;
+
+	            (0, _jquery2.default)(target).toggleClass('button--open');
+
+	            this.$blocks_visible.toggle();
+
+	            // Т.к. флексбокс используется, то вешаем на нужный блок его
+	            this.$blocks_visible.each(function () {
+	                if ((0, _jquery2.default)(this).hasClass('header__cart')) {
+	                    (0, _jquery2.default)(this).toggleClass('header__cart--flex');
+	                }
+	            });
+	        }
 	    }]);
 
 	    return Header;
@@ -418,7 +439,7 @@
 	exports.default = Header;
 
 /***/ },
-/* 65 */
+/* 46 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -464,7 +485,7 @@
 	exports.default = Module;
 
 /***/ },
-/* 66 */
+/* 47 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -479,11 +500,11 @@
 
 	var _jquery2 = _interopRequireDefault(_jquery);
 
-	var _Module2 = __webpack_require__(65);
+	var _Module2 = __webpack_require__(46);
 
 	var _Module3 = _interopRequireDefault(_Module2);
 
-	var _swiper = __webpack_require__(67);
+	var _swiper = __webpack_require__(48);
 
 	var _swiper2 = _interopRequireDefault(_swiper);
 
@@ -534,7 +555,7 @@
 	exports.default = SliderIndex;
 
 /***/ },
-/* 67 */
+/* 48 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -559,7 +580,7 @@
 
 
 /***/ },
-/* 68 */
+/* 49 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -570,7 +591,7 @@
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-	var _Module2 = __webpack_require__(65);
+	var _Module2 = __webpack_require__(46);
 
 	var _Module3 = _interopRequireDefault(_Module2);
 
@@ -586,8 +607,8 @@
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-	__webpack_require__(69);
-	__webpack_require__(71);
+	__webpack_require__(50);
+	__webpack_require__(52);
 
 	// Левый фильтр
 
@@ -681,7 +702,7 @@
 	exports.default = Filter;
 
 /***/ },
-/* 69 */
+/* 50 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -703,7 +724,7 @@
 		if ( true ) {
 
 			// AMD. Register as an anonymous module.
-			!(__WEBPACK_AMD_DEFINE_ARRAY__ = [ __webpack_require__(1), __webpack_require__(70) ], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory), __WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ? (__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
+			!(__WEBPACK_AMD_DEFINE_ARRAY__ = [ __webpack_require__(1), __webpack_require__(51) ], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory), __WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ? (__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
 		} else {
 
 			// Browser globals
@@ -1420,7 +1441,7 @@
 
 
 /***/ },
-/* 70 */
+/* 51 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;( function( factory ) {
@@ -1443,7 +1464,7 @@
 
 
 /***/ },
-/* 71 */
+/* 52 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -1470,10 +1491,10 @@
 			// AMD. Register as an anonymous module.
 			!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
 				__webpack_require__(1),
-				__webpack_require__(72),
-				__webpack_require__(74),
-				__webpack_require__(70),
-				__webpack_require__(69)
+				__webpack_require__(53),
+				__webpack_require__(55),
+				__webpack_require__(51),
+				__webpack_require__(50)
 			], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory), __WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ? (__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
 		} else {
 
@@ -2201,7 +2222,7 @@
 
 
 /***/ },
-/* 72 */
+/* 53 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -2224,9 +2245,9 @@
 			// AMD. Register as an anonymous module.
 			!(__WEBPACK_AMD_DEFINE_ARRAY__ = [
 				__webpack_require__(1),
-				__webpack_require__(73),
-				__webpack_require__(70),
-				__webpack_require__(69)
+				__webpack_require__(54),
+				__webpack_require__(51),
+				__webpack_require__(50)
 			], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory), __WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ? (__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
 		} else {
 
@@ -2433,14 +2454,14 @@
 
 
 /***/ },
-/* 73 */
+/* 54 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;( function( factory ) {
 		if ( true ) {
 
 			// AMD. Register as an anonymous module.
-			!(__WEBPACK_AMD_DEFINE_ARRAY__ = [ __webpack_require__(1), __webpack_require__(70) ], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory), __WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ? (__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
+			!(__WEBPACK_AMD_DEFINE_ARRAY__ = [ __webpack_require__(1), __webpack_require__(51) ], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory), __WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ? (__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
 		} else {
 
 			// Browser globals
@@ -2454,7 +2475,7 @@
 
 
 /***/ },
-/* 74 */
+/* 55 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -2475,7 +2496,7 @@
 		if ( true ) {
 
 			// AMD. Register as an anonymous module.
-			!(__WEBPACK_AMD_DEFINE_ARRAY__ = [ __webpack_require__(1), __webpack_require__(70) ], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory), __WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ? (__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
+			!(__WEBPACK_AMD_DEFINE_ARRAY__ = [ __webpack_require__(1), __webpack_require__(51) ], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory), __WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ? (__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
 		} else {
 
 			// Browser globals
@@ -2505,7 +2526,7 @@
 
 
 /***/ },
-/* 75 */
+/* 56 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -2520,11 +2541,11 @@
 
 	var _jquery2 = _interopRequireDefault(_jquery);
 
-	var _Module2 = __webpack_require__(65);
+	var _Module2 = __webpack_require__(46);
 
 	var _Module3 = _interopRequireDefault(_Module2);
 
-	var _swiper = __webpack_require__(67);
+	var _swiper = __webpack_require__(48);
 
 	var _swiper2 = _interopRequireDefault(_swiper);
 
@@ -2633,7 +2654,7 @@
 	exports.default = Map;
 
 /***/ },
-/* 76 */
+/* 57 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -2648,11 +2669,11 @@
 
 	var _jquery2 = _interopRequireDefault(_jquery);
 
-	var _Module2 = __webpack_require__(65);
+	var _Module2 = __webpack_require__(46);
 
 	var _Module3 = _interopRequireDefault(_Module2);
 
-	var _swiper = __webpack_require__(67);
+	var _swiper = __webpack_require__(48);
 
 	var _swiper2 = _interopRequireDefault(_swiper);
 
@@ -2703,7 +2724,7 @@
 	exports.default = Similar;
 
 /***/ },
-/* 77 */
+/* 58 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -2714,7 +2735,7 @@
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-	var _Module2 = __webpack_require__(65);
+	var _Module2 = __webpack_require__(46);
 
 	var _Module3 = _interopRequireDefault(_Module2);
 
@@ -2727,7 +2748,7 @@
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
 	var $ = __webpack_require__(1);
-	__webpack_require__(78)($);
+	__webpack_require__(59)($);
 
 	// Одиночная новость
 
@@ -2757,7 +2778,7 @@
 	exports.default = NewsOnce;
 
 /***/ },
-/* 78 */
+/* 59 */
 /***/ function(module, exports) {
 
 	/*!
@@ -4790,7 +4811,7 @@
 
 
 /***/ },
-/* 79 */
+/* 60 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -4805,11 +4826,11 @@
 
 	var _jquery2 = _interopRequireDefault(_jquery);
 
-	var _Module2 = __webpack_require__(65);
+	var _Module2 = __webpack_require__(46);
 
 	var _Module3 = _interopRequireDefault(_Module2);
 
-	var _App = __webpack_require__(63);
+	var _App = __webpack_require__(44);
 
 	var _App2 = _interopRequireDefault(_App);
 
@@ -4877,7 +4898,7 @@
 	exports.default = Question;
 
 /***/ },
-/* 80 */
+/* 61 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -4892,11 +4913,11 @@
 
 	var _jquery2 = _interopRequireDefault(_jquery);
 
-	var _Module2 = __webpack_require__(65);
+	var _Module2 = __webpack_require__(46);
 
 	var _Module3 = _interopRequireDefault(_Module2);
 
-	var _App = __webpack_require__(63);
+	var _App = __webpack_require__(44);
 
 	var _App2 = _interopRequireDefault(_App);
 
@@ -4948,7 +4969,7 @@
 	exports.default = Popup;
 
 /***/ },
-/* 81 */
+/* 62 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -4959,7 +4980,7 @@
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-	var _Module2 = __webpack_require__(65);
+	var _Module2 = __webpack_require__(46);
 
 	var _Module3 = _interopRequireDefault(_Module2);
 
@@ -5029,7 +5050,7 @@
 	exports.default = YandexMapContacts;
 
 /***/ },
-/* 82 */
+/* 63 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -5040,7 +5061,7 @@
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-	var _Module2 = __webpack_require__(65);
+	var _Module2 = __webpack_require__(46);
 
 	var _Module3 = _interopRequireDefault(_Module2);
 
@@ -5109,6 +5130,85 @@
 	}(_Module3.default);
 
 	exports.default = GeographyOfSales;
+
+/***/ },
+/* 64 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _jquery = __webpack_require__(1);
+
+	var _jquery2 = _interopRequireDefault(_jquery);
+
+	var _Module2 = __webpack_require__(46);
+
+	var _Module3 = _interopRequireDefault(_Module2);
+
+	var _App = __webpack_require__(44);
+
+	var _App2 = _interopRequireDefault(_App);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	// Каталог по болезням
+	var DiseaseDirectory = function (_Module) {
+	    _inherits(DiseaseDirectory, _Module);
+
+	    function DiseaseDirectory() {
+	        _classCallCheck(this, DiseaseDirectory);
+
+	        return _possibleConstructorReturn(this, (DiseaseDirectory.__proto__ || Object.getPrototypeOf(DiseaseDirectory)).call(this, {
+	            name: 'Disease-directory',
+	            self: '.js-disease'
+	        }));
+	    }
+
+	    _createClass(DiseaseDirectory, [{
+	        key: 'init',
+	        value: function init() {
+	            this.$titles = (0, _jquery2.default)('.js-disease-title', this.$root);
+
+	            this.$titles.on('click', _jquery2.default.proxy(this.openList, this));
+	            _App2.default.win.on('resize', _jquery2.default.proxy(this.getClient, this));
+	        }
+	    }, {
+	        key: 'openList',
+	        value: function openList(e) {
+	            var target = e.currentTarget;
+	            var $parent = (0, _jquery2.default)(target).parent();
+
+	            if (this.getClient() < 768) {
+
+	                (0, _jquery2.default)(target).toggleClass('disease-directory__title--open');
+	                $parent.find('.js-disease-all-list').toggle();
+	            }
+	        }
+	    }, {
+	        key: 'getClient',
+	        value: function getClient() {
+	            var clientWidth = document.documentElement.clientWidth;
+
+	            return clientWidth;
+	        }
+	    }]);
+
+	    return DiseaseDirectory;
+	}(_Module3.default);
+
+	exports.default = DiseaseDirectory;
 
 /***/ }
 /******/ ]);

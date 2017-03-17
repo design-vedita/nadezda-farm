@@ -17,7 +17,7 @@ footer
         background-position center
         transition all .5s ease
     
-        @media (min-width 768px) and (max-width 1199px)
+        @media (max-width 1199px)
             opacity 0
             visibility hidden
 
@@ -36,7 +36,7 @@ footer
         background-position center
         transition all .5s ease
     
-        @media (min-width 768px) and (max-width 1199px)
+        @media (max-width 1199px)
             opacity 0
             visibility hidden
         
@@ -48,6 +48,9 @@ footer
     @media (min-width 768px) and (max-width 1199px)
         padding-top 22px
     
+    @media (max-width 767px)
+        padding-top 22px
+        
     ul
         
         margin 0
@@ -64,6 +67,12 @@ footer
     
         @media (min-width 768px) and (max-width 1199px)
             margin-top 6px
+            text-align left
+            
+        @media (max-width 767px)
+            margin-top 26px
+            margin-bottom 21px
+            text-align left
                 
         a
             padding-left 39px
@@ -84,6 +93,11 @@ footer
                 font-size 16px !important
                 background-size 23px 23px
                 background-position 0 2px
+                
+            & > span
+        
+                @media (max-width 767px)
+                    padding-left 8px
         
         span
             margin-top -1px
@@ -96,12 +110,16 @@ footer
             @media (min-width 768px) and (max-width 1199px)
                 margin-top 5px
                 line-height 16px
+                
             
             span
                 display inline
                 color white
                 
             @media (min-width 768px) and (max-width 1199px)
+                text-align left
+    
+            @media (max-width 767px)
                 text-align left
     
     &__logo

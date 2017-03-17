@@ -11,11 +11,16 @@
     @media (min-width 768px) and (max-width 1199px)
         padding-top 21px
         padding-bottom 4px
+        
+    @media (max-width 767px)
+        margin-left -15px
+        padding-top 21px
+        width 'calc(%s + %s)' % (100% 30px)
     
     &__title
         width 20%
     
-        @media (min-width 768px) and (max-width 1199px)
+        @media (max-width 1199px)
             width 100%
             text-align center
     
@@ -28,9 +33,12 @@
     &__list
         width 80%
     
-        @media (min-width 768px) and (max-width 1199px)
+        @media (max-width 1199px)
             margin-top 19px
             width 100%
+            
+        @media (max-width 767px)
+            margin-top 16px
         
         ul
             text-align justify
@@ -52,6 +60,9 @@
             text-transform uppercase
             color alphabet
             transition all .5s ease
+            
+            @media (max-width 767px)
+                padding_x(14px)
             
             &:hover
                 color white

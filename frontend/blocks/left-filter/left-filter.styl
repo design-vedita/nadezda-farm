@@ -4,6 +4,13 @@
 	padding-bottom 29px
 	background-color white
 	
+	@media (max-width 1199px)
+		margin-top 0
+	
+	@media (max-width 767px)
+		padding-top 19px
+		padding-bottom 10px
+	
 	&__title
 		margin-bottom 9px
 		padding-left 27px
@@ -11,10 +18,51 @@
 		line-height normal
 		text-transform uppercase
 		color green-base
-		
+
+		@media (max-width 767px)
+			position relative
+			cursor pointer
+			
+			&::before
+				position absolute
+				right: 20px;
+				top: 13px;
+				content ''
+				display block
+				width: 11px;
+				height: 3px;
+				border-radius 2px
+				background-color green-base
+				transform rotate(45deg)
+				transition all .5s ease
+			
+			&::after
+				position absolute
+				right: 14px;
+				top: 13px;
+				content ''
+				display block
+				width: 11px;
+				height: 3px;
+				border-radius 2px
+				background-color green-base
+				transform rotate(-45deg)
+				transition all .5s ease
+			
+			&--open
+
+				&::before
+					transform rotate(-45deg)
+			
+				&::after
+					transform rotate(45deg)
+
 	form
 		padding-right 20px
 		padding-left 24px
+		
+		@media (max-width 767px)
+			display none
 		
 	fieldset
 		padding 0
@@ -34,7 +82,10 @@
 		label
 			margin-right 4%
 			color pagination
-		
+			
+		@media (min-width 768px) and (max-width 1199px)
+			width 110px
+			
 	input[type=text]
 		padding-left 7px
 		width 76px
@@ -54,6 +105,9 @@
 		float right
 		text-align right
 		
+		@media (max-width 1199px)
+			float left
+		
 	&__points
 		margin-top 14px
 		margin-bottom 1px
@@ -61,6 +115,9 @@
 		flex-wrap wrap
 		flex-direction row
 		justify-content space-between
+		
+		@media (min-width 768px) and (max-width 1199px)
+			margin-top -7px
 	
 		span
 			font-size 11px
@@ -167,8 +224,27 @@
 		flex-direction row
 		justify-content space-between
 		
+		@media (max-width 1199px)
+			justify-content flex-start
+		
 		input
 			padding_y(5px)
 			padding_x(12px)
 			font-size 16px
 			border none
+			
+			@media (max-width 1199px)
+				&.button-orange
+					margin-left 30px
+		
+	&__wrapper-slider
+		
+		@media (min-width 768px) and (max-width 1199px)
+			float right
+			width 'calc(%s - %s)' % (100% 234px)
+	
+				
+	.clear
+		
+		@media (min-width 768px) and (max-width 1199px)
+			display none

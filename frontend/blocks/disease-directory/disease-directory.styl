@@ -7,6 +7,17 @@
         flex-wrap wrap
         flex-direction row
         
+        @media (max-width 767px)
+            width 'calc(%s + %s)' % (100% 31px)
+        
+    &__all-list
+        
+        @media (max-width 767px)
+            display none
+            
+        @media (min-width 768px)
+            display block !important
+        
     &__ul
         padding_x(16px)
         width 25%
@@ -16,19 +27,61 @@
             
             &:not(:last-child)
                 margin-bottom 20px
+            
+        @media (max-width 767px)
+            width 100%
         
         li
+            position relative
+            
             list-style-type none
     
             &:not(:last-child)
                 margin-bottom 8.5px
             
-            &:nth-of-type(1)
-                margin-bottom 18px
-                font-size 15px
-                line-height normal
-                font-weight 600
-                color green-base
+    &__title
+        margin-bottom 18px
+        font-size 15px
+        line-height normal
+        font-weight 600
+        color green-base
+
+        @media (max-width 767px)
+            cursor pointer
+
+            &::after
+                position absolute
+                right: 0px;
+                top: 11px;
+                content ''
+                display block
+                width: 6px;
+                height: 2px;
+                border-radius 2px
+                background-color green-base
+                transform rotate(-45deg)
+                transition all .5s ease
+
+            &::before
+                position absolute
+                right: 3px;
+                top: 11px;
+                content ''
+                display block
+                width: 6px;
+                height: 2px;
+                border-radius 2px
+                background-color green-base
+                transform rotate(45deg)
+                transition all .5s ease
+                
+        &--open
+
+            &::after
+                transform rotate(45deg)
+                
+            &::before
+                transform rotate(-45deg)
             
         a
             font-size 14px
