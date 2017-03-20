@@ -11,10 +11,18 @@ mixin left-filter()
                 .left-filter__hide.js-left-filter-hide
                     .left-filter__from
                         label От
-                        input(type="text" value="3").js-left-filter-from-age
+                        input(type="text"
+                                value=3
+                                data-min=5
+                                data-value-min=10
+                                ).js-left-filter-from-age
                     .left-filter__to
                         label до
-                        input(type="text" value="50").js-left-filter-to-age
+                        input(type="text"
+                                value=50
+                                data-max=50
+                                data-value-max=25
+                                ).js-left-filter-to-age
                     .clear
                     .left-filter__wrapper-slider
                         .left-filter__points
@@ -42,10 +50,18 @@ mixin left-filter()
                 .left-filter__hide.js-left-filter-hide
                     .left-filter__from
                         label От
-                        input(type="text" value="3").js-left-filter-from-price
+                        input( type="text"
+                                value=3
+                                data-min=250
+                                data-value-min=1000
+                                ).js-left-filter-from-price
                     .left-filter__to
                         label до
-                        input(type="text" value="50").js-left-filter-to-price
+                        input( type="text"
+                               value=50
+                                data-max=5800
+                                data-value-max=3000
+                               ).js-left-filter-to-price
                     .clear
                     .left-filter__wrapper-slider
                         .left-filter__points

@@ -6,6 +6,14 @@
 		background-color white
 		box-shadow 0 0 10px 0 rgba(black, 8%)
 		
+		@media (min-width 768px) and (max-width 1199px)
+			padding_x(12px)
+		
+		@media (max-width 767px)
+			padding_x(15px)
+			margin_x(-15px)
+			width 'calc(%s + %s)' % (100% 30px)
+		
 	&__row
 		padding-bottom 24px
 		display flex
@@ -13,20 +21,40 @@
 		flex-direction row
 		align-content stretch
 		
-		&:not(:last-child)
-			border-bottom 1px solid article-border
+		@media (min-width 768px) and (max-width 1199px)
+			margin-top 30px
+			
+			&:not(:last-child)
+				border-bottom 1px solid article-border
 		
-		&:not(:nth-of-type(1))
-			margin-top 28px
+			&:not(:nth-of-type(1))
+				margin-top 28px
+				
+		@media (max-width 767px)
+			
+			&:last-child ^[0]__tale:last-child
+				border-bottom-color transparent
+			
 		
 	&__tale
 		width 50%
 		
-		&:nth-of-type(odd)
-			padding-right 15px
+		@media (min-width 768px)
+			&:nth-of-type(odd)
+				padding-right 15px
+				
+			&:nth-of-type(even)
+				padding-left 15px
 			
-		&:nth-of-type(even)
-			padding-left 15px
+		@media (max-width 767px)
+			padding-bottom 24px
+			width 100%
+			
+			&:not(:first-child)
+				margin-top 24px
+				
+			border-bottom 1px solid article-border
+			
 		
 	&__tale-image
 		height 200px
@@ -62,6 +90,9 @@
 		background-position 3px center
 		background-repeat no-repeat
 		
+		@media (min-width 768px) and (max-width 1199px)
+			margin-top 2px
+		
 	&__more
 		margin-top 8px
 		display block
@@ -69,6 +100,9 @@
 		font-weight 600
 		color price-tale-list
 		transition all .5s ease
+		
+		@media (min-width 768px) and (max-width 1199px)
+			margin-top 22px
 		
 		&:hover
 			text-decoration none

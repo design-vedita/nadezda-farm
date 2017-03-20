@@ -31,6 +31,7 @@ export default class Filter extends Module {
         //переменная заголовка
         this.$filter_title = $('.js-left-filter-title', this.$root);
         App.win.on('resize', $.proxy(this.getClientWidth, this));
+        this.$filter_title.on('click', $.proxy(this.openFilter, this));
 
     }
 
@@ -47,11 +48,18 @@ export default class Filter extends Module {
 
     // Cлайдер по возрасту
     initSliderAge() {
+
+        this.$min = $('.js-left-filter-from-age').attr('data-min');
+        this.$max = $('.js-left-filter-to-age').attr('data-max');
+
+        this.$value_min = $('.js-left-filter-from-age').attr('data-value-min');
+        this.$value_max = $('.js-left-filter-to-age').attr('data-value-max');
+
         this.$slider_age.slider({
             range: true,
-            min: 0,
-            max: 80,
-            values: [ 3, 20 ],
+            min: +this.$min,
+            max: +this.$max,
+            values: [ +this.$value_min, +this.$value_max ],
             slide: function( event, ui ) {
                 $('.js-left-filter-from-age').val(ui.values[ 0 ]);
                 $('.js-left-filter-to-age').val(ui.values[ 1 ]);
@@ -65,11 +73,18 @@ export default class Filter extends Module {
 
     // Слайдер по ценам
     initSliderPrice() {
+
+        this.$min = $('.js-left-filter-from-price').attr('data-min');
+        this.$max = $('.js-left-filter-to-price').attr('data-max');
+
+        this.$value_min = $('.js-left-filter-from-price').attr('data-value-min');
+        this.$value_max = $('.js-left-filter-to-price').attr('data-value-max');
+
         this.$slider_price.slider({
             range: true,
-            min: 250,
-            max: 5800,
-            values: [ 250, 1400 ],
+            min: +this.$min,
+            max: +this.$max,
+            values: [ +this.$value_min, +this.$value_max ],
             slide: function( event, ui ) {
                 $('.js-left-filter-from-price').val(ui.values[ 0 ]);
                 $('.js-left-filter-to-price').val(ui.values[ 1 ]);
@@ -90,7 +105,15 @@ export default class Filter extends Module {
     // На мобильных прячем, показываем фильтр
     openFilter(e) {
 
-        if (this.getClientWidth() < 767) {
+        if (this.getClientWidth() < 1200) {
+
+            let target = e.currentTarget;
+
+            $(target)
+                .toggleClass('left-filter__title--open')
+                .parent()
+                .find('form')
+                .toggleClass('form--open');
 
         }
     }

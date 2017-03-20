@@ -9,6 +9,9 @@
 	align-items stretch
 	width 100%
 	
+	@media (min-width 768px) and (max-width 1199px)
+		padding-right 32px
+	
 	&:hover::before
 		transform scale(1.07)
 		box-shadow 0 0 18px 0 rgba(black, 38%)
@@ -40,11 +43,22 @@
 		width 34%
 		align-self center
 		
+		@media (min-width 768px) and (max-width 1199px)
+			width 24.5%
+			
+			img
+				width 100%
+				max-width 236px
+				height auto
+		
 	&__description
 		position relative
 		z-index 1
 		padding-left 10px
 		width 46.5%
+		
+		@media (min-width 768px) and (max-width 1199px)
+			width 55%
 		
 	&__buy-block
 		position relative
@@ -54,7 +68,10 @@
 		width 19.5%
 		border-left 1px solid fieldset-filter-border
 		
-	
+		@media (min-width 768px) and (max-width 1199px)
+			padding-left 10px
+			width 20%
+		
 	&__rating
 		margin-top 3px
 		
@@ -149,7 +166,7 @@
 		font-size 0
 		
 		button
-			width 33px
+			width 32px
 			height 27px
 			font-size 18px
 			border 1px solid count-button
@@ -163,7 +180,7 @@
 				border-color green-hover
 					
 		input
-			width 59px
+			width 58px
 			height 27px
 			font-size 18px
 			text-align center

@@ -6,7 +6,8 @@
 		margin-right 5px
 		display inline-block
 			
-		a
+		a,
+		span
 			padding_x(9px)
 			padding_y(4px)
 			font-size 14px
@@ -22,18 +23,20 @@
 	&__first,
 	&__last
 		
-		a
+		a,
+		span
 			font-size 12px !important
 			line-height 24px !important
 			text-transform uppercase
 			color first-pagi !important
+			background-color transparent
 			
 			&:hover
 				color green-base !important
 			
 	&__active
 		
-		a
+		span
 			background-color green-base
 			color white !important
 		

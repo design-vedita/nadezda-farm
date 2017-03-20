@@ -19,6 +19,9 @@
 		@media (min-width 768px) and (max-width 1199px)
 			margin-top 14px
 		
+		@media (max-width 767px)
+			margin-top 22px
+		
 	&__card-tale
 		margin-bottom 3px
 		width 33.3333%
@@ -43,6 +46,9 @@
 	&__sort-type
 		width 30%
 		
+		@media (max-width 767px)
+			width 100%
+		
 		a
 			display inline-block
 			vertical-align middle
@@ -60,6 +66,9 @@
 				
 				svg
 					fill orange-link
+					
+			&.sort--desc ^[0]__sort-arrow
+				transform rotate(180deg)
 			
 	&__sort-arrow
 		fill arrow-sort
@@ -70,6 +79,9 @@
 		width 70%
 		font-size 0
 		text-align right
+		
+		@media (max-width 767px)
+			display none
 		
 		a
 			&:last-child

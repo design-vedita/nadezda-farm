@@ -22,7 +22,18 @@ export default class Similar extends Module {
             //spaceBetween: 2,
             slidesPerView: 4,
             nextButton: '.js-similar-carousel-next',
-            prevButton: '.js-similar-carousel-prev'
+            prevButton: '.js-similar-carousel-prev',
+            breakpoints: {
+                1190: {
+                    slidesPerView: 3
+                },
+                767: {
+                    slidesPerView: 2
+                },
+                460: {
+                    slidesPerView: 1
+                }
+            }
         });
     }
 }

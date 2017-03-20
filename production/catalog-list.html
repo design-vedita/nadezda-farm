@@ -162,7 +162,7 @@
           <div class="col-md-12">
             <div class="catalog">
               <div class="row">
-                <div class="col-md-3">
+                <div class="col-lg-3 col-md-12">
                   <!-- Левое меню-->
                   <div class="left-menu">
                     <p class="left-menu__title">Каталог</p>
@@ -202,7 +202,7 @@
                   <!---->
                   <!-- Левый фильтр-->
                   <div class="left-filter js-left-filter">
-                    <p class="left-filter__title">Фильтр</p>
+                    <p class="left-filter__title js-left-filter-title">Фильтр</p>
                     <form>
                       <fieldset class="left-filter__checkbox-fieldset">
                         <input type="checkbox" id="jvls">
@@ -213,15 +213,17 @@
                         <div class="left-filter__hide js-left-filter-hide">
                           <div class="left-filter__from">
                             <label>От</label>
-                            <input class="js-left-filter-from-age" type="text" value="3">
+                            <input class="js-left-filter-from-age" type="text" value="3" data-min="5" data-value-min="10">
                           </div>
                           <div class="left-filter__to">
                             <label>до</label>
-                            <input class="js-left-filter-to-age" type="text" value="50">
+                            <input class="js-left-filter-to-age" type="text" value="50" data-max="50" data-value-max="25">
                           </div>
                           <div class="clear"></div>
-                          <div class="left-filter__points"><span>0 лет</span><span>80 лет</span></div>
-                          <div class="left-filter__slider js-left-filter-age"></div>
+                          <div class="left-filter__wrapper-slider">
+                            <div class="left-filter__points"><span>0 лет</span><span>80 лет</span></div>
+                            <div class="left-filter__slider js-left-filter-age"></div>
+                          </div>
                         </div>
                       </fieldset>
                       <fieldset>
@@ -245,15 +247,17 @@
                         <div class="left-filter__hide js-left-filter-hide">
                           <div class="left-filter__from">
                             <label>От</label>
-                            <input class="js-left-filter-from-price" type="text" value="3">
+                            <input class="js-left-filter-from-price" type="text" value="3" data-min="250" data-value-min="1000">
                           </div>
                           <div class="left-filter__to">
                             <label>до</label>
-                            <input class="js-left-filter-to-price" type="text" value="50">
+                            <input class="js-left-filter-to-price" type="text" value="50" data-max="5800" data-value-max="3000">
                           </div>
                           <div class="clear"></div>
-                          <div class="left-filter__points"><span>250 р.</span><span>5800 р.</span></div>
-                          <div class="left-filter__slider js-left-filter-price"></div>
+                          <div class="left-filter__wrapper-slider">
+                            <div class="left-filter__points"><span>250 р.</span><span>5800 р.</span></div>
+                            <div class="left-filter__slider js-left-filter-price"></div>
+                          </div>
                         </div>
                       </fieldset>
                       <fieldset>
@@ -267,6 +271,41 @@
                     </form>
                   </div>
                   <!---->
+                  <div class="alphabet-substance catalog__alphabet-substance hidden-lg hidden-xs">
+                    <div class="alphabet-substance__title">
+                      <p>Вещество по алфавиту:</p>
+                    </div>
+                    <div class="alphabet-substance__list">
+                      <ul>
+                        <li><a href="javascript:void(0)">a</a></li>
+                        <li><a href="javascript:void(0)">b</a></li>
+                        <li><a href="javascript:void(0)">c</a></li>
+                        <li><a href="javascript:void(0)">d</a></li>
+                        <li><a href="javascript:void(0)">e</a></li>
+                        <li><a href="javascript:void(0)">f</a></li>
+                        <li><a href="javascript:void(0)">g</a></li>
+                        <li><a href="javascript:void(0)">h</a></li>
+                        <li><a href="javascript:void(0)">i</a></li>
+                        <li><a href="javascript:void(0)">j</a></li>
+                        <li><a href="javascript:void(0)">k</a></li>
+                        <li><a href="javascript:void(0)">l</a></li>
+                        <li><a href="javascript:void(0)">m</a></li>
+                        <li><a href="javascript:void(0)">n</a></li>
+                        <li><a href="javascript:void(0)">o</a></li>
+                        <li><a href="javascript:void(0)">p</a></li>
+                        <li><a href="javascript:void(0)">q</a></li>
+                        <li><a href="javascript:void(0)">r</a></li>
+                        <li><a href="javascript:void(0)">s</a></li>
+                        <li><a href="javascript:void(0)">t</a></li>
+                        <li><a href="javascript:void(0)">u</a></li>
+                        <li><a href="javascript:void(0)">v</a></li>
+                        <li><a href="javascript:void(0)">w</a></li>
+                        <li><a href="javascript:void(0)">x</a></li>
+                        <li><a href="javascript:void(0)">y</a></li>
+                        <li><a href="javascript:void(0)">z</a></li>
+                      </ul>
+                    </div>
+                  </div>
                   <!-- Левый баннер-->
                   <div class="left-banner">
                     <div class="left-banner__image" style="background-image: url(image/left-banner.jpg);"></div>
@@ -279,10 +318,10 @@
                   </div>
                   <!---->
                 </div>
-                <div class="col-md-9">
+                <div class="col-lg-9 col-md-12">
                   <h1>Мама и малыш</h1>
                   <div class="catalog__sort">
-                    <div class="catalog__sort-type"><a href="javascript:void(0)">По цене
+                    <div class="catalog__sort-type"><a class="sort--desc" href="javascript:void(0)">По цене
                         <svg class="catalog__sort-arrow" xmlns="http://www.w3.org/2000/svg" width="7" height="7" viewBox="0 0 7 7">
                           <path d="M738.5,402a0.764,0.764,0,0,0-.818.694v3.942l-1.258-1.066a0.959,0.959,0,0,0-1.2-.032,0.644,0.644,0,0,0,.039,1.013l2.627,2.226a0.958,0.958,0,0,0,1.2.033c0.008-.008.013-0.016,0.021-0.023s0.025-.015.037-0.025l2.591-2.2a0.638,0.638,0,0,0,.029-1.006,0.951,0.951,0,0,0-1.188.025l-1.261,1.069v-3.96A0.764,0.764,0,0,0,738.5,402Z" transform="translate(-735 -402)"></path>
                         </svg></a><a href="javascript:void(0)">По популярности
@@ -557,7 +596,7 @@
                     <ul>
                       <li class="pagination__first"><a href="javascript:void(0)">Первая</a></li>
                       <li><a href="javascript:void(0)">1</a></li>
-                      <li class="pagination__active"><a href="javascript:void(0)">2</a></li>
+                      <li class="pagination__active"><span>2</span></li>
                       <li><a href="javascript:void(0)">3</a></li>
                       <li class="pagination__last"><a href="javascript:void(0)">Последняя</a></li>
                     </ul>

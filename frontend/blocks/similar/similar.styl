@@ -18,6 +18,7 @@
         
         &:hover::before
             transform scale(1)
+            box-shadow initial
             
     &__wrapper
         position relative
@@ -34,7 +35,7 @@
         
         &::before
             position absolute
-            top 9px
+            top 10px
             content ''
             display block
             width 12px
@@ -44,7 +45,7 @@
             
         &::after
             position absolute
-            top 16px
+            top 17px
             content ''
             display block
             width 12px
@@ -54,6 +55,9 @@
             
     &__carousel-prev
         left -45px
+    
+        @media (max-width 1199px)
+            left -15px
         
         &::before
             left 7px
@@ -65,6 +69,9 @@
         
     &__carousel-next
         right -45px
+    
+        @media (max-width 1199px)
+            right -15px
     
         &::before
             right 7px

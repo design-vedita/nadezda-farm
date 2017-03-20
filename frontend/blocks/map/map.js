@@ -41,11 +41,21 @@ export default class Map extends Module {
             centeredSlides: false,
             slideToClickedSlide: true,
             nextButton: '.js-carousel-next',
-            prevButton: '.js-carousel-prev'
+            prevButton: '.js-carousel-prev',
+            breakpoints: {
+                767: {
+                    slidesPerView: 3,
+                }
+            }
         });
 
         this.$gallery.params.control = this.$thumbs;
         this.$thumbs.params.control = this.$gallery;
+
+
+        if (this.getClientWidth() > 768 && this.getClientWidth() < 1199) {
+           // this.$thumbs.updateContainerSize();
+        }
     }
 
     // Открытие разделов в описании
@@ -78,6 +88,12 @@ export default class Map extends Module {
                 $(this).addClass('map__tabs-description--active');
             }
         });
+    }
+
+    getClientWidth() {
+        let clientWidth = document.documentElement.clientWidth;
+
+        return clientWidth;
     }
 
 }

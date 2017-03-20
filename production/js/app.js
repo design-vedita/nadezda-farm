@@ -595,6 +595,10 @@
 
 	var _Module3 = _interopRequireDefault(_Module2);
 
+	var _App = __webpack_require__(44);
+
+	var _App2 = _interopRequireDefault(_App);
+
 	var _jquery = __webpack_require__(1);
 
 	var _jquery2 = _interopRequireDefault(_jquery);
@@ -639,6 +643,11 @@
 	            this.$title.on('click', _jquery2.default.proxy(this.openParams, this));
 	            this.initSliderAge();
 	            this.initSliderPrice();
+
+	            //переменная заголовка
+	            this.$filter_title = (0, _jquery2.default)('.js-left-filter-title', this.$root);
+	            _App2.default.win.on('resize', _jquery2.default.proxy(this.getClientWidth, this));
+	            this.$filter_title.on('click', _jquery2.default.proxy(this.openFilter, this));
 	        }
 
 	        // Клик по заголовку открытие
@@ -658,11 +667,18 @@
 	    }, {
 	        key: 'initSliderAge',
 	        value: function initSliderAge() {
+
+	            this.$min = (0, _jquery2.default)('.js-left-filter-from-age').attr('data-min');
+	            this.$max = (0, _jquery2.default)('.js-left-filter-to-age').attr('data-max');
+
+	            this.$value_min = (0, _jquery2.default)('.js-left-filter-from-age').attr('data-value-min');
+	            this.$value_max = (0, _jquery2.default)('.js-left-filter-to-age').attr('data-value-max');
+
 	            this.$slider_age.slider({
 	                range: true,
-	                min: 0,
-	                max: 80,
-	                values: [3, 20],
+	                min: +this.$min,
+	                max: +this.$max,
+	                values: [+this.$value_min, +this.$value_max],
 	                slide: function slide(event, ui) {
 	                    (0, _jquery2.default)('.js-left-filter-from-age').val(ui.values[0]);
 	                    (0, _jquery2.default)('.js-left-filter-to-age').val(ui.values[1]);
@@ -679,11 +695,18 @@
 	    }, {
 	        key: 'initSliderPrice',
 	        value: function initSliderPrice() {
+
+	            this.$min = (0, _jquery2.default)('.js-left-filter-from-price').attr('data-min');
+	            this.$max = (0, _jquery2.default)('.js-left-filter-to-price').attr('data-max');
+
+	            this.$value_min = (0, _jquery2.default)('.js-left-filter-from-price').attr('data-value-min');
+	            this.$value_max = (0, _jquery2.default)('.js-left-filter-to-price').attr('data-value-max');
+
 	            this.$slider_price.slider({
 	                range: true,
-	                min: 250,
-	                max: 5800,
-	                values: [250, 1400],
+	                min: +this.$min,
+	                max: +this.$max,
+	                values: [+this.$value_min, +this.$value_max],
 	                slide: function slide(event, ui) {
 	                    (0, _jquery2.default)('.js-left-filter-from-price').val(ui.values[0]);
 	                    (0, _jquery2.default)('.js-left-filter-to-price').val(ui.values[1]);
@@ -693,6 +716,27 @@
 	            (0, _jquery2.default)('.js-left-filter-from-price').val((0, _jquery2.default)(".js-left-filter-price").slider("values", 0));
 
 	            (0, _jquery2.default)('.js-left-filter-to-price').val((0, _jquery2.default)(".js-left-filter-price").slider("values", 1));
+	        }
+	    }, {
+	        key: 'getClientWidth',
+	        value: function getClientWidth() {
+	            var clientWidth = document.documentElement.clientWidth;
+
+	            return clientWidth;
+	        }
+
+	        // На мобильных прячем, показываем фильтр
+
+	    }, {
+	        key: 'openFilter',
+	        value: function openFilter(e) {
+
+	            if (this.getClientWidth() < 1200) {
+
+	                var target = e.currentTarget;
+
+	                (0, _jquery2.default)(target).toggleClass('left-filter__title--open').parent().find('form').toggleClass('form--open');
+	            }
 	        }
 	    }]);
 
@@ -2604,11 +2648,20 @@
 	                centeredSlides: false,
 	                slideToClickedSlide: true,
 	                nextButton: '.js-carousel-next',
-	                prevButton: '.js-carousel-prev'
+	                prevButton: '.js-carousel-prev',
+	                breakpoints: {
+	                    767: {
+	                        slidesPerView: 3
+	                    }
+	                }
 	            });
 
 	            this.$gallery.params.control = this.$thumbs;
 	            this.$thumbs.params.control = this.$gallery;
+
+	            if (this.getClientWidth() > 768 && this.getClientWidth() < 1199) {
+	                // this.$thumbs.updateContainerSize();
+	            }
 	        }
 
 	        // Открытие разделов в описании
@@ -2645,6 +2698,13 @@
 	                    (0, _jquery2.default)(this).addClass('map__tabs-description--active');
 	                }
 	            });
+	        }
+	    }, {
+	        key: 'getClientWidth',
+	        value: function getClientWidth() {
+	            var clientWidth = document.documentElement.clientWidth;
+
+	            return clientWidth;
 	        }
 	    }]);
 
@@ -2713,7 +2773,18 @@
 	                //spaceBetween: 2,
 	                slidesPerView: 4,
 	                nextButton: '.js-similar-carousel-next',
-	                prevButton: '.js-similar-carousel-prev'
+	                prevButton: '.js-similar-carousel-prev',
+	                breakpoints: {
+	                    1190: {
+	                        slidesPerView: 3
+	                    },
+	                    767: {
+	                        slidesPerView: 2
+	                    },
+	                    460: {
+	                        slidesPerView: 1
+	                    }
+	                }
 	            });
 	        }
 	    }]);

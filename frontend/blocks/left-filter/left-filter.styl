@@ -6,8 +6,7 @@
 	
 	@media (max-width 1199px)
 		margin-top 0
-	
-	@media (max-width 767px)
+		margin-bottom 30px
 		padding-top 19px
 		padding-bottom 10px
 	
@@ -19,7 +18,7 @@
 		text-transform uppercase
 		color green-base
 
-		@media (max-width 767px)
+		@media (max-width 1199px)
 			position relative
 			cursor pointer
 			
@@ -61,8 +60,11 @@
 		padding-right 20px
 		padding-left 24px
 		
-		@media (max-width 767px)
+		@media (max-width 1199px)
 			display none
+			
+			&.form--open
+				display block
 		
 	fieldset
 		padding 0

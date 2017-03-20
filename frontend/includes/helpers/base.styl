@@ -201,6 +201,14 @@ input
         margin-bottom 30px
         background-color white
         box-shadow 0 0 10px 0 rgba(black, 8%)
+    
+        @media (min-width 768px) and (max-width 1199px)
+            padding_x(12px)
+    
+        @media (max-width 767px)
+            padding_x(15px)
+            margin_x(-15px)
+            width 'calc(%s + %s)' % (100% 30px)
         
 .point
     padding-left 22px

@@ -8,10 +8,12 @@
         flex-direction row
         align-items stretch
         
-        &:not(:last-child)
-            margin-bottom 22px
-            padding-bottom 31px
-        
+        @media (min-width 768px)
+            
+            &:not(:last-child)
+                margin-bottom 22px
+                padding-bottom 31px
+    
             &::after
                 position absolute
                 left 15px
@@ -21,10 +23,35 @@
                 width 'calc(%s - %s)' % (100% 30px)
                 height 1px
                 background-color article-border
+            
+        @media (max-width 767px)
+            
+            &:last-child ^[0]__tale:last-child
+                &::after
+                    display none
         
     &__tale
         padding_x(15px)
         width 50%
+        
+        @media (max-width 767px)
+            position relative
+            padding-bottom 24px
+            width 100%
+    
+            &:not(:first-child)
+                margin-top 24px
+            
+            &::after
+                position absolute
+                left 15px
+                bottom 0
+                content ''
+                display block
+                width 'calc(%s - %s)' % (100% 30px)
+                height 1px
+                background-color article-border
+            
         
     &__image
         margin-top 21px
