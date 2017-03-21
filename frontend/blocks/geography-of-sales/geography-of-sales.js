@@ -1,4 +1,5 @@
 import Module from '../../includes/Module';
+import App from '../../includes/App';
 import $ from 'jquery';
 
 // Георгафия продаж
@@ -17,6 +18,20 @@ export default class GeographyOfSales extends Module {
         this.$sections = $('.js-geography-section', this.$root);
 
         this.$links.on('click', $.proxy(this.openSection, this));
+
+        this.$geo_title = $('.js-geography-of-sales__left-menu .left-menu__title', this.$root);
+        this.$geo_list = $('.js-geography-of-sales__left-menu .left-menu__list', this.$root);
+
+        App.doc.on('resize', $.proxy(this.getClient, this));
+        this.$geo_title.on('click', $.proxy(this.openList, this));
+    }
+
+    // Открытие списка аптек
+    openList() {
+
+        if (this.getClient() < 768) {
+            this.$geo_list.toggle();
+        }
     }
 
     // Открытие списков аптек по клику на область
@@ -43,5 +58,11 @@ export default class GeographyOfSales extends Module {
                 $(this).addClass('geography-of-sales--visible');
             }
         });
+    }
+
+    getClient() {
+
+        let clientWidth = document.documentElement.clientWidth;
+        return clientWidth;
     }
 }

@@ -161,18 +161,24 @@
 		+ label
 			position relative
 			padding-left 20px
+			display block
 			cursor pointer
 			
 			&::before
 				position absolute
 				left 0
-				top 'calc(%s - %s)' % (50% 8px)
+				//top 'calc(%s - %s)' % (50% 8px)
+				top 6px
 				content ''
 				display inline-block
 				vertical-align middle
 				width 12px
 				height 12px
 				border 1px solid checkbox-border
+				
+			span
+				display inline-block
+				line-height 22px
 	
 	&__category-title
 		position relative

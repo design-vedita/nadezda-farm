@@ -42,6 +42,10 @@
             color green-base
             border-bottom 1px green-base dashed
             
+            @media (max-width 767px)
+                color link-answer
+                border-bottom-color link-answer
+            
     &__answer
         padding-bottom 20px
         margin-top 23px
@@ -61,6 +65,9 @@
         background-position center
         background-repeat no-repeat
         
+        @media (max-width 767px)
+            display none
+        
     &__answer-text
         padding_y(13px)
         padding_x(15px)
@@ -68,6 +75,9 @@
         letter-spacing .6px
         background-color green-base
         border-radius 3px
+    
+        @media (max-width 767px)
+            width 100%
         
         p
             color white

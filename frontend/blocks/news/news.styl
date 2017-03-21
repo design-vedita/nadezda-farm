@@ -6,6 +6,10 @@
 		background-color white
 		box-shadow 0 0 10px 0 rgba(black, 8%)
 		
+		@media (max-width 767px)
+			padding 0
+			box-shadow none
+		
 	&__tale
 		padding-bottom 20px
 		display flex
@@ -16,14 +20,28 @@
 		&:not(:first-child)
 			margin-top 30px
 		
-		&:not(:last-child)
-			border-bottom 1px solid article-border
+		@media (min-width 768px)
+			
+			&:not(:last-child)
+				border-bottom 1px solid article-border
 		
 	&__image
 		width 164px
 		
+		@media (max-width 767px)
+			margin_x(auto)
+			width 100%
+			max-width 290px
+		
+			img
+				width 100%
+		
 	&__introtext
 		width 'calc(%s - %s)' % (100% 195px)
+		
+		@media (max-width 767px)
+			margin-top 25px
+			width 100%
 		
 	&__title
 		margin-top -5px
@@ -34,6 +52,10 @@
 			text-decoration none
 			color green-base
 			transition all .5s ease
+			
+			@media (max-width 767px)
+				font-size 22px
+				text-transform uppercase
 			
 			&:hover
 				color  green-hover

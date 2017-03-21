@@ -7,6 +7,7 @@
 		display flex
 		flex-wrap wrap
 		flex-direction row
+		justify-content center
 		align-content stretch
 		
 		@media (min-width 768px) and (max-width 1199px)
@@ -19,6 +20,9 @@
 		padding_x(1px)
 		margin-bottom 2px
 		width 25%
+		
+		@media (max-width 1199px)
+			width 286px
 		
 		&::before
 			position absolute

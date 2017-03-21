@@ -8,12 +8,19 @@
 		background-color white
 		box-shadow 0 0 10px 0 rgba(black, 8%)
 		
+		@media (max-width 767px)
+			margin_x(-15px)
+			width 'calc(%s + %s)' % (100% 30px)
+		
 	&__content
 		display flex
 		flex-wrap wrap
 		flex-direction row
 		justify-content space-between
 		border-bottom 1px solid article-border
+		
+		@media (max-width 767px)
+			border-bottom none
 	
 	&__image
 		width 239px
@@ -22,8 +29,21 @@
 		background-position center
 		background-repeat no-repeat
 		
+		a
+			display block
+			height 100%
+		
+		@media (max-width 767px)
+			margin_x(auto)
+			width 100%
+			max-width 290px
+		
 	&__text
 		width 'calc(%s - %s)' % (100% 269px)
+		
+		@media (max-width 767px)
+			margin-top 32px
+			width 100%
 		
 	&__title
 		margin-top -6px
@@ -49,18 +69,32 @@
 			margin-bottom 10px
 			
 	&__gallery
-		margin_x(-12.5px)
 		padding-top 20px
 		display flex
 		flex-wrap wrap
 		flex-direction row
 		align-items stretch
 		
+		@media (min-width 1200px)
+			margin_x(-12.5px)
+		
+		@media (min-width 768px) and (max-width 1199px)
+			margin_x(-9px)
+		
 	&__slide
-		padding_x(12.5px)
 		width 25%
 		height 100%
 		box-sizing border-box
+		
+		@media (min-width 1200px)
+			padding_x(12.5px)
+		
+		@media (min-width 768px) and (max-width 1199px)
+			padding_x(9px)
+		
+		@media (max-width 767px)
+			margin-bottom 34px
+			width 100%
 		
 	&__slide-image
 		position relative
@@ -68,6 +102,13 @@
 		height 230px
 		background-size cover
 		background-position center
+		
+		@media (min-width 768px) and (max-width 1199px)
+			height 145px
+		
+		@media (max-width 767px)
+			height 260px
+		
 		
 		a
 			position absolute

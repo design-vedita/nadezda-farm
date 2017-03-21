@@ -1,11 +1,68 @@
 .geography-of-sales
     margin-bottom 30px
     
+    &__left-menu
+        
+        @media (max-width 1199px)
+            display block !important
+    
     &__list
         padding-top 20px
         padding_x(24px)
         background-color white
         box-shadow 0 0 10px 0 rgba(black, 8%)
+        
+        @media (max-width 768px)
+            margin-top 30px
+        
+    .left-menu__list
+        
+        @media (max-width 767px)
+            display none
+            
+        @media (min-width 768px)
+            display block !important
+        
+    .left-menu__title
+    
+        @media (max-width 767px)
+            position relative
+            cursor pointer
+        
+            &::after
+                position absolute
+                right 18px
+                top 50%
+                content ''
+                display block
+                width 6px;
+                height 2px;
+                border-radius 2px
+                background-color white
+                transform rotate(45deg)
+                transition all .5s ease
+        
+            &::before
+                position absolute
+                right 15px
+                top 50%
+                content ''
+                display block
+                width 6px
+                height 2px;
+                border-radius 2px
+                background-color white
+                transform rotate(-45deg)
+                transition all .5s ease
+        
+            &.button--open
+            
+                &::after
+                    transform rotate(-45deg)
+            
+                &::before
+                    transform rotate(45deg)
+        
         
     &__title
         margin-bottom 12px
@@ -19,6 +76,9 @@
         margin-bottom 20px
         padding_x(15px)
         width 50%
+    
+        @media (max-width 1199px)
+            width 100%
         
     &__point,
     &__phone

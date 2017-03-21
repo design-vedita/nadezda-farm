@@ -3,9 +3,9 @@ include ../left-menu/left-menu
 mixin geography-of-sales()
     .geography-of-sales.js-geography-of-sales&attributes(attributes)= name
         .row
-            .col-md-3
-                +left-menu('Список Аптек')(class="geography-of-sales__left-menu")
-            .col-md-9
+            .col-lg-3.col-md-3.col-sm-4
+                +left-menu('Список Аптек')(class="geography-of-sales__left-menu js-geography-of-sales__left-menu")
+            .col-lg-9.col-md-9.col-sm-8
                 .geography-of-sales__list
                     .geography-of-sales__wrapper
                         section(data-region="belgorod").geography-of-sales--visible.js-geography-section

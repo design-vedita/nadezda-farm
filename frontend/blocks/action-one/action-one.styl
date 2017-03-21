@@ -1,5 +1,11 @@
 .action-one
     
+    &__h1
+        margin-top 13px
+    
+        @media (min-width 1199px)
+            display none
+    
     &__wrapper
         padding_x(30px)
         padding_y(30px)
@@ -7,6 +13,12 @@
         background-color white
         box-shadow 0 0 10px 0 rgba(black, 8%)
         box-sizing border-box
+        
+        @media (max-width 1199px)
+            margin-top 0
+    
+        @media (max-width 767px)
+            padding_x(15px)
         
     &__inner
         margin_x(-15px)
@@ -19,18 +31,48 @@
     &__right-part
         padding_x(15px)
         width 50%
+    
+        @media (max-width 1199px)
+            width 100%
+        
+    &__left-part
+        order 1
+        
+        @media (max-width 1199px)
+            order 2
+        
+    &__right-part
+        order 2
+    
+        @media (max-width 1199px)
+            order 1
         
     &__title
         font-size 22px
         color green-base
         
+        @media (max-width 1199px)
+            display none
+        
+        
     &__full-text
         margin-top 19px
         
     &__right-part
+    
+        @media (max-width 767px)
+            text-align center
         
         img
             margin-top 51px
+            
+            @media (max-width 1199px)
+                margin-top 0
+                
+            @media (max-width 767px)
+                width 100%
+                max-width 531px
+            
             
     &__stock
         margin-top 13px

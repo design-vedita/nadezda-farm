@@ -2,6 +2,7 @@ import Module from '../../includes/Module';
 import App from '../../includes/App';
 import $ from 'jquery';
 require('jquery-ui');
+require('ui-swipe');
 require('ui-slider');
 
 // Левый фильтр
@@ -90,6 +91,7 @@ export default class Filter extends Module {
                 $('.js-left-filter-to-price').val(ui.values[ 1 ]);
             }
         });
+
 
         $('.js-left-filter-from-price').val($( ".js-left-filter-price" ).slider( "values", 0 ));
 

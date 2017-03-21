@@ -10,7 +10,7 @@
         display none
         
         @media (max-width 767px)
-            margin-top 19px
+            margin-top 17px
             margin_x(-15px)
             display block
             width 'calc(%s + %s)' % (100% 30px)
@@ -113,11 +113,22 @@
             
         &--open
             
+            @media (max-width 767px)
+            
+                &:first-child a
+    
+                    &::after
+                        transform rotate(-45deg) !important
+    
+                    &::before
+                        transform rotate(45deg) !important
+            
             & > a
                 background-color orange-link
         
         &:first-child
             background-color orange-base
+            
             
             & > a
                 padding-left 36px
@@ -130,8 +141,36 @@
                     background-position 26% center
     
                 @media (max-width 767px)
+                    position relative
                     padding-left 45px
                     background-position 15px center
+                    
+                    &::after
+                        position absolute
+                        right 18px
+                        top 50%
+                        content ''
+                        display block
+                        width 6px;
+                        height 2px;
+                        border-radius 2px
+                        background-color white
+                        transform rotate(45deg)
+                        transition all .5s ease
+                        
+                    &::before
+                        position absolute
+                        right 15px
+                        top 50%
+                        content ''
+                        display block
+                        width 6px
+                        height 2px;
+                        border-radius 2px
+                        background-color white
+                        transform rotate(-45deg)
+                        transition all .5s ease
+                    
                 
                 &:hover
                     background-color orange-link
@@ -154,7 +193,7 @@
                 padding-left 15px
     
             @media all and (-webkit-min-device-pixel-ratio:0)
-                padding_y(8px)
+                padding_y(12px)
             
             &:hover
                 color white
@@ -178,7 +217,7 @@
         background-color white
         border-top 4px solid orange-link
         box-shadow 9px 9px 18px 0 rgba(black, 38%)
-        transition all .2s ease
+        transition opacity .2s ease, visibility .1s linear
         
         &--open
             opacity 1
@@ -365,9 +404,22 @@
             padding-top 15px
             
         @media (max-width 767px)
+            margin-top 11px
+            padding-bottom 10px
+            margin-bottom 19px
             width 100%
             order 3
             display none
+            
+            &::after
+                position absolute
+                left -15px
+                bottom 0
+                content ''
+                display block
+                width 'calc(%s + %s)' % (100% 30px)
+                height 1px
+                background-color border-gray
                 
         & > a
             position relative
@@ -428,14 +480,12 @@
             top 41px
         
         @media (max-width 767px)
-            margin-bottom 19px
             margin-left -15px
             padding-top 0
             padding-left 0
             padding-bottom 9px
             width 'calc(%s + %s)' % (100% 30px)
             border-top none
-            border-bottom 1px solid border-gray
             box-shadow none
         
         li

@@ -55,8 +55,6 @@ $(() => {
     App.modules.push(new GeographyOfSales);
     App.modules.push(new YandexMapContacts);
     App.modules.push(new DiseaseDirectory);
-
-
 });
 
 

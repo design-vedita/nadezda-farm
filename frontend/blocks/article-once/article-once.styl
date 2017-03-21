@@ -7,12 +7,23 @@
 		box-shadow 0 0 10px 0 rgba(black, 8%)
 		overflow auto
 		
+		@media (min-width 768px) and (max-width 1199px)
+			padding_x(12px)
+		
+		@media (max-width 767px)
+			margin_x(-15px)
+			padding_x(15px)
+		
 	p
 		margin-bottom 15px
 		
 		span
 			position relative
 			top -5px
+			
+			@media (max-width 1199px)
+				top 0
+				display block
 		
 		&.quotes
 			text-indent 2.2em
@@ -33,6 +44,9 @@
 						background-position left top
 						background-repeat no-repeat
 						
+						@media (max-width 1199px)
+							left 0
+						
 				&.italic
 					margin-top 13px
 					padding-right 6px
@@ -47,6 +61,11 @@
 			margin-right 30px
 			margin-bottom 15px
 			float left
+			
+			@media (max-width 767px)
+				margin-right 0
+				width 100%
+				float none
 			
 	&__similar
 		margin-bottom 30px
