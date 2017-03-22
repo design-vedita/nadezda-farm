@@ -6,8 +6,13 @@
     background-color white
     box-shadow 0 0 10px 0 rgba(black, 8%)
     
+    .container
+        position relative
+        z-index 1
+    
     &::before
         position absolute
+        z-index 0
         left 0
         bottom 0
         content ''
@@ -20,6 +25,7 @@
         
     &::after
         position absolute
+        z-index 0
         right 0
         bottom 0
         content ''
@@ -30,6 +36,12 @@
         background-repeat no-repeat
         background-position center
     
+    @media (max-width 1199px)
+        
+        &::before,
+        &::after
+            display none
+        
     &__center
         text-align center
         

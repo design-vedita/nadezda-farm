@@ -14,7 +14,6 @@ export default class Header extends Module {
 
     init() {
         this.$menu = $('.js-header-menu', this.$root);
-        this.$submenu = $('.js-header-submenu', this.$root);
         this.$two_submenu = $('.js-header-submenu-two', this.$root);
 
         this.$list_city = $('.js-city-list', this.$root);
@@ -51,7 +50,11 @@ export default class Header extends Module {
             }
 
             $(target).toggleClass('header__li--open');
-            this.$submenu.toggleClass('header__submenu-one--open');
+            let $submenu =
+                $(target)
+                    .find('.js-header-submenu');
+
+            $submenu.toggleClass('header__submenu-one--open');
         }
 
         // Обработчик под мобильные устройства

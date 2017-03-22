@@ -1,4 +1,5 @@
 import Module from '../../includes/Module';
+import App from '../../includes/App';
 import $ from 'jquery';
 
 // Яндекс карта контакты
@@ -13,9 +14,19 @@ export default class YandexMapContacts extends Module {
 
     init() {
         this.createMap();
+
+       App.win.on('resize', $.proxy(this.getClient, this));
     }
 
+    getClient() {
+        let clientWidth = document.documentElement.clientWidth;
+        return clientWidth;
+    }
+
+
     createMap() {
+
+        let _self = this;
 
         let $map = $('#map');
 
@@ -38,6 +49,11 @@ export default class YandexMapContacts extends Module {
                 });
 
                 myMap.geoObjects.add(myPlacemark);
+
+                if (_self.getClient() < 768) {
+                    myMap.behaviors.disable('scrollZoom');
+                }
+
             });
         }
 

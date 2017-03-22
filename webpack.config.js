@@ -30,7 +30,6 @@ var config = {
         alias: {
             'jquery': path.join(__dirname, 'node_modules/jquery/dist/jquery.min'),
             'fancy': path.join(__dirname, 'node_modules/fancybox/dist/js/jquery.fancybox.pack'),
-            'ui-swipe': path.join(__dirname, 'node_modules/jquery-touchswipe/jquery.touchSwipe'),
             'ui-slider': path.join(__dirname, 'node_modules/jquery-ui/ui/widgets/slider.js')
         }
     },

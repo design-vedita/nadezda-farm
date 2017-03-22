@@ -282,6 +282,8 @@
                 @media (min-width 767px)
                 
                     & ^[0]__submenu-two
+                        width 200%
+                        height auto
                         opacity 1
                         visibility visible
                 
@@ -328,12 +330,14 @@
         flex-direction row
         align-items stretch
         justify-content space-between
-        width 200%
+        width 0
+        height 0
+        overflow hidden
         opacity 0
         visibility hidden
         background-color white
         box-shadow 9px 9px 18px 0 rgba(black, 38%)
-        transition all .5s ease
+        transition opacity .5s ease, visibility .5s ease
         
         @media (max-width 767px)
             left 0
@@ -344,6 +348,8 @@
         
         &--open
             position static
+            width 200%
+            height auto
             opacity 1
             visibility visible
         

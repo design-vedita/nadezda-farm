@@ -2,6 +2,13 @@
     max-width 556px
     width 100%
     
+    @media (max-width 556px)
+        max-width 450px
+    
+    @media (max-width 450px)
+        max-width 290px
+        
+        
     &__content
         margin-top 30px
         
@@ -25,6 +32,9 @@
         margin-bottom 23px
         text-align center
         
+        @media (max-width 556px)
+            text-align center
+        
         a
             padding_x(15px)
             padding_y(8px)
@@ -34,3 +44,9 @@
             &.button-green
                 margin-left 30px
                 padding_x(32px)
+    
+                @media (max-width 556px)
+                    margin-left 0
+    
+                @media (max-width 450px)
+                    margin-top 10px
