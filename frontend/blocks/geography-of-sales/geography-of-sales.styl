@@ -12,15 +12,18 @@
         background-color white
         box-shadow 0 0 10px 0 rgba(black, 8%)
         
-        @media (max-width 768px)
+        @media (max-width 767px)
+            padding_x(8px)
+            padding-top 16px
             margin-top 30px
+            
         
     .left-menu__list
         
         @media (max-width 767px)
             display none
             
-        @media (min-width 768px)
+        @media (min-width 767px)
             display block !important
         
     .left-menu__title
@@ -69,6 +72,10 @@
         font-size 16px
         line-height normal
         
+        @media (max-width 767px)
+            margin-bottom 17px
+            letter-spacing -.1px
+        
     &__wrapper
         margin_x(-15px)
         
@@ -80,11 +87,22 @@
         @media (max-width 1199px)
             width 100%
         
+        @media (max-width 767px)
+            margin-bottom 14px
+            
     &__point,
     &__phone
         line-height 30px
         
+        @media (max-width 767px)
+            line-height 18px
+            background-position left top
         
+    &__phone
+    
+        @media (max-width 767px)
+            margin-top 13px
+            
     section
         display none
         flex-wrap wrap

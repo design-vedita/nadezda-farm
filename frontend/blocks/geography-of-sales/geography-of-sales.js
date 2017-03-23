@@ -49,6 +49,13 @@ export default class GeographyOfSales extends Module {
                 .parent()
                 .addClass('left-menu--active');
 
+        // На мобильных по клику прячем список, чтобы сразу видеть изменения
+        if (this.getClient() < 768) {
+            $(target)
+                .parents('.left-menu__list')
+                .toggle();
+        }
+
         let $region = $(target).attr('data-region');
 
         this.$sections.each(function() {

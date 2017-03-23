@@ -4,7 +4,12 @@
         display flex
         flex-wrap wrap
         align-content stretch
-        justify-content space-between
+        justify-content center
         
         .card-tale
             margin-bottom 3px
+            
+            @media (min-width 768px) and (max-width 1199px)
+                
+                &:last-of-type
+                    display none

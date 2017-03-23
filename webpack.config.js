@@ -125,6 +125,10 @@ var config = {
             template: './frontend/pages/catalog-all.pug'
         }),
         new HtmlWebpackPlugin({
+            filename: 'catalog-alphabet.html',
+            template: './frontend/pages/catalog-alphabet.pug'
+        }),
+        new HtmlWebpackPlugin({
             filename: 'active-substance.html',
             template: './frontend/pages/active-substance.pug'
         }),

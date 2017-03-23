@@ -1,6 +1,5 @@
 import $ from 'jquery';
 import Module from '../../includes/Module';
-import App from '../../includes/App'
 
 // Попап основные параметры
 export default class Popup extends Module {
@@ -13,6 +12,7 @@ export default class Popup extends Module {
     }
 
     init() {
+        this.$body = $('body');
         this.$close = $('.js-close', this.$root);
         this.$close.on('click', $.proxy(this.closePopup, this));
     }
@@ -24,7 +24,7 @@ export default class Popup extends Module {
         $parent.removeClass('popup--visible');
 
         // Удаляем затемнение за попапом
-        App.body.removeClass('open--popup');
+        this.$body.removeClass('open--popup');
 
     }
 

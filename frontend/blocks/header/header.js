@@ -62,6 +62,10 @@ export default class Header extends Module {
 
             let target = e.currentTarget;
 
+            let $submenu =
+                $(target)
+                    .find('.js-header-submenu');
+
             // Отключаем переход по ссылке Каталог
             if ($(e.target.parentElement).hasClass('js-header-menu')) {
                 e.preventDefault();
@@ -70,7 +74,7 @@ export default class Header extends Module {
             if (!$(e.target).hasClass('js-header-submenu-two')) {
 
                 $(target).toggleClass('header__li--open');
-                this.$submenu.toggleClass('header__submenu-one--open');
+                $submenu.toggleClass('header__submenu-one--open');
 
             } else {
                 // Отключаем переход при клике во 2 уровне меню по ссылке
@@ -91,12 +95,19 @@ export default class Header extends Module {
     // Закрытие меню при клике не в меню
     closeMenu(e) {
         let clientWidth = document.documentElement.clientWidth;
+
+        let target = e.currentTarget;
+
+        let $submenu =
+            $(target)
+                .find('.js-header-submenu');
+
         if (clientWidth < 1200 && clientWidth > 767) {
             if($(e.target).closest(this.$menu).length) return;
 
             if (!$(e.target).closest( this.$menu ).length) {
                 this.$menu.removeClass('header__li--open');
-                this.$submenu.removeClass('header__submenu-one--open');
+                $submenu.removeClass('header__submenu-one--open');
             }
             e.stopPropagation();
         }

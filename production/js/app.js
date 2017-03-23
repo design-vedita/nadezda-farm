@@ -344,6 +344,8 @@
 
 	                var _target = e.currentTarget;
 
+	                var _$submenu = (0, _jquery2.default)(_target).find('.js-header-submenu');
+
 	                // Отключаем переход по ссылке Каталог
 	                if ((0, _jquery2.default)(e.target.parentElement).hasClass('js-header-menu')) {
 	                    e.preventDefault();
@@ -352,7 +354,7 @@
 	                if (!(0, _jquery2.default)(e.target).hasClass('js-header-submenu-two')) {
 
 	                    (0, _jquery2.default)(_target).toggleClass('header__li--open');
-	                    this.$submenu.toggleClass('header__submenu-one--open');
+	                    _$submenu.toggleClass('header__submenu-one--open');
 	                } else {
 	                    // Отключаем переход при клике во 2 уровне меню по ссылке
 	                    e.preventDefault();
@@ -370,12 +372,17 @@
 	        key: 'closeMenu',
 	        value: function closeMenu(e) {
 	            var clientWidth = document.documentElement.clientWidth;
+
+	            var target = e.currentTarget;
+
+	            var $submenu = (0, _jquery2.default)(target).find('.js-header-submenu');
+
 	            if (clientWidth < 1200 && clientWidth > 767) {
 	                if ((0, _jquery2.default)(e.target).closest(this.$menu).length) return;
 
 	                if (!(0, _jquery2.default)(e.target).closest(this.$menu).length) {
 	                    this.$menu.removeClass('header__li--open');
-	                    this.$submenu.removeClass('header__submenu-one--open');
+	                    $submenu.removeClass('header__submenu-one--open');
 	                }
 	                e.stopPropagation();
 	            }
@@ -5014,10 +5021,6 @@
 
 	var _Module3 = _interopRequireDefault(_Module2);
 
-	var _App = __webpack_require__(44);
-
-	var _App2 = _interopRequireDefault(_App);
-
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -5042,6 +5045,7 @@
 	    _createClass(Popup, [{
 	        key: 'init',
 	        value: function init() {
+	            this.$body = (0, _jquery2.default)('body');
 	            this.$close = (0, _jquery2.default)('.js-close', this.$root);
 	            this.$close.on('click', _jquery2.default.proxy(this.closePopup, this));
 	        }
@@ -5056,7 +5060,7 @@
 	            $parent.removeClass('popup--visible');
 
 	            // Удаляем затемнение за попапом
-	            _App2.default.body.removeClass('open--popup');
+	            this.$body.removeClass('open--popup');
 	        }
 	    }]);
 
@@ -5249,6 +5253,11 @@
 	            });
 
 	            (0, _jquery2.default)(target).parent().addClass('left-menu--active');
+
+	            // На мобильных по клику прячем список, чтобы сразу видеть изменения
+	            if (this.getClient() < 768) {
+	                (0, _jquery2.default)(target).parents('.left-menu__list').toggle();
+	            }
 
 	            var $region = (0, _jquery2.default)(target).attr('data-region');
 

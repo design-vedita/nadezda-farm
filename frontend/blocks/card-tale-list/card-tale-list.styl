@@ -9,8 +9,15 @@
 	@media (max-width 767px)
 		padding_x(1px)
 		width 290px
+	
+	&:hover
+		z-index 2
+	
+	&:not(:last-child)
+		margin-bottom 2px
 		
 	&__inner
+		position relative
 		padding  6px 37px 7px 15px
 		display flex
 		flex-wrap wrap
@@ -31,7 +38,7 @@
 		&::before
 			position absolute
 			z-index 1
-			left 2px
+			left 0
 			top 0
 			content ''
 			display block
@@ -44,12 +51,6 @@
 			
 			@media (max-width 767px)
 				width 'calc(%s - %s)' % (100% 2px)
-		
-	&:hover
-		z-index 2
-	
-	&:not(:last-child)
-		margin-bottom 2px
 	
 	&__image
 		position relative
@@ -203,10 +204,14 @@
 		margin-top 12px
 		
 		@media (max-width 767px)
+			display flex
 			width 100%
 		
 	&__order-count
 		font-size 0
+		
+		@media (max-width 767px)
+			width 50%
 		
 		button
 			width 32px
@@ -239,6 +244,10 @@
 	
 	&__order-button
 		margin-top 6px
+		
+		@media (max-width 767px)
+			margin-top 0
+			width 50%
 				
 		input
 			padding-left 48px
