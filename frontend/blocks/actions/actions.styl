@@ -7,13 +7,17 @@
         flex-wrap wrap
         flex-direction row
         align-items stretch
-        
-        @media (min-width 768px)
             
+        &:last-child
+            &::after
+                display none
+            
+        @media (min-width 768px)
+        
             &:not(:last-child)
                 margin-bottom 22px
                 padding-bottom 31px
-    
+        
             &::after
                 position absolute
                 left 15px
@@ -26,10 +30,10 @@
             
         @media (max-width 767px)
             
-            &:last-child ^[0]__tale:last-child
-                &::after
-                    display none
-        
+            &:last-child ^[0]__tale:last-child::after
+               display none
+                
+                
     &__tale
         padding_x(15px)
         width 50%

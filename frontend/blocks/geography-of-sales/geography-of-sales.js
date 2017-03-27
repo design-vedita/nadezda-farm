@@ -17,7 +17,7 @@ export default class GeographyOfSales extends Module {
         this.$links = $('.js-link-region', this.$root);
         this.$sections = $('.js-geography-section', this.$root);
 
-        this.$links.on('click', $.proxy(this.openSection, this));
+        //this.$links.on('click', $.proxy(this.openSection, this));
 
         this.$geo_title = $('.js-geography-of-sales__left-menu .left-menu__title', this.$root);
         this.$geo_list = $('.js-geography-of-sales__left-menu .left-menu__list', this.$root);
@@ -35,7 +35,8 @@ export default class GeographyOfSales extends Module {
     }
 
     // Открытие списков аптек по клику на область
-    openSection(e) {
+    // Т.к. используется перезагрузка, закомментил
+    /*openSection(e) {
 
         let target = e.currentTarget;
 
@@ -65,7 +66,7 @@ export default class GeographyOfSales extends Module {
                 $(this).addClass('geography-of-sales--visible');
             }
         });
-    }
+    }*/
 
     getClient() {
 

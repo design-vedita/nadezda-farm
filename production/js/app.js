@@ -622,7 +622,7 @@
 	__webpack_require__(50);
 	__webpack_require__(52);
 
-	// Подключаем jquery-ui-touch-punch
+	// Подключаем jquery-ui-touch-punch, чтобы работ swipe на слайдерах с ценами
 	!function (a) {
 	    function f(a, b) {
 	        if (!(a.originalEvent.touches.length > 1)) {
@@ -5220,7 +5220,7 @@
 	            this.$links = (0, _jquery2.default)('.js-link-region', this.$root);
 	            this.$sections = (0, _jquery2.default)('.js-geography-section', this.$root);
 
-	            this.$links.on('click', _jquery2.default.proxy(this.openSection, this));
+	            //this.$links.on('click', $.proxy(this.openSection, this));
 
 	            this.$geo_title = (0, _jquery2.default)('.js-geography-of-sales__left-menu .left-menu__title', this.$root);
 	            this.$geo_list = (0, _jquery2.default)('.js-geography-of-sales__left-menu .left-menu__list', this.$root);
@@ -5241,34 +5241,32 @@
 	        }
 
 	        // Открытие списков аптек по клику на область
-
-	    }, {
-	        key: 'openSection',
-	        value: function openSection(e) {
-
-	            var target = e.currentTarget;
-
-	            (0, _jquery2.default)('.' + target.className).each(function () {
-	                (0, _jquery2.default)(this).parent().removeClass('left-menu--active');
-	            });
-
-	            (0, _jquery2.default)(target).parent().addClass('left-menu--active');
-
-	            // На мобильных по клику прячем список, чтобы сразу видеть изменения
+	        // Т.к. используется перезагрузка, закомментил
+	        /*openSection(e) {
+	              let target = e.currentTarget;
+	                  $('.' + target.className).each(function(){
+	                    $(this)
+	                        .parent()
+	                        .removeClass('left-menu--active');
+	                });
+	                  $(target)
+	                    .parent()
+	                    .addClass('left-menu--active');
+	              // На мобильных по клику прячем список, чтобы сразу видеть изменения
 	            if (this.getClient() < 768) {
-	                (0, _jquery2.default)(target).parents('.left-menu__list').toggle();
+	                $(target)
+	                    .parents('.left-menu__list')
+	                    .toggle();
 	            }
-
-	            var $region = (0, _jquery2.default)(target).attr('data-region');
-
-	            this.$sections.each(function () {
-	                (0, _jquery2.default)(this).removeClass('geography-of-sales--visible');
-
-	                if ((0, _jquery2.default)(this).attr('data-region') == $region) {
-	                    (0, _jquery2.default)(this).addClass('geography-of-sales--visible');
+	              let $region = $(target).attr('data-region');
+	              this.$sections.each(function() {
+	                $(this).removeClass('geography-of-sales--visible');
+	                  if ($(this).attr('data-region') == $region) {
+	                    $(this).addClass('geography-of-sales--visible');
 	                }
 	            });
-	        }
+	        }*/
+
 	    }, {
 	        key: 'getClient',
 	        value: function getClient() {
