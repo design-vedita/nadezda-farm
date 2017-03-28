@@ -49,6 +49,31 @@
 			padding-top 17px
 			padding-bottom 6px
 	
+	&__prescription
+		position absolute
+		z-index 4
+		left  227px
+		top 11px
+		
+		@media (min-width 992px) and (max-width 1199px)
+			left 190px
+		
+		@media (min-width 768px) and (max-width 991px)
+			left 138px
+			
+		@media (max-width 767px)
+			left auto
+			right 9px
+		
+		span
+			display block
+			width 41px
+			height 41px
+			background-image url(../../image/svg/only-recept.svg)
+			background-size cover
+			background-position center
+			
+			
 	&__image
 		position relative
 		z-index 1

@@ -49,10 +49,7 @@ export default class YandexMapContacts extends Module {
                 });
 
                 myMap.geoObjects.add(myPlacemark);
-
-                if (_self.getClient() < 768) {
-                    myMap.behaviors.disable('scrollZoom');
-                }
+                myMap.behaviors.disable('scrollZoom');
 
             });
         }
