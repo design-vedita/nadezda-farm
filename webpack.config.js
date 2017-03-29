@@ -24,6 +24,10 @@ var entry  = {
     app: './frontend/pages/app'
 };
 
+// Получить список страниц
+
+
+
 var config = {
     entry: entry,
     resolve: {
@@ -52,7 +56,7 @@ var config = {
             },
             {
                 test: /\.svg$/,
-                loaders: ['url?name=img/svg/[name].[ext]', 'svgo?' + svgoConfig]
+                loaders: ['file?name=../image/svg/[name].[ext]', 'svgo?' + svgoConfig]
             },
             {
                 test: /\.styl/,
@@ -64,7 +68,7 @@ var config = {
             },
             {
                 test: /\.(png|jpg|gif)$/,
-                loader: "url?&limit=4096&name=image/[name].[ext]"
+                loader: "url?publicPath=../&limit=4096&publicPath=../&name=image/[name].[ext]"
             }
         ]
     },
