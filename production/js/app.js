@@ -2668,30 +2668,55 @@
 	    }, {
 	        key: 'initCarousel',
 	        value: function initCarousel() {
-	            this.$gallery = new _swiper2.default(this.$slider, {
-	                spaceBetween: 10,
-	                centeredSlides: true,
-	                slidesPerView: 1
-	            });
 
-	            this.$thumbs = new _swiper2.default(this.$carosuel, {
-	                slidesPerView: 4,
-	                spaceBetween: 12,
-	                loop: true,
-	                touchRatio: 0.2,
-	                centeredSlides: false,
-	                slideToClickedSlide: true,
-	                nextButton: '.js-carousel-next',
-	                prevButton: '.js-carousel-prev',
-	                breakpoints: {
-	                    767: {
-	                        slidesPerView: 3
+	            if (this.$carosuel.length > 0) {
+
+	                var $gallery = new _swiper2.default(this.$slider, {
+	                    slidesPerView: 1
+	                });
+
+	                var $thumbs = new _swiper2.default(this.$carosuel, {
+	                    spaceBetween: 12,
+	                    //centeredSlides: true,
+	                    slidesPerView: 4,
+	                    touchRatio: 0.2,
+	                    slideToClickedSlide: true,
+	                    nextButton: '.js-carousel-next',
+	                    prevButton: '.js-carousel-prev',
+	                    breakpoints: {
+	                        767: {
+	                            slidesPerView: 3
+	                        }
 	                    }
-	                }
-	            });
+	                });
 
-	            this.$gallery.params.control = this.$thumbs;
-	            this.$thumbs.params.control = this.$gallery;
+	                // Ручное управление слайдами
+	                $thumbs.slides.on('click', function () {
+	                    // Переходим к нужному в верхнем слайдере
+	                    $gallery.slideTo($thumbs.clickedIndex);
+
+	                    // Очищаем активный класс
+	                    (0, _jquery2.default)($thumbs.container).each(function () {
+	                        (0, _jquery2.default)(this).find('.map__image-thumb').removeClass('swiper-slide-active');
+	                    });
+	                    // Ставим активный класс текущему превью
+	                    (0, _jquery2.default)($thumbs.clickedSlide).addClass('swiper-slide-active');
+	                });
+
+	                $thumbs.nextButton.on('click', function () {
+	                    $gallery.slideNext();
+	                    $thumbs.slideNext();
+	                });
+
+	                $thumbs.prevButton.on('click', function () {
+	                    $gallery.slidePrev();
+	                    $thumbs.slidePrev();
+	                });
+
+	                $gallery.params.control = $thumbs;
+	            }
+
+	            /*$thumbs.params.control = this.$gallery;*/
 
 	            if (this.getClientWidth() > 768 && this.getClientWidth() < 1199) {
 	                // this.$thumbs.updateContainerSize();
